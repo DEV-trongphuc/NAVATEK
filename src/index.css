@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F4F7FC;
+    --bg-card: #FFFFFF;
+    --navy-primary: #0F2B5C;
+    --navy-dark: #0A1C3E;
+    --navy-light: #1E3A8A;
+    --cyan-accent: #2563EB;
+    --cyan-glow: #00D2FF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --border-light: rgba(226, 232, 240, 0.9);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Bento Box & SDI Presence Components */
+.sdi-bento-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(219, 230, 248, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(15, 43, 92, 0.05), 0 4px 6px -2px rgba(15, 43, 92, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.sdi-bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px -12px rgba(15, 43, 92, 0.12), 0 8px 12px -4px rgba(15, 43, 92, 0.04);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.sdi-bento-card-dark {
+  background: linear-gradient(145deg, #0F2B5C 0%, #081735 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+/* Glassmorphism Header Pill */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 32px -8px rgba(15, 43, 92, 0.08);
+}
+
+/* SDI Pill Button */
+.sdi-btn-primary {
+  background-color: var(--navy-primary);
+  color: #ffffff;
+  border-radius: 9999px;
+  font-weight: 600;
+  padding: 10px 24px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(15, 43, 92, 0.2);
+}
+
+.sdi-btn-primary:hover {
+  background-color: var(--cyan-accent);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+.sdi-btn-secondary {
+  background-color: rgba(15, 43, 92, 0.06);
+  color: var(--navy-primary);
+  border-radius: 9999px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sdi-btn-secondary:hover {
+  background-color: rgba(15, 43, 92, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Soft Radial Background Highlights */
+.bg-glow-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.08) 0%, rgba(244, 247, 252, 0) 70%);
+}
+
+.bg-glow-blue-bottom {
+  background: radial-gradient(ellipse at 50% 100%, rgba(15, 43, 92, 0.15) 0%, rgba(244, 247, 252, 0) 70%);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Về NavaTek — Hệ Sinh Thái Hạ Tầng B2B IT</title>
+  <meta name="description" content="NavaTek thừa kế uy tín từ hệ thống Navastore.vn, cung cấp hạ tầng CNTT tinh gọn cho B2B.">
+  
+  <!-- Direct Google Fonts Link for Perfect Vietnamese Diacritics Support -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Unified Header (Top banner + main navbar) -->
+  <header class="sdi-header">
+    
+
+    <div class="sdi-navbar-main">
+      <a href="/" class="sdi-logo">
+        <img src="/images/LOGO.png" alt="NavaTek B2B" style="height: 38px; width: auto; object-fit: contain;">
+        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: #E2E8F0; color: var(--sdi-navy-primary); padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      </a>
+
+      <nav class="sdi-nav-menu">
+        <a href="/" class="sdi-nav-link">Giải Thế</a>
+        <a href="/combo-tron-bo.html" class="sdi-nav-link">Combo Trọn Bộ</a>
+        <a href="/may-don-le.html" class="sdi-nav-link">Máy Đơn Lẻ</a>
+        <a href="/nganh-phuc-vu.html" class="sdi-nav-link">Ngành Phục Vụ</a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link active">Dịch Vụ</a>
+        <a href="/du-an.html" class="sdi-nav-link">Dự Án</a>
+      </nav>
+
+      <div class="sdi-search-wrapper">
+        <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+        <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field">
+        <div class="sdi-suggestion-box" id="search-suggestion-dropdown"></div>
+      </div>
+
+      <button class="sdi-btn-orange trigger-quote-modal">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="sdi-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
+      <div class="sdi-mobile-drawer-content">
+        <nav class="sdi-mobile-nav-links">
+          <a href="/" class="sdi-mobile-nav-link">Giải Pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/combo-tron-bo.html" class="sdi-mobile-nav-link">Combo Trọn Bộ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/may-don-le.html" class="sdi-mobile-nav-link">Máy Đơn Lẻ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link">Ngành Phục Vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link active">Dịch Vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/du-an.html" class="sdi-mobile-nav-link">Dự Án <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        </nav>
+        
+        <!-- Mobile Search inside Drawer -->
+        <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
+          <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+          <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
+          <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
+        </div>
+
+        <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
+          <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+          <span>Nhận báo giá</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sdi-header-spacer" style="height: 76px;"></div>
+
+  <!-- Hero Trang Con -->
+  <section class="tech-dot-grid-dark" style="background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #060B1E 100%) !important; background-size: 28px 28px, auto !important; background-color: #060B1E !important; color: #FFFFFF; padding: 11rem 0 8rem 0; position: relative; overflow: hidden;">
+    <!-- Radial glow decorators for depth -->
+    <div style="position: absolute; top: -30%; right: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+    <div style="position: absolute; bottom: -20%; left: 5%; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+
+    <!-- Animated light packets running along tracks -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100,200 L350,200 L480,320 L1000,320" stroke="rgba(56, 189, 248, 0.08)" stroke-width="2" fill="none" />
+      <path d="M200,-100 L320,150 L320,400 L450,550" stroke="rgba(56, 189, 248, 0.08)" stroke-width="2" fill="none" />
+      
+      <circle r="4" fill="var(--sdi-blue-glow)" style="offset-path: path('M-100,200 L350,200 L480,320 L1000,320'); animation: flow-data 6s linear infinite; filter: drop-shadow(0 0 6px var(--sdi-blue-glow));" />
+      <circle r="4" fill="var(--sdi-blue-accent)" style="offset-path: path('M200,-100 L320,150 L320,400 L450,550'); animation: flow-data 8s linear infinite 3s; filter: drop-shadow(0 0 6px var(--sdi-blue-accent));" />
+    </svg>
+
+    <!-- Floating SVGs -->
+    <svg style="position: absolute; top: 15%; left: 5%; opacity: 0.15; animation: sdi-float 8s infinite alternate;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--sdi-blue-glow)" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+    <svg style="position: absolute; bottom: 15%; left: 30%; opacity: 0.12; animation: sdi-float 10s infinite alternate-reverse;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sdi-blue-glow)" stroke-width="2">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+    </svg>
+
+    <div class="container-sdi" style="position: relative; z-index: 2;">
+      <div class="sdi-split-grid">
+        
+        <div class="sdi-animate-fade-up">
+          <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.15); padding: 0.4rem 1rem;">
+            <i data-lucide="award" style="width: 14px; height: 14px;"></i>
+            <span>GIỚI THIỆU NAVATEK</span>
+          </span>
+          
+          <h1 style="color: #FFFFFF; font-size: 2.8rem; line-height: 1.25; margin-top: 0.75rem; margin-bottom: 1.5rem;" class="sdi-animate-fade-up sdi-delay-2">
+            Chúng tôi dựng hạ tầng CNTT<br>để doanh nghiệp <span style="color: #38BDF8;">tập trung việc của mình</span>
+          </h1>
+          
+          <p style="color: #94A3B8; font-size: 1.1rem; line-height: 1.65; margin-bottom: 2.5rem; max-width: 600px;" class="sdi-animate-fade-up sdi-delay-3">
+            NavaTek tư vấn và thiết lập hệ thống trạm AI local bảo mật cao, hạ tầng mạng chịu tải lớn và hệ thống máy chủ lưu trữ chuyên dụng cho văn phòng làm việc.
+          </p>
+
+          <div style="display: flex; gap: 1rem; align-items: center;" class="sdi-animate-fade-up sdi-delay-3">
+            <button class="sdi-btn-orange trigger-quote-modal" style="font-size: 1rem;">Nhận báo giá</button>
+            <a href="/du-an.html" class="sdi-pill-btn-outline sdi-pill-btn-outline-white" style="border: 2.5px solid rgba(255, 255, 255, 0.45); color: #FFFFFF; padding: 0.75rem 1.85rem; border-radius: 9999px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s;">
+              <span>Liên hệ dự án</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wireframe style illustration placeholder -->
+        <div class="sdi-animate-fade-up sdi-delay-2 hero-floating-graphic">
+          <div class="wireframe-box-dashed" style="position: relative; min-height: 360px; overflow: hidden; border-color: rgba(255, 255, 255, 0.12); background: rgba(255, 255, 255, 0.03);">
+            <!-- Video background inside placeholder -->
+            <video autoplay muted loop playsinline poster="/images/b2b_it_hero.png" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; pointer-events: none;"></video>
+            <img src="/images/b2b_it_hero.png" alt="Server Local AI" id="hero-interactive-img" class="graphic-blend" style="max-height: 280px; filter: drop-shadow(0 15px 25px rgba(0, 51, 102, 0.28)); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Câu chuyện (Sinh ra từ hệ thống bán lẻ Top 2 VN) -->
+  <section style="padding: 5.5rem 0; background: #ffffff;">
+    <div class="container-sdi">
+      <div class="sdi-split-grid is-footer">
+        
+        <div>
+          <span class="eyebrow-badge">CÂU CHUYỆN THƯƠNG HIỆU</span>
+          <h2 style="margin-bottom: 1.5rem; color: var(--sdi-navy-primary);">Sinh ra từ hệ thống bán lẻ Top 2 Việt Nam</h2>
+          
+          <p style="color: var(--sdi-text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            NavaTek là đơn vị sở hữu và vận hành <strong>Navastore.vn</strong> — hệ thống bán lẻ thiết bị CNTT, máy tính nhúng thuộc Top 2 tìm kiếm Google với hơn 300.000 lượt truy cập mỗi tháng.
+          </p>
+          <p style="color: var(--sdi-text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Nhận thấy nhu cầu đặc thù của nhóm khách hàng B2B về quy trình chứng từ thuế VAT minh bạch, nhu cầu khảo sát thiết lập tận nơi và bảo trì cam kết, NavaTek được thành lập như một pháp nhân độc lập chuyên biệt để phục vụ hoàn hảo tệp khách hàng doanh nghiệp và trường học.
+          </p>
+          <p style="color: var(--sdi-text-secondary); font-size: 1rem; line-height: 1.7;">
+            Chúng tôi tận dụng thế mạnh tuyệt đối về nguồn hàng chính hãng, năng lực kho vận logistics sẵn có từ hệ sinh thái để mang lại mức giá tối ưu và tốc độ giao lắp nhanh nhất trên thị trường.
+          </p>
+        </div>
+
+        <div class="bento-card bento-card-white" style="padding: 2rem; align-items: center; justify-content: center; min-height: 380px;">
+          <img src="/images/combo.png" alt="Kho hàng NavaTek" class="graphic-blend" style="max-height: 260px;" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Con số biết nói -->
+  <section style="padding: 5rem 0; background: #F8FAFD; border-top: 1px solid #EFF3FA; border-bottom: 1px solid #EFF3FA;">
+    <div class="container-sdi">
+      
+      <div class="sdi-grid-4" style="text-align: center !important;">
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 3rem; font-weight: 900; color: var(--sdi-navy-primary);">300.000+</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Lượt truy cập/tháng từ Navastore</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 3rem; font-weight: 900; color: var(--sdi-navy-primary);">Top 2</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Google — Bán lẻ Navastore</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 3rem; font-weight: 900; color: var(--sdi-navy-primary);">50+</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Dự án B2B đã triển khai</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 3rem; font-weight: 900; color: var(--sdi-navy-primary);">24/7</div>
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Hỗ trợ tận nơi TP.HCM</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hệ sinh thái Nava -->
+  <section style="padding: 5.5rem 0; background: #ffffff;">
+    <div class="container-sdi" style="max-width: 960px; text-align: center; margin: 0 auto;">
+      <span class="eyebrow-badge">HỆ SINH THÁI THỐNG NHẤT</span>
+      <h2 style="color: var(--sdi-navy-primary); margin-bottom: 1.25rem;">Hai thương hiệu, một nguồn lực</h2>
+      <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.7;">
+        Navastore phục vụ khách hàng lẻ mua sắm thiết bị nhanh chóng. NavaTek đồng hành cùng khách hàng doanh nghiệp trong khảo sát, tư vấn giải pháp và ký hợp đồng kinh tế dài hạn. Chúng tôi chia sẻ chung kho hàng lớn, đội ngũ kỹ sư tối ưu hóa và mối quan hệ trực tiếp với hãng.
+      </p>
+
+      <div style="display: flex; gap: 3rem; justify-content: center; align-items: center; background: #F8FAFD; padding: 2rem; border-radius: 24px; border: 1px solid var(--sdi-border); flex-wrap: wrap;">
+        <div style="text-align: center;">
+          <div style="font-weight: 900; font-size: 1.4rem; color: var(--sdi-navy-primary);">NAVATEK</div>
+          <div style="font-size: 0.8rem; color: var(--sdi-text-secondary); margin-top: 0.25rem;">Giải pháp doanh nghiệp</div>
+        </div>
+        <div style="font-size: 1.5rem; color: #CBD5E1; font-weight: 300;">|</div>
+        <div style="text-align: center;">
+          <div style="font-weight: 900; font-size: 1.4rem; color: var(--sdi-orange-cta);">NAVASTORE</div>
+          <div style="font-size: 0.8rem; color: var(--sdi-text-secondary); margin-top: 0.25rem;">Bán lẻ • Top 2 Google</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Đội ngũ nhân sự -->
+  <section style="padding: 5.5rem 0; background: #F8FAFD; border-top: 1px solid #EFF3FA;">
+    <div class="container-sdi">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+        <span class="eyebrow-badge">ĐỘI NGŨ CHUYÊN MÔN</span>
+        <h2>Người trực tiếp làm việc với bạn</h2>
+      </div>
+
+      <div class="sdi-grid-4">
+        <div class="bento-card bento-card-white" style="padding: 2rem; text-align: center; align-items: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: #EFF6FF; color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; margin-bottom: 1.25rem;">NT</div>
+          <h4 style="font-size: 1.1rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">Nguyễn Văn A</h4>
+          <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">Trưởng phòng Kỹ thuật</span>
+        </div>
+        <div class="bento-card bento-card-white" style="padding: 2rem; text-align: center; align-items: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: #EFF6FF; color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; margin-bottom: 1.25rem;">TH</div>
+          <h4 style="font-size: 1.1rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">Trần Văn B</h4>
+          <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">Kỹ sư hệ thống local AI</span>
+        </div>
+        <div class="bento-card bento-card-white" style="padding: 2rem; text-align: center; align-items: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: #EFF6FF; color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; margin-bottom: 1.25rem;">LH</div>
+          <h4 style="font-size: 1.1rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">Lê Văn C</h4>
+          <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">Chuyên viên mạng & NAS</span>
+        </div>
+        <div class="bento-card bento-card-white" style="padding: 2rem; text-align: center; align-items: center;">
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: #EFF6FF; color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.5rem; margin-bottom: 1.25rem;">PT</div>
+          <h4 style="font-size: 1.1rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">Phạm Văn D</h4>
+          <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">Hỗ trợ on-site TP.HCM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chứng nhận đại lý -->
+  <section style="padding: 5.5rem 0; background: #ffffff;">
+    <div class="container-sdi" style="text-align: center;">
+      <span class="eyebrow-badge">CHỨNG NHẬN ĐẠI LÝ</span>
+      <h2 style="color: var(--sdi-navy-primary); margin-bottom: 1rem;">Đơn vị phân phối và đối tác chính hãng</h2>
+      <p style="color: var(--sdi-text-secondary); font-size: 1.025rem; margin-bottom: 3.5rem;">Đầy đủ giấy tờ chứng nhận CO/CQ từ các hãng phần cứng lớn.</p>
+
+      <div style="display: flex; justify-content: center; gap: 4rem; align-items: center; flex-wrap: wrap; opacity: 0.6; margin-bottom: 4rem;">
+        <span style="font-weight: 900; font-size: 1.4rem; color: var(--sdi-navy-primary);">INTEL PARTNER</span>
+        <span style="font-weight: 900; font-size: 1.4rem; color: var(--sdi-navy-primary);">AMD PRO</span>
+        <span style="font-weight: 900; font-size: 1.4rem; color: var(--sdi-navy-primary);">NVIDIA ELITE</span>
+        <span style="font-weight: 900; font-size: 1.4rem; color: var(--sdi-navy-primary);">ASUS GOLDEN</span>
+      </div>
+
+      <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+        <div style="border: 1px solid var(--sdi-border); border-radius: 12px; padding: 1.5rem; background: #F8FAFD; max-width: 280px;">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Intel Authorized</div>
+          <div style="font-size: 0.75rem; color: var(--sdi-text-muted);">Chứng nhận đối tác cung cấp giải pháp máy tính nhúng.</div>
+        </div>
+        <div style="border: 1px solid var(--sdi-border); border-radius: 12px; padding: 1.5rem; background: #F8FAFD; max-width: 280px;">
+          <div style="font-size: 0.8rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Asus Gold Partner</div>
+          <div style="font-size: 0.75rem; color: var(--sdi-text-muted);">Đại lý ủy quyền phân phối Mini PC chính hãng tại Việt Nam.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+
+  <div class="modal-overlay" id="quote-modal">
+    <div class="modal-box">
+      <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <span class="eyebrow-badge">NAVATEK v3.1</span>
+      <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
+      <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
+      <form id="quote-request-form">
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Họ và tên *</label>
+          <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+        </div>
+        <div class="sdi-form-grid-2" style="margin-bottom: 1.25rem !important;">
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Số điện thoại / Zalo *</label>
+            <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Email</label>
+            <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+        </div>
+        <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem;">
+          <span>Gửi Yêu Cầu Báo Giá</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

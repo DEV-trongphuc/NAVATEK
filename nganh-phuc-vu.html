@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giải Pháp AI Server & Trí Tuệ Nhân Tạo — NavaTek</title>
+  <meta name="description" content="NavaTek cung cấp giải pháp trạm AI Server cục bộ tự vận hành, bảo vệ dữ liệu tối đa cho doanh nghiệp.">
+  
+  <!-- Direct Google Fonts Link for Perfect Vietnamese Diacritics Support -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Unified Header (Top banner + main navbar) -->
+  <header class="sdi-header">
+    
+
+    <div class="sdi-navbar-main">
+      <a href="/" class="sdi-logo">
+        <img src="/images/LOGO.png" alt="NavaTek B2B" style="height: 38px; width: auto; object-fit: contain;">
+        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: #E2E8F0; color: var(--sdi-navy-primary); padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      </a>
+
+      <nav class="sdi-nav-menu">
+        <a href="/nganh-phuc-vu.html" class="sdi-nav-link active">Giải pháp</a>
+        <a href="/may-don-le.html" class="sdi-nav-link">Sản phẩm</a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Dịch vụ</a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Về NavaTek</a>
+        <a href="/du-an.html" class="sdi-nav-link">Liên hệ</a>
+      </nav>
+
+      <div class="sdi-search-wrapper">
+        <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+        <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field">
+        <div class="sdi-suggestion-box" id="search-suggestion-dropdown"></div>
+      </div>
+
+      <button class="sdi-btn-orange trigger-quote-modal">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="sdi-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
+      <div class="sdi-mobile-drawer-content">
+        <nav class="sdi-mobile-nav-links">
+          <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link active">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Về NavaTek <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        </nav>
+        
+        <!-- Mobile Search inside Drawer -->
+        <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
+          <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+          <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
+          <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
+        </div>
+
+        <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
+          <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+          <span>Nhận báo giá</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sdi-header-spacer" style="height: 76px;"></div>
+
+  <!-- Hero Trang Con -->
+  <section class="tech-dot-grid-dark" style="background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #060B1E 100%) !important; background-size: 28px 28px, auto !important; background-color: #060B1E !important; color: #FFFFFF; padding: 11rem 0 8rem 0; position: relative; overflow: hidden;">
+    <!-- Glow decorators -->
+    <div style="position: absolute; top: -30%; right: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+    <div style="position: absolute; bottom: -20%; left: 5%; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+    
+    <!-- Floating SVGs -->
+    <svg style="position: absolute; top: 20%; right: 12%; opacity: 0.15; animation: sdi-float 8s infinite alternate;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+    </svg>
+    <svg style="position: absolute; bottom: 25%; right: 28%; opacity: 0.12; animation: sdi-float 10s infinite alternate-reverse;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+
+    <!-- Animated Running Circuit Lines SVG -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.15;">
+      <defs>
+        <linearGradient id="grad-line-1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+          <stop offset="50%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.6" />
+          <stop offset="100%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <!-- Circuit track 1 -->
+      <path d="M-100,200 L350,200 L480,320 L1000,320" fill="none" stroke="url(#grad-line-1)" stroke-width="1.5" />
+      <!-- Circuit track 2 -->
+      <path d="M200,-100 L320,150 L320,400 L450,550" fill="none" stroke="url(#grad-line-1)" stroke-width="1.5" />
+      
+      <!-- Animated light packets running along tracks using standard css animations -->
+      <circle r="4" fill="var(--sdi-blue-glow)" style="offset-path: path('M-100,200 L350,200 L480,320 L1000,320'); animation: flow-data 6s linear infinite; filter: drop-shadow(0 0 6px var(--sdi-blue-glow));" />
+      <circle r="4" fill="var(--sdi-blue-accent)" style="offset-path: path('M200,-100 L320,150 L320,400 L450,550'); animation: flow-data 8s linear infinite 3s; filter: drop-shadow(0 0 6px var(--sdi-blue-accent));" />
+    </svg>
+
+    <div class="container-sdi" style="position: relative; z-index: 2;">
+      <div class="sdi-split-grid">
+        
+        <div class="sdi-animate-fade-up">
+          <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.1); color: var(--sdi-blue-accent); display: inline-flex; align-items: center; gap: 0.35rem; border: 1px solid rgba(37, 99, 235, 0.15);">
+            <i data-lucide="cpu" style="width: 13px; height: 13px;"></i>
+            <span>GIẢI PHÁP DOANH NGHIỆP</span>
+          </span>
+          <h1 style="color: #FFFFFF; font-size: 2.8rem; margin-top: 0.75rem; margin-bottom: 1rem; line-height: 1.25;">AI Server & Trí Tuệ Nhân Tạo</h1>
+          <p style="color: #94A3B8; font-size: 1.1rem; max-width: 780px; line-height: 1.65; margin: 0;">
+            Giải pháp hạ tầng máy chủ AI Local chuyên biệt cho phòng R&D và doanh nghiệp vận hành mô hình ngôn ngữ lớn (LLM), suy luận AI tốc độ cao và bảo mật dữ liệu tuyệt đối.
+          </p>
+        </div>
+
+        <!-- Right Column: Interactive Wireframe Tech Graphic -->
+        <div class="sdi-animate-fade-up sdi-delay-2 hero-floating-graphic" style="display: flex; align-items: center; justify-content: center; width: 100%;">
+          <div style="position: relative; width: 100%; min-height: 360px; display: flex; align-items: center; justify-content: center; overflow: visible;">
+            <!-- Subtle network flow simulation background -->
+            <div class="grid-flow-nodes" style="position: absolute; inset: 0; opacity: 0.15;"></div>
+            
+            <!-- Custom Animated High-Tech Server SVG -->
+            <svg width="100%" height="320" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto; max-height: 320px;">
+              <style>
+                .glow-node {
+                  filter: drop-shadow(0 0 8px #38BDF8);
+                }
+                .link-line {
+                  stroke-dasharray: 8 6;
+                  animation: svg-dash-flow 1.5s linear infinite;
+                }
+                .link-line-reverse {
+                  stroke-dasharray: 8 6;
+                  animation: svg-dash-flow-rev 2s linear infinite;
+                }
+                @keyframes svg-dash-flow {
+                  to {
+                    stroke-dashoffset: -28;
+                  }
+                }
+                @keyframes svg-dash-flow-rev {
+                  to {
+                    stroke-dashoffset: 28;
+                  }
+                }
+                .pulse-ring {
+                  transform-origin: 250px 160px;
+                  animation: svg-pulse 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+                }
+                @keyframes svg-pulse {
+                  0% {
+                    transform: scale(0.85);
+                    opacity: 0.8;
+                  }
+                  100% {
+                    transform: scale(1.3);
+                    opacity: 0;
+                  }
+                }
+                .float-box {
+                  animation: svg-float-y 6s ease-in-out infinite alternate;
+                }
+                @keyframes svg-float-y {
+                  0% { transform: translateY(0); }
+                  100% { transform: translateY(-8px); }
+                }
+              </style>
+
+              <!-- Central AI Core / Server Rack (Isometric) -->
+              <g transform="translate(0, 0)">
+                <g class="float-box">
+                  <!-- Pulsing Glow Ring -->
+                  <circle cx="250" cy="160" r="60" stroke="#2563EB" stroke-width="1.5" stroke-opacity="0.3" fill="none" />
+                  <circle cx="250" cy="160" r="60" stroke="#38BDF8" stroke-width="2" class="pulse-ring" fill="none" />
+
+                  <!-- Isometric Server Rack Blocks -->
+                  <!-- Rack Base / Floor plate -->
+                  <path d="M 250 120 L 310 150 L 250 180 L 190 150 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" opacity="0.6" />
+                  
+                  <!-- Server Rack Pillar Back/Sides -->
+                  <path d="M 190 150 L 190 210 L 250 240 L 250 180 Z" fill="#1E293B" stroke="#2563EB" stroke-dasharray="2 2" opacity="0.5" />
+                  <path d="M 310 150 L 310 210 L 250 240 L 250 180 Z" fill="#0F172A" stroke="#2563EB" stroke-dasharray="2 2" opacity="0.5" />
+
+                  <!-- Top Server Blade -->
+                  <g transform="translate(0, -30)">
+                    <path d="M 250 140 L 300 165 L 250 190 L 200 165 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="2" class="glow-node" />
+                    <path d="M 200 165 L 200 175 L 250 200 L 250 190 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" />
+                    <path d="M 300 165 L 300 175 L 250 200 L 250 190 Z" fill="#0A1128" stroke="#38BDF8" stroke-width="1.5" />
+                    <!-- Server LEDs -->
+                    <circle cx="220" cy="180" r="2.5" fill="#10B981" />
+                    <circle cx="235" cy="187" r="2.5" fill="#38BDF8" />
+                    <circle cx="250" cy="195" r="2.5" fill="#38BDF8" />
+                  </g>
+
+                  <!-- Middle Server Blade -->
+                  <g transform="translate(0, -10)">
+                    <path d="M 250 140 L 300 165 L 250 190 L 200 165 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.5" />
+                    <path d="M 200 165 L 200 175 L 250 200 L 250 190 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1" />
+                    <path d="M 300 165 L 300 175 L 250 200 L 250 190 Z" fill="#0A1128" stroke="#2563EB" stroke-width="1" />
+                    <!-- Server LEDs -->
+                    <circle cx="220" cy="180" r="2" fill="#10B981" />
+                    <circle cx="235" cy="187" r="2" fill="#2563EB" />
+                    <circle cx="250" cy="195" r="2" fill="#10B981" />
+                  </g>
+
+                  <!-- Bottom Server Blade -->
+                  <g transform="translate(0, 10)">
+                    <path d="M 250 140 L 300 165 L 250 190 L 200 165 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.5" />
+                    <path d="M 200 165 L 200 175 L 250 200 L 250 190 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1" />
+                    <path d="M 300 165 L 300 175 L 250 200 L 250 190 Z" fill="#0A1128" stroke="#2563EB" stroke-width="1" />
+                    <!-- Server LEDs -->
+                    <circle cx="220" cy="180" r="2" fill="#2563EB" />
+                    <circle cx="235" cy="187" r="2" fill="#2563EB" />
+                    <circle cx="250" cy="195" r="2" fill="#10B981" />
+                  </g>
+                </g>
+              </g>
+
+              <!-- Left Node: Cloud Data Storage -->
+              <g transform="translate(100, 100)">
+                <g class="float-box">
+                  <circle cx="0" cy="0" r="22" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" />
+                  <!-- Cloud icon -->
+                  <path d="M -8 2 A 4 4 0 0 1 -4 -4 A 5 5 0 0 1 5 -4 A 4 4 0 0 1 8 2 Z" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+                  <line x1="-8" y1="2" x2="8" y2="2" stroke="#38BDF8" stroke-width="1.5" />
+                </g>
+              </g>
+
+              <!-- Right Node: AI Model / Neural Brain -->
+              <g transform="translate(400, 100)">
+                <g class="float-box">
+                  <circle cx="0" cy="0" r="22" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" />
+                  <!-- Brain / Neural nodes icon -->
+                  <circle cx="-6" cy="-6" r="3" fill="#38BDF8" />
+                  <circle cx="6" cy="-6" r="3" fill="#38BDF8" />
+                  <circle cx="0" cy="6" r="3" fill="#38BDF8" />
+                  <line x1="-4" y1="-4" x2="-1" y2="3" stroke="#38BDF8" stroke-width="1" />
+                  <line x1="4" y1="-4" x2="1" y2="3" stroke="#38BDF8" stroke-width="1" />
+                  <line x1="-3" y1="-6" x2="3" y2="-6" stroke="#38BDF8" stroke-width="1" />
+                </g>
+              </g>
+
+              <!-- Bottom Node: Database -->
+              <g transform="translate(250, 260)">
+                <g class="float-box">
+                  <circle cx="0" cy="0" r="20" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" />
+                  <!-- Database cylinder icon -->
+                  <ellipse cx="0" cy="-6" rx="7" ry="3" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+                  <path d="M -7 -6 L -7 0 A 7 3 0 0 0 7 0 L 7 -6" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+                  <path d="M -7 0 L -7 6 A 7 3 0 0 0 7 6 L 7 0" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+                </g>
+              </g>
+
+              <!-- Connecting Datastreams (Lines) -->
+              <!-- Left to Center -->
+              <path d="M 122 100 L 190 135" stroke="#38BDF8" stroke-width="1.5" fill="none" class="link-line" />
+              <!-- Center to Right -->
+              <path d="M 310 135 L 378 100" stroke="#38BDF8" stroke-width="1.5" fill="none" class="link-line-reverse" />
+              <!-- Center to Bottom -->
+              <path d="M 250 210 L 250 240" stroke="#38BDF8" stroke-width="1.5" fill="none" class="link-line" />
+            </svg>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Vấn đề khách đang gặp -->
+  <section style="padding: 5.5rem 0; background: #FFFFFF;">
+    <div class="container-sdi">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+        <span class="eyebrow-badge">BÀI TOÁN HẠ TẦNG</span>
+        <h2>Khi nào doanh nghiệp cần AI Server riêng?</h2>
+      </div>
+
+      <div class="sdi-stats-grid">
+        <div class="bento-card" style="border: 1px solid var(--sdi-border); padding: 2.25rem;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--sdi-navy-primary);">Dữ liệu không được ra ngoài</h3>
+          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary);">Các ngành tài chính, y tế, sản xuất cơ mật bắt buộc phải tự lưu trữ dữ liệu tại chỗ, không được gửi dữ liệu lên cloud công cộng.</p>
+        </div>
+
+        <div class="bento-card" style="border: 1px solid var(--sdi-border); padding: 2.25rem;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--sdi-navy-primary);">Chi phí Cloud tăng liên tục</h3>
+          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary);">Khi chạy tải tính toán huấn luyện AI liên tục 24/7, chi phí thuê Cloud lâu dài sẽ đắt gấp nhiều lần so với việc sở hữu máy trạm vật lý.</p>
+        </div>
+
+        <div class="bento-card" style="border: 1px solid var(--sdi-border); padding: 2.25rem;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--sdi-navy-primary);">Yêu cầu độ trễ cực thấp</h3>
+          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary);">Xử lý dữ liệu camera giám sát AI, nhận diện phôi hoặc suy luận thời gian thực yêu cầu xử lý tại chỗ không thông qua đường truyền mạng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lợi ích (NavaTek làm gì cho bạn) -->
+  <section style="padding: 5.5rem 0; background: #F8FAFD; border-top: 1px solid #EFF3FA;">
+    <div class="container-sdi">
+      <div class="sdi-split-grid is-footer">
+        
+        <div>
+          <span class="eyebrow-badge">LỢI ÍCH VẬN HÀNH</span>
+          <h2 style="margin-bottom: 2rem;">NavaTek làm gì cho bạn</h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+            <div>
+              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">1. Tư vấn cấu hình theo tải thật</h4>
+              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary);">Đo lường chính xác nhu cầu sử dụng thực tế và tham số mô hình AI trước khi chọn GPU, tránh lãng phí ngân sách đầu tư.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">2. Lắp đặt & nghiệm thu tận nơi</h4>
+              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary);">Chạy thử nghiệm hiệu năng thực tế (benchmark test) trực tiếp cùng khách hàng tại phòng server trước khi tiến hành bàn giao bàn nghiệm thu.</p>
+            </div>
+            <div>
+              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">3. Bảo hành & Hỗ trợ kỹ thuật 24/7</h4>
+              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary);">Cung cấp thiết bị dự phòng thay thế tương đương trong thời gian xử lý sự cố phần cứng, đảm bảo luồng suy luận của doanh nghiệp liên tục.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-white" style="padding: 2rem; align-items: center; justify-content: center;">
+          <img src="/images/combo.png" alt="Isometric rack server GPU AI" class="graphic-blend" style="max-height: 280px;" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cấu hình đề xuất (Ba mức cấu hình) -->
+  <section style="padding: 5.5rem 0; background: #FFFFFF;">
+    <div class="container-sdi">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+        <span class="eyebrow-badge">CẤU HÌNH ĐÁP ỨNG</span>
+        <h2>Ba mức cấu hình AI Server theo quy mô</h2>
+      </div>
+
+      <div class="sdi-stats-grid" style="margin-bottom: 4rem !important;">
+        
+        <!-- Config 1 -->
+        <div class="bento-card bento-card-white" style="padding: 2.5rem; justify-content: space-between; border: 1px solid var(--sdi-border);">
+          <div>
+            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent);">Mức Khởi Đầu</span>
+            <h3 style="font-size: 1.4rem; color: var(--sdi-navy-primary); margin-bottom: 0.75rem;">Workstation 1 GPU</h3>
+            <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem;">Phù hợp nhóm nghiên cứu từ 1-3 người bắt đầu chạy thử nghiệm, tinh chỉnh các mô hình ngôn ngữ vừa và nhỏ.</p>
+          </div>
+          <div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--sdi-orange-cta); margin-bottom: 1rem;">Từ 79.000.000₫</div>
+            <a href="/may-don-le.html" class="sdi-pill-btn-outline" style="width: 100%; justify-content: center; font-size: 0.85rem;">Xem chi tiết cấu hình</a>
+          </div>
+        </div>
+
+        <!-- Config 2 -->
+        <div class="bento-card" style="padding: 2.5rem; justify-content: space-between; border: 2px solid var(--sdi-blue-accent); background: linear-gradient(135deg, #FFFFFF 0%, #EEF4FF 100%);">
+          <div>
+            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.16); color: var(--sdi-blue-accent);">Phổ Biến Nhất</span>
+            <h3 style="font-size: 1.4rem; color: var(--sdi-navy-primary); margin-bottom: 0.75rem;">Server AI 2 GPU</h3>
+            <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem;">Dành cho phòng R&D chuyên nghiệp, huấn luyện (fine-tuning) các mô hình dữ liệu lớn hoặc xử lý hình ảnh.</p>
+          </div>
+          <div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--sdi-orange-cta); margin-bottom: 1rem;">Từ 189.000.000₫</div>
+            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; font-size: 0.85rem;">Xem chi tiết cấu hình</a>
+          </div>
+        </div>
+
+        <!-- Config 3 -->
+        <div class="bento-card bento-card-white" style="padding: 2.5rem; justify-content: space-between; border: 1px solid var(--sdi-border);">
+          <div>
+            <span class="eyebrow-badge" style="background: rgba(16, 185, 129, 0.08); color: #10B981;">Tùy Biến Lớn</span>
+            <h3 style="font-size: 1.4rem; color: var(--sdi-navy-primary); margin-bottom: 0.75rem;">Cluster 4+ GPU</h3>
+            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1.5rem;">Giải pháp cụm máy chủ phân tán hiệu năng cực cao dành cho sản xuất đại trà. Cần khảo sát tư vấn riêng.</p>
+          </div>
+          <div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--sdi-navy-primary); margin-bottom: 1rem;">Liên Hệ Báo Giá</div>
+            <button class="sdi-pill-btn-outline trigger-quote-modal" style="width: 100%; justify-content: center; font-size: 0.85rem;">Liên hệ tư vấn riêng</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bảng so sánh nhanh (Bảng HTML thật, chuẩn SEO) -->
+      <div style="overflow-x: auto; border: 1px solid var(--sdi-border); border-radius: 16px; background: #FFFFFF; box-shadow: var(--sdi-shadow-soft);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.925rem;">
+          <thead>
+            <tr style="background: #F8FAFD; border-bottom: 1px solid var(--sdi-border);">
+              <th style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--sdi-navy-primary);">Thông Số Kỹ Thuật</th>
+              <th style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--sdi-navy-primary);">Phân Khúc 1 GPU</th>
+              <th style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--sdi-navy-primary);">Phân Khúc 2 GPU</th>
+              <th style="padding: 1.25rem 1.5rem; font-weight: 700; color: var(--sdi-navy-primary);">Phân Khúc 4+ GPU</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #EFF3FA;">
+              <td style="padding: 1rem 1.5rem; font-weight: 700;">Dòng GPU</td>
+              <td style="padding: 1rem 1.5rem;">NVIDIA RTX 4090 × 1</td>
+              <td style="padding: 1rem 1.5rem;">NVIDIA RTX 4090 × 2</td>
+              <td style="padding: 1rem 1.5rem;">NVIDIA H100 / RTX 6000 Ada</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #EFF3FA;">
+              <td style="padding: 1rem 1.5rem; font-weight: 700;">RAM Máy Chủ</td>
+              <td style="padding: 1rem 1.5rem;">64 GB ECC DDR5</td>
+              <td style="padding: 1rem 1.5rem;">128 GB ECC DDR5</td>
+              <td style="padding: 1rem 1.5rem;">256 GB ECC DDR5+</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #EFF3FA;">
+              <td style="padding: 1rem 1.5rem; font-weight: 700;">Lưu Trữ SSD</td>
+              <td style="padding: 1rem 1.5rem;">2 TB NVMe Gen5</td>
+              <td style="padding: 1rem 1.5rem;">4 TB NVMe Gen5</td>
+              <td style="padding: 1rem 1.5rem;">Tùy chọn cấu hình riêng</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem 1.5rem; font-weight: 700;">Nhu Cầu Phù Hợp</td>
+              <td style="padding: 1rem 1.5rem;">Thử nghiệm mô hình nhỏ</td>
+              <td style="padding: 1rem 1.5rem;">Huấn luyện mô hình vừa</td>
+              <td style="padding: 1rem 1.5rem;">Tải sản xuất công nghiệp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA cuối trang -->
+  <section style="padding: 5rem 0; background: #F8FAFD; border-top: 1px solid #EFF3FA;">
+    <div class="container-sdi" style="text-align: center; max-width: 720px; margin: 0 auto;">
+      <h3 style="font-size: 1.85rem; color: var(--sdi-navy-primary); margin-bottom: 0.75rem;">Chưa rõ cần cấu hình nào cho đơn vị?</h3>
+      <p style="color: var(--sdi-text-secondary); margin-bottom: 2rem;">Hãy để lại thông tin liên hệ, đội ngũ kỹ sư hạ tầng của NavaTek sẽ liên hệ tư vấn cấu hình chính xác trong vòng 24 giờ làm việc.</p>
+      <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+        <button class="sdi-btn-orange trigger-quote-modal" style="font-size: 1rem;">Nhận báo giá giải pháp</button>
+        <a href="tel:1900628283" class="sdi-pill-btn-outline" style="font-size: 1rem;">Gọi hotline hỗ trợ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+
+  <div class="modal-overlay" id="quote-modal">
+    <div class="modal-box">
+      <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <span class="eyebrow-badge">NAVATEK v3.1</span>
+      <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
+      <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
+      <form id="quote-request-form">
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Họ và tên *</label>
+          <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+        </div>
+        <div class="sdi-form-grid-2" style="margin-bottom: 1.25rem !important;">
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Số điện thoại / Zalo *</label>
+            <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Email</label>
+            <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+        </div>
+        <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem;">
+          <span>Gửi Yêu Cầu Báo Giá</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

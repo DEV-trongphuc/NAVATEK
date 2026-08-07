@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAVATEK — Giải Pháp Hạ Tầng CNTT Tinh Gọn Cho Doanh Nghiệp</title>
+  <meta name="description" content="NavaTek cung cấp Mini PC, AI Server và thiết bị mạng B2B kèm thiết lập tự động hóa, lắp đặt tận nơi.">
+  
+  <!-- Direct Google Fonts for Stable Vietnamese Rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=2.2">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Unified Dark Cyber Header (Matching Wireframe style) -->
+  <header class="sdi-header">
+    
+
+    <div class="sdi-navbar-main">
+      <a href="/" class="sdi-logo">
+        <img src="/images/LOGO.png" alt="NavaTek Logo" style="height: 38px; width: auto; object-fit: contain;">
+        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      </a>
+
+      <!-- Center Nav Menu (5 links matching Wireframe) -->
+      <nav class="sdi-nav-menu">
+        <a href="/nganh-phuc-vu.html" class="sdi-nav-link active">Giải pháp</a>
+        <a href="/may-don-le.html" class="sdi-nav-link">Sản phẩm</a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Dịch vụ</a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Về NavaTek</a>
+        <a href="/du-an.html" class="sdi-nav-link">Liên hệ</a>
+      </nav>
+
+      <!-- Search Box with Search Suggestion -->
+      <div class="sdi-search-wrapper">
+        <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+        <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field">
+        <div class="sdi-suggestion-box" id="search-suggestion-dropdown"></div>
+      </div>
+
+      <!-- Action Button Orange (#E8862E) with Charcoal Text (#16202C) -->
+      <button class="sdi-btn-orange trigger-quote-modal">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="sdi-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
+      <div class="sdi-mobile-drawer-content">
+        <nav class="sdi-mobile-nav-links">
+          <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link active">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Về NavaTek <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+          <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        </nav>
+        
+        <!-- Mobile Search inside Drawer -->
+        <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
+          <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+          <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
+          <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
+        </div>
+
+        <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
+          <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+          <span>Nhận báo giá</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Spacer matching header height (top banner + main navbar) -->
+  <div class="sdi-header-spacer" style="height: 76px;"></div>
+
+  <div class="sdi-page-wrapper">
+
+
+  <!-- ==========================================================================
+       HERO SECTION (DARK BLUE NỀN TỐI #0A1128)
+       ========================================================================== -->
+  <section class="tech-dot-grid-light" style="background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%); color: var(--sdi-text-main); padding: 11rem 0 8rem 0; position: relative; overflow: hidden;">
+    <!-- Ambient radial glow decorators -->
+    <div style="position: absolute; top: -30%; left: -10%; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+    <div style="position: absolute; bottom: -20%; right: -5%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(232,134,46,0.06) 0%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+    
+    <!-- Animated Running Circuit Lines SVG -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.15;">
+      <defs>
+        <linearGradient id="grad-line-1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+          <stop offset="50%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.6" />
+          <stop offset="100%" stop-color="var(--sdi-orange-cta)" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <!-- Circuit track 1 -->
+      <path d="M-100,200 L350,200 L480,320 L1000,320" fill="none" stroke="url(#grad-line-1)" stroke-width="1.5" />
+      <!-- Circuit track 2 -->
+      <path d="M200,-100 L320,150 L320,400 L450,550" fill="none" stroke="url(#grad-line-1)" stroke-width="1.5" />
+      
+      <!-- Animated light packets running along tracks using standard css animations -->
+      <circle r="4" fill="var(--sdi-blue-glow)" style="offset-path: path('M-100,200 L350,200 L480,320 L1000,320'); animation: flow-data 6s linear infinite; filter: drop-shadow(0 0 6px var(--sdi-blue-glow));" />
+      <circle r="4" fill="var(--sdi-blue-accent)" style="offset-path: path('M200,-100 L320,150 L320,400 L450,550'); animation: flow-data 8s linear infinite 3s; filter: drop-shadow(0 0 6px var(--sdi-blue-accent));" />
+    </svg>
+
+    <!-- Floating SVG nodes -->
+    <svg style="position: absolute; top: 15%; left: 5%; opacity: 0.2; animation: sdi-float 8s infinite alternate;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--sdi-navy-primary)" stroke-width="2">
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+    <svg style="position: absolute; bottom: 15%; left: 30%; opacity: 0.15; animation: sdi-float 10s infinite alternate-reverse;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sdi-navy-primary)" stroke-width="2">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+    </svg>
+    
+    <div class="container-sdi" style="position: relative; z-index: 1;">
+      <div class="sdi-split-grid">
+        
+        <div class="sdi-animate-fade-up">
+          <span class="eyebrow-badge eyebrow-badge-orange sdi-animate-fade-up sdi-delay-1" style="background: rgba(37,99,235,0.1); color: var(--sdi-blue-accent);">
+            <i data-lucide="server" style="width: 14px; height: 14px;"></i>
+            <span>HẠ TẦNG CNTT TINH GỌN B2B</span>
+          </span>
+          
+          <h1 style="color: var(--sdi-navy-primary); font-size: 2.85rem; line-height: 1.2; margin-top: 0.5rem; margin-bottom: 1.5rem;" class="sdi-animate-fade-up sdi-delay-2">
+            Hạ tầng CNTT tinh gọn<br><span style="color: var(--sdi-blue-accent);">Đột phá hiệu suất</span> doanh nghiệp
+          </h1>
+          
+          <p style="color: var(--sdi-text-secondary); font-size: 1.1rem; line-height: 1.65; margin-bottom: 2.5rem; max-width: 600px;" class="sdi-animate-fade-up sdi-delay-3">
+            NavaTek cung cấp Mini PC hiệu năng cao, trạm AI Server local và thiết bị mạng phân phối chính hãng kèm lắp đặt tận nơi cho doanh nghiệp, trường học.
+          </p>
+
+          <div style="display: flex; gap: 1rem; align-items: center;" class="sdi-animate-fade-up sdi-delay-3">
+            <button class="sdi-btn-orange trigger-quote-modal" style="font-size: 1rem;">Nhận báo giá</button>
+            <a href="/nganh-phuc-vu.html" class="sdi-pill-btn-outline" style="border: 2px solid var(--sdi-navy-primary); color: var(--sdi-navy-primary); padding: 0.75rem 1.85rem; border-radius: 9999px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s;">
+              <span>Xem giải pháp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wireframe style illustration placeholder (BOD Requirement) -->
+        <div class="sdi-animate-fade-up sdi-delay-2 hero-floating-graphic">
+          <div class="wireframe-box-dashed" style="position: relative; min-height: 360px; overflow: hidden; border-color: rgba(0, 51, 102, 0.12); background: rgba(255, 255, 255, 0.65);">
+            
+            <!-- Video background inside placeholder -->
+            <video autoplay muted loop playsinline poster="/images/b2b_it_hero.png" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.06; pointer-events: none;"></video>
+            
+            <div style="position: relative; z-index: 2; text-align: center; padding: 2.5rem 2rem;">
+              <img src="/images/b2b_it_hero.png" alt="NavaTek 3D IT Infrastructure" class="graphic-blend" style="max-height: 240px; margin-bottom: 1.25rem; filter: drop-shadow(0 20px 40px rgba(0, 51, 102, 0.15));">
+              <i data-lucide="play-circle" style="width: 36px; height: 36px; color: rgba(0, 51, 102, 0.3); margin-bottom: 0.5rem; display: inline-block;"></i>
+              <div style="font-size: 0.8rem; color: var(--sdi-text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">HỆ SINH THÁI TÍNH TOÁN CỤC BỘ</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 1: CON SỐ UY TÍN + KHÁCH HÀNG TIÊU BIỂU (DARK BACKGROUND COHESIVE FOLD)
+       ========================================================================== -->
+  <section style="padding: 5.5rem 0; background: #FFFFFF; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; position: relative; z-index: 2;">
+    <div class="container-sdi">
+      
+
+      <div class="sdi-split-grid reveal-on-scroll">
+        
+        <!-- Left: Large stats -->
+        <div class="sdi-stats-grid">
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; color: var(--sdi-navy-primary); line-height: 1;" class="count-up" data-target="50">50+</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Dự án đã triển khai</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; color: var(--sdi-navy-primary); line-height: 1;" class="count-up" data-target="1000">1.000+</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Mini PC đã cung cấp</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; color: var(--sdi-navy-primary); line-height: 1;">24/7</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Hỗ trợ kỹ thuật tận nơi</div>
+          </div>
+        </div>
+
+        <!-- Right: Client logos (Horizontal) -->
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--sdi-text-muted); display: block; margin-bottom: 1.25rem; letter-spacing: 0.05em;">Đã tin dùng dịch vụ NavaTek</span>
+          <div class="sdi-logos-grid">
+            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">EVN HCM</div>
+            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">HÒA PHÁT</div>
+            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">NAM TRIỆU</div>
+            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">ĐH BÁCH KHOA</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: GIẢI PHÁP & SẢN PHẨM CỐT LÕI (SDI CLONE BENTO GRID REMIX)
+       ========================================================================== -->
+  <section class="section home-solutions">
+    <div class="container-sdi">
+      <div class="home-solutions-wr">
+        <div class="head-section" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <div class="section-head-title-cont">
+            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.15); padding: 0.4rem 1rem;">OUR SOLUTIONS</span>
+          </div>
+          <div class="section-head-right">
+            <h2 class="home-solutions-item-title" style="font-size: 2.8rem; line-height: 1.15;">Your Priorities, Our Solutions</h2>
+          </div>
+        </div>
+
+        <div class="home-solutions-grid reveal-on-scroll delay-1">
+          <!-- Card 1: Vận hành IT Trọn gói (is-big) -->
+          <a id="w-node-cecfff72-2a57-d473-5de6-8d0c457beeff-457beef4" href="/dich-vu-bao-tri.html" class="home-solutions-item is-big w-inline-block">
+            <div class="home-solutions-item-wr">
+              <div class="home-solutions-item-head">
+                <div class="home-solutions-item-icon w-embed">
+                  <svg fill="none" height="100%" viewbox="0 0 57 56" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.1693 41.4766H10.2726C9.48015 41.4766 8.83771 42.1279 8.83771 42.9313V47.5936C8.83771 48.397 9.48015 49.0483 10.2726 49.0483H18.1693C18.9618 49.0483 19.6042 48.397 19.6042 47.5936V42.9313C19.6042 42.1279 18.9618 41.4766 18.1693 41.4766Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M46.5205 41.4766H38.6238C37.8313 41.4766 37.1889 42.1279 37.1889 42.9313V47.5936C37.1889 48.397 37.8313 49.0483 38.6238 49.0483H46.5205C47.3129 49.0483 47.9554 48.397 47.9554 47.5936V42.9313C47.9554 42.1279 47.3129 41.4766 46.5205 41.4766Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M32.3404 41.4766H24.4438C23.6513 41.4766 23.0089 42.1279 23.0089 42.9313V47.5936C23.0089 48.397 23.6513 49.0483 24.4438 49.0483H32.3404C33.1329 49.0483 33.7753 48.397 33.7753 47.5936V42.9313C33.7753 42.1279 33.1329 41.4766 32.3404 41.4766Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M37.0909 6.95215H19.7023C18.9098 6.95215 18.2673 7.60345 18.2673 8.40687V16.4123C18.2673 17.2157 18.9098 17.867 19.7023 17.867H37.0909C37.8834 17.867 38.5258 17.2157 38.5258 16.4123V8.40687C38.5258 7.60345 37.8834 6.95215 37.0909 6.95215Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M42.5721 32.405C43.8371 32.405 44.8627 31.3653 44.8627 30.0829C44.8627 28.8004 43.8371 27.7607 42.5721 27.7607C41.3071 27.7607 40.2816 28.8004 40.2816 30.0829C40.2816 31.3653 41.3071 32.405 42.5721 32.405Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M42.5721 32.4863V41.811" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M28.3921 32.405C29.6572 32.405 30.6827 31.3653 30.6827 30.0829C30.6827 28.8004 29.6572 27.7607 28.3921 27.7607C27.1271 27.7607 26.1016 28.8004 26.1016 30.0829C26.1016 31.3653 27.1271 32.405 28.3921 32.405Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M28.3921 32.4863V41.811" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M28.3921 18.1465V27.4711" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M25.7272 30.083H16.5294" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M39.8983 30.083H30.7094" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M35.032 10.3125H21.761" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M32.7682 13.584H24.0249" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M14.221 32.405C15.486 32.405 16.5115 31.3653 16.5115 30.0829C16.5115 28.8004 15.486 27.7607 14.221 27.7607C12.9559 27.7607 11.9304 28.8004 11.9304 30.0829C11.9304 31.3653 12.9559 32.405 14.221 32.405Z" stroke="currentColor" stroke-miterlimit="10"></path>
+                    <path d="M14.2209 32.4863V41.811" stroke="currentColor" stroke-miterlimit="10"></path>
+                  </svg>
+                </div>
+                <h4 class="home-solutions-item-title">Vận hành IT Trọn gói</h4>
+              </div>
+              <p class="text-size-regular-16 t-c-grey" style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.6;">
+                Dịch vụ quản trị hạ tầng CNTT toàn diện cho doanh nghiệp mọi quy mô. Khảo sát thiết bị, cài đặt hệ thống mạng và hỗ trợ kỹ thuật on-site tận nơi.
+              </p>
+            </div>
+            <!-- Beautiful background gradient overlay -->
+            <div class="home-solutions-item-grad is-top"></div>
+          </a>
+
+          <!-- Card 2: Trạm AI & Máy chủ Cục bộ -->
+          <a id="w-node-cecfff72-2a57-d473-5de6-8d0c457bef0b-457beef4" href="/may-don-le.html" class="home-solutions-item w-inline-block">
+            <div class="home-solutions-item-wr">
+              <div class="home-solutions-item-head is-horizontal">
+                <div class="home-solutions-item-icon w-embed">
+                  <svg fill="none" height="100%" viewbox="0 0 56 56" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M42.9522 42.1735C44.1792 42.1735 45.174 41.1905 45.174 39.9779C45.174 38.7652 44.1792 37.7822 42.9522 37.7822C41.7252 37.7822 40.7305 38.7652 40.7305 39.9779C40.7305 41.1905 41.7252 42.1735 42.9522 42.1735Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M31.8428 47.5644C33.0699 47.5644 34.0646 46.5814 34.0646 45.3687C34.0646 44.1561 33.0699 43.1731 31.8428 43.1731C30.6158 43.1731 29.6211 44.1561 29.6211 45.3687C29.6211 46.5814 30.6158 47.5644 31.8428 47.5644Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M24.1671 47.5644C25.3941 47.5644 26.3888 46.5814 26.3888 45.3687C26.3888 44.1561 25.3941 43.1731 24.1671 43.1731C22.94 43.1731 21.9453 44.1561 21.9453 45.3687C21.9453 46.5814 22.94 47.5644 24.1671 47.5644Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M13.0499 42.1735C14.2769 42.1735 15.2716 41.1905 15.2716 39.9779C15.2716 38.7652 14.2769 37.7822 13.0499 37.7822C11.8228 37.7822 10.8281 38.7652 10.8281 39.9779C10.8281 41.1905 11.8228 42.1735 13.0499 42.1735Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M31.8438 43.1729V31.6821" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M36.1289 31.6821V39.9777H40.728" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M19.8764 31.6821V39.9777H15.2773" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M24.1641 43.1729V31.6821" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M28.6367 31.6823H39.6244C44.0074 31.6823 47.5777 28.1624 47.5777 23.8309C47.5777 19.4994 44.016 15.971 39.6244 15.971C39.5466 15.971 39.4688 15.971 39.3997 15.971C39.2354 11.7848 35.7342 8.42725 31.455 8.42725C28.291 8.42725 25.4641 10.2726 24.1933 13.0834C23.3979 12.7075 22.5162 12.511 21.6257 12.511C18.9372 12.511 16.6117 14.2794 15.8942 16.7912C11.7705 16.8339 8.43359 20.1573 8.43359 24.241C8.43359 28.3247 11.8138 31.6908 15.972 31.6908H28.6367V31.6823Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M25.6026 22.4211H21.1418C20.3731 22.4211 19.75 23.037 19.75 23.7966V28.205C19.75 28.9647 20.3731 29.5805 21.1418 29.5805H25.6026C26.3713 29.5805 26.9944 28.9647 26.9944 28.205V23.7966C26.9944 23.037 26.3713 22.4211 25.6026 22.4211Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M34.8604 22.4211H30.3996C29.631 22.4211 29.0078 23.037 29.0078 23.7966V28.205C29.0078 28.9647 29.631 29.5805 30.3996 29.5805H34.8604C35.6291 29.5805 36.2522 28.9647 36.2522 28.205V23.7966C36.2522 23.037 35.6291 22.4211 34.8604 22.4211Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M34.8604 13.1602H30.3996C29.631 13.1602 29.0078 13.776 29.0078 14.5356V18.944C29.0078 19.7037 29.631 20.3195 30.3996 20.3195H34.8604C35.6291 20.3195 36.2522 19.7037 36.2522 18.944V14.5356C36.2522 13.776 35.6291 13.1602 34.8604 13.1602Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                  </svg>
+                </div>
+                <h4 class="home-solutions-item-title">Trạm AI & Máy chủ Cục bộ</h4>
+              </div>
+              <p class="text-size-regular-16 t-c-grey" style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.6; max-width: 580px;">
+                Cung cấp máy chủ chuyên dụng hỗ trợ chạy Local LLM, Stable Diffusion bảo mật. Đảm bảo dữ liệu kinh doanh được tính toán hoàn toàn offline.
+              </p>
+            </div>
+            <div class="home-solutions-item-grad is-1"></div>
+          </a>
+
+          <!-- Card 3: Nâng cấp RAM & SSD Đồng bộ -->
+          <a id="w-node-cecfff72-2a57-d473-5de6-8d0c457bef15-457beef4" href="/may-don-le.html" class="home-solutions-item w-inline-block">
+            <div class="home-solutions-item-wr">
+              <div class="home-solutions-item-head">
+                <div class="home-solutions-item-icon w-embed">
+                  <svg fill="none" height="100%" viewbox="0 0 57 56" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.2982 48.5003V44.7092C35.9698 43.5718 36.9522 41.6683 36.9126 39.6464V34.1176C36.9284 33.0355 36.057 32.1588 34.9716 32.1509C34.7181 32.1509 34.4646 32.1983 34.2269 32.2931C33.9971 31.4401 33.2208 30.8477 32.3335 30.8398C32.0799 30.8398 31.8343 30.8872 31.6046 30.982C31.3432 29.9473 30.2895 29.3233 29.2517 29.5919C29.1883 29.6076 29.1249 29.6313 29.0615 29.655V25.6111C29.0615 24.5291 28.1821 23.6523 27.0968 23.6523C26.0114 23.6523 25.132 24.5291 25.132 25.6111V36.3054L24.8389 35.9816C24.8389 35.9816 24.7914 35.9263 24.7597 35.9026C23.706 35.0812 22.177 35.2628 21.3531 36.3212C20.6559 37.2058 20.6638 38.4616 21.3768 39.3383L24.5458 44.0536C24.5458 44.0536 24.5933 44.1247 24.625 44.1563C25.037 44.567 25.5123 44.9224 26.0352 45.1989V48.5003" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M11.3392 34.0465C12.7481 34.0465 13.8902 32.9078 13.8902 31.5032C13.8902 30.0986 12.7481 28.96 11.3392 28.96C9.93033 28.96 8.78821 30.0986 8.78821 31.5032C8.78821 32.9078 9.93033 34.0465 11.3392 34.0465Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M45.445 12.981C46.8539 12.981 47.996 11.8424 47.996 10.4378C47.996 9.03318 46.8539 7.89453 45.445 7.89453C44.0361 7.89453 42.894 9.03318 42.894 10.4378C42.894 11.8424 44.0361 12.981 45.445 12.981Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M14.5953 12.6019C15.7985 12.6019 16.7739 11.6294 16.7739 10.4298C16.7739 9.23026 15.7985 8.25781 14.5953 8.25781C13.392 8.25781 12.4166 9.23026 12.4166 10.4298C12.4166 11.6294 13.392 12.6019 14.5953 12.6019Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M43.4802 31.1234C44.6835 31.1234 45.6589 30.1509 45.6589 28.9513C45.6589 27.7517 44.6835 26.7793 43.4802 26.7793C42.277 26.7793 41.3016 27.7517 41.3016 28.9513C41.3016 30.1509 42.277 31.1234 43.4802 31.1234Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M24.6488 22.3887C24.6488 21.046 25.7421 19.9561 27.0889 19.9561C28.4357 19.9561 29.529 21.046 29.529 22.3887" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M32.1433 26.1555L32.8881 24.876C33.094 24.5284 33.1416 24.1177 33.0386 23.7307C32.9356 23.3437 32.6821 23.012 32.3335 22.8145L31.9374 22.5855C31.9374 22.5223 31.9374 22.4591 31.9374 22.3959C31.9374 22.3327 31.9374 22.2695 31.9374 22.2063L32.3335 21.9773C32.6821 21.7719 32.9356 21.4481 33.0386 21.0611C33.1416 20.6741 33.0861 20.2634 32.8881 19.9158L32.1433 18.6363C31.9374 18.2888 31.6126 18.036 31.2244 17.9334C30.8362 17.8307 30.4242 17.886 30.0756 18.0834L29.6795 18.3125C29.5686 18.2414 29.4577 18.1782 29.3468 18.1229V17.6648C29.3468 16.8355 28.6654 16.1562 27.8336 16.1562H26.3521C25.5203 16.1562 24.8389 16.8355 24.8389 17.6648V18.1229C24.728 18.1861 24.6171 18.2493 24.5062 18.3125L24.1101 18.0834C23.3891 17.6648 22.4622 17.9176 22.0423 18.6363L21.2976 19.9158C21.0917 20.2634 21.0441 20.6741 21.1471 21.0611C21.2501 21.4481 21.5036 21.7798 21.8522 21.9773L22.2483 22.2063C22.2483 22.3327 22.2483 22.3327 22.2483 22.3959C22.2483 22.4591 22.2483 22.5223 22.2483 22.5855L21.8522 22.8145C21.1313 23.2331 20.8778 24.1572 21.2976 24.876L22.0423 26.1555" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M41.3016 13.0605L34.5359 17.6337" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M18.1683 12.9736L23.1673 16.3462" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M14.7775 29.3706L20.3628 25.4609" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M40.438 27.5535L35.439 24.0625" stroke="currentcolor" stroke-miterlimit="10"></path>
+                  </svg>
+                </div>
+                <h4 class="home-solutions-item-title">Nâng cấp RAM & SSD Đồng bộ</h4>
+              </div>
+              <p class="text-size-regular-16 t-c-grey" style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                Nâng cấp RAM, SSD hiệu năng cao đồng loạt cho hệ thống máy văn phòng, trường học. Tối ưu năng suất và kéo dài vòng đời phần cứng.
+              </p>
+            </div>
+            <!-- Gradient Graphic -->
+            <div class="home-solutions-item-grad"></div>
+          </a>
+
+          <!-- Card 4: Tự động hóa Lark & Sapo -->
+          <a id="w-node-cecfff72-2a57-d473-5de6-8d0c457bef21-457beef4" href="/nganh-phuc-vu.html" class="home-solutions-item w-inline-block">
+            <div class="home-solutions-item-wr">
+              <div class="home-solutions-item-head">
+                <div class="home-solutions-item-icon w-embed">
+                  <svg fill="none" height="100%" viewbox="0 0 57 56" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M41.3882 13.1542C42.6997 13.1542 43.7629 12.1081 43.7629 10.8178C43.7629 9.52747 42.6997 8.48145 41.3882 8.48145C40.0767 8.48145 39.0135 9.52747 39.0135 10.8178C39.0135 12.1081 40.0767 13.1542 41.3882 13.1542Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M45.5554 21.0272C46.8669 21.0272 47.9301 19.9812 47.9301 18.6909C47.9301 17.4005 46.8669 16.3545 45.5554 16.3545C44.2439 16.3545 43.1807 17.4005 43.1807 18.6909C43.1807 19.9812 44.2439 21.0272 45.5554 21.0272Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M43.2824 18.6904H29.1082" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M39.0135 34.4637C40.325 34.4637 41.3882 33.4177 41.3882 32.1274C41.3882 30.837 40.325 29.791 39.0135 29.791C37.702 29.791 36.6388 30.837 36.6388 32.1274C36.6388 33.4177 37.702 34.4637 39.0135 34.4637Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M45.4445 31.0634C46.756 31.0634 47.8192 30.0173 47.8192 28.727C47.8192 27.4367 46.756 26.3906 45.4445 26.3906C44.133 26.3906 43.0698 27.4367 43.0698 28.727C43.0698 30.0173 44.133 31.0634 45.4445 31.0634Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M36.7312 32.1271H22.5663C18.1865 32.1271 16.3293 31.5725 16.3293 27.7998" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M39.0135 48.5458C40.325 48.5458 41.3882 47.4997 41.3882 46.2094C41.3882 44.9191 40.325 43.873 39.0135 43.873C37.702 43.873 36.6388 44.9191 36.6388 46.2094C36.6388 47.4997 37.702 48.5458 39.0135 48.5458Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M42.5524 41.0458C43.8639 41.0458 44.9271 39.9997 44.9271 38.7094C44.9271 37.4191 43.8639 36.373 42.5524 36.373C41.2409 36.373 40.1777 37.4191 40.1777 38.7094C40.1777 39.9997 41.2409 41.0458 42.5524 41.0458Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M40.2701 38.709H28.8772" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M39.5864 12.3818L36.722 15.1091H29.1082" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M43.9846 26.8181L40.3163 23.0908H29.1082" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M37.4889 44.7732L34.1902 41.0459H29.1082" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M28.8033 42.3543C28.7848 45.3907 26.2715 47.8271 23.1853 47.8089C20.1361 47.7907 17.6691 45.3634 17.6413 42.3634V42.3361C17.6413 42.0271 17.3919 41.7725 17.0777 41.7543C14.4997 41.6271 12.5224 39.4634 12.661 36.9361C12.6795 36.5271 12.7534 36.1271 12.8827 35.7452C12.9659 35.4998 12.8735 35.2271 12.6517 35.0816C8.70626 32.4634 7.67137 27.1998 10.3233 23.318C10.9978 22.3271 11.8848 21.4907 12.9105 20.8634C13.1692 20.7089 13.2616 20.3816 13.1322 20.1089C11.9957 17.8361 12.9567 15.0816 15.2667 13.9725C15.8303 13.6998 16.4494 13.5452 17.0869 13.5089C17.4011 13.4907 17.6506 13.2361 17.6506 12.9271V12.8998C17.6783 9.86342 20.2008 7.42706 23.2777 7.45433C26.327 7.4816 28.794 9.90887 28.8125 12.9089V42.3543H28.8033Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M19.7203 14.3728C19.7203 12.591 21.1895 11.1455 23.0005 11.1455C24.8116 11.1455 26.2807 12.591 26.2807 14.3728" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M20.0622 18.3633C22.2983 18.3633 24.1093 20.1451 24.1093 22.3451C24.1093 24.5451 22.2983 26.3269 20.0622 26.3269" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M23.0098 45.1003C21.1987 45.1003 19.7296 43.6549 19.7296 41.873" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M17.9185 38.5359C16.4679 38.5359 15.2944 37.3814 15.2944 35.9541" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M11.8201 28.1641C11.8201 24.855 14.5459 22.1641 17.9185 22.1641" stroke="currentcolor" stroke-miterlimit="10"></path>
+                  </svg>
+                </div>
+                <h4 class="home-solutions-item-title">Tự động hóa Lark & Sapo</h4>
+              </div>
+              <p class="text-size-regular-16 t-c-grey" style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                Đồng bộ dữ liệu đơn hàng, cào dữ liệu qua trạm Apify và tự động hóa luồng báo cáo trực tiếp lên Lark Suite, Sapo.
+              </p>
+            </div>
+            <div class="home-solutions-item-grad"></div>
+          </a>
+
+          <!-- Card 5: Hạ tầng Mạng & Bảo mật B2B -->
+          <a id="w-node-cecfff72-2a57-d473-5de6-8d0c457bef2f-457beef4" href="/may-don-le.html" class="home-solutions-item w-inline-block">
+            <div class="home-solutions-item-wr">
+              <div class="home-solutions-item-head">
+                <div class="home-solutions-item-icon w-embed">
+                  <svg fill="none" height="100%" viewbox="0 0 56 56" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_5819_37498)">
+                      <path d="M30.3982 43.2039H15.8301" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M43.6426 41.2256H34.168" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M43.6426 14.7981H38.2285" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M37.9318 36.7244H8.29688" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M23.115 32.4836C15.9556 29.7354 15.166 23.8481 15.166 21.3961V17.6351L23.109 13.6372L31.0639 17.6351V21.3961C31.0639 23.8422 30.2744 29.7354 23.115 32.4836Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M18.918 22.2371L22.1949 25.5065L27.3003 20.4128" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M26.077 39.2061H20.1523V43.204H26.077V39.2061Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M46.593 12.7961H35.2781C34.6666 12.7961 34.168 13.2937 34.168 13.9037V18.1148H36.8216C37.433 18.1148 37.9317 18.6123 37.9317 19.2224V38.1043C37.9317 38.7144 37.433 39.2119 36.8216 39.2119H34.168V42.1022C34.168 42.7123 34.6666 43.2098 35.2781 43.2098H46.593C47.2045 43.2098 47.7031 42.7123 47.7031 42.1022V13.9037C47.7031 13.2937 47.2045 12.7961 46.593 12.7961Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                      <path d="M36.8217 18.1147H31.0633V21.396C31.0633 23.8421 30.2737 29.7353 23.1143 32.4835C15.9549 29.7353 15.1654 23.848 15.1654 21.396V18.1147H9.407C8.79554 18.1147 8.29688 18.6123 8.29688 19.2223V38.1042C8.29688 38.7143 8.79554 39.2118 9.407 39.2118H36.8217C37.4331 39.2118 37.9318 38.7143 37.9318 38.1042V19.2223C37.9318 18.6123 37.4331 18.1147 36.8217 18.1147Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    </g>
+                    <defs>
+                      <clippath id="clip0_5819_37498">
+                        <rect fill="white" height="31" transform="translate(8 12.5)" width="40"></rect>
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+                <h4 class="home-solutions-item-title">Hạ tầng Mạng & Bảo mật B2B</h4>
+              </div>
+              <p class="text-size-regular-16 t-c-grey" style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                Tích hợp tường lửa chịu tải cao pfSense/MikroTik, thiết bị định tuyến chuyên dụng và camera an ninh AI bảo vệ doanh nghiệp.
+              </p>
+            </div>
+            <div class="home-solutions-item-grad is-2"></div>
+          </a>
+
+          <!-- Card 6: Tư vấn & Khảo sát Hạ tầng -->
+          <a id="w-node-_8227f528-cd3c-d0a3-6ff5-9ea092ed4ac8-457beef4" href="/du-an.html" class="home-solutions-item w-inline-block">
+            <div class="home-solutions-item-wr">
+              <div class="home-solutions-item-head">
+                <div class="home-solutions-item-icon w-embed">
+                  <svg fill="none" height="100%" viewbox="0 0 57 56" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6443 26.4028C17.8062 26.4028 18.7482 25.448 18.7482 24.2702C18.7482 23.0925 17.8062 22.1377 16.6443 22.1377C15.4823 22.1377 14.5403 23.0925 14.5403 24.2702C14.5403 25.448 15.4823 26.4028 16.6443 26.4028Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M23.431 21.1664C24.593 21.1664 25.535 20.2117 25.535 19.0339C25.535 17.8561 24.593 16.9014 23.431 16.9014C22.269 16.9014 21.327 17.8561 21.327 19.0339C21.327 20.2117 22.269 21.1664 23.431 21.1664Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M30.0376 24.5854C31.1996 24.5854 32.1416 23.6306 32.1416 22.4529C32.1416 21.2751 31.1996 20.3203 30.0376 20.3203C28.8756 20.3203 27.9337 21.2751 27.9337 22.4529C27.9337 23.6306 28.8756 24.5854 30.0376 24.5854Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M37.1927 20.6186C38.3547 20.6186 39.2967 19.6638 39.2967 18.4861C39.2967 17.3083 38.3547 16.3535 37.1927 16.3535C36.0307 16.3535 35.0887 17.3083 35.0887 18.4861C35.0887 19.6638 36.0307 20.6186 37.1927 20.6186Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M21.8674 20.2627L18.298 23.2001" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M28.2447 21.6152L25.2811 20.0801" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M35.3262 19.4902L31.8796 21.4651" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M18.1588 30.0576H15.1871C14.6671 30.0576 14.2456 30.4848 14.2456 31.0119V34.024C14.2456 34.551 14.6671 34.9782 15.1871 34.9782H18.1588C18.6788 34.9782 19.1003 34.551 19.1003 34.024V31.0119C19.1003 30.4848 18.6788 30.0576 18.1588 30.0576Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M24.9209 24.9053H21.9492C21.4292 24.9053 21.0077 25.3325 21.0077 25.8595V34.0246C21.0077 34.5516 21.4292 34.9788 21.9492 34.9788H24.9209C25.4409 34.9788 25.8624 34.5516 25.8624 34.0246V25.8595C25.8624 25.3325 25.4409 24.9053 24.9209 24.9053Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M31.5849 28.4561H28.6131C28.0931 28.4561 27.6716 28.8833 27.6716 29.4103V34.0239C27.6716 34.5509 28.0931 34.9781 28.6131 34.9781H31.5849C32.1048 34.9781 32.5263 34.5509 32.5263 34.0239V29.4103C32.5263 28.8833 32.1048 28.4561 31.5849 28.4561Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M38.2488 24.5645H35.277C34.7571 24.5645 34.3356 24.9917 34.3356 25.5187V34.024C34.3356 34.551 34.7571 34.9782 35.277 34.9782H38.2488C38.7688 34.9782 39.1903 34.551 39.1903 34.024V25.5187C39.1903 24.9917 38.7688 24.5645 38.2488 24.5645Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M42.9971 39.0153H37.1927V45.6536L28.7441 39.0153H10.3078C9.47273 39.0153 8.80142 38.3266 8.80142 37.4885V14.9682C8.80142 14.1218 9.48091 13.4414 10.3078 13.4414H42.9971C43.8321 13.4414 44.5034 14.1301 44.5034 14.9682V37.4802C44.5034 38.3266 43.8239 39.007 42.9971 39.007V39.0153Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                    <path d="M46.4764 9.91504H13.7871C12.9521 9.91504 12.2808 10.6038 12.2808 11.4418V13.4333H42.9971C43.8321 13.4333 44.5034 14.122 44.5034 14.9601V35.4806H46.4682C47.3033 35.4806 47.9746 34.7919 47.9746 33.9538V11.4418C47.9746 10.5955 47.2951 9.91504 46.4682 9.91504H46.4764Z" stroke="currentcolor" stroke-miterlimit="10"></path>
+                  </svg>
+                </div>
+                <h4 class="home-solutions-item-title">Tư vấn & Khảo sát Hạ tầng</h4>
+              </div>
+              <p class="text-size-regular-16 t-c-grey" style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.5;">
+                Khảo sát mặt bằng tận nơi và thiết lập sơ đồ hạ tầng CNTT tối ưu hóa chi phí đầu tư phần cứng ban đầu.
+              </p>
+            </div>
+            <div class="home-solutions-item-grad is-3"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2C: THỐNG KÊ UY TÍN (SDI CLONE SUPPORT STATS REMIX)
+       ========================================================================== -->
+  <div class="section solutions-support reveal-on-scroll tech-dot-grid-dark" style="background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #060B1E 100%) !important; background-size: 28px 28px, auto !important; background-color: #060B1E !important; position: relative;">
+    <!-- Radial glow decorators for depth -->
+    <div style="position: absolute; top: -30%; right: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+    <div style="position: absolute; bottom: -20%; left: 5%; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+
+    <!-- Animated Running Circuit Lines SVG (Bảng điện) -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.15;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad-line-support" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+          <stop offset="50%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.6" />
+          <stop offset="100%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <!-- Circuit track 1 -->
+      <path d="M-100,150 L400,150 L550,270 L1200,270" fill="none" stroke="url(#grad-line-support)" stroke-width="1.5" />
+      <!-- Circuit track 2 -->
+      <path d="M300,-100 L420,120 L420,300 L600,450" fill="none" stroke="url(#grad-line-support)" stroke-width="1.5" />
+      
+      <!-- Animated light packets -->
+      <circle r="4" fill="var(--sdi-blue-glow)" style="offset-path: path('M-100,150 L400,150 L550,270 L1200,270'); animation: flow-data 6s linear infinite; filter: drop-shadow(0 0 6px var(--sdi-blue-glow));" />
+      <circle r="4" fill="var(--sdi-blue-accent)" style="offset-path: path('M300,-100 L420,120 L420,300 L600,450'); animation: flow-data 8s linear infinite 3s; filter: drop-shadow(0 0 6px var(--sdi-blue-accent));" />
+    </svg>
+
+    <div class="container-sdi" style="position: relative; z-index: 2;">
+      <div class="support-content-title-wrapper solution-content-title-wrapper">
+        <div class="support-content-title-head-wrapper solution-content-title-head-wrapper">
+          <h2 class="heading-sky-blue-gradient">Đối tác tin cậy cho các dự án hạ tầng công nghệ cốt lõi</h2>
+        </div>
+      </div>
+      <div class="home-why-wr">
+        <div class="home-why-wr-left">
+          <p class="text-size-regular-16 t-c-sky-blue" style="color: #94A3B8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+            Với năng lực cung cấp phần cứng chính hãng và đội ngũ kỹ sư lành nghề, NavaTek đồng hành thiết lập môi trường tính toán cục bộ bảo mật cao và vận hành êm ái cho hàng chục doanh nghiệp, trường học tại TP.HCM.
+          </p>
+          <div class="support-button-wr">
+            <button class="sdi-btn-orange trigger-quote-modal" style="font-size: 0.9rem; padding: 0.75rem 2rem;">
+              <span>Về NavaTek</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="home-why-grid">
+          <div class="divider-v"></div>
+          <div class="home-why-grid-item">
+            <div class="home-why-grid-item-head">
+              <div class="home-why-grid-item-title">Chỉ số hài lòng (CSAT)</div>
+            </div>
+            <div class="home-why-grid-item-cont">
+              <h2 class="home-why-item-title">98%</h2>
+            </div>
+          </div>
+          
+          <div class="divider-v"></div>
+          <div class="home-why-grid-item">
+            <div class="home-why-grid-item-head">
+              <div class="home-why-grid-item-title">Doanh nghiệp đã triển khai</div>
+            </div>
+            <div class="home-why-grid-item-cont">
+              <h2 class="home-why-item-title">50+</h2>
+            </div>
+          </div>
+          
+          <div class="divider-v"></div>
+          <div class="home-why-grid-item">
+            <div class="home-why-grid-item-head">
+              <div class="home-why-grid-item-title">Thiết bị đã bàn giao</div>
+            </div>
+            <div class="home-why-grid-item-cont">
+              <h2 class="home-why-item-title">1.000+</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GÓI SETUP TRỌN GÓI (INTEGRATED STEPS & ILLUSTRATION)
+       ========================================================================== -->
+  <section style="padding: 6.5rem 0; background: #FFFFFF; border-top: 1px solid var(--sdi-border); position: relative;">
+    <div class="container-sdi">
+      
+
+      <div class="sdi-split-grid is-reversed">
+        
+        <!-- Left: Wireframe style illustration placeholder -->
+        <div>
+          <div class="wireframe-box-dashed-dark" style="position: relative; min-height: 420px; overflow: visible; display: flex; align-items: center; justify-content: center; background: rgba(0, 51, 102, 0.02); flex-direction: column; padding: 2rem 1rem;">
+            
+            <svg width="100%" height="380" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto; max-height: 380px;">
+              <style>
+                .office-flow {
+                  stroke-dasharray: 8 6;
+                  animation: office-dash 1.8s linear infinite;
+                }
+                @keyframes office-dash {
+                  to { stroke-dashoffset: -28; }
+                }
+                .office-float {
+                  animation: office-float-y 5s ease-in-out infinite alternate;
+                }
+                @keyframes office-float-y {
+                  0% { transform: translateY(0); }
+                  100% { transform: translateY(-8px); }
+                }
+                .glow-blue {
+                  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.65));
+                }
+                .glow-green {
+                  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.65));
+                }
+              </style>
+
+              <!-- Central Mini PC Node (Isometric 3D - Enlarged to max) -->
+              <g transform="translate(250, 200)">
+                <g class="office-float">
+                  <!-- Base Plate Shadow -->
+                  <ellipse cx="0" cy="38" rx="80" ry="16" fill="rgba(0, 51, 102, 0.18)" />
+                  <!-- Left Face -->
+                  <path d="M -75 -15 L 0 18 L 0 38 L -75 5 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Right Face -->
+                  <path d="M 75 -15 L 0 18 L 0 38 L 75 5 Z" fill="#161E2D" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Top Face -->
+                  <path d="M 0 -38 L 75 -15 L 0 18 L -75 -15 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="2.5" class="glow-blue" />
+                  
+                  <!-- Front Details: USB Ports & Power Led -->
+                  <path d="M 18 20 L 26 16 L 26 22 L 18 26 Z" fill="#38BDF8" />
+                  <path d="M 36 12 L 44 8 L 44 14 L 36 18 Z" fill="#38BDF8" />
+                  <!-- Power LED -->
+                  <circle cx="-35" cy="2" r="5" fill="#10B981" class="glow-green" />
+                  <!-- Text label -->
+                  <text x="0" y="60" fill="var(--sdi-navy-primary)" font-size="10.5" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.05em">CENTRAL MINI PC</text>
+                </g>
+              </g>
+
+              <!-- Top Left Node: Isometric Monitor Display (Exact 20:9 Aspect Ratio) -->
+              <g transform="translate(90, 75)">
+                <g class="office-float" style="animation-delay: -1s;">
+                  <!-- Stand Shadow -->
+                  <ellipse cx="0" cy="50" rx="35" ry="8" fill="rgba(0, 51, 102, 0.15)" />
+                  <!-- Stand Base -->
+                  <path d="M -28 42 L 0 49 L 28 42 L 0 35 Z" fill="#334155" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Stand Column -->
+                  <path d="M -5 15 L -5 42 L 5 42 L 5 15 Z" fill="#475569" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Monitor Frame (Exact 20:9) -->
+                  <rect x="-58" y="-26.1" width="116" height="52.2" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
+                  <!-- Screen Area (Exact 20:9) -->
+                  <rect x="-55" y="-24.75" width="110" height="49.5" rx="1.5" fill="#1E293B" />
+                  <!-- Graph Line on Screen -->
+                  <path d="M -45 0 L -25 -16 L -5 4 L 15 -12 L 40 2" stroke="#10B981" stroke-width="2.5" fill="none" class="glow-green" />
+                  <!-- Screen Power LED -->
+                  <circle cx="53" cy="22" r="2" fill="#10B981" />
+                  <!-- Text label -->
+                  <text x="0" y="-45" fill="var(--sdi-navy-primary)" font-size="10" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.03em">MÀN HÌNH (ULTRAWIDE 20:9)</text>
+                </g>
+              </g>
+
+              <!-- Top Right Node: Isometric Camera (Enlarged to max) -->
+              <g transform="translate(410, 75)">
+                <g class="office-float" style="animation-delay: -2s;">
+                  <!-- Base Mount Shadow -->
+                  <ellipse cx="0" cy="45" rx="28" ry="7" fill="rgba(0, 51, 102, 0.15)" />
+                  <!-- Base Mount Plate -->
+                  <path d="M -20 38 L 0 44 L 20 38 L 0 32 Z" fill="#334155" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Bracket Pole -->
+                  <path d="M -3 15 L -3 38 L 3 38 L 3 15 Z" fill="#475569" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Camera Cylinder Body -->
+                  <rect x="-18" y="-20" width="36" height="35" rx="18" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
+                  <!-- Camera Lens -->
+                  <circle cx="0" cy="-2.5" r="11" fill="#1E293B" stroke="#10B981" stroke-width="2.5" class="glow-green" />
+                  <circle cx="0" cy="-2.5" r="4.5" fill="#38BDF8" />
+                  <!-- Red Recording led -->
+                  <circle cx="6" cy="-8" r="1.8" fill="#FF4D4D" class="glow-red" />
+                  <!-- Text label -->
+                  <text x="0" y="-30" fill="var(--sdi-navy-primary)" font-size="10" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.03em">CAMERA GIÁM SÁT</text>
+                </g>
+              </g>
+
+              <!-- Bottom Node: Isometric Printer (Enlarged to max & Lowered) -->
+              <g transform="translate(250, 315)">
+                <g class="office-float" style="animation-delay: -3s;">
+                  <!-- Base Shadow -->
+                  <ellipse cx="0" cy="38" rx="65" ry="14" fill="rgba(0, 51, 102, 0.2)" />
+                  <!-- Left Face -->
+                  <path d="M -60 -10 L 0 15 L 0 38 L -60 13 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Right Face -->
+                  <path d="M 60 -10 L 0 15 L 0 38 L 60 13 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Top Face -->
+                  <path d="M 0 -30 L 60 -10 L 0 15 L -60 -10 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Paper output slot -->
+                  <path d="M -35 5 L 35 20" stroke="#38BDF8" stroke-width="3" />
+                  <!-- Sheet of paper coming out -->
+                  <path d="M -25 12 L 25 24 L 25 38 L -25 26 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+                  <!-- Paper Details -->
+                  <line x1="-18" y1="18" x2="18" y2="26" stroke="#38BDF8" stroke-width="1.5" />
+                  <line x1="-18" y1="23" x2="10" y2="29" stroke="#38BDF8" stroke-width="1.5" />
+                  <!-- Text label -->
+                  <text x="0" y="58" fill="var(--sdi-navy-primary)" font-size="10" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.03em">MÁY IN VĂN PHÒNG</text>
+                </g>
+              </g>
+
+              <!-- Connecting Datastreams (Lines) -->
+              <path d="M 200 175 L 130 110" stroke="#2563EB" stroke-width="2.5" fill="none" class="office-flow" />
+              <path d="M 300 175 L 370 110" stroke="#2563EB" stroke-width="2.5" fill="none" class="office-flow" />
+              <path d="M 250 225 L 250 295" stroke="#2563EB" stroke-width="2.5" fill="none" class="office-flow" />
+            </svg>
+            <p style="font-size: 0.725rem; color: var(--sdi-text-muted); text-align: center; max-width: 380px; margin-top: 0.75rem; padding: 0 1.5rem; line-height: 1.4;">
+              Mô hình văn phòng B2B kết nối đồng bộ: Thiết lập Mini PC trung tâm, liên thông dữ liệu và cấp nguồn tự động tới Hệ thống hiển thị, Camera giám sát và Máy in văn phòng.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: 3 Steps -->
+        <div>
+          <span class="eyebrow-badge reveal-on-scroll">HẠ TẦNG TRỌN GÓI</span>
+          <h2 style="font-size: 2.3rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; margin-bottom: 1rem;">Lắp đặt tận nơi, chạy được&nbsp;ngay</h2>
+          <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; margin-bottom: 2.5rem;">
+            Không cần hiểu kỹ thuật. Đội ngũ NavaTek khảo sát mặt bằng, lắp đặt trọn bộ và bảo trì định kỳ.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
+            <div class="sdi-step-item" style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem; border-radius: 14px; transition: all 0.3s ease;">
+              <div class="sdi-step-number" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; transition: all 0.3s ease;">1</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">BƯỚC 1: Khảo sát</h4>
+                <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); line-height: 1.5;">Đo nhu cầu, số điểm máy, hạ tầng mạng sẵn có của văn phòng.</p>
+              </div>
+            </div>
+            
+            <div class="sdi-step-item" style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem; border-radius: 14px; transition: all 0.3s ease;">
+              <div class="sdi-step-number" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; transition: all 0.3s ease;">2</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">BƯỚC 2: Lắp đặt</h4>
+                <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); line-height: 1.5;">Setup máy tính, đường truyền mạng, camera và cấu hình phần mềm đồng bộ.</p>
+              </div>
+            </div>
+            
+            <div class="sdi-step-item" style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem; border-radius: 14px; transition: all 0.3s ease;">
+              <div class="sdi-step-number" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; transition: all 0.3s ease;">3</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">BƯỚC 3: Bảo trì</h4>
+                <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); line-height: 1.5;">Kiểm tra định kỳ thiết bị hạ tầng, hỗ trợ khắc phục sự cố tận nơi 24/7.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="/dich-vu-bao-tri.html" class="sdi-pill-btn-outline">Xem dịch vụ triển khai</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: CẤU HÌNH BÁN CHẠY (BEST SELLERS)
+       ========================================================================== -->
+  <section style="padding: 6.5rem 0; background: #F8FAFD; border-top: 1px solid var(--sdi-border); position: relative;">
+    <div class="container-sdi">
+      
+
+      <div style="margin-bottom: 4rem;" class="reveal-on-scroll">
+        <span class="eyebrow-badge">SẢN PHẨM NỔI BẬT</span>
+        <h2 style="font-size: 2.3rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; margin-bottom: 0.75rem;">Cấu hình bán chạy</h2>
+        <p style="color: var(--sdi-text-secondary); font-size: 1rem;">
+          Thẻ sản phẩm luôn hiện giá + tình trạng kho — hai trường này bắt buộc để Google hiển thị được Rich Snippets.
+        </p>
+      </div>
+
+      <div class="sdi-grid-4 reveal-on-scroll delay-1">
+        
+        <!-- Card 1: Combo -->
+        <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 410px;">
+          <div>
+            <span class="product-type-badge combo">Combo trọn bộ</span>
+            <div style="text-align: center; margin: 1.5rem 0;">
+              <img src="/images/combo.png" alt="Combo Trạm AI" style="max-height: 90px; mix-blend-mode: multiply;">
+            </div>
+            <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Combo Trạm AI: Mini PC + eGPU RTX 4070</h4>
+          </div>
+          <div>
+            <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">Từ 68.000.000₫</div>
+            <div style="font-size: 0.75rem; color: var(--sdi-text-muted); margin-bottom: 1rem;">○ Đặt trước • 7 ngày</div>
+            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Workstation -->
+        <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 410px;">
+          <div>
+            <span class="product-type-badge single">Máy đơn</span>
+            <div style="text-align: center; margin: 1.5rem 0;">
+              <img src="/images/laser.png" alt="Workstation AI" style="max-height: 90px; mix-blend-mode: multiply;">
+            </div>
+            <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Workstation AI · RTX 4090 · 128GB</h4>
+          </div>
+          <div>
+            <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">Từ 96.000.000₫</div>
+            <div style="font-size: 0.75rem; color: var(--sdi-text-muted); margin-bottom: 1rem;">○ Đặt trước • 7 ngày</div>
+            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Mini PC Core i9 -->
+        <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 410px;">
+          <div>
+            <span class="product-type-badge single">Máy đơn</span>
+            <div style="text-align: center; margin: 1.5rem 0;">
+              <img src="/images/bending.png" alt="Mini PC Core i9" style="max-height: 90px; mix-blend-mode: multiply;">
+            </div>
+            <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Mini PC Core i9 · 64GB · chạy LLM nhẹ</h4>
+          </div>
+          <div>
+            <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">28.900.000₫</div>
+            <div style="font-size: 0.75rem; color: #10B981; font-weight: 600; margin-bottom: 1rem;">● Còn hàng</div>
+            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Component -->
+        <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 410px;">
+          <div>
+            <span class="product-type-badge part">Linh kiện</span>
+            <div style="text-align: center; margin: 1.5rem 0;">
+              <img src="/images/ai.png" alt="Gói nâng cấp RAM SSD" style="max-height: 90px; mix-blend-mode: multiply;">
+            </div>
+            <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Gói nâng cấp RAM 64GB + SSD 2TB</h4>
+          </div>
+          <div>
+            <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">9.900.000₫</div>
+            <div style="font-size: 0.75rem; color: #10B981; font-weight: 600; margin-bottom: 1rem;">● Còn hàng</div>
+            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+  <!-- ==========================================================================
+       SECTION 3: ĐỐI TÁC & NHÀ PHÂN PHỐI (PARTNER LOGOS)
+       ========================================================================== -->
+  <section style="padding: 5rem 0; background: #FFFFFF; border-top: 1px solid var(--sdi-border); position: relative;">
+    <div class="container-sdi">
+      
+
+      <div style="text-align: center; margin-bottom: 3rem;" class="reveal-on-scroll">
+        <span class="eyebrow-badge">ĐỐI TÁC CHIẾN LƯỢC</span>
+        <h3 style="font-size: 1.5rem; color: var(--sdi-navy-primary); margin-top: 0.25rem;">Đối tác & nhà phân phối</h3>
+      </div>
+
+      <div style="display: flex; justify-content: center; gap: 3.5rem; align-items: center; flex-wrap: wrap;" class="reveal-on-scroll delay-1">
+        <span class="partner-logo-tag intel">Intel</span>
+        <span class="partner-logo-tag amd">AMD</span>
+        <span class="partner-logo-tag nvidia">NVIDIA</span>
+        <span class="partner-logo-tag asus">Asus</span>
+        <span class="partner-logo-tag ntc">Nhất Tiến Chung</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: BINARY MATRIX B2B CTA
+       ========================================================================== -->
+  <section class="binary-matrix-container">
+    <!-- The dynamic gradient overlay that fades in on scroll -->
+    <div class="home-cta-anims-grad"></div>
+    <!-- Centered background grid of code numbers with blend modes -->
+    <div class="home-cta-anims-code-img"></div>
+    <!-- Floating binary code streams (with 3D depth blur, intersecting slants, and falling/rising motions) -->
+    <div class="binary-streams-wrapper">
+      <div class="binary-stream falling blur-heavy slant-right" style="left: 5%; animation-duration: 10s; animation-delay: 0s;">0110101101001</div>
+      <div class="binary-stream rising blur-light" style="left: 15%; animation-duration: 18s; animation-delay: -3s;">1001011011011</div>
+      <div class="binary-stream falling" style="left: 28%; animation-duration: 14s; animation-delay: -7s;">1101001011010</div>
+      <div class="binary-stream rising blur-heavy slant-left" style="left: 42%; animation-duration: 12s; animation-delay: -2s;">0101100110101</div>
+      <div class="binary-stream falling blur-light slant-right" style="left: 58%; animation-duration: 16s; animation-delay: -5s;">1100101001011</div>
+      <div class="binary-stream rising" style="left: 70%; animation-duration: 13s; animation-delay: -1s;">1010011001101</div>
+      <div class="binary-stream falling blur-light slant-left" style="left: 82%; animation-duration: 15s; animation-delay: -4s;">0110100101100</div>
+      <div class="binary-stream rising blur-heavy" style="left: 92%; animation-duration: 11s; animation-delay: -6s;">1001011011001</div>
+    </div>
+    <div class="container-sdi reveal-on-scroll" style="position: relative; z-index: 2;">
+      <span class="eyebrow-badge eyebrow-badge-orange" style="background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37,99,235,0.15);">ĐỒNG HÀNH CÙNG DOANH NGHIỆP</span>
+      <h2 style="font-size: 2.3rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; margin-bottom: 0.75rem;">Sẵn sàng tối ưu hạ tầng CNTT của bạn?</h2>
+      <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; max-width: 650px; margin: 0 auto 2.5rem auto; line-height: 1.6;">
+        Chúng tôi đồng hành thiết lập môi trường tính toán AI local bảo mật cao và vận hành êm ái cho văn phòng của bạn.
+      </p>
+      <div class="sdi-button-strand-container">
+        <!-- Left strands -->
+        <object type="image/svg+xml" data="/strand.svg" class="sdi-strand-svg is-left"></object>
+        
+        <button class="sdi-btn-orange trigger-quote-modal" style="font-size: 1rem; padding: 0.85rem 2.5rem; z-index: 5; margin: 0;">
+          <span>Nhận tư vấn cấu hình ngay</span>
+        </button>
+        
+        <!-- Right strands -->
+        <object type="image/svg+xml" data="/strand.svg" class="sdi-strand-svg is-right"></object>
+      </div>
+    </div>
+  </div> <!-- Closes .sdi-page-wrapper -->
+
+  <!-- ==========================================================================
+       FOOTER & REQUEST QUOTE FORM
+       ========================================================================== -->
+  <footer class="footer-sdi tech-dot-grid-dark" id="footer-section" style="position: relative; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #050B1A 100%) !important; background-size: 28px 28px, auto !important; background-color: #050B1A !important; overflow: hidden;">
+    <!-- Ambient glowing backgrounds for cyber theme -->
+    <div style="position: absolute; top: -10%; left: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+    <div style="position: absolute; bottom: -10%; right: -5%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+
+    <!-- Beautiful high-contrast SVG circuit tracks & flowing data packets (Bảng điện) -->
+    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.16;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad-line-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+          <stop offset="50%" stop-color="var(--sdi-blue-glow)" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <!-- Extended Circuit track 1 (horizontal top branch left) -->
+      <path d="M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550" fill="none" stroke="url(#grad-line-footer)" stroke-width="1.8" />
+      <!-- Extended Circuit track 2 (horizontal top branch right) -->
+      <path d="M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580" fill="none" stroke="url(#grad-line-footer)" stroke-width="1.8" />
+      
+      <!-- Animated light packets running along footer tracks -->
+      <circle r="4.5" fill="#38BDF8" style="offset-path: path('M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550'); animation: flow-data 8s linear infinite; filter: drop-shadow(0 0 8px #38BDF8);" />
+      <circle r="4.5" fill="#38BDF8" style="offset-path: path('M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580'); animation: flow-data 10s linear infinite 4s; filter: drop-shadow(0 0 8px #38BDF8);" />
+    </svg>
+    <div class="container-sdi">
+      
+      <div class="sdi-split-grid is-footer">
+        
+        <!-- Left: Form -->
+        <div>
+          <span class="eyebrow-badge" style="background: rgba(56, 189, 248, 0.08); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.15); padding: 0.4rem 1rem;">BÁO GIÁ NHANH</span>
+          <h2 style="color: #FFFFFF; font-size: 2.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Nhận báo giá trong 24 giờ</h2>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 2rem;">Kỹ sư hạ tầng của NavaTek sẽ liên hệ tư vấn cấu hình chi tiết và gửi báo giá qua email/Zalo.</p>
+
+          <form id="footer-lead-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="sdi-form-grid-2">
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Họ và tên *</label>
+                <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Số điện thoại *</label>
+                <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div class="sdi-form-grid-2">
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Email</label>
+                <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Nhu cầu của bạn *</label>
+                <select required style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: #0F172A; color: #FFFFFF; font-size: 0.9rem;">
+                  <option value="Trạm AI Cục bộ & Tự động hóa">Trạm AI Cục bộ & Tự động hóa</option>
+                  <option value="Nâng cấp RAM / SSD / Lưu trữ">Nâng cấp RAM / SSD / Lưu trữ</option>
+                  <option value="Mini PC, Mạng, NAS & Camera">Mini PC, Mạng, NAS & Camera</option>
+                  <option value="Cần tư vấn tổng thể / Chưa rõ nhu cầu">Cần tư vấn tổng thể / Chưa rõ nhu cầu</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-top: 0.5rem;">
+              <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.9rem;">
+                <span>Gửi yêu cầu báo giá</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Corporate details & Ecosystem -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h4 style="color: #FFFFFF; font-size: 1.25rem; margin-bottom: 1rem;">Thông tin công ty</h4>
+            <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              <strong>Công ty TNHH NavaTek</strong><br>
+              Địa chỉ: Thành phố Hồ Chí Minh<br>
+              Hotline: 1900 - NAVATEK | MST: 031789456<br>
+              Liên kết: <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách đổi trả</a>
+            </p>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+              <a href="/nganh-phuc-vu.html" class="footer-link" style="margin-right: 0.75rem;">Giải pháp</a>
+              <a href="/may-don-le.html" class="footer-link" style="margin-right: 0.75rem;">Sản phẩm</a>
+              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Dịch vụ</a>
+              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Về NavaTek</a>
+              <a href="/du-an.html" class="footer-link">Liên hệ</a>
+            </div>
+          </div>
+
+          <!-- Ecosystem Block (Matching Wireframe) -->
+          <div>
+            <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 0.75rem;">Hệ sinh thái Nava</h4>
+            <div class="sdi-form-grid-2" style="gap: 1.25rem !important;">
+              <div class="sdi-ecosystem-card">
+                <div class="sdi-eco-title">NAVATEK</div>
+                <div class="sdi-eco-desc">Giải pháp doanh nghiệp</div>
+              </div>
+              <div class="sdi-ecosystem-card is-retail">
+                <div class="sdi-eco-title">NAVASTORE</div>
+                <div class="sdi-eco-desc">Bán lẻ · Top 2 Google</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color: #475569; font-size: 0.8rem; margin-top: 3.5rem;">
+        © 2026 Công Ty TNHH NavaTek. Bảo lưu mọi quyền.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Popup -->
+  <div class="modal-overlay" id="quote-modal">
+    <div class="modal-box">
+      <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <span class="eyebrow-badge">NAVATEK v3.1</span>
+      <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
+      <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
+      <form id="quote-request-form">
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Họ và tên *</label>
+          <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+        </div>
+        <div class="sdi-form-grid-2" style="margin-bottom: 1.25rem !important;">
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Số điện thoại / Zalo *</label>
+            <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Email</label>
+            <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+        </div>
+        <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem;">
+          <span>Gửi Yêu Cầu Báo Giá</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SEO Technical Guidelines for Dev Team (As specified in the Wireframe) -->
+  <section style="display: none !important;">
+    <div class="container-sdi">
+      <h4 style="color: #FFFFFF; font-size: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Ghi chú kỹ thuật SEO — dành cho team Dev</h4>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;">
+        <div>
+          <div style="font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.03em;">Schema Doanh Nghiệp</div>
+          <p>Gắn Organization + LocalBusiness ở Footer và trang Liên hệ để lên top map local TP.HCM. Thêm parentOrganization nối 2 tên miền Navatek &harr; Navastore để tối ưu SEO chéo trong hệ sinh thái.</p>
+        </div>
+        <div>
+          <div style="font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.03em;">Cấu trúc URL</div>
+          <p>Tuyệt đối không dùng URL chứa ID kiểu ?id=123. Dùng slug sạch, có dấu gạch nối, không dấu tiếng Việt: e.g. /mini-pc/intel-n100</p>
+        </div>
+        <div>
+          <div style="font-weight: 800; color: #FFFFFF; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.03em;">Alt Text Có Chủ Ý</div>
+          <p>Mọi logo khách hàng / logo hãng phải có alt chứa từ khóa, ví dụ alt="Khách hàng doanh nghiệp của NavaTek". Không để alt trống, không nhồi từ khóa vô nghĩa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JSON-LD Schema for Organization & LocalBusiness (BOD Requirement) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://navatek.vn/#organization",
+        "name": "NavaTek",
+        "url": "https://navatek.vn",
+        "logo": "https://navatek.vn/images/LOGO.png",
+        "sameAs": [
+          "https://navastore.vn"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://navatek.vn/#localbusiness",
+        "name": "NavaTek B2B IT Infrastructure",
+        "image": "https://navatek.vn/images/LOGO.png",
+        "telephone": "19006282",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Thành phố Hồ Chí Minh",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressCountry": "VN"
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://navatek.vn/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="module" src="/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
