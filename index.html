@@ -171,36 +171,58 @@
   <!-- ==========================================================================
        SECTION 1: CON SỐ UY TÍN + KHÁCH HÀNG TIÊU BIỂU (DARK BACKGROUND COHESIVE FOLD)
        ========================================================================== -->
-  <section style="padding: 5.5rem 0; background: #FFFFFF; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; position: relative; z-index: 2;">
+  <section style="padding: 5.5rem 0; background: radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.07) 0%, transparent 50%), radial-gradient(circle at 10% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%), #0A1128; border-top: 1px solid rgba(255, 255, 255, 0.06); border-bottom: 1px solid rgba(255, 255, 255, 0.06); position: relative; z-index: 2;">
     <div class="container-sdi">
       
-
       <div class="sdi-split-grid reveal-on-scroll">
         
-        <!-- Left: Large stats -->
+        <!-- Left: Large stats as Glassmorphic Cards -->
         <div class="sdi-stats-grid">
-          <div>
-            <div style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; color: var(--sdi-navy-primary); line-height: 1;" class="count-up" data-target="50">50+</div>
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Dự án đã triển khai</div>
+          <div class="sdi-stat-card">
+            <div class="sdi-stat-icon-wrapper" style="color: #38BDF8; background: rgba(56, 189, 248, 0.08); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
+              <i data-lucide="folder-check" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div style="background: linear-gradient(135deg, #94A3B8 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; line-height: 1;" class="count-up" data-target="50">50+</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-align: center;">Dự án triển khai</div>
           </div>
-          <div>
-            <div style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; color: var(--sdi-navy-primary); line-height: 1;" class="count-up" data-target="1000">1.000+</div>
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Mini PC đã cung cấp</div>
+          
+          <div class="sdi-stat-card">
+            <div class="sdi-stat-icon-wrapper" style="color: #38BDF8; background: rgba(56, 189, 248, 0.08); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
+              <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div style="background: linear-gradient(135deg, #94A3B8 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; line-height: 1;" class="count-up" data-target="1000">1.000+</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-align: center;">Mini PC cung cấp</div>
           </div>
-          <div>
-            <div style="font-family: var(--font-heading); font-size: 3.2rem; font-weight: 900; color: var(--sdi-navy-primary); line-height: 1;">24/7</div>
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-secondary); margin-top: 0.5rem;">Hỗ trợ kỹ thuật tận nơi</div>
+          
+          <div class="sdi-stat-card">
+            <div class="sdi-stat-icon-wrapper" style="color: #38BDF8; background: rgba(56, 189, 248, 0.08); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
+              <i data-lucide="headset" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div style="background: linear-gradient(135deg, #94A3B8 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; line-height: 1;">24/7</div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-align: center;">Hỗ trợ tận nơi</div>
           </div>
         </div>
 
-        <!-- Right: Client logos (Horizontal) -->
-        <div>
-          <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--sdi-text-muted); display: block; margin-bottom: 1.25rem; letter-spacing: 0.05em;">Đã tin dùng dịch vụ NavaTek</span>
+        <!-- Right: Client logos (Sleek cards with matching icons) -->
+        <div style="display: flex; flex-direction: column; justify-content: center;">
+          <span style="font-size: 0.725rem; font-weight: 800; text-transform: uppercase; color: #64748B; display: block; margin-bottom: 1.25rem; letter-spacing: 0.08em; text-align: left;">Đã tin dùng dịch vụ NavaTek</span>
           <div class="sdi-logos-grid">
-            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">EVN HCM</div>
-            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">HÒA PHÁT</div>
-            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">NAM TRIỆU</div>
-            <div class="sdi-client-logo-box" style="background: #F8FAFC; color: var(--sdi-navy-primary); border: 1px solid #E2E8F0;">ĐH BÁCH KHOA</div>
+            <div class="sdi-client-card">
+              <div class="sdi-client-card-icon"><i data-lucide="zap" style="width: 18px; height: 18px;"></i></div>
+              <span class="sdi-client-card-name">EVN HCM</span>
+            </div>
+            <div class="sdi-client-card">
+              <div class="sdi-client-card-icon"><i data-lucide="building-2" style="width: 18px; height: 18px;"></i></div>
+              <span class="sdi-client-card-name">HÒA PHÁT</span>
+            </div>
+            <div class="sdi-client-card">
+              <div class="sdi-client-card-icon"><i data-lucide="anchor" style="width: 18px; height: 18px;"></i></div>
+              <span class="sdi-client-card-name">NAM TRIỆU</span>
+            </div>
+            <div class="sdi-client-card">
+              <div class="sdi-client-card-icon"><i data-lucide="graduation-cap" style="width: 18px; height: 18px;"></i></div>
+              <span class="sdi-client-card-name">ĐH BÁCH KHOA</span>
+            </div>
           </div>
         </div>
 

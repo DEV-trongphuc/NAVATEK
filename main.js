@@ -202,6 +202,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const showSuccessToast = (title, message) => {
+    let existingToast = document.querySelector('.sdi-toast');
+    if (existingToast) {
+      existingToast.remove();
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = 'sdi-toast';
+    toast.innerHTML = `
+      <div class="sdi-toast-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="sdi-toast-content">
+        <div class="sdi-toast-title">${title}</div>
+        <div class="sdi-toast-desc">${message}</div>
+      </div>
+    `;
+    
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 50);
+    
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        toast.remove();
+      }, 350);
+    }, 4500);
+  };
+
   const handleFormSubmit = (e, formElement) => {
     e.preventDefault();
     const submitBtn = formElement.querySelector('button[type="submit"]');
@@ -209,10 +241,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set loading state
     submitBtn.disabled = true;
-    submitBtn.innerHTML = `<span>Đang gửi...</span>`;
+    submitBtn.innerHTML = `<span class="sdi-spinner"></span><span>Đang gửi...</span>`;
 
     setTimeout(() => {
-      alert('⚡ Gửi yêu cầu thành công! Kỹ sư NavaTek sẽ liên hệ tư vấn giải pháp trong vòng 24 giờ.');
+      showSuccessToast(
+        'Gửi yêu cầu thành công!',
+        'Kỹ sư NavaTek sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15-30 phút.'
+      );
       modalOverlay?.classList.remove('open');
       formElement.reset();
       submitBtn.disabled = false;
@@ -239,13 +274,12 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
       const targetSrc = btn.getAttribute('data-target-src');
       if (mainProductPreviewImg && targetSrc) {
-        mainProductPreviewImg.style.opacity = '0.3';
-        mainProductPreviewImg.style.transform = 'scale(0.95)';
+        if (mainProductPreviewImg.getAttribute('src') === targetSrc) return;
+        mainProductPreviewImg.classList.add('switching');
         setTimeout(() => {
           mainProductPreviewImg.src = targetSrc;
-          mainProductPreviewImg.style.opacity = '1';
-          mainProductPreviewImg.style.transform = 'scale(1)';
-        }, 150);
+          mainProductPreviewImg.classList.remove('switching');
+        }, 180);
       }
     };
     btn.addEventListener('click', handler);
@@ -514,4 +548,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateActiveLink(desktopLinks);
   updateActiveLink(mobileLinks);
+
+  // ==========================================================================
+  // 12. FLOATING NAV CAPSULE BACKDROP (Vercel-style Menu Indicator)
+  // ==========================================================================
+  const navMenu = document.querySelector('.sdi-nav-menu');
+  const navLinks = document.querySelectorAll('.sdi-nav-link');
+  
+  if (navMenu && navLinks.length > 0) {
+    // Add class for CSS override overrides
+    navMenu.classList.add('has-capsule');
+
+    const capsule = document.createElement('div');
+    capsule.className = 'sdi-nav-capsule';
+    navMenu.appendChild(capsule);
+    
+    const positionCapsule = (linkEl) => {
+      if (!linkEl) {
+        capsule.style.opacity = '0';
+        return;
+      }
+      capsule.style.left = `${linkEl.offsetLeft}px`;
+      capsule.style.top = `${linkEl.offsetTop}px`;
+      capsule.style.width = `${linkEl.offsetWidth}px`;
+      capsule.style.height = `${linkEl.offsetHeight}px`;
+      capsule.style.opacity = '1';
+    };
+    
+    // Initial position based on active page link
+    const activeLink = navMenu.querySelector('.sdi-nav-link.active');
+    if (activeLink) {
+      // Small delay to make sure layouts and widths are fully computed by browser
+      setTimeout(() => {
+        positionCapsule(activeLink);
+      }, 150);
+    }
+    
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        positionCapsule(link);
+      });
+    });
+    
+    navMenu.addEventListener('mouseleave', () => {
+      const activeLinkOnLeave = navMenu.querySelector('.sdi-nav-link.active');
+      if (activeLinkOnLeave) {
+        positionCapsule(activeLinkOnLeave);
+      } else {
+        capsule.style.opacity = '0';
+      }
+    });
+  }
 });
