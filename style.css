@@ -80,7 +80,7 @@ h3 {
 /* Limited Premium Desktop Container (Matching reference style) */
 .container-sdi, .container-custom {
   width: 100%;
-  max-width: 1300px; /* Limited width for premium desktop rendering */
+  max-width: 1420px; /* Expanded limit matching sdi-clone standard */
   margin: 0 auto;
   padding: 0 1.5rem; /* Standard comfortable gutters */
 }
@@ -105,7 +105,7 @@ h3 {
 .sdi-top-banner {
   background: #F8FAFC;
   border-bottom: 1px solid #E2E8F0;
-  padding: 0.45rem 1.5rem; /* Reduced padding to match 1300px container grid alignment */
+  padding: 0.45rem 1.5rem; /* Reduced padding to match 1420px container grid alignment */
   font-size: 0.8rem;
   font-weight: 500;
   color: #475569;
@@ -116,7 +116,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1300px; /* Aligned with desktop container limit */
+  max-width: 1420px; /* Aligned with desktop container limit */
   margin: 0 auto;
 }
 
@@ -127,7 +127,7 @@ h3 {
   justify-content: space-between;
   padding: 1.1rem 1.5rem; /* Aligned padding */
   width: 100%;
-  max-width: 1300px; /* Aligned max-width */
+  max-width: 1420px; /* Aligned max-width */
   margin: 0 auto;
   gap: 1.5rem;
 }
@@ -1823,7 +1823,7 @@ body {
   background-color: var(--light-grey-border);
   border-radius: 1.5rem;
   flex-flow: column;
-  padding: 2rem;
+  padding: 1.25rem; /* Compact padding matching sdi-clone */
   transition: box-shadow 0.5s, background-color 0.5s;
   position: relative;
   border: none;
@@ -1841,7 +1841,7 @@ body {
 .home-solutions-item.is-big {
   justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 2rem;
+  padding-top: 22.38rem; /* Pushes content to the bottom to allow Lottie cloud graphic at top */
   min-height: 560px;
 }
 
@@ -1895,7 +1895,7 @@ body {
   position: absolute;
   inset: 0% 0% 0% auto;
   overflow: hidden;
-  opacity: 0.15;
+  opacity: 0.85;
   pointer-events: none;
 }
 
@@ -1913,6 +1913,15 @@ body {
 
 .home-solutions-item-anim {
   height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.home-solutions-item-anim svg {
+  height: 100% !important;
+  width: auto !important;
+  max-width: none !important;
 }
 
 .home-solutions-item-wr {
@@ -1922,9 +1931,16 @@ body {
   flex-flow: column;
   justify-content: space-between;
   width: 100%;
+  max-width: 30rem; /* Prevents text from expanding too wide and overlapping background Lotties */
   height: 100%;
   display: flex;
   position: relative;
+}
+
+/* Helper to group icon, title, and description closely at the bottom in Card 1 (is-big) */
+.home-solutions-item.is-big .home-solutions-item-wr {
+  justify-content: flex-end;
+  row-gap: 1.25rem;
 }
 
 /* Specific Webflow Node Grid Placements */
@@ -2100,7 +2116,6 @@ body {
 
 /* 1. Scale up the icon container on card hover */
 .home-solutions-item:hover .home-solutions-item-icon {
-  transform: scale(1.12);
   box-shadow: 0 12px 24px rgba(37, 99, 235, 0.12);
   color: var(--sdi-blue-accent) !important;
 }
@@ -2112,11 +2127,11 @@ body {
 
 /* 3. Reveal hover background gradients */
 .home-solutions-item-grad {
-  transition: opacity 0.5s ease;
-  opacity: 0.1;
+  transition: opacity 0.4s ease;
+  opacity: 0.85;
 }
 .home-solutions-item:hover .home-solutions-item-grad {
-  opacity: 0.3;
+  opacity: 1.0;
 }
 
 /* 4. Smooth transitions for all inner SVG paths */
@@ -2135,7 +2150,6 @@ body {
 .home-solutions-item:hover svg path:nth-child(7),
 .home-solutions-item:hover svg path:nth-child(14) {
   color: var(--sdi-orange-cta) !important;
-  transform: scale(1.22);
 }
 /* Flow dash lines on hover */
 .home-solutions-item:hover svg path:nth-child(6),
@@ -2153,7 +2167,6 @@ body {
 .home-solutions-item:hover svg path:nth-child(3),
 .home-solutions-item:hover svg path:nth-child(4) {
   color: var(--sdi-orange-cta) !important;
-  transform: scale(1.15);
 }
 /* Flow vertical networking routes */
 .home-solutions-item:hover svg path:nth-child(5),
@@ -2189,7 +2202,6 @@ body {
 .home-solutions-item:hover svg path:nth-child(7),
 .home-solutions-item:hover svg path:nth-child(8) {
   color: var(--sdi-orange-cta) !important;
-  transform: scale(1.2);
 }
 /* Flow network strands */
 .home-solutions-item:hover svg path:nth-child(3),
@@ -2203,7 +2215,6 @@ body {
 /* --- Card 5 (Hạ tầng Mạng & Bảo mật B2B) Animations --- */
 /* Pulsate the security shield and checkmark */
 .home-solutions-item:hover svg path:nth-child(5) {
-  transform: scale(1.06);
   color: var(--sdi-blue-accent) !important;
 }
 .home-solutions-item:hover svg path:nth-child(6) {
@@ -2213,18 +2224,10 @@ body {
 
 /* --- Card 6 (Tư vấn & Khảo sát Hạ tầng) Animations --- */
 /* Grow layout bar charts */
-.home-solutions-item svg path:nth-child(8),
-.home-solutions-item svg path:nth-child(9),
-.home-solutions-item svg path:nth-child(10),
-.home-solutions-item svg path:nth-child(11) {
-  transform-origin: bottom;
-  transform: scaleY(0.6);
-}
 .home-solutions-item:hover svg path:nth-child(8),
 .home-solutions-item:hover svg path:nth-child(9),
 .home-solutions-item:hover svg path:nth-child(10),
 .home-solutions-item:hover svg path:nth-child(11) {
-  transform: scaleY(1);
   color: var(--sdi-orange-cta) !important;
 }
 .home-solutions-item:hover svg path:nth-child(12),

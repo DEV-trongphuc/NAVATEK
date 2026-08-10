@@ -599,4 +599,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================================================
+  // 13. LOTTIE HOVER ANIMATIONS FOR SOLUTIONS CARDS (sdipresence.com 100% replication)
+  // ==========================================================================
+  const lottieContainers = document.querySelectorAll('.home-solutions-item-anim');
+  lottieContainers.forEach(container => {
+    const path = container.getAttribute('data-lottie-path');
+    if (!path) return;
+
+    const anim = lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: path
+    });
+
+    const parentCard = container.closest('.home-solutions-item');
+    if (parentCard) {
+      parentCard.addEventListener('mouseenter', () => {
+        anim.setDirection(1);
+        anim.play();
+      });
+      parentCard.addEventListener('mouseleave', () => {
+        anim.setDirection(-1);
+        anim.play();
+      });
+    }
+  });
 });
