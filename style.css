@@ -3025,3 +3025,71 @@ body.drawer-open {
   border-color: #64748B;
   box-shadow: 0 4px 12px rgba(100, 116, 139, 0.2);
 }
+
+/* ==========================================================================
+   ENHANCED HERO ANIMATION STYLES
+   ========================================================================== */
+
+/* 1. Weightless Floating Motion */
+@keyframes sdi-float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes sdi-float-reverse {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(12px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* 2. Slow Rotation */
+@keyframes sdi-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 3. Glowing Node Pulse */
+@keyframes sdi-pulse-glow {
+  0% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.15); }
+  100% { opacity: 0.15; transform: scale(1); }
+}
+
+/* 4. Scanning beam sweeping down */
+@keyframes sdi-scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(350%); }
+}
+
+/* 5. Glowing pulse for CTA Button */
+.sdi-btn-orange.hero-pulse {
+  animation: hero-button-pulse 3s infinite;
+}
+
+@keyframes hero-button-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(232, 134, 46, 0.45); }
+  70% { box-shadow: 0 0 0 14px rgba(232, 134, 46, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 134, 46, 0); }
+}
+
+/* 6. Wireframe Card Hover Improvements */
+.wireframe-box-dashed {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hero-floating-graphic:hover .wireframe-box-dashed {
+  border-style: solid !important;
+  border-color: rgba(37, 99, 235, 0.25) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 30px 65px rgba(0, 51, 102, 0.1) !important;
+}
+
+.hero-floating-graphic img {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hero-floating-graphic:hover img {
+  transform: translateY(-6px) scale(1.03) !important;
+}
+

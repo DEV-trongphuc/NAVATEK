@@ -638,4 +638,47 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // ==========================================================================
+  // 14. INTERACTIVE PARALLAX MOUSE MOVE & HOLOGRAPHIC TILT FOR HERO SECTION
+  // ==========================================================================
+  const heroSection = document.querySelector('.tech-dot-grid-light');
+  if (heroSection) {
+    const parallaxElements = heroSection.querySelectorAll('.sdi-parallax-shape');
+    const graphicContainer = heroSection.querySelector('.hero-floating-graphic');
+    
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      // Move abstract shapes based on speed attribute
+      parallaxElements.forEach(el => {
+        const speed = parseFloat(el.getAttribute('data-parallax-speed') || '0.05');
+        const moveX = x * speed;
+        const moveY = y * speed;
+        el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+      
+      // Stunning 3D holographic card tilt effect for the 3D Hero Illustration box
+      if (graphicContainer) {
+        const tiltX = (y / rect.height) * -12; // Max tilt 12 degrees
+        const tiltY = (x / rect.width) * 12;
+        graphicContainer.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-5px)`;
+        graphicContainer.style.transition = 'transform 0.05s ease-out';
+      }
+    });
+    
+    // Reset transforms when mouse leaves
+    heroSection.addEventListener('mouseleave', () => {
+      parallaxElements.forEach(el => {
+        el.style.transform = '';
+        el.style.transition = 'transform 0.4s ease-out';
+      });
+      if (graphicContainer) {
+        graphicContainer.style.transform = '';
+        graphicContainer.style.transition = 'transform 0.4s ease-out';
+      }
+    });
+  }
 });
