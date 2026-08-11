@@ -367,12 +367,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footer && wrapper) {
       if (window.innerWidth >= 1024) {
         footer.style.position = 'fixed';
+        footer.style.bottom = '0';
+        footer.style.left = '0';
+        footer.style.right = '0';
+        footer.style.width = '100%';
+        footer.style.zIndex = '1';
         footer.style.height = 'auto';
         const naturalHeight = footer.offsetHeight;
         footer.style.height = `${naturalHeight}px`;
         wrapper.style.marginBottom = `${naturalHeight}px`;
       } else {
         footer.style.position = 'static';
+        footer.style.bottom = '';
+        footer.style.left = '';
+        footer.style.right = '';
+        footer.style.width = '';
+        footer.style.zIndex = '';
         footer.style.height = 'auto';
         wrapper.style.marginBottom = '0px';
       }

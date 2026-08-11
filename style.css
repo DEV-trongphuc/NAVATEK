@@ -2125,6 +2125,13 @@ body {
   color: var(--sdi-blue-accent);
 }
 
+.home-solutions-item:hover .sdi-solutions-icon-container {
+  background: rgba(37, 99, 235, 0.08) !important;
+  border-color: var(--sdi-blue-accent) !important;
+  border-style: solid !important;
+  transform: translateY(-2px);
+}
+
 /* 3. Reveal hover background gradients */
 .home-solutions-item-grad {
   transition: opacity 0.4s ease;
@@ -2800,4 +2807,221 @@ body.drawer-open {
 .sdi-upload-zone:hover .sdi-upload-icon {
   transform: translateY(-3px) scale(1.05);
   color: var(--sdi-blue-accent);
+}
+
+/* --- Client Logos Continuous Marquee Scrolling --- */
+.sdi-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  position: relative;
+  /* Fading gradient boundaries on left and right for high-end look */
+  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  padding: 1rem 0;
+}
+
+.sdi-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: sdiMarqueeScroll 30s linear infinite;
+}
+
+/* Pause scroll animation on hover for interactive feel */
+.sdi-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.sdi-marquee-group {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+@keyframes sdiMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}
+
+/* --- Custom Solutions 2-Column Bento Layout --- */
+.solutions-custom-grid {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 2.5rem !important;
+  width: 100%;
+}
+
+.solutions-custom-card {
+  background-color: var(--light-grey-border) !important;
+  border-radius: 1.5rem !important;
+  padding: 2.5rem !important;
+  transition: box-shadow 0.5s ease, background-color 0.5s ease, border-color 0.5s ease !important;
+  position: relative !important;
+  border: 1.5px solid rgba(0, 84, 177, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  text-decoration: none !important;
+  min-height: 520px !important;
+}
+
+.solutions-custom-card:hover {
+  background-color: var(--white) !important;
+  box-shadow: 0 30px 60px rgba(0, 84, 177, 0.08) !important;
+  border-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Strategic highlighted variant for left card */
+.solutions-custom-card.is-featured {
+  border: 1.5px solid rgba(37, 99, 235, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.03) !important;
+}
+.solutions-custom-card.is-featured:hover {
+  border-color: var(--sdi-blue-accent) !important;
+  box-shadow: 0 30px 60px rgba(37, 99, 235, 0.1) !important;
+}
+
+.sdi-badge-strategic {
+  font-family: var(--font-heading);
+  font-size: 0.725rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #64748B;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.solutions-sub-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.solutions-custom-card:hover .solutions-sub-card {
+  border-color: rgba(37, 99, 235, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.02);
+}
+
+.solutions-sub-card-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1.5px solid #0f172a;
+  color: #0f172a;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.solutions-sub-card-tag.secondary {
+  border-color: #64748B;
+  color: #64748B;
+}
+
+/* Floating animation for 3D icons */
+.sdi-solutions-icon-container {
+  background: rgba(37, 99, 235, 0.03);
+  border: 1.5px dashed rgba(37, 99, 235, 0.15);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solutions-custom-card:hover .sdi-solutions-icon-container {
+  background: rgba(37, 99, 235, 0.06);
+  border-style: solid;
+  border-color: var(--sdi-blue-accent);
+}
+
+.sdi-3d-icon-anim {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.solutions-custom-card:hover .sdi-3d-icon-anim {
+  transform: translateY(-6px) scale(1.08);
+}
+
+@media (max-width: 1024px) {
+  .solutions-custom-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* --- Bottom 3-Column Services Layout --- */
+.solutions-sub-grid-three {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.solutions-custom-card.is-sub-pillar {
+  min-height: 380px !important;
+  padding: 2rem !important;
+}
+
+@media (max-width: 1024px) {
+  .solutions-sub-grid-three {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* --- Pill Buttons for Bento Grid Cards --- */
+.sdi-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  color: var(--sdi-blue-accent);
+  padding: 0.45rem 1.15rem;
+  border-radius: 99px;
+  font-family: var(--font-heading);
+  font-size: 0.775rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.sdi-pill-btn:hover {
+  background: var(--sdi-blue-accent);
+  color: var(--white);
+  border-color: var(--sdi-blue-accent);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  transform: translateY(-1px);
+}
+
+.sdi-pill-btn.secondary {
+  background: rgba(100, 116, 139, 0.06);
+  border-color: rgba(100, 116, 139, 0.15);
+  color: #64748B;
+}
+
+.sdi-pill-btn.secondary:hover {
+  background: #64748B;
+  color: var(--white);
+  border-color: #64748B;
+  box-shadow: 0 4px 12px rgba(100, 116, 139, 0.2);
 }
