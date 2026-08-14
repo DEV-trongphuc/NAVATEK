@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/style.css?v=2.2">
+  <link rel="stylesheet" href="/style.css?v=3.2">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -59,32 +59,32 @@
         <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
       </button>
     </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
-      <div class="sdi-mobile-drawer-content">
-        <nav class="sdi-mobile-nav-links">
-          <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link active">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Về NavaTek <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        </nav>
-        
-        <!-- Mobile Search inside Drawer -->
-        <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
-          <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
-          <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
-          <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
-        </div>
-
-        <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
-          <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
-          <span>Nhận báo giá</span>
-        </button>
-      </div>
-    </div>
   </header>
+
+  <!-- Mobile Navigation Drawer (Independent Fixed Overlay) -->
+  <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
+    <div class="sdi-mobile-drawer-content">
+      <nav class="sdi-mobile-nav-links">
+        <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link active">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Về NavaTek <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+      </nav>
+      
+      <!-- Mobile Search inside Drawer -->
+      <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
+        <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+        <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
+        <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
+      </div>
+
+      <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+    </div>
+  </div>
 
   <!-- Spacer matching header height (top banner + main navbar) -->
   <div class="sdi-header-spacer" style="height: 76px;"></div>
@@ -212,7 +212,6 @@
         </linearGradient>
       </defs>
       <!-- Circuit track 1 -->
-      <path d="M-100,80 L500,80 L650,220 L500,400 L900,400 L1100,550" fill="none" stroke="url(#grad-line-stats)" stroke-width="1.8" />
       <!-- Animated light packets running along stats tracks -->
       <circle r="4.5" fill="#38BDF8" style="offset-path: path('M-100,80 L500,80 L650,220 L500,400 L900,400 L1100,550'); animation: flow-data 8s linear infinite; filter: drop-shadow(0 0 8px #38BDF8);" />
     </svg>
@@ -223,27 +222,27 @@
         <!-- Top: Large stats spread across 1 row -->
         <div class="sdi-stats-grid" style="width: 100%;">
           <div class="sdi-stat-card">
-            <div class="sdi-stat-icon-wrapper" style="color: #38BDF8; background: rgba(56, 189, 248, 0.08); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
-              <i data-lucide="folder-check" style="width: 20px; height: 20px;"></i>
+            <div class="sdi-stat-icon-wrapper">
+              <i data-lucide="folder-check"></i>
             </div>
-            <div style="background: linear-gradient(135deg, #94A3B8 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; line-height: 1;" class="count-up" data-target="50">50+</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-align: center;">Dự án triển khai</div>
+            <div class="sdi-stat-number count-up" data-target="50">50+</div>
+            <div class="sdi-stat-label">Dự án triển khai</div>
           </div>
           
           <div class="sdi-stat-card">
-            <div class="sdi-stat-icon-wrapper" style="color: #38BDF8; background: rgba(56, 189, 248, 0.08); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
-              <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
+            <div class="sdi-stat-icon-wrapper">
+              <i data-lucide="cpu"></i>
             </div>
-            <div style="background: linear-gradient(135deg, #94A3B8 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; line-height: 1;" class="count-up" data-target="1000">1.000+</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-align: center;">Mini PC cung cấp</div>
+            <div class="sdi-stat-number count-up" data-target="1000">1.000+</div>
+            <div class="sdi-stat-label">Mini PC cung cấp</div>
           </div>
           
           <div class="sdi-stat-card">
-            <div class="sdi-stat-icon-wrapper" style="color: #38BDF8; background: rgba(56, 189, 248, 0.08); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;">
-              <i data-lucide="headset" style="width: 20px; height: 20px;"></i>
+            <div class="sdi-stat-icon-wrapper">
+              <i data-lucide="headset"></i>
             </div>
-            <div style="background: linear-gradient(135deg, #94A3B8 0%, #FFFFFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; line-height: 1;">24/7</div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-align: center;">Hỗ trợ tận nơi</div>
+            <div class="sdi-stat-number">24/7</div>
+            <div class="sdi-stat-label">Hỗ trợ tận nơi</div>
           </div>
         </div>
 
@@ -320,7 +319,7 @@
   <!-- ==========================================================================
        SECTION 2: GIẢI PHÁP & SẢN PHẨM CỐT LÕI (SDI CLONE BENTO GRID REMIX)
        ========================================================================== -->
-                <section class="section home-solutions">
+  <section class="section home-solutions">
     <div class="container-sdi">
       <div class="home-solutions-wr">
         <div class="head-section" style="display: flex; flex-direction: column; gap: 0.5rem;">
@@ -332,29 +331,28 @@
           </div>
         </div>
 
-        <div class="reveal-on-scroll delay-1" style="display: flex; flex-direction: column; gap: 2.5rem; width: 100%;">
+        <div class="reveal-on-scroll delay-1" style="display: flex; flex-direction: column; gap: 2rem; width: 100%;">
           
-          <!-- Top Row: Core Offerings (2 Columns) -->
-          <div class="solutions-custom-grid">
+          <!-- Unified Solutions Grid (Desktop Bento) & Swipeable Slider (Mobile) -->
+          <div class="solutions-grid-slider" id="solutions-slider">
             
-            <!-- Left Card: Trạm AI Cục bộ -->
-            <div class="home-solutions-item w-inline-block" style="flex: 1.15; cursor: default; padding: 3rem 2rem 2rem 2rem; position: relative;">
-              <span class="sdi-badge-strategic" style="position: absolute; top: 1.25rem; left: 2rem; margin: 0;">MŨI NHỌN — ĐỊNH VỊ CHIẾN LƯỢC</span>
-              <div class="home-solutions-item-wr" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 2; max-width: 60%;">
+            <!-- Card 1: Trạm AI Cục bộ -->
+            <div class="home-solutions-item w-inline-block">
+              <span class="sdi-badge-strategic">MŨI NHỌN — ĐỊNH VỊ CHIẾN LƯỢC</span>
+              <div class="home-solutions-item-wr">
                 <div>
-                  <div class="sdi-solutions-icon-container" style="padding: 0.85rem; margin-bottom: 1.25rem;">
+                  <div class="sdi-solutions-icon-container">
                     <i data-lucide="cpu" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
                   </div>
                   
-                  <h3 style="font-family: var(--font-heading); font-size: 1.55rem; font-weight: 900; color: var(--sdi-navy-primary); margin-bottom: 0.75rem; line-height: 1.25; text-align: left;">Trạm AI Cục bộ & Máy chủ Tự động hóa</h3>
+                  <h3 class="home-solutions-item-title">Trạm AI Cục bộ & Máy chủ Tự động hóa</h3>
                   
-                  <p style="color: var(--sdi-text-secondary); font-size: 0.9rem; line-height: 1.55; margin-bottom: 1.5rem; text-align: left;">
+                  <p>
                     Chạy Local LLM, Stable Diffusion, hoặc làm máy chủ tự động hóa 24/7 ngay tại văn phòng — dữ liệu không ra khỏi công ty. Có hai hình thức tuỳ ngân sách và nhu cầu:
                   </p>
                 </div>
 
-                <!-- Two small buttons instead of nested cards -->
-                <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap; z-index: 3; position: relative;">
+                <div class="solutions-btn-group" style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap; z-index: 3; position: relative;">
                   <a href="/combo-tron-bo.html" class="sdi-pill-btn">
                     <span>Combo Trọn Bộ</span>
                     <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
@@ -365,53 +363,48 @@
                   </a>
                 </div>
               </div>
-              <div class="home-solutions-item-grad is-1" style="right: -4rem; opacity: 0.65;">
+              <div class="home-solutions-item-grad is-1">
                 <div class="home-solutions-item-anim" data-lottie-path="https://cdn.prod.website-files.com/685c045f09a3dab41aa0d71d/68cc7c8e51517ebbe17c14dc_ServiceNow%20Integration.json"></div>
               </div>
             </div>
             
-            <!-- Right Card: Gói Nâng cấp Hạ tầng -->
-            <div class="home-solutions-item w-inline-block" style="flex: 0.85; cursor: default; padding: 3rem 2rem 2rem 2rem; position: relative;">
-              <div class="home-solutions-item-wr" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 2; max-width: 75%;">
+            <!-- Card 2: Gói Nâng cấp Hạ tầng -->
+            <div class="home-solutions-item w-inline-block">
+              <div class="home-solutions-item-wr">
                 <div>
-                  <div class="sdi-solutions-icon-container" style="padding: 0.85rem; margin-bottom: 1.25rem;">
+                  <div class="sdi-solutions-icon-container">
                     <i data-lucide="database" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
                   </div>
                   
-                  <h3 style="font-family: var(--font-heading); font-size: 1.55rem; font-weight: 900; color: var(--sdi-navy-primary); margin-bottom: 0.75rem; line-height: 1.25; text-align: left;">Gói Nâng cấp Hạ tầng Lưu trữ & Bộ nhớ</h3>
+                  <h3 class="home-solutions-item-title">Gói Nâng cấp Hạ tầng Lưu trữ & Bộ nhớ</h3>
                 </div>
 
-                <p style="color: var(--sdi-text-secondary); font-size: 0.9rem; line-height: 1.55; margin-top: auto; margin-bottom: 1.5rem; text-align: left;">
+                <p>
                   RAM và SSD hiệu năng cao, đóng gói thành "gói nâng cấp tăng tốc xử lý dữ liệu nội bộ" cho nhu cầu nâng cấp đồng bộ hàng loạt máy văn phòng / máy chủ. Nhấn mạnh độ bền và tốc độ truy xuất cơ sở dữ liệu.
                 </p>
 
-                <div style="z-index: 3; position: relative;">
+                <div style="z-index: 3; position: relative; margin-top: auto;">
                   <a href="/may-don-le.html" class="sdi-pill-btn">
                     <span>Xem Gói Nâng Cấp</span>
                     <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
                   </a>
                 </div>
               </div>
-              <div class="home-solutions-item-grad" style="right: -1.5rem; opacity: 0.75;">
+              <div class="home-solutions-item-grad">
                 <div class="home-solutions-item-anim" data-lottie-path="https://cdn.prod.website-files.com/685c045f09a3dab41aa0d71d/68cc7bceb797cde355ce7e21_Enterprise%20%20Data%20%26%20Al.json"></div>
               </div>
             </div>
-            
-          </div>
-          
-          <!-- Bottom Row: Supporting Services (3 Columns) -->
-          <div class="solutions-sub-grid-three">
-            
-            <!-- Bottom Card 1: Dịch vụ Trao tay -->
-            <div class="home-solutions-item w-inline-block" style="cursor: default; padding: 3rem 2rem 2rem 2rem; position: relative;">
-              <div class="home-solutions-item-wr" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 2; text-align: left;">
+
+            <!-- Card 3: Dịch vụ Trao tay -->
+            <div class="home-solutions-item w-inline-block">
+              <div class="home-solutions-item-wr">
                 <div>
-                  <div class="sdi-solutions-icon-container" style="padding: 0.85rem; margin-bottom: 1.25rem;">
+                  <div class="sdi-solutions-icon-container">
                     <i data-lucide="package-check" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
                   </div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 900; color: var(--sdi-navy-primary); margin-bottom: 0.75rem; line-height: 1.25;">Dịch vụ "Trao tay" (Plug & Play)</h4>
+                  <h4 class="home-solutions-item-title">Dịch vụ "Trao tay" (Plug & Play)</h4>
                 </div>
-                <p style="color: var(--sdi-text-secondary); font-size: 0.875rem; line-height: 1.5; text-align: left; margin-top: auto; padding-top: 1.5rem;">
+                <p>
                   Máy giao tới là chạy được ngay: cài sẵn môi trường AI cục bộ, tối ưu phần cứng khớp đúng tác vụ của doanh nghiệp. Khách không phải tự thiết lập.
                 </p>
               </div>
@@ -420,17 +413,17 @@
               </div>
             </div>
 
-            <!-- Bottom Card 2: Tư vấn & Thiết lập Tự động hóa -->
-            <div class="home-solutions-item w-inline-block" style="cursor: default; padding: 3rem 2rem 2rem 2rem; position: relative;">
-              <span class="sdi-badge-strategic" style="position: absolute; top: 1.25rem; left: 2rem; margin: 0; font-size: 0.625rem; color: var(--sdi-blue-accent);">"MỎ NEO" CHỐT ĐƠN PHẦN CỨNG GIÁ TRỊ CAO</span>
-              <div class="home-solutions-item-wr" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 2; text-align: left;">
+            <!-- Card 4: Tư vấn & Thiết lập Tự động hóa -->
+            <div class="home-solutions-item w-inline-block">
+              <span class="sdi-badge-strategic">"MỎ NEO" CHỐT ĐƠN PHẦN CỨNG GIÁ TRỊ CAO</span>
+              <div class="home-solutions-item-wr">
                 <div>
-                  <div class="sdi-solutions-icon-container" style="padding: 0.85rem; margin-bottom: 1.25rem; background: rgba(37, 99, 235, 0.08);">
+                  <div class="sdi-solutions-icon-container" style="background: rgba(37, 99, 235, 0.08);">
                     <i data-lucide="workflow" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
                   </div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 900; color: var(--sdi-navy-primary); margin-bottom: 0.75rem; line-height: 1.25;">Tư vấn & Thiết lập Tự động hóa</h4>
+                  <h4 class="home-solutions-item-title">Tư vấn & Thiết lập Tự động hóa</h4>
                 </div>
-                <p style="color: var(--sdi-text-secondary); font-size: 0.875rem; line-height: 1.5; text-align: left; margin-top: auto; padding-top: 1.5rem;">
+                <p>
                   Tư vấn cấu hình phần cứng đi kèm thiết lập luồng cào dữ liệu, quản lý tồn kho, tự động hóa báo cáo trên Lark, Sapo (V2/V3), Coze, Apify.
                 </p>
               </div>
@@ -439,16 +432,16 @@
               </div>
             </div>
 
-            <!-- Bottom Card 3: Hậu mãi chuẩn B2B -->
-            <div class="home-solutions-item w-inline-block" style="cursor: default; padding: 3rem 2rem 2rem 2rem; position: relative;">
-              <div class="home-solutions-item-wr" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; z-index: 2; text-align: left;">
+            <!-- Card 5: Hậu mãi chuẩn B2B -->
+            <div class="home-solutions-item w-inline-block">
+              <div class="home-solutions-item-wr">
                 <div>
-                  <div class="sdi-solutions-icon-container" style="padding: 0.85rem; margin-bottom: 1.25rem;">
+                  <div class="sdi-solutions-icon-container">
                     <i data-lucide="shield-check" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
                   </div>
-                  <h4 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 900; color: var(--sdi-navy-primary); margin-bottom: 0.75rem; line-height: 1.25;">Hậu mãi chuẩn B2B</h4>
+                  <h4 class="home-solutions-item-title">Hậu mãi chuẩn B2B</h4>
                 </div>
-                <p style="color: var(--sdi-text-secondary); font-size: 0.875rem; line-height: 1.5; text-align: left; margin-top: auto; padding-top: 1.5rem;">
+                <p>
                   Xuất hóa đơn VAT minh bạch · bảo hành 1 đổi 1 nhanh · <strong style="font-weight: 700; color: var(--sdi-navy-primary);">hỗ trợ kỹ thuật tận nơi (on-site) tại TP.HCM</strong>. Khách doanh nghiệp mua sự an tâm.
                 </p>
               </div>
@@ -457,6 +450,15 @@
               </div>
             </div>
 
+          </div>
+
+          <!-- Slide Dots for Mobile -->
+          <div class="solutions-slider-dots" id="solutions-dots" aria-label="Solutions pagination">
+            <button class="solutions-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="solutions-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="solutions-dot" data-slide="2" aria-label="Slide 3"></button>
+            <button class="solutions-dot" data-slide="3" aria-label="Slide 4"></button>
+            <button class="solutions-dot" data-slide="4" aria-label="Slide 5"></button>
           </div>
 
         </div>
@@ -922,12 +924,31 @@
               </div>
               <div>
                 <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Nhu cầu của bạn *</label>
-                <select required style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: #0F172A; color: #FFFFFF; font-size: 0.9rem;">
-                  <option value="Trạm AI Cục bộ & Tự động hóa">Trạm AI Cục bộ & Tự động hóa</option>
-                  <option value="Nâng cấp RAM / SSD / Lưu trữ">Nâng cấp RAM / SSD / Lưu trữ</option>
-                  <option value="Mini PC, Mạng, NAS & Camera">Mini PC, Mạng, NAS & Camera</option>
-                  <option value="Cần tư vấn tổng thể / Chưa rõ nhu cầu">Cần tư vấn tổng thể / Chưa rõ nhu cầu</option>
-                </select>
+                <div class="sdi-custom-select" data-name="demand">
+                  <input type="hidden" name="demand" value="Trạm AI Cục bộ & Tự động hóa" required>
+                  <button type="button" class="sdi-custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="sdi-custom-select-label">Trạm AI Cục bộ & Tự động hóa</span>
+                    <i data-lucide="chevron-down" class="sdi-select-arrow"></i>
+                  </button>
+                  <div class="sdi-custom-select-dropdown" role="listbox">
+                    <div class="sdi-custom-select-option selected" data-value="Trạm AI Cục bộ & Tự động hóa" role="option" aria-selected="true">
+                      <span>Trạm AI Cục bộ & Tự động hóa</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Nâng cấp RAM / SSD / Lưu trữ" role="option">
+                      <span>Nâng cấp RAM / SSD / Lưu trữ</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Mini PC, Mạng, NAS & Camera" role="option">
+                      <span>Mini PC, Mạng, NAS & Camera</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Cần tư vấn tổng thể / Chưa rõ nhu cầu" role="option">
+                      <span>Cần tư vấn tổng thể / Chưa rõ nhu cầu</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

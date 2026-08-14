@@ -50,32 +50,32 @@
         <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
       </button>
     </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
-      <div class="sdi-mobile-drawer-content">
-        <nav class="sdi-mobile-nav-links">
-          <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/may-don-le.html" class="sdi-mobile-nav-link active">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Về NavaTek <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-          <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        </nav>
-        
-        <!-- Mobile Search inside Drawer -->
-        <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
-          <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
-          <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
-          <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
-        </div>
-
-        <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
-          <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
-          <span>Nhận báo giá</span>
-        </button>
-      </div>
-    </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
+    <div class="sdi-mobile-drawer-content">
+      <nav class="sdi-mobile-nav-links">
+        <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/may-don-le.html" class="sdi-mobile-nav-link active">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Về NavaTek <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+      </nav>
+      
+      <!-- Mobile Search inside Drawer -->
+      <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
+        <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+        <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
+        <div class="sdi-suggestion-box" id="search-suggestion-dropdown-mobile"></div>
+      </div>
+
+      <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important;">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+    </div>
+  </div>
 
   <div class="sdi-header-spacer" style="height: 76px;"></div>
 
@@ -176,11 +176,27 @@
               </button>
               <div class="sdi-catalog-inputs">
                 <input type="text" placeholder="Tìm trong danh mục..." class="sdi-catalog-search">
-                <select class="sdi-catalog-select">
-                  <option>Sắp xếp: Mới nhất</option>
-                  <option>Sắp xếp theo giá tăng dần</option>
-                  <option>Sắp xếp theo giá giảm dần</option>
-                </select>
+                <div class="sdi-custom-select is-light is-compact" data-name="catalog_sort" id="catalog-sort-select">
+                  <input type="hidden" name="catalog_sort" value="Sắp xếp: Mới nhất">
+                  <button type="button" class="sdi-custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="sdi-custom-select-label">Sắp xếp: Mới nhất</span>
+                    <i data-lucide="chevron-down" class="sdi-select-arrow"></i>
+                  </button>
+                  <div class="sdi-custom-select-dropdown" role="listbox">
+                    <div class="sdi-custom-select-option selected" data-value="Sắp xếp: Mới nhất" role="option" aria-selected="true">
+                      <span>Sắp xếp: Mới nhất</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Sắp xếp theo giá tăng dần" role="option">
+                      <span>Sắp xếp theo giá tăng dần</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Sắp xếp theo giá giảm dần" role="option">
+                      <span>Sắp xếp theo giá giảm dần</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -422,12 +438,31 @@
               </div>
               <div>
                 <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Nhu cầu của bạn *</label>
-                <select required style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: #0F172A; color: #FFFFFF; font-size: 0.9rem;">
-                  <option value="Trạm AI Cục bộ & Tự động hóa">Trạm AI Cục bộ & Tự động hóa</option>
-                  <option value="Nâng cấp RAM / SSD / Lưu trữ">Nâng cấp RAM / SSD / Lưu trữ</option>
-                  <option value="Mini PC, Mạng, NAS & Camera">Mini PC, Mạng, NAS & Camera</option>
-                  <option value="Cần tư vấn tổng thể / Chưa rõ nhu cầu">Cần tư vấn tổng thể / Chưa rõ nhu cầu</option>
-                </select>
+                <div class="sdi-custom-select" data-name="demand">
+                  <input type="hidden" name="demand" value="Trạm AI Cục bộ & Tự động hóa" required>
+                  <button type="button" class="sdi-custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="sdi-custom-select-label">Trạm AI Cục bộ & Tự động hóa</span>
+                    <i data-lucide="chevron-down" class="sdi-select-arrow"></i>
+                  </button>
+                  <div class="sdi-custom-select-dropdown" role="listbox">
+                    <div class="sdi-custom-select-option selected" data-value="Trạm AI Cục bộ & Tự động hóa" role="option" aria-selected="true">
+                      <span>Trạm AI Cục bộ & Tự động hóa</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Nâng cấp RAM / SSD / Lưu trữ" role="option">
+                      <span>Nâng cấp RAM / SSD / Lưu trữ</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Mini PC, Mạng, NAS & Camera" role="option">
+                      <span>Mini PC, Mạng, NAS & Camera</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Cần tư vấn tổng thể / Chưa rõ nhu cầu" role="option">
+                      <span>Cần tư vấn tổng thể / Chưa rõ nhu cầu</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

@@ -681,4 +681,142 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================================================
+  // 15. MOBILE SOLUTIONS CAROUSEL & SLIDE DOTS SYNC
+  // ==========================================================================
+  const solutionsSlider = document.getElementById('solutions-slider');
+  const solutionsDotsContainer = document.getElementById('solutions-dots');
+
+  if (solutionsSlider && solutionsDotsContainer) {
+    const dots = solutionsDotsContainer.querySelectorAll('.solutions-dot');
+    const items = solutionsSlider.querySelectorAll('.home-solutions-item');
+
+    // Click dot to smoothly scroll to corresponding card
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (items[index]) {
+          const targetCard = items[index];
+          const scrollLeft = targetCard.offsetLeft - solutionsSlider.offsetLeft;
+          solutionsSlider.scrollTo({
+            left: scrollLeft,
+            behavior: 'smooth'
+          });
+          dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+      });
+    });
+
+    // Update active dot on scroll / swipe
+    let scrollTimeout;
+    solutionsSlider.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const scrollLeft = solutionsSlider.scrollLeft;
+        let closestIndex = 0;
+        let minDistance = Infinity;
+
+        items.forEach((item, index) => {
+          const itemOffset = item.offsetLeft - solutionsSlider.offsetLeft;
+          const distance = Math.abs(scrollLeft - itemOffset);
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestIndex = index;
+          }
+        });
+
+        dots.forEach((d, i) => d.classList.toggle('active', i === closestIndex));
+      }, 40);
+    }, { passive: true });
+  }
+
+  // ==========================================================================
+  // 16. PREMIUM CUSTOM SELECT DROPDOWN COMPONENT INITIALIZER
+  // ==========================================================================
+  function initCustomSelects() {
+    const customSelects = document.querySelectorAll('.sdi-custom-select');
+
+    customSelects.forEach(select => {
+      const trigger = select.querySelector('.sdi-custom-select-trigger');
+      const label = select.querySelector('.sdi-custom-select-label');
+      const dropdown = select.querySelector('.sdi-custom-select-dropdown');
+      const options = select.querySelectorAll('.sdi-custom-select-option');
+      const hiddenInput = select.querySelector('input[type="hidden"]');
+
+      if (!trigger || !dropdown) return;
+
+      // Toggle dropdown open/close
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = select.classList.contains('open');
+
+        // Close all other open custom selects first
+        document.querySelectorAll('.sdi-custom-select.open').forEach(s => {
+          if (s !== select) {
+            s.classList.remove('open');
+            s.querySelector('.sdi-custom-select-trigger')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          select.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          select.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Handle Option Selection
+      options.forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const val = opt.getAttribute('data-value') || opt.textContent.trim();
+          const text = opt.querySelector('span')?.textContent.trim() || opt.textContent.trim();
+
+          // Update active state
+          options.forEach(o => {
+            o.classList.remove('selected');
+            o.setAttribute('aria-selected', 'false');
+          });
+          opt.classList.add('selected');
+          opt.setAttribute('aria-selected', 'true');
+
+          // Update trigger label and hidden input
+          if (label) label.textContent = text;
+          if (hiddenInput) {
+            hiddenInput.value = val;
+            hiddenInput.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+
+          // Close dropdown
+          select.classList.remove('open');
+          trigger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+
+    // Close any open custom select when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.sdi-custom-select')) {
+        document.querySelectorAll('.sdi-custom-select.open').forEach(s => {
+          s.classList.remove('open');
+          s.querySelector('.sdi-custom-select-trigger')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.sdi-custom-select.open').forEach(s => {
+          s.classList.remove('open');
+          s.querySelector('.sdi-custom-select-trigger')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  }
+
+  initCustomSelects();
 });
