@@ -128,149 +128,105 @@
 
         <!-- Right Column: Interactive Wireframe Tech Graphic -->
         <div class="sdi-animate-fade-up sdi-delay-2 hero-floating-graphic" style="display: flex; align-items: center; justify-content: center; width: 100%;">
-          <div style="position: relative; width: 100%; min-height: 360px; display: flex; align-items: center; justify-content: center; overflow: visible;">
-            <!-- Subtle network flow simulation background -->
-            <div class="grid-flow-nodes" style="position: absolute; inset: 0; opacity: 0.15;"></div>
-            
-            <!-- Custom Animated High-Tech Server SVG -->
-            <svg width="100%" height="320" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto; max-height: 320px;">
-              <style>
-                .glow-node {
-                  filter: drop-shadow(0 0 8px #38BDF8);
-                }
-                .link-line {
-                  stroke-dasharray: 8 6;
-                  animation: svg-dash-flow 1.5s linear infinite;
-                }
-                .link-line-reverse {
-                  stroke-dasharray: 8 6;
-                  animation: svg-dash-flow-rev 2s linear infinite;
-                }
-                @keyframes svg-dash-flow {
-                  to {
-                    stroke-dashoffset: -28;
+          <div style="position: relative; width: 100%; min-height: 340px; display: flex; align-items: center; justify-content: center; overflow: visible;">
+            <!-- Custom Animated Soft High-Tech AI Neural Server SVG (Feedback 5) -->
+            <svg width="100%" height="340" viewBox="0 0 520 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+              <defs>
+                <linearGradient id="hero-ai-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563EB" stop-opacity="0.3" />
+                  <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.05" />
+                </linearGradient>
+                <linearGradient id="hero-card-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(30, 41, 59, 0.9)" />
+                  <stop offset="100%" stop-color="rgba(15, 23, 42, 0.9)" />
+                </linearGradient>
+                <linearGradient id="hero-core-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563EB" />
+                  <stop offset="100%" stop-color="#38BDF8" />
+                </linearGradient>
+                <filter id="hero-glow-soft" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#38BDF8" flood-opacity="0.4" />
+                </filter>
+                <style>
+                  .neural-stream {
+                    stroke-dasharray: 6 6;
+                    animation: neural-dash 2s linear infinite;
                   }
-                }
-                @keyframes svg-dash-flow-rev {
-                  to {
-                    stroke-dashoffset: 28;
+                  @keyframes neural-dash {
+                    to { stroke-dashoffset: -24; }
                   }
-                }
-                .pulse-ring {
-                  transform-origin: 250px 160px;
-                  animation: svg-pulse 2.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-                }
-                @keyframes svg-pulse {
-                  0% {
-                    transform: scale(0.85);
-                    opacity: 0.8;
+                  .neural-float {
+                    animation: neural-float-y 6s ease-in-out infinite alternate;
                   }
-                  100% {
-                    transform: scale(1.3);
-                    opacity: 0;
+                  @keyframes neural-float-y {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-8px); }
                   }
-                }
-                .float-box {
-                  animation: svg-float-y 6s ease-in-out infinite alternate;
-                }
-                @keyframes svg-float-y {
-                  0% { transform: translateY(0); }
-                  100% { transform: translateY(-8px); }
-                }
-              </style>
+                  .neural-pulse-ring {
+                    transform-origin: 260px 170px;
+                    animation: pulse-grow 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+                  }
+                  @keyframes pulse-grow {
+                    0% { transform: scale(0.9); opacity: 0.8; }
+                    100% { transform: scale(1.35); opacity: 0; }
+                  }
+                </style>
+              </defs>
 
-              <!-- Central AI Core / Server Rack (Isometric) -->
-              <g transform="translate(0, 0)">
-                <g class="float-box">
-                  <!-- Pulsing Glow Ring -->
-                  <circle cx="250" cy="160" r="60" stroke="#2563EB" stroke-width="1.5" stroke-opacity="0.3" fill="none" />
-                  <circle cx="250" cy="160" r="60" stroke="#38BDF8" stroke-width="2" class="pulse-ring" fill="none" />
+              <!-- Ambient Glow & Radial Rings -->
+              <circle cx="260" cy="170" r="110" fill="url(#hero-ai-glow)" />
+              <circle cx="260" cy="170" r="85" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.4" fill="none" />
+              <circle cx="260" cy="170" r="85" stroke="#38BDF8" stroke-width="2" class="neural-pulse-ring" fill="none" />
 
-                  <!-- Isometric Server Rack Blocks -->
-                  <!-- Rack Base / Floor plate -->
-                  <path d="M 250 120 L 310 150 L 250 180 L 190 150 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" opacity="0.6" />
-                  
-                  <!-- Server Rack Pillar Back/Sides -->
-                  <path d="M 190 150 L 190 210 L 250 240 L 250 180 Z" fill="#1E293B" stroke="#2563EB" stroke-dasharray="2 2" opacity="0.5" />
-                  <path d="M 310 150 L 310 210 L 250 240 L 250 180 Z" fill="#0F172A" stroke="#2563EB" stroke-dasharray="2 2" opacity="0.5" />
-
-                  <!-- Top Server Blade -->
-                  <g transform="translate(0, -30)">
-                    <path d="M 250 140 L 300 165 L 250 190 L 200 165 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="2" class="glow-node" />
-                    <path d="M 200 165 L 200 175 L 250 200 L 250 190 Z" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5" />
-                    <path d="M 300 165 L 300 175 L 250 200 L 250 190 Z" fill="#0A1128" stroke="#38BDF8" stroke-width="1.5" />
-                    <!-- Server LEDs -->
-                    <circle cx="220" cy="180" r="2.5" fill="#10B981" />
-                    <circle cx="235" cy="187" r="2.5" fill="#38BDF8" />
-                    <circle cx="250" cy="195" r="2.5" fill="#38BDF8" />
-                  </g>
-
-                  <!-- Middle Server Blade -->
-                  <g transform="translate(0, -10)">
-                    <path d="M 250 140 L 300 165 L 250 190 L 200 165 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.5" />
-                    <path d="M 200 165 L 200 175 L 250 200 L 250 190 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1" />
-                    <path d="M 300 165 L 300 175 L 250 200 L 250 190 Z" fill="#0A1128" stroke="#2563EB" stroke-width="1" />
-                    <!-- Server LEDs -->
-                    <circle cx="220" cy="180" r="2" fill="#10B981" />
-                    <circle cx="235" cy="187" r="2" fill="#2563EB" />
-                    <circle cx="250" cy="195" r="2" fill="#10B981" />
-                  </g>
-
-                  <!-- Bottom Server Blade -->
-                  <g transform="translate(0, 10)">
-                    <path d="M 250 140 L 300 165 L 250 190 L 200 165 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.5" />
-                    <path d="M 200 165 L 200 175 L 250 200 L 250 190 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1" />
-                    <path d="M 300 165 L 300 175 L 250 200 L 250 190 Z" fill="#0A1128" stroke="#2563EB" stroke-width="1" />
-                    <!-- Server LEDs -->
-                    <circle cx="220" cy="180" r="2" fill="#2563EB" />
-                    <circle cx="235" cy="187" r="2" fill="#2563EB" />
-                    <circle cx="250" cy="195" r="2" fill="#10B981" />
-                  </g>
-                </g>
-              </g>
-
-              <!-- Left Node: Cloud Data Storage -->
-              <g transform="translate(100, 100)">
-                <g class="float-box">
-                  <circle cx="0" cy="0" r="22" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" />
-                  <!-- Cloud icon -->
-                  <path d="M -8 2 A 4 4 0 0 1 -4 -4 A 5 5 0 0 1 5 -4 A 4 4 0 0 1 8 2 Z" fill="none" stroke="#38BDF8" stroke-width="1.5" />
-                  <line x1="-8" y1="2" x2="8" y2="2" stroke="#38BDF8" stroke-width="1.5" />
-                </g>
-              </g>
-
-              <!-- Right Node: AI Model / Neural Brain -->
-              <g transform="translate(400, 100)">
-                <g class="float-box">
-                  <circle cx="0" cy="0" r="22" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" />
-                  <!-- Brain / Neural nodes icon -->
-                  <circle cx="-6" cy="-6" r="3" fill="#38BDF8" />
-                  <circle cx="6" cy="-6" r="3" fill="#38BDF8" />
-                  <circle cx="0" cy="6" r="3" fill="#38BDF8" />
-                  <line x1="-4" y1="-4" x2="-1" y2="3" stroke="#38BDF8" stroke-width="1" />
-                  <line x1="4" y1="-4" x2="1" y2="3" stroke="#38BDF8" stroke-width="1" />
-                  <line x1="-3" y1="-6" x2="3" y2="-6" stroke="#38BDF8" stroke-width="1" />
-                </g>
-              </g>
-
-              <!-- Bottom Node: Database -->
-              <g transform="translate(250, 260)">
-                <g class="float-box">
-                  <circle cx="0" cy="0" r="20" fill="#0F172A" stroke="#2563EB" stroke-width="1.5" />
-                  <!-- Database cylinder icon -->
-                  <ellipse cx="0" cy="-6" rx="7" ry="3" fill="none" stroke="#38BDF8" stroke-width="1.5" />
-                  <path d="M -7 -6 L -7 0 A 7 3 0 0 0 7 0 L 7 -6" fill="none" stroke="#38BDF8" stroke-width="1.5" />
-                  <path d="M -7 0 L -7 6 A 7 3 0 0 0 7 6 L 7 0" fill="none" stroke="#38BDF8" stroke-width="1.5" />
-                </g>
-              </g>
-
-              <!-- Connecting Datastreams (Lines) -->
-              <!-- Left to Center -->
-              <path d="M 122 100 L 190 135" stroke="#38BDF8" stroke-width="1.5" fill="none" class="link-line" />
-              <!-- Center to Right -->
-              <path d="M 310 135 L 378 100" stroke="#38BDF8" stroke-width="1.5" fill="none" class="link-line-reverse" />
+              <!-- Connecting Curved Bezier Neural Paths -->
+              <!-- Center to Top-Left -->
+              <path d="M 260 120 C 260 70, 130 110, 110 75" stroke="#38BDF8" stroke-width="2" fill="none" class="neural-stream" opacity="0.8" />
+              <!-- Center to Top-Right -->
+              <path d="M 260 120 C 260 70, 390 110, 410 75" stroke="#38BDF8" stroke-width="2" fill="none" class="neural-stream" opacity="0.8" />
               <!-- Center to Bottom -->
-              <path d="M 250 210 L 250 240" stroke="#38BDF8" stroke-width="1.5" fill="none" class="link-line" />
+              <path d="M 260 220 C 260 250, 260 265, 260 280" stroke="#10B981" stroke-width="2" fill="none" class="neural-stream" opacity="0.8" />
+
+              <!-- TOP-LEFT NODE: LLM INFERENCE ENGINE -->
+              <g transform="translate(30, 30)" class="neural-float">
+                <rect width="160" height="66" rx="14" fill="url(#hero-card-dark)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
+                <rect x="10" y="11" width="44" height="44" rx="10" fill="rgba(37, 99, 235, 0.2)" />
+                <path d="M 22 25 L 42 25 M 22 33 L 36 33 M 22 41 L 42 41" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+                <text x="62" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">LOCAL LLM</text>
+                <text x="62" y="44" fill="#94A3B8" font-size="8.5" font-weight="500" font-family="'Inter', sans-serif">DeepSeek / Llama-3</text>
+                <circle cx="146" cy="18" r="3.5" fill="#10B981" />
+              </g>
+
+              <!-- TOP-RIGHT NODE: GPU CLUSTER ACCELERATION -->
+              <g transform="translate(330, 30)" class="neural-float" style="animation-delay: -1.5s;">
+                <rect width="160" height="66" rx="14" fill="url(#hero-card-dark)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
+                <rect x="10" y="11" width="44" height="44" rx="10" fill="rgba(16, 185, 129, 0.2)" />
+                <path d="M 22 25 L 42 25 L 42 41 L 22 41 Z M 26 21 L 26 25 M 34 21 L 34 25 M 26 41 L 26 45 M 34 41 L 34 45" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" fill="none" />
+                <text x="62" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">GPU COMPUTE</text>
+                <text x="62" y="44" fill="#94A3B8" font-size="8.5" font-weight="500" font-family="'Inter', sans-serif">NVIDIA RTX 4090 / Ada</text>
+                <circle cx="146" cy="18" r="3.5" fill="#38BDF8" />
+              </g>
+
+              <!-- CENTRAL AI CORE NODE (HERO ACCENT) -->
+              <g transform="translate(170, 115)" class="neural-float" style="animation-delay: -0.75s;" filter="url(#hero-glow-soft)">
+                <rect width="180" height="110" rx="18" fill="rgba(15, 23, 42, 0.95)" stroke="#38BDF8" stroke-width="2" />
+                <!-- Core Gradient Pill Header -->
+                <rect x="12" y="12" width="156" height="26" rx="8" fill="url(#hero-core-grad)" />
+                <text x="90" y="29" fill="#FFFFFF" font-size="10.5" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" letter-spacing="0.06em">AI SERVER CORE</text>
+                <!-- Core Stats & Icon -->
+                <circle cx="42" cy="72" r="18" fill="rgba(37, 99, 235, 0.25)" />
+                <path d="M 34 72 L 50 72 M 42 64 L 42 80" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+                <text x="68" y="67" fill="#FFFFFF" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">Private AI 24/7</text>
+                <text x="68" y="82" fill="#10B981" font-size="9" font-weight="700" font-family="'Inter', sans-serif">● On-Premise Secure</text>
+              </g>
+
+              <!-- BOTTOM NODE: ENTERPRISE DATA & VECTOR DB -->
+              <g transform="translate(180, 270)" class="neural-float" style="animation-delay: -2.2s;">
+                <rect width="160" height="60" rx="12" fill="url(#hero-card-dark)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5" />
+                <rect x="10" y="10" width="40" height="40" rx="8" fill="rgba(16, 185, 129, 0.15)" />
+                <ellipse cx="30" cy="22" rx="8" ry="3" stroke="#10B981" stroke-width="1.5" fill="none" />
+                <path d="M 22 22 L 22 34 A 8 3 0 0 0 38 34 L 38 22" stroke="#10B981" stroke-width="1.5" fill="none" />
+                <text x="58" y="27" fill="#FFFFFF" font-size="10" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">VECTOR DB</text>
+              </g>
             </svg>
 
           </div>
@@ -307,33 +263,33 @@
     </div>
   </section>
 
-  <!-- Lợi ích (NavaTek làm gì cho bạn) -->
+  <!-- Lợi ích (NavaTek làm gì cho bạn - Feedback 6: Cân bằng Grid & Trục hiển thị) -->
   <section style="padding: 5.5rem 0; background: #F8FAFD; border-top: 1px solid #EFF3FA;">
     <div class="container-sdi">
-      <div class="sdi-split-grid is-footer">
+      <div class="sdi-solution-benefit-grid">
         
         <div>
           <span class="eyebrow-badge">LỢI ÍCH VẬN HÀNH</span>
-          <h2 style="margin-bottom: 2rem;">NavaTek làm gì cho bạn</h2>
+          <h2 style="margin-bottom: 2rem; color: var(--sdi-navy-primary);">NavaTek làm gì cho bạn</h2>
           
           <div style="display: flex; flex-direction: column; gap: 1.75rem;">
             <div>
               <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">1. Tư vấn cấu hình theo tải thật</h4>
-              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary);">Đo lường chính xác nhu cầu sử dụng thực tế và tham số mô hình AI trước khi chọn GPU, tránh lãng phí ngân sách đầu tư.</p>
+              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary); line-height: 1.6;">Đo lường chính xác nhu cầu sử dụng thực tế và tham số mô hình AI trước khi chọn GPU, tránh lãng phí ngân sách đầu tư.</p>
             </div>
             <div>
-              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">2. Lắp đặt & nghiệm thu tận nơi</h4>
-              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary);">Chạy thử nghiệm hiệu năng thực tế (benchmark test) trực tiếp cùng khách hàng tại phòng server trước khi tiến hành bàn giao bàn nghiệm thu.</p>
+              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">2. Lắp đặt &amp; nghiệm thu tận nơi</h4>
+              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary); line-height: 1.6;">Chạy thử nghiệm hiệu năng thực tế (benchmark test) trực tiếp cùng khách hàng tại phòng server trước khi tiến hành bàn giao bàn nghiệm thu.</p>
             </div>
             <div>
-              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">3. Bảo hành & Hỗ trợ kỹ thuật 24/7</h4>
-              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary);">Cung cấp thiết bị dự phòng thay thế tương đương trong thời gian xử lý sự cố phần cứng, đảm bảo luồng suy luận của doanh nghiệp liên tục.</p>
+              <h4 style="color: var(--sdi-navy-primary); font-size: 1.15rem; margin-bottom: 0.35rem;">3. Bảo hành &amp; Hỗ trợ kỹ thuật 24/7</h4>
+              <p style="font-size: 0.95rem; color: var(--sdi-text-secondary); line-height: 1.6;">Cung cấp thiết bị dự phòng thay thế tương đương trong thời gian xử lý sự cố phần cứng, đảm bảo luồng suy luận của doanh nghiệp liên tục.</p>
             </div>
           </div>
         </div>
 
-        <div class="bento-card bento-card-white" style="padding: 2rem; align-items: center; justify-content: center;">
-          <img src="/images/combo.png" alt="Isometric rack server GPU AI" class="graphic-blend" style="max-height: 280px;" />
+        <div class="bento-card bento-card-white" style="padding: 2.5rem; display: flex; align-items: center; justify-content: center; min-height: 380px; box-shadow: 0 16px 36px rgba(0, 51, 102, 0.06); border-radius: 24px; border: 1px solid var(--sdi-border);">
+          <img src="/images/combo.png" alt="Trạm AI Server GPU NavaTek" class="graphic-blend" style="max-height: 300px; width: auto; object-fit: contain;" />
         </div>
 
       </div>
@@ -446,9 +402,137 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  
+  <!-- ==========================================================================
+       UNIFIED DARK FOOTER & REQUEST QUOTE FORM (Feedback 0)
+       ========================================================================== -->
+  <footer class="footer-sdi tech-dot-grid-dark" id="footer-section" style="position: relative; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #050B1A 100%) !important; background-size: 28px 28px, auto !important; background-color: #050B1A !important; overflow: hidden;">
+    <div style="position: absolute; top: -10%; left: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+    <div style="position: absolute; bottom: -10%; right: -5%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
 
+    <!-- Subtle ambient SVG circuit tracks (Feedback 4) -->
+    <svg class="footer-circuit-subtle" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad-line-footer-sol" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+          <stop offset="50%" stop-color="var(--sdi-blue-glow)" stop-opacity="0.5" />
+          <stop offset="100%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <path d="M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550" fill="none" stroke="url(#grad-line-footer-sol)" stroke-width="1" />
+      <path d="M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580" fill="none" stroke="url(#grad-line-footer-sol)" stroke-width="1" />
+      <circle r="3.5" fill="#38BDF8" opacity="0.6" style="offset-path: path('M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550'); animation: flow-data 8s linear infinite;" />
+      <circle r="3.5" fill="#38BDF8" opacity="0.6" style="offset-path: path('M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580'); animation: flow-data 10s linear infinite 4s;" />
+    </svg>
+
+    <div class="container-sdi">
+      <div class="sdi-split-grid is-footer">
+        
+        <!-- Left: Form -->
+        <div>
+          <span class="eyebrow-badge" style="background: rgba(56, 189, 248, 0.08); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.15); padding: 0.4rem 1rem;">BÁO GIÁ NHANH</span>
+          <h2 style="color: #FFFFFF; font-size: 2.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Nhận báo giá giải pháp trong 24 giờ</h2>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 2rem;">Kỹ sư hạ tầng của NavaTek sẽ liên hệ tư vấn cấu hình chi tiết và gửi báo giá qua email/Zalo.</p>
+
+          <form id="footer-lead-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="sdi-form-grid-2">
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Họ và tên *</label>
+                <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Số điện thoại *</label>
+                <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div class="sdi-form-grid-2">
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Email</label>
+                <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Nhu cầu của bạn *</label>
+                <div class="sdi-custom-select" data-name="demand">
+                  <input type="hidden" name="demand" value="Trạm AI Cục bộ & Tự động hóa" required>
+                  <button type="button" class="sdi-custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="sdi-custom-select-label">Trạm AI Cục bộ & Tự động hóa</span>
+                    <i data-lucide="chevron-down" class="sdi-select-arrow"></i>
+                  </button>
+                  <div class="sdi-custom-select-dropdown" role="listbox">
+                    <div class="sdi-custom-select-option selected" data-value="Trạm AI Cục bộ & Tự động hóa" role="option" aria-selected="true">
+                      <span>Trạm AI Cục bộ & Tự động hóa</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Nâng cấp RAM / SSD / Lưu trữ" role="option">
+                      <span>Nâng cấp RAM / SSD / Lưu trữ</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Mini PC, Mạng, NAS & Camera" role="option">
+                      <span>Mini PC, Mạng, NAS & Camera</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                    <div class="sdi-custom-select-option" data-value="Cần tư vấn tổng thể / Chưa rõ nhu cầu" role="option">
+                      <span>Cần tư vấn tổng thể / Chưa rõ nhu cầu</span>
+                      <i data-lucide="check" class="sdi-option-check"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 0.5rem;">
+              <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.9rem;">
+                <span>Gửi yêu cầu báo giá</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Corporate details & Ecosystem -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h4 style="color: #FFFFFF; font-size: 1.25rem; margin-bottom: 1rem;">Thông tin công ty</h4>
+            <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              <strong>Công ty TNHH NavaTek</strong><br>
+              Địa chỉ: Thành phố Hồ Chí Minh<br>
+              Hotline: 1900 - NAVATEK | MST: 031789456<br>
+              Liên kết: <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách đổi trả</a>
+            </p>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+              <a href="/nganh-phuc-vu.html" class="footer-link active" style="margin-right: 0.75rem;">Giải pháp</a>
+              <a href="/may-don-le.html" class="footer-link" style="margin-right: 0.75rem;">Sản phẩm</a>
+              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Dịch vụ</a>
+              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Về NavaTek</a>
+              <a href="/du-an.html" class="footer-link">Liên hệ</a>
+            </div>
+          </div>
+
+          <!-- Ecosystem Block -->
+          <div>
+            <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 0.75rem;">Hệ sinh thái Nava</h4>
+            <div class="sdi-form-grid-2" style="gap: 1.25rem !important;">
+              <div class="sdi-ecosystem-card">
+                <div class="sdi-eco-title">NAVATEK</div>
+                <div class="sdi-eco-desc">Giải pháp doanh nghiệp</div>
+              </div>
+              <div class="sdi-ecosystem-card is-retail">
+                <div class="sdi-eco-title">NAVASTORE</div>
+                <div class="sdi-eco-desc">Bán lẻ · Top 2 Google</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color: #475569; font-size: 0.8rem; margin-top: 3.5rem;">
+        © 2026 Công Ty TNHH NavaTek. Bảo lưu mọi quyền.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Popup -->
   <div class="modal-overlay" id="quote-modal">
     <div class="modal-box">
       <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">

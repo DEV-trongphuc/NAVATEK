@@ -336,8 +336,8 @@
           <!-- Unified Solutions Grid (Desktop Bento) & Swipeable Slider (Mobile) -->
           <div class="solutions-grid-slider" id="solutions-slider">
             
-            <!-- Card 1: Trạm AI Cục bộ -->
-            <div class="home-solutions-item w-inline-block">
+            <!-- Card 1: Trạm AI Cục bộ (Feedback 1: Balanced 2-Column Bento Card) -->
+            <div class="home-solutions-item is-hero-card w-inline-block">
               <span class="sdi-badge-strategic">MŨI NHỌN — ĐỊNH VỊ CHIẾN LƯỢC</span>
               <div class="home-solutions-item-wr">
                 <div>
@@ -347,12 +347,12 @@
                   
                   <h3 class="home-solutions-item-title">Trạm AI Cục bộ & Máy chủ Tự động hóa</h3>
                   
-                  <p>
+                  <p style="color: var(--sdi-text-secondary); line-height: 1.65; margin-top: 0.5rem;">
                     Chạy Local LLM, Stable Diffusion, hoặc làm máy chủ tự động hóa 24/7 ngay tại văn phòng — dữ liệu không ra khỏi công ty. Có hai hình thức tuỳ ngân sách và nhu cầu:
                   </p>
                 </div>
 
-                <div class="solutions-btn-group" style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap; z-index: 3; position: relative;">
+                <div class="solutions-btn-group" style="margin-top: 0.75rem; display: flex; gap: 0.75rem; flex-wrap: wrap; z-index: 3; position: relative;">
                   <a href="/combo-tron-bo.html" class="sdi-pill-btn">
                     <span>Combo Trọn Bộ</span>
                     <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
@@ -547,176 +547,168 @@
   </div>
 
   <!-- ==========================================================================
-       GÓI SETUP TRỌN GÓI (INTEGRATED STEPS & ILLUSTRATION)
+       GÓI SETUP TRỌN GÓI (INTEGRATED STEPS & ILLUSTRATION - Feedback 2 & 3)
        ========================================================================== -->
   <section style="padding: 6.5rem 0; background: #FFFFFF; border-top: 1px solid var(--sdi-border); position: relative;">
     <div class="container-sdi">
       
-
-      <div class="sdi-split-grid is-reversed">
+      <div class="sdi-split-grid is-reversed" style="gap: 3.5rem; align-items: center;">
         
-        <!-- Left: Wireframe style illustration placeholder -->
+        <!-- Left: Soft Minimalist Connected Office Ecosystem Diagram (Feedback 2) -->
         <div>
-          <div class="wireframe-box-dashed-dark" style="position: relative; min-height: 420px; overflow: visible; display: flex; align-items: center; justify-content: center; background: rgba(0, 51, 102, 0.02); flex-direction: column; padding: 2rem 1rem;">
-            
-            <svg width="100%" height="380" viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto; max-height: 380px;">
-              <style>
-                .office-flow {
-                  stroke-dasharray: 8 6;
-                  animation: office-dash 1.8s linear infinite;
-                }
-                @keyframes office-dash {
-                  to { stroke-dashoffset: -28; }
-                }
-                .office-float {
-                  animation: office-float-y 5s ease-in-out infinite alternate;
-                }
-                @keyframes office-float-y {
-                  0% { transform: translateY(0); }
-                  100% { transform: translateY(-8px); }
-                }
-                .glow-blue {
-                  filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.65));
-                }
-                .glow-green {
-                  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.65));
-                }
-              </style>
+          <div class="sdi-diagram-wrapper">
+            <svg width="100%" height="380" viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+              <defs>
+                <linearGradient id="soft-blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#EFF6FF" />
+                  <stop offset="100%" stop-color="#DBEAFE" />
+                </linearGradient>
+                <linearGradient id="soft-card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FFFFFF" />
+                  <stop offset="100%" stop-color="#F8FAFD" />
+                </linearGradient>
+                <linearGradient id="line-flow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2563EB" />
+                  <stop offset="50%" stop-color="#38BDF8" />
+                  <stop offset="100%" stop-color="#10B981" />
+                </linearGradient>
+                <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#003366" flood-opacity="0.08" />
+                </filter>
+                <filter id="center-glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#2563EB" flood-opacity="0.18" />
+                </filter>
+                <style>
+                  .flow-line {
+                    stroke-dasharray: 6 5;
+                    animation: data-stream 2s linear infinite;
+                  }
+                  @keyframes data-stream {
+                    to { stroke-dashoffset: -22; }
+                  }
+                  .node-pulse {
+                    animation: node-pulse-anim 3s ease-in-out infinite alternate;
+                  }
+                  @keyframes node-pulse-anim {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-4px); }
+                  }
+                </style>
+              </defs>
 
-              <!-- Central Mini PC Node (Isometric 3D - Enlarged to max) -->
-              <g transform="translate(250, 200)">
-                <g class="office-float">
-                  <!-- Base Plate Shadow -->
-                  <ellipse cx="0" cy="38" rx="80" ry="16" fill="rgba(0, 51, 102, 0.18)" />
-                  <!-- Left Face -->
-                  <path d="M -75 -15 L 0 18 L 0 38 L -75 5 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.8" />
-                  <!-- Right Face -->
-                  <path d="M 75 -15 L 0 18 L 0 38 L 75 5 Z" fill="#161E2D" stroke="#2563EB" stroke-width="1.8" />
-                  <!-- Top Face -->
-                  <path d="M 0 -38 L 75 -15 L 0 18 L -75 -15 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="2.5" class="glow-blue" />
-                  
-                  <!-- Front Details: USB Ports & Power Led -->
-                  <path d="M 18 20 L 26 16 L 26 22 L 18 26 Z" fill="#38BDF8" />
-                  <path d="M 36 12 L 44 8 L 44 14 L 36 18 Z" fill="#38BDF8" />
-                  <!-- Power LED -->
-                  <circle cx="-35" cy="2" r="5" fill="#10B981" class="glow-green" />
-                  <!-- Text label -->
-                  <text x="0" y="60" fill="var(--sdi-navy-primary)" font-size="10.5" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.05em">CENTRAL MINI PC</text>
-                </g>
+              <!-- Ambient Glow in Background -->
+              <circle cx="260" cy="190" r="140" fill="url(#soft-blue-grad)" opacity="0.6" />
+
+              <!-- Connecting Bezier Datastreams (Smooth Curves) -->
+              <!-- Center to Top-Left (Monitor) -->
+              <path d="M 260 150 C 260 90, 150 140, 140 85" stroke="url(#line-flow-grad)" stroke-width="2.5" fill="none" class="flow-line" />
+              <!-- Center to Top-Right (Camera) -->
+              <path d="M 260 150 C 260 90, 370 140, 380 85" stroke="url(#line-flow-grad)" stroke-width="2.5" fill="none" class="flow-line" />
+              <!-- Center to Bottom (Printer/Peripheral) -->
+              <path d="M 260 230 C 260 270, 260 280, 260 305" stroke="url(#line-flow-grad)" stroke-width="2.5" fill="none" class="flow-line" />
+
+              <!-- NODE 1: TOP-LEFT - MÀN HÌNH ULTRAWIDE 20:9 -->
+              <g transform="translate(60, 25)" class="node-pulse" filter="url(#soft-shadow)">
+                <rect width="160" height="72" rx="14" fill="url(#soft-card-grad)" stroke="#E2E8F0" stroke-width="1.5" />
+                <!-- Icon container -->
+                <rect x="12" y="14" width="44" height="44" rx="10" fill="#EFF6FF" />
+                <path d="M 24 28 L 44 28 L 44 42 L 24 42 Z M 34 42 L 34 46 M 29 46 L 39 46" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <!-- Text -->
+                <text x="64" y="32" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">MÀN HÌNH 20:9</text>
+                <text x="64" y="47" fill="#64748B" font-size="9" font-weight="500" font-family="'Inter', sans-serif">Hiển thị đa tác vụ</text>
+                <!-- Status dot -->
+                <circle cx="146" cy="18" r="3.5" fill="#10B981" />
               </g>
 
-              <!-- Top Left Node: Isometric Monitor Display (Exact 20:9 Aspect Ratio) -->
-              <g transform="translate(90, 75)">
-                <g class="office-float" style="animation-delay: -1s;">
-                  <!-- Stand Shadow -->
-                  <ellipse cx="0" cy="50" rx="35" ry="8" fill="rgba(0, 51, 102, 0.15)" />
-                  <!-- Stand Base -->
-                  <path d="M -28 42 L 0 49 L 28 42 L 0 35 Z" fill="#334155" stroke="#38BDF8" stroke-width="1.2" />
-                  <!-- Stand Column -->
-                  <path d="M -5 15 L -5 42 L 5 42 L 5 15 Z" fill="#475569" stroke="#38BDF8" stroke-width="1.2" />
-                  <!-- Monitor Frame (Exact 20:9) -->
-                  <rect x="-58" y="-26.1" width="116" height="52.2" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
-                  <!-- Screen Area (Exact 20:9) -->
-                  <rect x="-55" y="-24.75" width="110" height="49.5" rx="1.5" fill="#1E293B" />
-                  <!-- Graph Line on Screen -->
-                  <path d="M -45 0 L -25 -16 L -5 4 L 15 -12 L 40 2" stroke="#10B981" stroke-width="2.5" fill="none" class="glow-green" />
-                  <!-- Screen Power LED -->
-                  <circle cx="53" cy="22" r="2" fill="#10B981" />
-                  <!-- Text label -->
-                  <text x="0" y="-45" fill="var(--sdi-navy-primary)" font-size="10" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.03em">MÀN HÌNH (ULTRAWIDE 20:9)</text>
-                </g>
+              <!-- NODE 2: TOP-RIGHT - CAMERA GIÁM SÁT AI -->
+              <g transform="translate(300, 25)" class="node-pulse" style="animation-delay: -1s;" filter="url(#soft-shadow)">
+                <rect width="160" height="72" rx="14" fill="url(#soft-card-grad)" stroke="#E2E8F0" stroke-width="1.5" />
+                <!-- Icon container -->
+                <rect x="12" y="14" width="44" height="44" rx="10" fill="#FEF3C7" />
+                <path d="M 24 30 L 38 30 L 44 24 L 44 46 L 38 40 L 24 40 Z" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <!-- Text -->
+                <text x="64" y="32" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">CAMERA AI</text>
+                <text x="64" y="47" fill="#64748B" font-size="9" font-weight="500" font-family="'Inter', sans-serif">Nhận diện thời gian thực</text>
+                <!-- Live badge -->
+                <circle cx="146" cy="18" r="3.5" fill="#EF4444" />
               </g>
 
-              <!-- Top Right Node: Isometric Camera (Enlarged to max) -->
-              <g transform="translate(410, 75)">
-                <g class="office-float" style="animation-delay: -2s;">
-                  <!-- Base Mount Shadow -->
-                  <ellipse cx="0" cy="45" rx="28" ry="7" fill="rgba(0, 51, 102, 0.15)" />
-                  <!-- Base Mount Plate -->
-                  <path d="M -20 38 L 0 44 L 20 38 L 0 32 Z" fill="#334155" stroke="#38BDF8" stroke-width="1.2" />
-                  <!-- Bracket Pole -->
-                  <path d="M -3 15 L -3 38 L 3 38 L 3 15 Z" fill="#475569" stroke="#38BDF8" stroke-width="1.2" />
-                  <!-- Camera Cylinder Body -->
-                  <rect x="-18" y="-20" width="36" height="35" rx="18" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
-                  <!-- Camera Lens -->
-                  <circle cx="0" cy="-2.5" r="11" fill="#1E293B" stroke="#10B981" stroke-width="2.5" class="glow-green" />
-                  <circle cx="0" cy="-2.5" r="4.5" fill="#38BDF8" />
-                  <!-- Red Recording led -->
-                  <circle cx="6" cy="-8" r="1.8" fill="#FF4D4D" class="glow-red" />
-                  <!-- Text label -->
-                  <text x="0" y="-30" fill="var(--sdi-navy-primary)" font-size="10" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.03em">CAMERA GIÁM SÁT</text>
-                </g>
+              <!-- NODE 3: CENTRAL MINI PC NODE (HERO CORE) -->
+              <g transform="translate(160, 140)" class="node-pulse" style="animation-delay: -0.5s;" filter="url(#center-glow)">
+                <rect width="200" height="96" rx="18" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
+                <!-- Core Glow Header -->
+                <rect x="12" y="12" width="176" height="26" rx="8" fill="linear-gradient(90deg, #2563EB 0%, #38BDF8 100%)" />
+                <text x="100" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" letter-spacing="0.05em">TRẠM MINI PC TRUNG TÂM</text>
+                <!-- Details -->
+                <rect x="20" y="48" width="38" height="38" rx="8" fill="#EFF6FF" />
+                <path d="M 31 59 L 47 59 M 31 67 L 47 67 M 39 53 L 39 73" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+                <text x="66" y="62" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">Private AI Server</text>
+                <text x="66" y="77" fill="#10B981" font-size="9" font-weight="700" font-family="'Inter', sans-serif">● Vận hành 24/7 Cục bộ</text>
               </g>
 
-              <!-- Bottom Node: Isometric Printer (Enlarged to max & Lowered) -->
-              <g transform="translate(250, 315)">
-                <g class="office-float" style="animation-delay: -3s;">
-                  <!-- Base Shadow -->
-                  <ellipse cx="0" cy="38" rx="65" ry="14" fill="rgba(0, 51, 102, 0.2)" />
-                  <!-- Left Face -->
-                  <path d="M -60 -10 L 0 15 L 0 38 L -60 13 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.8" />
-                  <!-- Right Face -->
-                  <path d="M 60 -10 L 0 15 L 0 38 L 60 13 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.8" />
-                  <!-- Top Face -->
-                  <path d="M 0 -30 L 60 -10 L 0 15 L -60 -10 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.8" />
-                  <!-- Paper output slot -->
-                  <path d="M -35 5 L 35 20" stroke="#38BDF8" stroke-width="3" />
-                  <!-- Sheet of paper coming out -->
-                  <path d="M -25 12 L 25 24 L 25 38 L -25 26 Z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
-                  <!-- Paper Details -->
-                  <line x1="-18" y1="18" x2="18" y2="26" stroke="#38BDF8" stroke-width="1.5" />
-                  <line x1="-18" y1="23" x2="10" y2="29" stroke="#38BDF8" stroke-width="1.5" />
-                  <!-- Text label -->
-                  <text x="0" y="58" fill="var(--sdi-navy-primary)" font-size="10" font-weight="900" text-anchor="middle" font-family="var(--font-heading)" letter-spacing="0.03em">MÁY IN VĂN PHÒNG</text>
-                </g>
+              <!-- NODE 4: BOTTOM - MÁY IN & NGOẠI VI VĂN PHÒNG -->
+              <g transform="translate(180, 295)" class="node-pulse" style="animation-delay: -1.5s;" filter="url(#soft-shadow)">
+                <rect width="160" height="68" rx="14" fill="url(#soft-card-grad)" stroke="#E2E8F0" stroke-width="1.5" />
+                <!-- Icon container -->
+                <rect x="12" y="12" width="44" height="44" rx="10" fill="#ECFDF5" />
+                <path d="M 26 24 L 42 24 L 42 30 L 26 30 Z M 24 30 L 44 30 L 44 44 L 24 44 Z M 28 38 L 40 38" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <!-- Text -->
+                <text x="64" y="30" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">MÁY IN &amp; NGOẠI VI</text>
+                <text x="64" y="45" fill="#64748B" font-size="9" font-weight="500" font-family="'Inter', sans-serif">Liên thông dữ liệu tự động</text>
+                <circle cx="146" cy="18" r="3.5" fill="#10B981" />
               </g>
-
-              <!-- Connecting Datastreams (Lines) -->
-              <path d="M 200 175 L 130 110" stroke="#2563EB" stroke-width="2.5" fill="none" class="office-flow" />
-              <path d="M 300 175 L 370 110" stroke="#2563EB" stroke-width="2.5" fill="none" class="office-flow" />
-              <path d="M 250 225 L 250 295" stroke="#2563EB" stroke-width="2.5" fill="none" class="office-flow" />
             </svg>
-            <p style="font-size: 0.725rem; color: var(--sdi-text-muted); text-align: center; max-width: 380px; margin-top: 0.75rem; padding: 0 1.5rem; line-height: 1.4;">
-              Mô hình văn phòng B2B kết nối đồng bộ: Thiết lập Mini PC trung tâm, liên thông dữ liệu và cấp nguồn tự động tới Hệ thống hiển thị, Camera giám sát và Máy in văn phòng.
+
+            <p class="sdi-diagram-caption">
+              <strong>Mô hình văn phòng B2B kết nối đồng bộ:</strong> Thiết lập Mini PC trung tâm, liên thông dữ liệu và cấp nguồn tự động tới Hệ thống hiển thị, Camera giám sát và Ngoại vi văn phòng.
             </p>
           </div>
         </div>
 
-        <!-- Right: 3 Steps -->
+        <!-- Right: 3 Steps (Feedback 3: Centered Single Vertical Axis Timeline) -->
         <div>
           <span class="eyebrow-badge reveal-on-scroll">HẠ TẦNG TRỌN GÓI</span>
           <h2 style="font-size: 2.3rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; margin-bottom: 1rem;">Lắp đặt tận nơi, chạy được&nbsp;ngay</h2>
-          <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; margin-bottom: 2.5rem;">
+          <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; margin-bottom: 1rem;">
             Không cần hiểu kỹ thuật. Đội ngũ NavaTek khảo sát mặt bằng, lắp đặt trọn bộ và bảo trì định kỳ.
           </p>
 
-          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;">
-            <div class="sdi-step-item" style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem; border-radius: 14px; transition: all 0.3s ease;">
-              <div class="sdi-step-number" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; transition: all 0.3s ease;">1</div>
-              <div>
-                <h4 style="font-size: 1.05rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">BƯỚC 1: Khảo sát</h4>
-                <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); line-height: 1.5;">Đo nhu cầu, số điểm máy, hạ tầng mạng sẵn có của văn phòng.</p>
+          <!-- Timeline Container with Continuous Vertical Rail -->
+          <div class="sdi-timeline-container">
+            <div class="sdi-timeline-rail"></div>
+
+            <!-- Step 1 -->
+            <div class="sdi-timeline-step">
+              <div class="sdi-timeline-number">1</div>
+              <div class="sdi-timeline-content">
+                <div class="sdi-timeline-title">BƯỚC 1: Khảo sát &amp; Tư vấn</div>
+                <p class="sdi-timeline-desc">Đo lường nhu cầu thực tế, số điểm máy, mặt bằng và hạ tầng mạng sẵn có của văn phòng.</p>
               </div>
             </div>
-            
-            <div class="sdi-step-item" style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem; border-radius: 14px; transition: all 0.3s ease;">
-              <div class="sdi-step-number" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; transition: all 0.3s ease;">2</div>
-              <div>
-                <h4 style="font-size: 1.05rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">BƯỚC 2: Lắp đặt</h4>
-                <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); line-height: 1.5;">Setup máy tính, đường truyền mạng, camera và cấu hình phần mềm đồng bộ.</p>
+
+            <!-- Step 2 -->
+            <div class="sdi-timeline-step">
+              <div class="sdi-timeline-number">2</div>
+              <div class="sdi-timeline-content">
+                <div class="sdi-timeline-title">BƯỚC 2: Lắp đặt &amp; Thiết lập</div>
+                <p class="sdi-timeline-desc">Setup phần cứng máy tính, đường truyền mạng, camera và cấu hình môi trường phần mềm đồng bộ.</p>
               </div>
             </div>
-            
-            <div class="sdi-step-item" style="display: flex; gap: 1.25rem; align-items: flex-start; padding: 1rem; border-radius: 14px; transition: all 0.3s ease;">
-              <div class="sdi-step-number" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; transition: all 0.3s ease;">3</div>
-              <div>
-                <h4 style="font-size: 1.05rem; color: var(--sdi-navy-primary); margin-bottom: 0.25rem;">BƯỚC 3: Bảo trì</h4>
-                <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); line-height: 1.5;">Kiểm tra định kỳ thiết bị hạ tầng, hỗ trợ khắc phục sự cố tận nơi 24/7.</p>
+
+            <!-- Step 3 -->
+            <div class="sdi-timeline-step step-3">
+              <div class="sdi-timeline-number">3</div>
+              <div class="sdi-timeline-content">
+                <div class="sdi-timeline-title">BƯỚC 3: Nghiệm thu &amp; Bảo trì</div>
+                <p class="sdi-timeline-desc">Kiểm tra hiệu năng thực tế, bàn giao hướng dẫn sử dụng và hỗ trợ kỹ thuật on-site tận nơi 24/7.</p>
               </div>
             </div>
           </div>
 
-          <a href="/dich-vu-bao-tri.html" class="sdi-pill-btn-outline">Xem dịch vụ triển khai</a>
+          <a href="/dich-vu-bao-tri.html" class="sdi-pill-btn-outline">
+            <span>Xem dịch vụ triển khai</span>
+            <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin-left: 0.5rem;"></i>
+          </a>
         </div>
 
       </div>
@@ -877,23 +869,23 @@
     <div style="position: absolute; top: -10%; left: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
     <div style="position: absolute; bottom: -10%; right: -5%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
 
-    <!-- Beautiful high-contrast SVG circuit tracks & flowing data packets (Bảng điện) -->
-    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.16;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Subtle ambient SVG circuit tracks (Feedback 4: Reduced opacity to avoid competing with content) -->
+    <svg class="footer-circuit-subtle" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="grad-line-footer" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
-          <stop offset="50%" stop-color="var(--sdi-blue-glow)" stop-opacity="0.8" />
+          <stop offset="50%" stop-color="var(--sdi-blue-glow)" stop-opacity="0.5" />
           <stop offset="100%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
         </linearGradient>
       </defs>
-      <!-- Extended Circuit track 1 (horizontal top branch left) -->
-      <path d="M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550" fill="none" stroke="url(#grad-line-footer)" stroke-width="1.8" />
-      <!-- Extended Circuit track 2 (horizontal top branch right) -->
-      <path d="M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580" fill="none" stroke="url(#grad-line-footer)" stroke-width="1.8" />
+      <!-- Circuit track 1 -->
+      <path d="M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550" fill="none" stroke="url(#grad-line-footer)" stroke-width="1" />
+      <!-- Circuit track 2 -->
+      <path d="M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580" fill="none" stroke="url(#grad-line-footer)" stroke-width="1" />
       
-      <!-- Animated light packets running along footer tracks -->
-      <circle r="4.5" fill="#38BDF8" style="offset-path: path('M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550'); animation: flow-data 8s linear infinite; filter: drop-shadow(0 0 8px #38BDF8);" />
-      <circle r="4.5" fill="#38BDF8" style="offset-path: path('M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580'); animation: flow-data 10s linear infinite 4s; filter: drop-shadow(0 0 8px #38BDF8);" />
+      <!-- Subtle light packets -->
+      <circle r="3.5" fill="#38BDF8" opacity="0.6" style="offset-path: path('M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550'); animation: flow-data 8s linear infinite;" />
+      <circle r="3.5" fill="#38BDF8" opacity="0.6" style="offset-path: path('M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580'); animation: flow-data 10s linear infinite 4s;" />
     </svg>
     <div class="container-sdi">
       

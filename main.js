@@ -819,4 +819,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initCustomSelects();
+
+  // ==========================================================================
+  // ASUS GOLD PARTNER CERTIFICATE LIGHTBOX MODAL (Feedback 8)
+  // ==========================================================================
+  const openCertBtn = document.getElementById('open-cert-modal');
+  const certModal = document.getElementById('cert-lightbox-modal');
+  const closeCertBtn = document.getElementById('close-cert-modal');
+
+  if (openCertBtn && certModal) {
+    openCertBtn.addEventListener('click', () => {
+      certModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    if (closeCertBtn) {
+      closeCertBtn.addEventListener('click', () => {
+        certModal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    certModal.addEventListener('click', (e) => {
+      if (e.target === certModal) {
+        certModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && certModal.classList.contains('active')) {
+        certModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 });
+
