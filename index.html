@@ -555,104 +555,154 @@
       <div class="sdi-split-grid is-reversed" style="gap: 3.5rem; align-items: center;">
         
         <!-- Left: Soft Minimalist Connected Office Ecosystem Diagram (Feedback 2) -->
-        <div>
-          <div class="sdi-diagram-wrapper">
-            <svg width="100%" height="390" viewBox="0 0 540 390" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+          <div class="sdi-diagram-wrapper" style="padding: 2rem 1.5rem; background: radial-gradient(circle at 50% 50%, #F8FAFD 0%, #FFFFFF 100%);">
+            <svg width="100%" height="410" viewBox="0 0 540 410" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
               <defs>
-                <linearGradient id="soft-blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#EFF6FF" />
-                  <stop offset="100%" stop-color="#DBEAFE" />
+                <linearGradient id="soft-ambient-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#EFF6FF" stop-opacity="0.8" />
+                  <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.3" />
                 </linearGradient>
-                <linearGradient id="soft-card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#FFFFFF" />
-                  <stop offset="100%" stop-color="#F8FAFD" />
-                </linearGradient>
-                <linearGradient id="line-flow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <linearGradient id="office-line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stop-color="#2563EB" />
                   <stop offset="50%" stop-color="#38BDF8" />
                   <stop offset="100%" stop-color="#10B981" />
                 </linearGradient>
-                <filter id="soft-shadow" x="-15%" y="-15%" width="130%" height="135%">
-                  <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#003366" flood-opacity="0.08" />
+                <filter id="iso-glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2563EB" flood-opacity="0.25" />
                 </filter>
-                <filter id="center-glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#2563EB" flood-opacity="0.18" />
+                <filter id="iso-glow-green" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#10B981" flood-opacity="0.5" />
+                </filter>
+                <filter id="iso-glow-red" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#EF4444" flood-opacity="0.6" />
                 </filter>
                 <style>
-                  .flow-line {
-                    stroke-dasharray: 6 5;
-                    animation: data-stream 2s linear infinite;
+                  .office-flow-anim {
+                    stroke-dasharray: 8 6;
+                    animation: office-dash-stream 2s linear infinite;
                   }
-                  @keyframes data-stream {
-                    to { stroke-dashoffset: -22; }
+                  @keyframes office-dash-stream {
+                    to { stroke-dashoffset: -28; }
                   }
-                  .node-pulse {
-                    animation: node-pulse-anim 3s ease-in-out infinite alternate;
+                  .office-float-node {
+                    animation: office-float-anim 5s ease-in-out infinite alternate;
                   }
-                  @keyframes node-pulse-anim {
+                  @keyframes office-float-anim {
                     0% { transform: translateY(0); }
-                    100% { transform: translateY(-5px); }
+                    100% { transform: translateY(-6px); }
                   }
                 </style>
               </defs>
 
               <!-- Ambient Glow in Background -->
-              <circle cx="270" cy="195" r="145" fill="url(#soft-blue-grad)" opacity="0.6" />
+              <circle cx="270" cy="205" r="160" fill="url(#soft-ambient-glow)" />
 
-              <!-- Connecting Bezier Datastreams (Smooth Curves) -->
+              <!-- Connecting Datastreams (Glowing Lines) -->
               <!-- Center to Top-Left (Monitor) -->
-              <path d="M 230 150 C 190 100, 160 110, 130 90" stroke="url(#line-flow-grad)" stroke-width="2.5" fill="none" class="flow-line" />
+              <path d="M 215 185 C 160 145, 140 120, 115 95" stroke="url(#office-line-grad)" stroke-width="2.5" fill="none" class="office-flow-anim" />
               <!-- Center to Top-Right (Camera) -->
-              <path d="M 310 150 C 350 100, 380 110, 410 90" stroke="url(#line-flow-grad)" stroke-width="2.5" fill="none" class="flow-line" />
-              <!-- Center to Bottom (Printer/Peripheral) -->
-              <path d="M 270 235 L 270 285" stroke="url(#line-flow-grad)" stroke-width="2.5" fill="none" class="flow-line" />
+              <path d="M 325 185 C 380 145, 400 120, 425 95" stroke="url(#office-line-grad)" stroke-width="2.5" fill="none" class="office-flow-anim" />
+              <!-- Center to Bottom (Printer) -->
+              <path d="M 270 240 L 270 305" stroke="url(#office-line-grad)" stroke-width="2.5" fill="none" class="office-flow-anim" />
 
-              <!-- NODE 1: TOP-LEFT - MÀN HÌNH ULTRAWIDE 20:9 -->
-              <g transform="translate(45, 20)">
-                <g class="node-pulse" filter="url(#soft-shadow)">
-                  <rect width="165" height="70" rx="14" fill="url(#soft-card-grad)" stroke="#E2E8F0" stroke-width="1.5" />
-                  <rect x="12" y="13" width="44" height="44" rx="10" fill="#EFF6FF" />
-                  <path d="M 24 27 L 44 27 L 44 41 L 24 41 Z M 34 41 L 34 45 M 29 45 L 39 45" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                  <text x="64" y="32" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">MÀN HÌNH 20:9</text>
-                  <text x="64" y="47" fill="#64748B" font-size="9" font-weight="500" font-family="'Inter', sans-serif">Hiển thị đa tác vụ</text>
-                  <circle cx="150" cy="18" r="3.5" fill="#10B981" />
+              <!-- TOP LEFT: 3D ISOMETRIC ULTRAWIDE 20:9 MONITOR -->
+              <g transform="translate(105, 80)">
+                <g class="office-float-node" style="animation-delay: -1s;">
+                  <!-- Stand Shadow -->
+                  <ellipse cx="0" cy="50" rx="36" ry="8" fill="rgba(0, 51, 102, 0.12)" />
+                  <!-- Stand Base -->
+                  <path d="M -28 42 L 0 49 L 28 42 L 0 35 Z" fill="#334155" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Stand Column -->
+                  <path d="M -5 15 L -5 42 L 5 42 L 5 15 Z" fill="#475569" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Monitor Frame (Exact 20:9) -->
+                  <rect x="-58" y="-26" width="116" height="52" rx="4" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
+                  <!-- Screen Area -->
+                  <rect x="-55" y="-24" width="110" height="48" rx="2" fill="#1E293B" />
+                  <!-- Graph Line on Screen -->
+                  <path d="M -45 0 L -25 -16 L -5 4 L 15 -12 L 40 2" stroke="#10B981" stroke-width="2.5" fill="none" class="glow-green" />
+                  <!-- Screen Power LED -->
+                  <circle cx="50" cy="20" r="2" fill="#10B981" />
+                  <!-- Label Badge -->
+                  <g transform="translate(0, -38)">
+                    <rect x="-65" y="-12" width="130" height="22" rx="11" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+                    <text x="0" y="3" fill="#003366" font-size="9.5" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif">MÀN HÌNH 20:9</text>
+                  </g>
                 </g>
               </g>
 
-              <!-- NODE 2: TOP-RIGHT - CAMERA GIÁM SÁT AI -->
-              <g transform="translate(330, 20)">
-                <g class="node-pulse" style="animation-delay: -1s;" filter="url(#soft-shadow)">
-                  <rect width="165" height="70" rx="14" fill="url(#soft-card-grad)" stroke="#E2E8F0" stroke-width="1.5" />
-                  <rect x="12" y="13" width="44" height="44" rx="10" fill="#FEF3C7" />
-                  <path d="M 24 29 L 38 29 L 44 23 L 44 45 L 38 39 L 24 39 Z" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                  <text x="64" y="32" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">CAMERA AI</text>
-                  <text x="64" y="47" fill="#64748B" font-size="9" font-weight="500" font-family="'Inter', sans-serif">Nhận diện thời gian thực</text>
-                  <circle cx="150" cy="18" r="3.5" fill="#EF4444" />
+              <!-- TOP RIGHT: 3D ISOMETRIC AI SECURITY CAMERA -->
+              <g transform="translate(435, 80)">
+                <g class="office-float-node" style="animation-delay: -2s;">
+                  <!-- Base Mount Shadow -->
+                  <ellipse cx="0" cy="46" rx="30" ry="7" fill="rgba(0, 51, 102, 0.12)" />
+                  <!-- Base Mount Plate -->
+                  <path d="M -20 38 L 0 44 L 20 38 L 0 32 Z" fill="#334155" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Bracket Pole -->
+                  <path d="M -3 15 L -3 38 L 3 38 L 3 15 Z" fill="#475569" stroke="#38BDF8" stroke-width="1.2" />
+                  <!-- Camera Cylinder Body -->
+                  <rect x="-20" y="-20" width="40" height="36" rx="18" fill="#0F172A" stroke="#38BDF8" stroke-width="2.5" />
+                  <!-- Camera Lens -->
+                  <circle cx="0" cy="-2" r="12" fill="#1E293B" stroke="#10B981" stroke-width="2.5" filter="url(#iso-glow-green)" />
+                  <circle cx="0" cy="-2" r="5" fill="#38BDF8" />
+                  <!-- Red Recording LED -->
+                  <circle cx="7" cy="-8" r="2" fill="#EF4444" filter="url(#iso-glow-red)" />
+                  <!-- Label Badge -->
+                  <g transform="translate(0, -38)">
+                    <rect x="-65" y="-12" width="130" height="22" rx="11" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+                    <text x="0" y="3" fill="#003366" font-size="9.5" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif">CAMERA GIÁM SÁT AI</text>
+                  </g>
                 </g>
               </g>
 
-              <!-- NODE 3: CENTRAL MINI PC NODE (HERO CORE) -->
-              <g transform="translate(165, 135)">
-                <g class="node-pulse" style="animation-delay: -0.5s;" filter="url(#center-glow)">
-                  <rect width="210" height="100" rx="18" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
-                  <rect x="12" y="12" width="186" height="26" rx="8" fill="linear-gradient(90deg, #2563EB 0%, #38BDF8 100%)" />
-                  <text x="105" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" letter-spacing="0.05em">TRẠM MINI PC TRUNG TÂM</text>
-                  <rect x="20" y="49" width="40" height="40" rx="8" fill="#EFF6FF" />
-                  <path d="M 32 61 L 48 61 M 32 69 L 48 69 M 40 55 L 40 75" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
-                  <text x="68" y="64" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">Private AI Server</text>
-                  <text x="68" y="79" fill="#10B981" font-size="9" font-weight="700" font-family="'Inter', sans-serif">● Vận hành 24/7 Cục bộ</text>
+              <!-- CENTER: 3D ISOMETRIC MINI PC HARDWARE CORE -->
+              <g transform="translate(270, 205)">
+                <g class="office-float-node" style="animation-delay: -0.5s;">
+                  <!-- Base Shadow -->
+                  <ellipse cx="0" cy="42" rx="88" ry="18" fill="rgba(0, 51, 102, 0.18)" />
+                  <!-- Left Face -->
+                  <path d="M -80 -16 L 0 20 L 0 42 L -80 6 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Right Face -->
+                  <path d="M 80 -16 L 0 20 L 0 42 L 80 6 Z" fill="#161E2D" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Top Face -->
+                  <path d="M 0 -42 L 80 -16 L 0 20 L -80 -16 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="2.5" filter="url(#iso-glow-blue)" />
+                  
+                  <!-- Front Details: USB Ports & Power LED -->
+                  <path d="M 20 22 L 28 18 L 28 24 L 20 28 Z" fill="#38BDF8" />
+                  <path d="M 38 14 L 46 10 L 46 16 L 38 20 Z" fill="#38BDF8" />
+                  <!-- Glowing Power LED -->
+                  <circle cx="-38" cy="4" r="5" fill="#10B981" filter="url(#iso-glow-green)" />
+
+                  <!-- Center Text Badge -->
+                  <g transform="translate(0, 68)">
+                    <rect x="-95" y="-13" width="190" height="26" rx="13" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" />
+                    <text x="0" y="4" fill="#003366" font-size="10" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" letter-spacing="0.04em">TRẠM MINI PC TRUNG TÂM</text>
+                  </g>
                 </g>
               </g>
 
-              <!-- NODE 4: BOTTOM - MÁY IN & NGOẠI VI VĂN PHÒNG -->
-              <g transform="translate(170, 285)">
-                <g class="node-pulse" style="animation-delay: -1.5s;" filter="url(#soft-shadow)">
-                  <rect width="200" height="68" rx="14" fill="url(#soft-card-grad)" stroke="#E2E8F0" stroke-width="1.5" />
-                  <rect x="12" y="12" width="44" height="44" rx="10" fill="#ECFDF5" />
-                  <path d="M 26 24 L 42 24 L 42 30 L 26 30 Z M 24 30 L 44 30 L 44 44 L 24 44 Z M 28 38 L 40 38" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                  <text x="64" y="30" fill="#003366" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">MÁY IN &amp; NGOẠI VI</text>
-                  <text x="64" y="45" fill="#64748B" font-size="9" font-weight="500" font-family="'Inter', sans-serif">Liên thông dữ liệu tự động</text>
-                  <circle cx="184" cy="18" r="3.5" fill="#10B981" />
+              <!-- BOTTOM: 3D ISOMETRIC OFFICE PRINTER -->
+              <g transform="translate(270, 335)">
+                <g class="office-float-node" style="animation-delay: -3s;">
+                  <!-- Base Shadow -->
+                  <ellipse cx="0" cy="38" rx="68" ry="14" fill="rgba(0, 51, 102, 0.16)" />
+                  <!-- Left Face -->
+                  <path d="M -60 -10 L 0 16 L 0 38 L -60 13 Z" fill="#0F172A" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Right Face -->
+                  <path d="M 60 -10 L 0 16 L 0 38 L 60 13 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Top Face -->
+                  <path d="M 0 -32 L 60 -10 L 0 16 L -60 -10 Z" fill="#1E293B" stroke="#2563EB" stroke-width="1.8" />
+                  <!-- Paper output slot -->
+                  <path d="M -35 6 L 35 21" stroke="#38BDF8" stroke-width="3" />
+                  <!-- Printed sheet coming out -->
+                  <path d="M -25 13 L 25 25 L 25 40 L -25 28 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+                  <line x1="-18" y1="20" x2="18" y2="28" stroke="#38BDF8" stroke-width="1.5" />
+                  <line x1="-18" y1="25" x2="10" y2="31" stroke="#38BDF8" stroke-width="1.5" />
+                  
+                  <!-- Label Badge -->
+                  <g transform="translate(0, 60)">
+                    <rect x="-80" y="-12" width="160" height="24" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+                    <text x="0" y="4" fill="#003366" font-size="9.5" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif">MÁY IN &amp; NGOẠI VI</text>
+                  </g>
                 </g>
               </g>
             </svg>
