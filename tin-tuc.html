@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kho Tri Thức & Cẩm Nang Công Nghệ B2B — NavaTek</title>
+  <meta name="description" content="Tổng hợp cẩm nang chuyên sâu về hạ tầng máy chủ AI, Mini PC, tự động hóa quy trình doanh nghiệp và bảo mật dữ liệu từ các kỹ sư NavaTek.">
+  
+  <!-- Direct Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/style.css?v=3.2">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Unified Dark Cyber Header -->
+  <header class="sdi-header">
+    <div class="sdi-navbar-main">
+      <a href="/" class="sdi-logo">
+        <img src="/images/LOGO.png" alt="NavaTek Logo" style="height: 38px; width: auto; object-fit: contain;">
+        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      </a>
+
+      <!-- Center Nav Menu -->
+      <nav class="sdi-nav-menu">
+        <a href="/nganh-phuc-vu.html" class="sdi-nav-link">Giải pháp</a>
+        <a href="/may-don-le.html" class="sdi-nav-link">Sản phẩm</a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Dịch vụ</a>
+        <a href="/tin-tuc.html" class="sdi-nav-link active">Tin tức</a>
+        <a href="/du-an.html" class="sdi-nav-link">Liên hệ</a>
+      </nav>
+
+      <!-- Search Box -->
+      <div class="sdi-search-wrapper">
+        <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
+        <input type="text" placeholder="Tìm sản phẩm, bài viết..." class="sdi-search-input" id="search-input-field">
+        <div class="sdi-suggestion-box" id="search-suggestion-dropdown"></div>
+      </div>
+
+      <!-- Action Button -->
+      <button class="sdi-btn-orange trigger-quote-modal">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="sdi-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu" style="width: 22px; height: 22px;"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
+    <div class="sdi-mobile-drawer-content">
+      <nav class="sdi-mobile-nav-links">
+        <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/tin-tuc.html" class="sdi-mobile-nav-link active">Tin tức <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+      </nav>
+      
+      <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important; width: 100%; justify-content: center; margin-top: 1rem;">
+        <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
+        <span>Nhận báo giá</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Spacer matching header height -->
+  <div class="sdi-header-spacer" style="height: 76px;"></div>
+
+  <main style="background: #F8FAFD; min-height: 100vh;">
+    
+    <!-- Hero Section -->
+    <section class="tech-dot-grid-light" style="background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%); padding: 5rem 0 3.5rem 0; position: relative; overflow: hidden; border-bottom: 1px solid var(--sdi-border);">
+      <div style="position: absolute; top: -20%; right: -5%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+      
+      <div class="container-sdi" style="position: relative; z-index: 2;">
+        <div style="max-width: 760px;">
+          <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.18);">KHO TRI THỨC & CẨM NANG CNTT</span>
+          <h1 style="font-size: 2.75rem; color: var(--sdi-navy-primary); font-weight: 900; line-height: 1.2; margin: 0.75rem 0 1rem 0;">
+            Kiến Thức, Xu Hướng & Cẩm Nang Hạ Tầng Doanh Nghiệp
+          </h1>
+          <p style="color: var(--sdi-text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+            Được viết và kiểm chứng trực tiếp bởi đội ngũ kỹ sư giải pháp NavaTek. Chia sẻ kinh nghiệm thực chiến về xây dựng trạm AI cục bộ, tối ưu máy chủ và tự động hóa quy trình B2B.
+          </p>
+
+          <!-- Quick Search Bar in Blog -->
+          <div style="position: relative; max-width: 520px;">
+            <i data-lucide="search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: #94A3B8;"></i>
+            <input type="text" id="blog-search-input" placeholder="Tìm kiếm bài viết, chủ đề (AI, Mini PC, NAS, Lark)..." style="width: 100%; padding: 0.9rem 1.25rem 0.9rem 3rem; border-radius: 99px; border: 1.5px solid var(--sdi-border); background: #FFFFFF; font-size: 0.95rem; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: border-color 0.3s ease;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section style="padding: 3.5rem 0 5rem 0;">
+      <div class="container-sdi">
+        
+        <!-- Category Filter Tabs -->
+        <div class="blog-filter-bar" id="blog-filter-container">
+          <button class="blog-filter-btn active" data-category="all">
+            <span>Tất cả bài viết</span>
+            <span class="count">6</span>
+          </button>
+          <button class="blog-filter-btn" data-category="ai">
+            <i data-lucide="cpu" style="width: 15px; height: 15px;"></i>
+            <span>Hạ tầng AI & LLM</span>
+            <span class="count">2</span>
+          </button>
+          <button class="blog-filter-btn" data-category="hardware">
+            <i data-lucide="hard-drive" style="width: 15px; height: 15px;"></i>
+            <span>Phần cứng B2B</span>
+            <span class="count">2</span>
+          </button>
+          <button class="blog-filter-btn" data-category="automation">
+            <i data-lucide="workflow" style="width: 15px; height: 15px;"></i>
+            <span>Tự động hóa RPA</span>
+            <span class="count">1</span>
+          </button>
+          <button class="blog-filter-btn" data-category="security">
+            <i data-lucide="shield" style="width: 15px; height: 15px;"></i>
+            <span>Bảo mật & NAS</span>
+            <span class="count">1</span>
+          </button>
+        </div>
+
+        <!-- Spotlight Featured Article -->
+        <a href="/bai-viet-chi-tiet.html" class="blog-spotlight-card" data-category="hardware">
+          <div class="blog-spotlight-visual">
+            <span class="blog-card-tag-floating blog-cat-badge ai" style="background: rgba(37, 99, 235, 0.9); color: #FFFFFF; border: none;">
+              ★ TÂM ĐIỂM HƯỚNG DẪN
+            </span>
+            <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-nghen-co-chai-pc.jpg?v=1786010990053" alt="Nghẽn cổ chai PC là gì?">
+            <div class="blog-card-reading-badge">
+              <i data-lucide="clock" style="width: 13px; height: 13px;"></i>
+              6 phút đọc · 3.1k view
+            </div>
+          </div>
+          
+          <div class="blog-spotlight-body">
+            <div>
+              <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                <span class="blog-cat-badge ai">TỐI ƯU PHẦN CỨNG</span>
+                <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">31/07/2026</span>
+              </div>
+              <h2 class="blog-spotlight-title">Nghẽn cổ chai PC là gì? Nguyên nhân và cách khắc phục triệt để</h2>
+              <p class="blog-spotlight-desc">
+                Tìm hiểu chi tiết hiện tượng nghẽn cổ chai giữa CPU và GPU, cách đo lường phần trăm nghẽn thực tế khi chạy tác vụ nặng và hướng dẫn nâng cấp phần cứng đồng bộ hiệu quả nhất cho dàn máy tính.
+              </p>
+            </div>
+
+            <div class="blog-card-footer">
+              <div class="blog-author-meta">
+                <div class="blog-author-avatar">TM</div>
+                <div>
+                  <div class="blog-author-name">Kỹ sư Trương Minh Tuấn</div>
+                  <div class="blog-card-date">Trưởng phòng Giải pháp NavaTek</div>
+                </div>
+              </div>
+              <div class="sdi-pill-btn">
+                <span>Đọc bài viết ngay</span>
+                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Articles Grid (6 Cards) -->
+        <div class="home-blog-grid" id="articles-grid">
+          
+          <!-- Article 1: Lắp thêm ổ cứng -->
+          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="hardware">
+            <div class="blog-card-thumb-wrapper">
+              <span class="blog-card-tag-floating blog-cat-badge hardware">NÂNG CẤP & LƯU TRỮ</span>
+              <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-cach-lap-them-o-cung-cho-pc-1x1.jpg?v=1786006751627" alt="Cách Lắp Thêm Ổ Cứng Cho PC">
+              <div class="blog-card-reading-badge">
+                <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+                5 phút đọc
+              </div>
+            </div>
+            <div class="blog-card-content">
+              <div>
+                <h3 class="blog-card-title">Cách Lắp Thêm Ổ Cứng Cho PC: HDD SATA, SSD M.2 NVMe</h3>
+                <p class="blog-card-excerpt">Hướng dẫn chi tiết từng bước tháo lắp, gắn khe M.2 NVMe PCIe Gen 4/5, kết nối cáp nguồn SATA và khởi tạo phân vùng GPT trên Windows.</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="blog-author-meta">
+                  <div class="blog-author-avatar">NV</div>
+                  <div>
+                    <div class="blog-author-name">Nguyễn Văn Vũ</div>
+                    <div class="blog-card-date">31/07/2026</div>
+                  </div>
+                </div>
+                <span class="blog-card-cta-link">Đọc tiếp <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2: Cổng PCI Trên Main -->
+          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="hardware">
+            <div class="blog-card-thumb-wrapper">
+              <span class="blog-card-tag-floating blog-cat-badge automation">KIẾN THỨC PHẦN CỨNG</span>
+              <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-cong-pci-tren-main-1x1.jpg?v=1786005998587" alt="Cổng PCI Trên Main Là Gì">
+              <div class="blog-card-reading-badge">
+                <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+                7 phút đọc
+              </div>
+            </div>
+            <div class="blog-card-content">
+              <div>
+                <h3 class="blog-card-title">Cổng PCI Trên Main Là Gì Và Cách Dùng Chuẩn Nhất</h3>
+                <p class="blog-card-excerpt">Phân biệt khe cắm PCIe x16, x8, x4, x1, các chuẩn băng thông PCIe 3.0, 4.0, 5.0 và cách cắm card đồ họa, card mạng 10GbE tối ưu.</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="blog-author-meta">
+                  <div class="blog-author-avatar">LH</div>
+                  <div>
+                    <div class="blog-author-name">Lê Hoàng Nam</div>
+                    <div class="blog-card-date">31/07/2026</div>
+                  </div>
+                </div>
+                <span class="blog-card-cta-link">Đọc tiếp <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3: Xóa game trên PC -->
+          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="security">
+            <div class="blog-card-thumb-wrapper">
+              <span class="blog-card-tag-floating blog-cat-badge security">THỦ THUẬT & HỆ THỐNG</span>
+              <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-huong-dan-xoa-game-tren-pc.jpg?v=1786010590760" alt="Hướng dẫn xóa game trên PC">
+              <div class="blog-card-reading-badge">
+                <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+                4 phút đọc
+              </div>
+            </div>
+            <div class="blog-card-content">
+              <div>
+                <h3 class="blog-card-title">Hướng dẫn xóa game trên PC nhanh chóng, giải phóng ổ cứng hiệu quả</h3>
+                <p class="blog-card-excerpt">Tổng hợp các cách gỡ cài đặt sạch sẽ, xóa file rác tận gốc AppData, Temp và dọn dẹp dung lượng bộ nhớ đệm cho máy tính văn phòng.</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="blog-author-meta">
+                  <div class="blog-author-avatar">TM</div>
+                  <div>
+                    <div class="blog-author-name">Trương Minh Tuấn</div>
+                    <div class="blog-card-date">31/07/2026</div>
+                  </div>
+                </div>
+                <span class="blog-card-cta-link">Đọc tiếp <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4: Top Game 2 Người -->
+          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="automation">
+            <div class="blog-card-thumb-wrapper">
+              <span class="blog-card-tag-floating blog-cat-badge automation">CẤU HÌNH & TRẢI NGHIỆM</span>
+              <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-game-2-nguoi-1-may-pc-1x1.jpg?v=1786009656133" alt="Top Game 2 Người 1 Máy PC">
+              <div class="blog-card-reading-badge">
+                <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+                6 phút đọc
+              </div>
+            </div>
+            <div class="blog-card-content">
+              <div>
+                <h3 class="blog-card-title">Top Game 2 Người 1 Máy PC Hay Nhất và Cấu Hình Chơi Mượt Mà</h3>
+                <p class="blog-card-excerpt">Khám phá các tựa game Co-op, phần mềm chia sẻ đa màn hình đa người dùng (Multi-seat) và cấu hình PC Mini / Workstation vận hành êm ái.</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="blog-author-meta">
+                  <div class="blog-author-avatar">LH</div>
+                  <div>
+                    <div class="blog-author-name">Lê Hoàng Nam</div>
+                    <div class="blog-card-date">31/07/2026</div>
+                  </div>
+                </div>
+                <span class="blog-card-cta-link">Đọc tiếp <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 5: Cẩm Nang AI -->
+          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="ai">
+            <div class="blog-card-thumb-wrapper">
+              <span class="blog-card-tag-floating blog-cat-badge ai">HẠ TẦNG AI & LLM</span>
+              <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-nghen-co-chai-pc.jpg?v=1786010990053" alt="Cẩm Nang Triển Khai Trạm AI Cục Bộ">
+              <div class="blog-card-reading-badge">
+                <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+                8 phút đọc
+              </div>
+            </div>
+            <div class="blog-card-content">
+              <div>
+                <h3 class="blog-card-title">Cẩm Nang Triển Khai Trạm AI Cục Bộ (Local LLM) Cho Doanh Nghiệp 2026</h3>
+                <p class="blog-card-excerpt">Phân tích chi phí TCO thực tế giữa Cloud API vs. Máy chủ AI On-Premise, tiêu chuẩn chọn GPU VRAM và 4 bước triển khai an toàn dữ liệu 100%.</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="blog-author-meta">
+                  <div class="blog-author-avatar">TM</div>
+                  <div>
+                    <div class="blog-author-name">Trương Minh Tuấn</div>
+                    <div class="blog-card-date">15/08/2026</div>
+                  </div>
+                </div>
+                <span class="blog-card-cta-link">Đọc tiếp <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 6: Tự động hóa -->
+          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="automation">
+            <div class="blog-card-thumb-wrapper">
+              <span class="blog-card-tag-floating blog-cat-badge automation">TỰ ĐỘNG HÓA</span>
+              <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-huong-dan-xoa-game-tren-pc.jpg?v=1786010590760" alt="5 Luồng tự động hóa Lark Sapo">
+              <div class="blog-card-reading-badge">
+                <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
+                6 phút đọc
+              </div>
+            </div>
+            <div class="blog-card-content">
+              <div>
+                <h3 class="blog-card-title">5 Luồng tự động hóa Lark & Sapo giúp tinh gọn 80% nhân sự vận hành</h3>
+                <p class="blog-card-excerpt">Cách thiết lập workflow tự động cào đơn hàng, đối soát kho và đẩy báo cáo doanh thu theo thời gian thực về group chat Lark.</p>
+              </div>
+              <div class="blog-card-footer">
+                <div class="blog-author-meta">
+                  <div class="blog-author-avatar">LH</div>
+                  <div>
+                    <div class="blog-author-name">Lê Hoàng Nam</div>
+                    <div class="blog-card-date">05/08/2026</div>
+                  </div>
+                </div>
+                <span class="blog-card-cta-link">Đọc tiếp <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i></span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Newsletter & Whitepaper Download Box -->
+        <div class="blog-newsletter-card">
+          <div style="position: absolute; top: -30%; right: -10%; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+          
+          <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 2;">
+            <div>
+              <span class="eyebrow-badge" style="background: rgba(56, 189, 248, 0.1); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.2);">WHITEPAPER B2B 2026</span>
+              <h3 style="font-size: 1.85rem; color: #FFFFFF; margin: 0.5rem 0 0.75rem 0;">Tải Ebook: Cẩm Nang Xây Dựng Hạ Tầng AI Nội Bộ</h3>
+              <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Tài liệu kỹ thuật chi tiết 45 trang bao gồm bảng tính chi phí TCO mẫu, danh sách lệnh Docker sẵn dùng và kiến trúc mạng On-Premise.
+              </p>
+            </div>
+
+            <div>
+              <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Ebook Whitepaper đã được gửi tới email.');" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <input type="email" required placeholder="Nhập email doanh nghiệp của bạn..." style="width: 100%; padding: 0.85rem 1.25rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #FFFFFF; font-size: 0.95rem; outline: none;">
+                <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem;">
+                  <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+                  <span>Tải Tài Liệu Miễn Phí (PDF)</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-sdi tech-dot-grid-dark" id="footer-section" style="position: relative; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #050B1A 100%) !important; background-size: 28px 28px, auto !important; background-color: #050B1A !important; overflow: hidden;">
+    <div class="container-sdi">
+      <div class="sdi-split-grid is-footer">
+        
+        <!-- Left: Form -->
+        <div>
+          <span class="eyebrow-badge" style="background: rgba(56, 189, 248, 0.08); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.15); padding: 0.4rem 1rem;">BÁO GIÁ NHANH</span>
+          <h2 style="color: #FFFFFF; font-size: 2.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Nhận báo giá trong 24 giờ</h2>
+          <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 2rem;">Kỹ sư hạ tầng của NavaTek sẽ liên hệ tư vấn cấu hình chi tiết và gửi báo giá qua email/Zalo.</p>
+
+          <form id="footer-lead-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="sdi-form-grid-2">
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Họ và tên *</label>
+                <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Số điện thoại *</label>
+                <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
+              </div>
+            </div>
+
+            <div>
+              <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.9rem;">
+                <span>Gửi yêu cầu báo giá</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Corporate details -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h4 style="color: #FFFFFF; font-size: 1.25rem; margin-bottom: 1rem;">Thông tin công ty</h4>
+            <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              <strong>Công ty TNHH NavaTek</strong><br>
+              Địa chỉ: Thành phố Hồ Chí Minh<br>
+              Hotline: 1900 - NAVATEK | MST: 031789456<br>
+              Liên kết: <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="/tin-tuc.html" style="color: #94A3B8; text-decoration: underline;">Kho tri thức B2B</a>
+            </p>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+              <a href="/nganh-phuc-vu.html" class="footer-link" style="margin-right: 0.75rem;">Giải pháp</a>
+              <a href="/may-don-le.html" class="footer-link" style="margin-right: 0.75rem;">Sản phẩm</a>
+              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Dịch vụ</a>
+              <a href="/tin-tuc.html" class="footer-link" style="margin-right: 0.75rem;">Tin tức</a>
+              <a href="/du-an.html" class="footer-link">Liên hệ</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 0.75rem;">Hệ sinh thái Nava</h4>
+            <div class="sdi-form-grid-2" style="gap: 1.25rem !important;">
+              <div class="sdi-ecosystem-card">
+                <div class="sdi-eco-title">NAVATEK</div>
+                <div class="sdi-eco-desc">Giải pháp doanh nghiệp</div>
+              </div>
+              <div class="sdi-ecosystem-card is-retail">
+                <div class="sdi-eco-title">NAVASTORE</div>
+                <div class="sdi-eco-desc">Bán lẻ · Top 2 Google</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color: #475569; font-size: 0.8rem; margin-top: 3.5rem;">
+        © 2026 Công Ty TNHH NavaTek. Bảo lưu mọi quyền.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Popup -->
+  <div class="modal-overlay" id="quote-modal">
+    <div class="modal-box">
+      <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <span class="eyebrow-badge">NAVATEK v3.1</span>
+      <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
+      <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
+      <form id="quote-request-form">
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Họ và tên *</label>
+          <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+        </div>
+        <div class="sdi-form-grid-2" style="margin-bottom: 1.25rem !important;">
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Số điện thoại / Zalo *</label>
+            <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Email</label>
+            <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+          </div>
+        </div>
+        <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem;">
+          <span>Gửi Yêu Cầu Báo Giá</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

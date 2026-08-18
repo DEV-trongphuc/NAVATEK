@@ -854,5 +854,102 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ==========================================================================
+  // BLOG & KNOWLEDGE HUB LOGIC (tin-tuc.html & bai-viet-chi-tiet.html)
+  // ==========================================================================
+  const blogFilterContainer = document.getElementById('blog-filter-container');
+  const articlesGrid = document.getElementById('articles-grid');
+  const spotlightCard = document.querySelector('.blog-spotlight-card');
+  const blogSearchInput = document.getElementById('blog-search-input');
+
+  if (blogFilterContainer && articlesGrid) {
+    const filterBtns = blogFilterContainer.querySelectorAll('.blog-filter-btn');
+    const cards = articlesGrid.querySelectorAll('.blog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const cat = btn.getAttribute('data-category');
+        
+        // Filter spotlight
+        if (spotlightCard) {
+          const spotCat = spotlightCard.getAttribute('data-category');
+          if (cat === 'all' || spotCat === cat) {
+            spotlightCard.style.display = 'grid';
+          } else {
+            spotlightCard.style.display = 'none';
+          }
+        }
+
+        // Filter cards
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (cat === 'all' || cardCat === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Blog Live Search
+    if (blogSearchInput) {
+      blogSearchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        cards.forEach(card => {
+          const title = card.querySelector('.blog-card-title')?.textContent.toLowerCase() || '';
+          const excerpt = card.querySelector('.blog-card-excerpt')?.textContent.toLowerCase() || '';
+          const tag = card.querySelector('.blog-cat-badge')?.textContent.toLowerCase() || '';
+
+          if (!query || title.includes(query) || excerpt.includes(query) || tag.includes(query)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (spotlightCard) {
+          const spotTitle = spotlightCard.querySelector('.blog-spotlight-title')?.textContent.toLowerCase() || '';
+          const spotDesc = spotlightCard.querySelector('.blog-spotlight-desc')?.textContent.toLowerCase() || '';
+          if (!query || spotTitle.includes(query) || spotDesc.includes(query)) {
+            spotlightCard.style.display = 'grid';
+          } else {
+            spotlightCard.style.display = 'none';
+          }
+        }
+      });
+    }
+  }
+
+  // Table of Contents Scrollspy for Single Post (bai-viet-chi-tiet.html)
+  const tocLinks = document.querySelectorAll('.article-toc-link');
+  if (tocLinks.length > 0) {
+    const headings = document.querySelectorAll('.article-content-body h2[id]');
+    
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      headings.forEach(heading => {
+        const top = heading.getBoundingClientRect().top;
+        if (top <= 140) {
+          currentId = heading.getAttribute('id');
+        }
+      });
+
+      if (currentId) {
+        tocLinks.forEach(link => {
+          if (link.getAttribute('href') === `#${currentId}`) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }
 });
 
