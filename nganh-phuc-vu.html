@@ -187,45 +187,53 @@
               <path d="M 260 220 C 260 250, 260 265, 260 280" stroke="#10B981" stroke-width="2" fill="none" class="neural-stream" opacity="0.8" />
 
               <!-- TOP-LEFT NODE: LLM INFERENCE ENGINE -->
-              <g transform="translate(30, 30)" class="neural-float">
-                <rect width="160" height="66" rx="14" fill="url(#hero-card-dark)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
-                <rect x="10" y="11" width="44" height="44" rx="10" fill="rgba(37, 99, 235, 0.2)" />
-                <path d="M 22 25 L 42 25 M 22 33 L 36 33 M 22 41 L 42 41" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
-                <text x="62" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">LOCAL LLM</text>
-                <text x="62" y="44" fill="#94A3B8" font-size="8.5" font-weight="500" font-family="'Inter', sans-serif">DeepSeek / Llama-3</text>
-                <circle cx="146" cy="18" r="3.5" fill="#10B981" />
+              <g transform="translate(30, 30)">
+                <g class="neural-float">
+                  <rect width="160" height="66" rx="14" fill="url(#hero-card-dark)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
+                  <rect x="10" y="11" width="44" height="44" rx="10" fill="rgba(37, 99, 235, 0.2)" />
+                  <path d="M 22 25 L 42 25 M 22 33 L 36 33 M 22 41 L 42 41" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+                  <text x="62" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">LOCAL LLM</text>
+                  <text x="62" y="44" fill="#94A3B8" font-size="8.5" font-weight="500" font-family="'Inter', sans-serif">DeepSeek / Llama-3</text>
+                  <circle cx="146" cy="18" r="3.5" fill="#10B981" />
+                </g>
               </g>
 
               <!-- TOP-RIGHT NODE: GPU CLUSTER ACCELERATION -->
-              <g transform="translate(330, 30)" class="neural-float" style="animation-delay: -1.5s;">
-                <rect width="160" height="66" rx="14" fill="url(#hero-card-dark)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
-                <rect x="10" y="11" width="44" height="44" rx="10" fill="rgba(16, 185, 129, 0.2)" />
-                <path d="M 22 25 L 42 25 L 42 41 L 22 41 Z M 26 21 L 26 25 M 34 21 L 34 25 M 26 41 L 26 45 M 34 41 L 34 45" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" fill="none" />
-                <text x="62" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">GPU COMPUTE</text>
-                <text x="62" y="44" fill="#94A3B8" font-size="8.5" font-weight="500" font-family="'Inter', sans-serif">NVIDIA RTX 4090 / Ada</text>
-                <circle cx="146" cy="18" r="3.5" fill="#38BDF8" />
+              <g transform="translate(330, 30)">
+                <g class="neural-float" style="animation-delay: -1.5s;">
+                  <rect width="160" height="66" rx="14" fill="url(#hero-card-dark)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5" />
+                  <rect x="10" y="11" width="44" height="44" rx="10" fill="rgba(16, 185, 129, 0.2)" />
+                  <path d="M 22 25 L 42 25 L 42 41 L 22 41 Z M 26 21 L 26 25 M 34 21 L 34 25 M 26 41 L 26 45 M 34 41 L 34 45" stroke="#10B981" stroke-width="1.8" stroke-linecap="round" fill="none" />
+                  <text x="62" y="29" fill="#FFFFFF" font-size="10.5" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">GPU COMPUTE</text>
+                  <text x="62" y="44" fill="#94A3B8" font-size="8.5" font-weight="500" font-family="'Inter', sans-serif">NVIDIA RTX 4090 / Ada</text>
+                  <circle cx="146" cy="18" r="3.5" fill="#38BDF8" />
+                </g>
               </g>
 
               <!-- CENTRAL AI CORE NODE (HERO ACCENT) -->
-              <g transform="translate(170, 115)" class="neural-float" style="animation-delay: -0.75s;" filter="url(#hero-glow-soft)">
-                <rect width="180" height="110" rx="18" fill="rgba(15, 23, 42, 0.95)" stroke="#38BDF8" stroke-width="2" />
-                <!-- Core Gradient Pill Header -->
-                <rect x="12" y="12" width="156" height="26" rx="8" fill="url(#hero-core-grad)" />
-                <text x="90" y="29" fill="#FFFFFF" font-size="10.5" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" letter-spacing="0.06em">AI SERVER CORE</text>
-                <!-- Core Stats & Icon -->
-                <circle cx="42" cy="72" r="18" fill="rgba(37, 99, 235, 0.25)" />
-                <path d="M 34 72 L 50 72 M 42 64 L 42 80" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
-                <text x="68" y="67" fill="#FFFFFF" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">Private AI 24/7</text>
-                <text x="68" y="82" fill="#10B981" font-size="9" font-weight="700" font-family="'Inter', sans-serif">● On-Premise Secure</text>
+              <g transform="translate(170, 115)">
+                <g class="neural-float" style="animation-delay: -0.75s;" filter="url(#hero-glow-soft)">
+                  <rect width="180" height="110" rx="18" fill="rgba(15, 23, 42, 0.95)" stroke="#38BDF8" stroke-width="2" />
+                  <!-- Core Gradient Pill Header -->
+                  <rect x="12" y="12" width="156" height="26" rx="8" fill="url(#hero-core-grad)" />
+                  <text x="90" y="29" fill="#FFFFFF" font-size="10.5" font-weight="900" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" letter-spacing="0.06em">AI SERVER CORE</text>
+                  <!-- Core Stats & Icon -->
+                  <circle cx="42" cy="72" r="18" fill="rgba(37, 99, 235, 0.25)" />
+                  <path d="M 34 72 L 50 72 M 42 64 L 42 80" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+                  <text x="68" y="67" fill="#FFFFFF" font-size="11" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">Private AI 24/7</text>
+                  <text x="68" y="82" fill="#10B981" font-size="9" font-weight="700" font-family="'Inter', sans-serif">● On-Premise Secure</text>
+                </g>
               </g>
 
               <!-- BOTTOM NODE: ENTERPRISE DATA & VECTOR DB -->
-              <g transform="translate(180, 270)" class="neural-float" style="animation-delay: -2.2s;">
-                <rect width="160" height="60" rx="12" fill="url(#hero-card-dark)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5" />
-                <rect x="10" y="10" width="40" height="40" rx="8" fill="rgba(16, 185, 129, 0.15)" />
-                <ellipse cx="30" cy="22" rx="8" ry="3" stroke="#10B981" stroke-width="1.5" fill="none" />
-                <path d="M 22 22 L 22 34 A 8 3 0 0 0 38 34 L 38 22" stroke="#10B981" stroke-width="1.5" fill="none" />
-                <text x="58" y="27" fill="#FFFFFF" font-size="10" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">VECTOR DB</text>
+              <g transform="translate(180, 270)">
+                <g class="neural-float" style="animation-delay: -2.2s;">
+                  <rect width="160" height="60" rx="12" fill="url(#hero-card-dark)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1.5" />
+                  <rect x="10" y="10" width="40" height="40" rx="8" fill="rgba(16, 185, 129, 0.15)" />
+                  <ellipse cx="30" cy="22" rx="8" ry="3" stroke="#10B981" stroke-width="1.5" fill="none" />
+                  <path d="M 22 22 L 22 34 A 8 3 0 0 0 38 34 L 38 22" stroke="#10B981" stroke-width="1.5" fill="none" />
+                  <text x="58" y="27" fill="#FFFFFF" font-size="10" font-weight="800" font-family="'Be Vietnam Pro', sans-serif">VECTOR DB</text>
+                </g>
               </g>
             </svg>
 
