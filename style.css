@@ -2761,6 +2761,22 @@ html, body {
   width: 100% !important;
 }
 
+/* Responsive Line Break Utilities */
+.br-mobile {
+  display: none;
+}
+.br-desktop {
+  display: block;
+}
+@media (max-width: 768px) {
+  .br-mobile {
+    display: block;
+  }
+  .br-desktop {
+    display: none;
+  }
+}
+
 .sdi-hero-section {
   padding: 5rem 0 4.5rem 0;
 }
