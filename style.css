@@ -2761,19 +2761,29 @@ html, body {
   width: 100% !important;
 }
 
-/* Responsive Line Break Utilities */
-.br-mobile {
-  display: none;
+/* Responsive Line Break & Heading Utilities */
+.ecosystem-main-heading {
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+  font-size: clamp(1.85rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
-.br-desktop {
-  display: block;
+
+.ecosystem-main-heading .text-navy {
+  color: #0A1128 !important;
+  display: inline;
 }
+
+.ecosystem-main-heading .text-accent {
+  color: #2563EB !important;
+  display: inline;
+}
+
 @media (max-width: 768px) {
-  .br-mobile {
-    display: block;
-  }
-  .br-desktop {
-    display: none;
+  .ecosystem-main-heading .text-accent {
+    display: block !important;
+    margin-top: 0.25rem !important;
   }
 }
 
