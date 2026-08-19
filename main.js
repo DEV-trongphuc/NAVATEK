@@ -858,10 +858,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // BLOG & KNOWLEDGE HUB LOGIC (tin-tuc.html & bai-viet-chi-tiet.html)
   // ==========================================================================
+  // BLOG & KNOWLEDGE HUB SYSTEM (SEARCH & FILTER)
+  // ==========================================================================
   const blogFilterContainer = document.getElementById('blog-filter-container');
   const articlesGrid = document.getElementById('articles-grid');
   const spotlightCard = document.querySelector('.blog-spotlight-card');
   const blogSearchInput = document.getElementById('blog-search-input');
+  const quickTags = document.querySelectorAll('.hero-quick-tag');
 
   if (blogFilterContainer && articlesGrid) {
     const filterBtns = blogFilterContainer.querySelectorAll('.blog-filter-btn');
@@ -878,7 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (spotlightCard) {
           const spotCat = spotlightCard.getAttribute('data-category');
           if (cat === 'all' || spotCat === cat) {
-            spotlightCard.style.display = 'grid';
+            spotlightCard.style.display = 'flex';
           } else {
             spotlightCard.style.display = 'none';
           }
@@ -904,7 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach(card => {
           const title = card.querySelector('.blog-card-title')?.textContent.toLowerCase() || '';
           const excerpt = card.querySelector('.blog-card-excerpt')?.textContent.toLowerCase() || '';
-          const tag = card.querySelector('.blog-cat-badge')?.textContent.toLowerCase() || '';
+          const tag = card.querySelector('.blog-cat-badge, .blog-card-tag-floating')?.textContent.toLowerCase() || '';
 
           if (!query || title.includes(query) || excerpt.includes(query) || tag.includes(query)) {
             card.style.display = 'flex';
@@ -916,12 +919,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (spotlightCard) {
           const spotTitle = spotlightCard.querySelector('.blog-spotlight-title')?.textContent.toLowerCase() || '';
           const spotDesc = spotlightCard.querySelector('.blog-spotlight-desc')?.textContent.toLowerCase() || '';
-          if (!query || spotTitle.includes(query) || spotDesc.includes(query)) {
-            spotlightCard.style.display = 'grid';
+          const spotTag = spotlightCard.querySelector('.blog-cat-badge, .blog-card-tag-floating')?.textContent.toLowerCase() || '';
+          if (!query || spotTitle.includes(query) || spotDesc.includes(query) || spotTag.includes(query)) {
+            spotlightCard.style.display = 'flex';
           } else {
             spotlightCard.style.display = 'none';
           }
         }
+      });
+    }
+
+    // Quick tag clicks in Hero
+    if (quickTags.length > 0 && blogSearchInput) {
+      quickTags.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const tagVal = btn.getAttribute('data-tag');
+          if (tagVal) {
+            blogSearchInput.value = tagVal;
+            blogSearchInput.dispatchEvent(new Event('input'));
+            blogSearchInput.focus();
+          }
+        });
       });
     }
   }

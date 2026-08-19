@@ -79,25 +79,82 @@
 
   <main style="background: #F8FAFD; min-height: 100vh;">
     
-    <!-- Hero Section -->
-    <section class="tech-dot-grid-light" style="background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%); padding: 5rem 0 3.5rem 0; position: relative; overflow: hidden; border-bottom: 1px solid var(--sdi-border);">
-      <div style="position: absolute; top: -20%; right: -5%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+    <!-- Hero Section with Integrated Spotlight Article -->
+    <section class="tech-dot-grid-light" style="background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%); padding: 4.5rem 0 3.5rem 0; position: relative; overflow: hidden; border-bottom: 1px solid var(--sdi-border);">
+      <div style="position: absolute; top: -20%; right: -5%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%); pointer-events: none;"></div>
       
       <div class="container-sdi" style="position: relative; z-index: 2;">
-        <div style="max-width: 760px;">
-          <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.18);">KHO TRI THỨC & CẨM NANG CNTT</span>
-          <h1 style="font-size: 2.75rem; color: var(--sdi-navy-primary); font-weight: 900; line-height: 1.2; margin: 0.75rem 0 1rem 0;">
-            Kiến Thức, Xu Hướng & Cẩm Nang Hạ Tầng Doanh Nghiệp
-          </h1>
-          <p style="color: var(--sdi-text-secondary); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-            Được viết và kiểm chứng trực tiếp bởi đội ngũ kỹ sư giải pháp NavaTek. Chia sẻ kinh nghiệm thực chiến về xây dựng trạm AI cục bộ, tối ưu máy chủ và tự động hóa quy trình B2B.
-          </p>
+        <div class="blog-hero-grid">
+          
+          <!-- Left Column: Hero Intro & Search -->
+          <div class="blog-hero-intro">
+            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.18);">KHO TRI THỨC & CẨM NANG CNTT</span>
+            <h1 style="font-size: 2.6rem; color: var(--sdi-navy-primary); font-weight: 900; line-height: 1.22; margin: 0.75rem 0 1rem 0;">
+              Kiến Thức, Xu Hướng & Cẩm Nang Hạ Tầng Doanh Nghiệp
+            </h1>
+            <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.75rem;">
+              Được viết và kiểm chứng trực tiếp bởi đội ngũ kỹ sư giải pháp NavaTek. Chia sẻ kinh nghiệm thực chiến về xây dựng trạm AI cục bộ, tối ưu máy chủ và tự động hóa quy trình B2B.
+            </p>
 
-          <!-- Quick Search Bar in Blog -->
-          <div style="position: relative; max-width: 520px;">
-            <i data-lucide="search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: #94A3B8;"></i>
-            <input type="text" id="blog-search-input" placeholder="Tìm kiếm bài viết, chủ đề (AI, Mini PC, NAS, Lark)..." style="width: 100%; padding: 0.9rem 1.25rem 0.9rem 3rem; border-radius: 99px; border: 1.5px solid var(--sdi-border); background: #FFFFFF; font-size: 0.95rem; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: border-color 0.3s ease;">
+            <!-- Quick Search Bar in Blog -->
+            <div style="position: relative; max-width: 520px; margin-bottom: 1.25rem;">
+              <i data-lucide="search" style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: #94A3B8;"></i>
+              <input type="text" id="blog-search-input" placeholder="Tìm kiếm bài viết, chủ đề (AI, Mini PC, NAS, Lark)..." style="width: 100%; padding: 0.85rem 1.25rem 0.85rem 3rem; border-radius: 99px; border: 1.5px solid var(--sdi-border); background: #FFFFFF; font-size: 0.95rem; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.04); transition: border-color 0.3s ease;">
+            </div>
+
+            <!-- Quick Suggested Topics -->
+            <div class="hero-quick-tags-wrap">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--sdi-text-muted);">Từ khóa gợi ý:</span>
+              <button type="button" class="hero-quick-tag" data-tag="AI">#Trạm_AI</button>
+              <button type="button" class="hero-quick-tag" data-tag="M.2">#SSD_NVMe</button>
+              <button type="button" class="hero-quick-tag" data-tag="PCI">#Khe_PCIe</button>
+              <button type="button" class="hero-quick-tag" data-tag="Lark">#Lark_RPA</button>
+            </div>
           </div>
+
+          <!-- Right Column: Spotlight Featured Article -->
+          <div class="blog-hero-spotlight-wrap">
+            <a href="/bai-viet-chi-tiet.html" class="blog-spotlight-card" data-category="hardware">
+              <div class="blog-spotlight-visual">
+                <span class="blog-card-tag-floating spotlight-tag">
+                  ★ TÂM ĐIỂM HƯỚNG DẪN
+                </span>
+                <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-nghen-co-chai-pc.jpg?v=1786010990053" alt="Nghẽn cổ chai PC là gì?">
+                <div class="blog-card-reading-badge">
+                  <i data-lucide="clock" style="width: 13px; height: 13px;"></i>
+                  6 phút đọc · 3.1k view
+                </div>
+              </div>
+              
+              <div class="blog-spotlight-body">
+                <div>
+                  <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.4rem;">
+                    <span class="blog-cat-badge hardware">TỐI ƯU PHẦN CỨNG</span>
+                    <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">31/07/2026</span>
+                  </div>
+                  <h2 class="blog-spotlight-title">Nghẽn cổ chai PC là gì? Nguyên nhân và cách khắc phục triệt để</h2>
+                  <p class="blog-spotlight-desc">
+                    Tìm hiểu chi tiết hiện tượng nghẽn cổ chai giữa CPU và GPU, cách đo lường % nghẽn thực tế và hướng dẫn nâng cấp đồng bộ hiệu quả nhất.
+                  </p>
+                </div>
+
+                <div class="blog-card-footer" style="padding-top: 0.75rem; margin-top: 0.25rem;">
+                  <div class="blog-author-meta">
+                    <div class="blog-author-avatar">TM</div>
+                    <div>
+                      <div class="blog-author-name">Kỹ sư Trương Minh Tuấn</div>
+                      <div class="blog-card-date">Trưởng phòng Giải pháp</div>
+                    </div>
+                  </div>
+                  <div class="sdi-pill-btn" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+                    <span>Đọc ngay</span>
+                    <i data-lucide="arrow-right" style="width: 13px; height: 13px;"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -110,7 +167,7 @@
         <div class="blog-filter-bar" id="blog-filter-container">
           <button class="blog-filter-btn active" data-category="all">
             <span>Tất cả bài viết</span>
-            <span class="count">6</span>
+            <span class="count">7</span>
           </button>
           <button class="blog-filter-btn" data-category="ai">
             <i data-lucide="cpu" style="width: 15px; height: 15px;"></i>
@@ -120,7 +177,7 @@
           <button class="blog-filter-btn" data-category="hardware">
             <i data-lucide="hard-drive" style="width: 15px; height: 15px;"></i>
             <span>Phần cứng B2B</span>
-            <span class="count">2</span>
+            <span class="count">3</span>
           </button>
           <button class="blog-filter-btn" data-category="automation">
             <i data-lucide="workflow" style="width: 15px; height: 15px;"></i>
@@ -129,51 +186,10 @@
           </button>
           <button class="blog-filter-btn" data-category="security">
             <i data-lucide="shield" style="width: 15px; height: 15px;"></i>
-            <span>Bảo mật & NAS</span>
+            <span>Bảo mật & Thủ thuật</span>
             <span class="count">1</span>
           </button>
         </div>
-
-        <!-- Spotlight Featured Article -->
-        <a href="/bai-viet-chi-tiet.html" class="blog-spotlight-card" data-category="hardware">
-          <div class="blog-spotlight-visual">
-            <span class="blog-card-tag-floating blog-cat-badge ai" style="background: rgba(37, 99, 235, 0.9); color: #FFFFFF; border: none;">
-              ★ TÂM ĐIỂM HƯỚNG DẪN
-            </span>
-            <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-nghen-co-chai-pc.jpg?v=1786010990053" alt="Nghẽn cổ chai PC là gì?">
-            <div class="blog-card-reading-badge">
-              <i data-lucide="clock" style="width: 13px; height: 13px;"></i>
-              6 phút đọc · 3.1k view
-            </div>
-          </div>
-          
-          <div class="blog-spotlight-body">
-            <div>
-              <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
-                <span class="blog-cat-badge ai">TỐI ƯU PHẦN CỨNG</span>
-                <span style="font-size: 0.8rem; color: var(--sdi-text-muted);">31/07/2026</span>
-              </div>
-              <h2 class="blog-spotlight-title">Nghẽn cổ chai PC là gì? Nguyên nhân và cách khắc phục triệt để</h2>
-              <p class="blog-spotlight-desc">
-                Tìm hiểu chi tiết hiện tượng nghẽn cổ chai giữa CPU và GPU, cách đo lường phần trăm nghẽn thực tế khi chạy tác vụ nặng và hướng dẫn nâng cấp phần cứng đồng bộ hiệu quả nhất cho dàn máy tính.
-              </p>
-            </div>
-
-            <div class="blog-card-footer">
-              <div class="blog-author-meta">
-                <div class="blog-author-avatar">TM</div>
-                <div>
-                  <div class="blog-author-name">Kỹ sư Trương Minh Tuấn</div>
-                  <div class="blog-card-date">Trưởng phòng Giải pháp NavaTek</div>
-                </div>
-              </div>
-              <div class="sdi-pill-btn">
-                <span>Đọc bài viết ngay</span>
-                <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
-              </div>
-            </div>
-          </div>
-        </a>
 
         <!-- Articles Grid (6 Cards) -->
         <div class="home-blog-grid" id="articles-grid">
