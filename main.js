@@ -969,5 +969,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Team Cards Slider on Mobile (dich-vu-bao-tri.html)
+  const teamTrack = document.getElementById('team-cards-track');
+  const teamDotsContainer = document.getElementById('team-slider-dots');
+  if (teamTrack && teamDotsContainer) {
+    const dots = teamDotsContainer.querySelectorAll('.team-dot');
+    const cards = teamTrack.querySelectorAll('.team-member-card');
+
+    teamTrack.addEventListener('scroll', () => {
+      const scrollLeft = teamTrack.scrollLeft;
+      const cardWidth = teamTrack.offsetWidth;
+      if (cardWidth > 0) {
+        const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), dots.length - 1);
+        dots.forEach((dot, idx) => {
+          if (idx === activeIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+    }, { passive: true });
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        if (cards[idx]) {
+          cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    });
+  }
 });
+
 
