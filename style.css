@@ -6339,3 +6339,143 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   PAIN POINT & NAVATEK SOLUTION PAIRED MATRIX COMPONENT
+   ========================================================================== */
+.ai-pain-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.ai-pair-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 51, 102, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.ai-pair-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 16px 32px rgba(0, 51, 102, 0.08);
+}
+
+/* Upper Part: Problem */
+.ai-pair-problem {
+  padding: 1.75rem 1.5rem 1.25rem 1.5rem;
+  background: #F8FAFD;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ai-pair-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  width: fit-content;
+  margin-bottom: 0.85rem;
+}
+
+.ai-pair-badge.problem {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+  border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+.ai-pair-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--sdi-navy-primary);
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+}
+
+.ai-pair-desc {
+  font-size: 0.88rem;
+  color: var(--sdi-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Connector Arrow */
+.ai-pair-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  z-index: 2;
+}
+
+.ai-pair-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  color: var(--sdi-blue-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.ai-pair-card:hover .ai-pair-arrow {
+  background: var(--sdi-blue-accent);
+  border-color: var(--sdi-blue-accent);
+  color: #FFFFFF;
+  transform: translateY(2px);
+}
+
+/* Lower Part: Solution */
+.ai-pair-solution {
+  padding: 1.5rem 1.5rem 1.75rem 1.5rem;
+  background: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ai-pair-badge.solution {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--sdi-blue-accent);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.ai-pair-sol-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--sdi-navy-primary);
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+}
+
+.ai-pair-sol-desc {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .ai-pain-solution-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+

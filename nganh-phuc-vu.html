@@ -326,80 +326,126 @@
     </div>
   </section>
 
-  <!-- Vấn đề khách đang gặp (Bug 9 & 23: Sửa wording + Chuẩn hoá Grid Stack trên mobile) -->
-  <section style="padding: 5rem 0; background: #FFFFFF; border-bottom: 1px solid #EFF3FA;">
+  <!-- SECTION: NỖI ĐAU THỰC TẾ & GIẢI PHÁP TỪ NAVATEK -->
+  <section class="section-pain-solution" style="padding: 5.5rem 0 6rem 0; background: #FFFFFF; border-bottom: 1px solid #EFF3FA;">
     <div class="container-sdi">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
-        <span class="eyebrow-badge">BÀI TOÁN HẠ TẦNG</span>
-        <h2 style="font-size: 2.35rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; font-weight: 800;">Khi nào doanh nghiệp cần AI Server riêng?</h2>
+      
+      <!-- Section Header -->
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 3.5rem auto;">
+        <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.15);">THỰC TRẠNG & GIẢI PHÁP HẠ TẦNG</span>
+        <h2 style="font-size: 2.35rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; font-weight: 800; letter-spacing: -0.02em;">
+          Khi Nào Cần AI Server Riêng &amp; Giải Pháp Từ NavaTek
+        </h2>
+        <p style="color: var(--sdi-text-secondary); font-size: 1.05rem; line-height: 1.65; margin-top: 0.75rem;">
+          Đối chiếu trực tiếp 3 thách thức lớn nhất khi ứng dụng AI doanh nghiệp và phương án máy chủ vật lý On-Premises may đo chính xác.
+        </p>
       </div>
 
-      <div class="sdi-grid-3 ai-problems-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-        <div class="bento-card" style="border: 1px solid var(--sdi-border); padding: 2rem 1.75rem; background: #F8FAFD; border-radius: 18px;">
-          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(37,99,235,0.1); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <!-- 3-Column Pair Cards Grid -->
+      <div class="ai-pain-solution-grid">
+        
+        <!-- Pair 1: Bảo mật Dữ liệu -->
+        <div class="ai-pair-card">
+          <!-- Top: Nỗi đau (Problem) -->
+          <div class="ai-pair-problem">
+            <div class="ai-pair-badge problem">
+              <i data-lucide="shield-alert" style="width: 15px; height: 15px;"></i>
+              <span>NỖI ĐAU THỰC TẾ</span>
+            </div>
+            <h3 class="ai-pair-title">Dữ liệu nhạy cảm không thể lên Cloud</h3>
+            <p class="ai-pair-desc">
+              Doanh nghiệp tài chính, y tế, luật, thương mại điện tử bắt buộc phải tự lưu trữ dữ liệu tại chỗ. Nguy cơ rò rỉ hồ sơ khách hàng, bí mật kinh doanh và mã nguồn khi gửi API lên cloud công cộng.
+            </p>
           </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--sdi-navy-primary); font-weight: 800;">Dữ liệu không được ra ngoài</h3>
-          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary); line-height: 1.65; margin: 0;">
-            Các doanh nghiệp ngành tài chính, y tế, luật, thương mại điện tử bắt buộc phải tự lưu trữ dữ liệu tại chỗ, tuyệt đối không được đưa hồ sơ khách hàng và bí mật kinh doanh lên cloud công cộng.
-          </p>
-        </div>
 
-        <div class="bento-card" style="border: 1px solid var(--sdi-border); padding: 2rem 1.75rem; background: #F8FAFD; border-radius: 18px;">
-          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(234,88,12,0.1); color: #EA580C; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          <!-- Middle Divider / Connector -->
+          <div class="ai-pair-divider">
+            <div class="ai-pair-arrow">
+              <i data-lucide="arrow-down" style="width: 14px; height: 14px;"></i>
+            </div>
           </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--sdi-navy-primary); font-weight: 800;">Chi phí cloud tăng liên tục</h3>
-          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary); line-height: 1.65; margin: 0;">
-            Khi chạy tải huấn luyện hoặc suy luận AI liên tục 24/7, chi phí thuê GPU Cloud tích lũy theo từng tháng sẽ đắt gấp nhiều lần so với việc đầu tư sở hữu trạm tính toán vật lý tại văn phòng.
-          </p>
-        </div>
 
-        <div class="bento-card" style="border: 1px solid var(--sdi-border); padding: 2rem 1.75rem; background: #F8FAFD; border-radius: 18px;">
-          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(22,163,74,0.1); color: #16A34A; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <!-- Bottom: Giải pháp NavaTek (Solution) -->
+          <div class="ai-pair-solution">
+            <div class="ai-pair-badge solution">
+              <i data-lucide="shield-check" style="width: 15px; height: 15px;"></i>
+              <span>GIẢI PHÁP NAVATEK</span>
+            </div>
+            <h4 class="ai-pair-sol-title">100% Cục bộ &amp; Tư vấn đúng tải thật</h4>
+            <p class="ai-pair-sol-desc">
+              Trạm AI Server vật lý đặt tại văn phòng, xử lý dữ liệu qua mạng nội bộ LAN không ra Internet. Kỹ sư đo lường chuẩn xác tải mô hình (LLM 8B–70B) để chọn đúng GPU, RAM, SSD, tránh lãng phí.
+            </p>
           </div>
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--sdi-navy-primary); font-weight: 800;">Cần độ trễ thấp</h3>
-          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary); line-height: 1.65; margin: 0;">
-            Các tác vụ camera AI giám sát thông minh, nhận diện khuôn mặt thời gian thực hoặc chatbot tra cứu tài liệu nội bộ cần tốc độ phản hồi tính bằng mili-giây qua mạng nội bộ LAN.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lợi ích: NavaTek làm gì cho bạn (Bug 9: 3 Cột Ngắn Gọn Đúng Brief) -->
-  <section style="padding: 5rem 0; background: #FFFFFF; border-bottom: 1px solid #EFF3FA;">
-    <div class="container-sdi">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
-        <span class="eyebrow-badge">LỢI ÍCH VẬN HÀNH</span>
-        <h2 style="font-size: 2.35rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; font-weight: 800;">NavaTek làm gì cho bạn?</h2>
-      </div>
-
-      <div class="sdi-grid-3 ai-benefits-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-        <div style="background: #F8FAFD; border: 1px solid #E2E8F0; border-radius: 18px; padding: 2.25rem 2rem;">
-          <div style="width: 46px; height: 46px; border-radius: 12px; background: rgba(37,99,235,0.1); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-weight: 900; font-size: 1.15rem;">1</div>
-          <h3 style="font-size: 1.25rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; font-weight: 800;">Tư vấn cấu hình theo tải thật</h3>
-          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary); line-height: 1.65; margin: 0;">
-            Kỹ sư đo lường chính xác nhu cầu sử dụng thực tế và kích thước mô hình AI của bạn để chọn đúng GPU, RAM, SSD, tránh lãng phí ngân sách đầu tư.
-          </p>
         </div>
 
-        <div style="background: #F8FAFD; border: 1px solid #E2E8F0; border-radius: 18px; padding: 2.25rem 2rem;">
-          <div style="width: 46px; height: 46px; border-radius: 12px; background: rgba(22,163,74,0.1); color: #16A34A; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-weight: 900; font-size: 1.15rem;">2</div>
-          <h3 style="font-size: 1.25rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; font-weight: 800;">Lắp đặt & nghiệm thu tận nơi</h3>
-          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary); line-height: 1.65; margin: 0;">
-            Chạy thử nghiệm hiệu năng thực tế (benchmark test) trực tiếp cùng khách hàng tại phòng máy văn phòng trước khi tiến hành ký biên bản bàn giao.
-          </p>
+        <!-- Pair 2: Chi phí vận hành TCO -->
+        <div class="ai-pair-card">
+          <!-- Top: Nỗi đau (Problem) -->
+          <div class="ai-pair-problem">
+            <div class="ai-pair-badge problem">
+              <i data-lucide="trending-up" style="width: 15px; height: 15px;"></i>
+              <span>NỖI ĐAU THỰC TẾ</span>
+            </div>
+            <h3 class="ai-pair-title">Chi phí thuê GPU Cloud tăng phi mã</h3>
+            <p class="ai-pair-desc">
+              Khi chạy tải suy luận AI liên tục 24/7 hoặc tích hợp RAG quy mô lớn, chi phí thuê API/Cloud hàng tháng tích lũy theo cấp số nhân, trở thành gánh nặng ngân sách định kỳ cho doanh nghiệp.
+            </p>
+          </div>
+
+          <!-- Middle Divider / Connector -->
+          <div class="ai-pair-divider">
+            <div class="ai-pair-arrow">
+              <i data-lucide="arrow-down" style="width: 14px; height: 14px;"></i>
+            </div>
+          </div>
+
+          <!-- Bottom: Giải pháp NavaTek (Solution) -->
+          <div class="ai-pair-solution">
+            <div class="ai-pair-badge solution">
+              <i data-lucide="check-circle-2" style="width: 15px; height: 15px;"></i>
+              <span>GIẢI PHÁP NAVATEK</span>
+            </div>
+            <h4 class="ai-pair-sol-title">Sở hữu vĩnh viễn &amp; Nghiệm thu tận nơi</h4>
+            <p class="ai-pair-sol-desc">
+              Đầu tư 1 lần sở hữu thiết bị trọn đời, hoàn vốn chỉ sau 4–6 tháng. Chạy thử nghiệm hiệu năng thực tế (Benchmark Full Load) trực tiếp cùng khách hàng tại phòng máy trước khi ký nghiệm thu.
+            </p>
+          </div>
         </div>
 
-        <div style="background: #F8FAFD; border: 1px solid #E2E8F0; border-radius: 18px; padding: 2.25rem 2rem;">
-          <div style="width: 46px; height: 46px; border-radius: 12px; background: rgba(234,88,12,0.1); color: #EA580C; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-weight: 900; font-size: 1.15rem;">3</div>
-          <h3 style="font-size: 1.25rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; font-weight: 800;">Bảo hành & Hỗ trợ kỹ thuật 24/7</h3>
-          <p style="font-size: 0.925rem; color: var(--sdi-text-secondary); line-height: 1.65; margin: 0;">
-            Cam kết phản ứng on-site 2-4h tại TP.HCM. Có sẵn thiết bị dự phòng thay thế tương đương trong thời gian xử lý sự cố phần cứng.
-          </p>
+        <!-- Pair 3: Độ trễ & Ổn định -->
+        <div class="ai-pair-card">
+          <!-- Top: Nỗi đau (Problem) -->
+          <div class="ai-pair-problem">
+            <div class="ai-pair-badge problem">
+              <i data-lucide="wifi-off" style="width: 15px; height: 15px;"></i>
+              <span>NỖI ĐAU THỰC TẾ</span>
+            </div>
+            <h3 class="ai-pair-title">Độ trễ cao &amp; Phụ thuộc đường truyền</h3>
+            <p class="ai-pair-desc">
+              Các tác vụ camera AI giám sát thông minh, nhận diện khuôn mặt hay chatbot tra cứu tức thì thường bị nghẽn mạng hoặc đứt cáp biển quốc tế, làm gián đoạn luồng vận hành công ty.
+            </p>
+          </div>
+
+          <!-- Middle Divider / Connector -->
+          <div class="ai-pair-divider">
+            <div class="ai-pair-arrow">
+              <i data-lucide="arrow-down" style="width: 14px; height: 14px;"></i>
+            </div>
+          </div>
+
+          <!-- Bottom: Giải pháp NavaTek (Solution) -->
+          <div class="ai-pair-solution">
+            <div class="ai-pair-badge solution">
+              <i data-lucide="zap" style="width: 15px; height: 15px;"></i>
+              <span>GIẢI PHÁP NAVATEK</span>
+            </div>
+            <h4 class="ai-pair-sol-title">Tốc độ tức thì &amp; Bảo hành On-site 24/7</h4>
+            <p class="ai-pair-sol-desc">
+              Tốc độ phản hồi tính bằng mili-giây qua mạng nội bộ. Đi kèm cam kết SLA phản ứng kỹ thuật On-site 2–4h tại TP.HCM và có sẵn máy dự phòng thay thế tương đương ngay lập tức.
+            </p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
