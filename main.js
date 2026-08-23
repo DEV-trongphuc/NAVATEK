@@ -1127,6 +1127,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  // ==========================================================================
+  // 16. DYNAMIC SCROLL MATRIX & CTA STRAND ANIMATION
+  // ==========================================================================
+  const binaryContainer = document.querySelector('.binary-matrix-container');
+  const ctaGrad = document.querySelector('.home-cta-anims-grad');
+  const ctaCode = document.querySelector('.home-cta-anims-code-img');
+  const binaryStreams = document.querySelector('.binary-streams-wrapper');
+  const strandSvgs = document.querySelectorAll('.sdi-strand-svg');
+
+  if (binaryContainer) {
+    const updateCtaScrollAnim = () => {
+      const rect = binaryContainer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Progress from 0 to 1 as the section scrolls into viewport
+      const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height * 0.4), 0), 1);
+      
+      if (ctaGrad) {
+        ctaGrad.style.opacity = (0.35 + progress * 0.45).toFixed(2);
+        ctaGrad.style.transform = `translateX(-50%) scale(${0.88 + progress * 0.22})`;
+      }
+      if (ctaCode) {
+        ctaCode.style.opacity = (0.15 + progress * 0.25).toFixed(2);
+      }
+      if (binaryStreams) {
+        binaryStreams.style.opacity = (0.4 + progress * 0.45).toFixed(2);
+      }
+      if (strandSvgs.length > 0) {
+        strandSvgs.forEach(svg => {
+          svg.style.opacity = (0.55 + progress * 0.4).toFixed(2);
+        });
+      }
+    };
+
+    window.addEventListener('scroll', updateCtaScrollAnim, { passive: true });
+    updateCtaScrollAnim();
+  }
+
   // Initialize Lucide icons
   if (window.lucide) {
     window.lucide.createIcons();

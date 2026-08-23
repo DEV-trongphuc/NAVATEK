@@ -1500,8 +1500,9 @@ body {
 /* BINARY WATERFALL MATRIX FOR CTA TRANSITION SECTION */
 .binary-matrix-container {
   position: relative;
-  background-color: #FFFFFF !important;
-  background-image: none !important;
+  background-color: #010101 !important;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px) !important;
+  background-size: 32px 32px !important;
   min-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -1509,15 +1510,28 @@ body {
   align-items: center;
   text-align: center; /* Center-align all text and child elements */
   overflow: hidden;
-  border-top: 1px solid var(--sdi-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   box-sizing: border-box;
-  padding-top: 5rem;
+  padding-top: 6rem;
   padding-bottom: 7rem;
+  color: #FFFFFF;
+}
+
+.binary-matrix-container h2 {
+  color: #FFFFFF !important;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.binary-matrix-container p {
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 1.05rem;
 }
 
 .home-cta-anims-grad {
   z-index: 1;
-  filter: blur(100px);
+  filter: blur(80px);
   background-image: linear-gradient(90deg, #65acff, #3866f1 56%, #0063ff) !important;
   border-radius: 100rem;
   width: 50rem;
@@ -1527,9 +1541,9 @@ body {
   bottom: -4rem;
   transform: translateX(-50%);
   pointer-events: none;
-  opacity: 0;
-  will-change: opacity;
-  transition: opacity 0.2s ease-out;
+  opacity: 0.55;
+  will-change: opacity, transform;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .home-cta-anims-code-img {
@@ -1541,7 +1555,7 @@ body {
   max-width: 64.25rem;
   height: 38rem;
   z-index: 2;
-  opacity: 0;
+  opacity: 0.28;
   mix-blend-mode: color-dodge;
   background-image: url('https://cdn.prod.website-files.com/685c045f09a3dab41aa0d71d/68cc800237876bc16ee202f1_code.svg');
   background-position: 50% 50%;
@@ -1549,32 +1563,32 @@ body {
   background-size: 135% auto;
   pointer-events: none;
   will-change: transform, opacity;
-  transition: opacity 0.15s ease-out;
+  transition: opacity 0.3s ease-out;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
 }
 
 .binary-streams-wrapper {
   position: absolute;
-  top: 35%;
+  top: 15%;
   left: 0;
   width: 100%;
-  height: 65%;
+  height: 85%;
   pointer-events: none;
   z-index: 2;
   overflow: hidden;
-  opacity: 0;
+  opacity: 0.7;
   will-change: opacity;
-  transition: opacity 0.15s ease-out;
+  transition: opacity 0.3s ease-out;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
 }
 
 .binary-stream {
   position: absolute;
-  color: rgba(96, 165, 250, 0.12); /* Extremely subtle and faint blue matrix lines */
+  color: rgba(96, 165, 250, 0.45); /* Crisp and glowing cyan matrix lines */
   font-family: monospace;
-  font-size: 0.65rem; /* Small and neat */
+  font-size: 0.75rem;
   line-height: 1.3;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -1582,6 +1596,7 @@ body {
   writing-mode: vertical-rl;
   text-orientation: upright;
   user-select: none;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
 }
 
 .binary-stream.falling {
@@ -1607,12 +1622,12 @@ body {
 .binary-stream.blur-heavy {
   filter: blur(2px);
   font-size: 0.8rem;
-  color: rgba(96, 165, 250, 0.05);
+  color: rgba(96, 165, 250, 0.25);
 }
 
 .binary-stream.blur-light {
   filter: blur(0.75px);
-  color: rgba(96, 165, 250, 0.08);
+  color: rgba(96, 165, 250, 0.4);
 }
 
 @keyframes binary-fall {
@@ -1621,10 +1636,10 @@ body {
     opacity: 0;
   }
   15% {
-    opacity: 0.28;
+    opacity: 0.75;
   }
   85% {
-    opacity: 0.28;
+    opacity: 0.75;
   }
   100% {
     transform: translateY(140%) translateZ(0);
@@ -1638,10 +1653,10 @@ body {
     opacity: 0;
   }
   15% {
-    opacity: 0.28;
+    opacity: 0.75;
   }
   85% {
-    opacity: 0.28;
+    opacity: 0.75;
   }
   100% {
     transform: translateY(-140%) translateZ(0);
@@ -1691,7 +1706,8 @@ body {
   height: 28rem;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.65;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.45));
 }
 
 .sdi-strand-svg.is-left {
