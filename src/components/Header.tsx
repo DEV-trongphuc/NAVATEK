@@ -55,7 +55,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuote, activeSection, setA
           <div>
             <div className="flex items-center gap-1.5">
               <span className="font-['Outfit'] font-extrabold text-xl tracking-tight text-[#0F2B5C]">NAVATEK</span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-100 text-[#2563EB]">v3.1</span>
             </div>
             <p className="text-[10px] text-slate-500 font-medium tracking-wide uppercase">Industrial Solutions</p>
           </div>

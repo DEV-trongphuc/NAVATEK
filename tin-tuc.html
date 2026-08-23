@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/style.css?v=3.2">
+  <link rel="stylesheet" href="./style.css?v=3.2">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -22,18 +22,174 @@
   <!-- Unified Dark Cyber Header -->
   <header class="sdi-header">
     <div class="sdi-navbar-main">
-      <a href="/" class="sdi-logo">
-        <img src="/images/LOGO.png" alt="NavaTek Logo" style="height: 38px; width: auto; object-fit: contain;">
-        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      <a href="./index.html" class="sdi-logo">
+        <img src="./images/LOGO.png" alt="NavaTek B2B" style="height: 38px; width: auto; object-fit: contain;">
       </a>
 
-      <!-- Center Nav Menu -->
+      <!-- Center Nav Menu (with Submenu Dropdowns) -->
       <nav class="sdi-nav-menu">
-        <a href="/nganh-phuc-vu.html" class="sdi-nav-link">Giải pháp</a>
-        <a href="/may-don-le.html" class="sdi-nav-link">Sản phẩm</a>
-        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Dịch vụ</a>
-        <a href="/tin-tuc.html" class="sdi-nav-link active">Tin tức</a>
-        <a href="/du-an.html" class="sdi-nav-link">Liên hệ</a>
+        <!-- 1. Giải pháp -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./nganh-phuc-vu.html" class="sdi-nav-link">
+            <span>Giải pháp</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./nganh-phuc-vu.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="cpu"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">AI Server & Local LLM</div>
+                  <div class="sdi-dropdown-desc">Trạm tính toán AI cục bộ bảo mật cao</div>
+                </div>
+              </a>
+              <a href="./combo-tron-bo.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="boxes"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Combo Hạ Tầng Trọn Bộ</div>
+                  <div class="sdi-dropdown-desc">Mini PC + eGPU cài sẵn Plug & Play</div>
+                </div>
+              </a>
+              <a href="./nganh-phuc-vu.html#tu-dong-hoa" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="workflow"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Tự Động Hóa Doanh Nghiệp</div>
+                  <div class="sdi-dropdown-desc">Tích hợp Lark, Sapo, Apify 24/7</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sản phẩm -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./may-don-le.html" class="sdi-nav-link">
+            <span>Sản phẩm</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./may-don-le.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="layout-grid"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Tất Cả Thiết Bị B2B</div>
+                  <div class="sdi-dropdown-desc">Catalog Mini PC, Workstation & Linh kiện</div>
+                </div>
+              </a>
+              <a href="./chi-tiet-may-don.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="monitor"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Mini PC & Workstation</div>
+                  <div class="sdi-dropdown-desc">Máy tính nhỏ gọn Core i9 / RTX 4090</div>
+                </div>
+              </a>
+              <a href="./chi-tiet-linh-kien.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="hard-drive"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Linh Kiện & Gói Nâng Cấp</div>
+                  <div class="sdi-dropdown-desc">RAM DDR5, SSD NVMe Gen4, eGPU Box</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dịch vụ -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./dich-vu-bao-tri.html" class="sdi-nav-link">
+            <span>Dịch vụ</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./dich-vu-bao-tri.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="wrench"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Dịch Vụ Bảo Trì & IT Managed</div>
+                  <div class="sdi-dropdown-desc">Quản trị toàn diện, cam kết SLA 15-30 phút</div>
+                </div>
+              </a>
+              <a href="./dich-vu-bao-tri.html#on-site" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="map-pin"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Hỗ Trợ Kỹ Thuật On-Site</div>
+                  <div class="sdi-dropdown-desc">Kỹ sư hỗ trợ tận nơi tại TP.HCM & lân cận</div>
+                </div>
+              </a>
+              <a href="./dich-vu-bao-tri.html#bang-gia" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="badge-percent"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Bảng Giá Gói Dịch Vụ</div>
+                  <div class="sdi-dropdown-desc">Gói Cơ Bản, Tiêu Chuẩn & Doanh Nghiệp</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Về NavaTek -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./ve-navatek.html" class="sdi-nav-link">
+            <span>Về NavaTek</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./ve-navatek.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="building-2"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Giới Thiệu NavaTek</div>
+                  <div class="sdi-dropdown-desc">Tầm nhìn, sứ mệnh & năng lực hạ tầng</div>
+                </div>
+              </a>
+              <a href="./ve-navatek.html#chung-nhan" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="award"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Chứng Nhận ASUS Gold Partner</div>
+                  <div class="sdi-dropdown-desc">Đối tác phân phối chính hãng ủy quyền</div>
+                </div>
+              </a>
+              <a href="./ve-navatek.html#he-sinh-thai" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="network"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Hệ Sinh Thái Nava</div>
+                  <div class="sdi-dropdown-desc">NavaTek B2B & NavaStore Bán Lẻ</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tin tức -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./tin-tuc.html" class="sdi-nav-link active">
+            <span>Tin tức</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./tin-tuc.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="newspaper"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Kho Tri Thức CNTT</div>
+                  <div class="sdi-dropdown-desc">Cẩm nang, kinh nghiệm & xu hướng công nghệ</div>
+                </div>
+              </a>
+              <a href="./bai-viet-chi-tiet.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="book-open"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Bài Viết Tiêu Biểu</div>
+                  <div class="sdi-dropdown-desc">Xử lý nghẽn cổ chai PC & tối ưu phần cứng</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Liên hệ -->
+        <div class="sdi-nav-item">
+          <a href="./du-an.html" class="sdi-nav-link">Liên hệ</a>
+        </div>
       </nav>
 
       <!-- Search Box -->
@@ -60,11 +216,72 @@
   <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
     <div class="sdi-mobile-drawer-content">
       <nav class="sdi-mobile-nav-links">
-        <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/tin-tuc.html" class="sdi-mobile-nav-link active">Tin tức <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <!-- 1. Giải pháp Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Giải pháp</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./nganh-phuc-vu.html" class="sdi-mobile-sublink"><i data-lucide="cpu"></i> AI Server & Local LLM</a>
+            <a href="./combo-tron-bo.html" class="sdi-mobile-sublink"><i data-lucide="boxes"></i> Combo Hạ Tầng Trọn Bộ</a>
+            <a href="./nganh-phuc-vu.html#tu-dong-hoa" class="sdi-mobile-sublink"><i data-lucide="workflow"></i> Tự Động Hóa Doanh Nghiệp</a>
+          </div>
+        </div>
+
+        <!-- 2. Sản phẩm Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Sản phẩm</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./may-don-le.html" class="sdi-mobile-sublink"><i data-lucide="layout-grid"></i> Tất Cả Thiết Bị B2B</a>
+            <a href="./chi-tiet-may-don.html" class="sdi-mobile-sublink"><i data-lucide="monitor"></i> Mini PC & Workstation</a>
+            <a href="./chi-tiet-linh-kien.html" class="sdi-mobile-sublink"><i data-lucide="hard-drive"></i> Linh Kiện & Nâng Cấp</a>
+          </div>
+        </div>
+
+        <!-- 3. Dịch vụ Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Dịch vụ</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./dich-vu-bao-tri.html" class="sdi-mobile-sublink"><i data-lucide="wrench"></i> Dịch Vụ Bảo Trì & IT Managed</a>
+            <a href="./dich-vu-bao-tri.html#on-site" class="sdi-mobile-sublink"><i data-lucide="map-pin"></i> Hỗ Trợ On-Site Tận Nơi</a>
+            <a href="./dich-vu-bao-tri.html#bang-gia" class="sdi-mobile-sublink"><i data-lucide="badge-percent"></i> Bảng Giá Dịch Vụ</a>
+          </div>
+        </div>
+
+        <!-- 4. Về NavaTek Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Về NavaTek</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./ve-navatek.html" class="sdi-mobile-sublink"><i data-lucide="building-2"></i> Giới Thiệu NavaTek</a>
+            <a href="./ve-navatek.html#chung-nhan" class="sdi-mobile-sublink"><i data-lucide="award"></i> Chứng Nhận ASUS Partner</a>
+            <a href="./ve-navatek.html#he-sinh-thai" class="sdi-mobile-sublink"><i data-lucide="network"></i> Hệ Sinh Thái Nava</a>
+          </div>
+        </div>
+
+        <!-- 5. Tin tức Accordion -->
+        <div class="sdi-mobile-accordion open">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Tin tức</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./tin-tuc.html" class="sdi-mobile-sublink active"><i data-lucide="newspaper"></i> Kho Tri Thức CNTT</a>
+            <a href="./bai-viet-chi-tiet.html" class="sdi-mobile-sublink"><i data-lucide="book-open"></i> Bài Viết Tiêu Biểu</a>
+          </div>
+        </div>
+
+        <!-- 6. Liên hệ link -->
+        <a href="./du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
       </nav>
       
       <button class="sdi-btn-orange trigger-quote-modal" style="display: inline-flex !important; width: 100%; justify-content: center; margin-top: 1rem;">
@@ -114,7 +331,7 @@
 
           <!-- Right Column: Spotlight Featured Article -->
           <div class="blog-hero-spotlight-wrap">
-            <a href="/bai-viet-chi-tiet.html" class="blog-spotlight-card" data-category="hardware">
+            <a href="./bai-viet-chi-tiet.html" class="blog-spotlight-card" data-category="hardware">
               <div class="blog-spotlight-visual">
                 <span class="blog-card-tag-floating spotlight-tag">
                   ★ TÂM ĐIỂM HƯỚNG DẪN
@@ -195,7 +412,7 @@
         <div class="home-blog-grid" id="articles-grid">
           
           <!-- Article 1: Lắp thêm ổ cứng -->
-          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="hardware">
+          <a href="./bai-viet-chi-tiet.html" class="blog-card" data-category="hardware">
             <div class="blog-card-thumb-wrapper">
               <span class="blog-card-tag-floating blog-cat-badge hardware">NÂNG CẤP & LƯU TRỮ</span>
               <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-cach-lap-them-o-cung-cho-pc-1x1.jpg?v=1786006751627" alt="Cách Lắp Thêm Ổ Cứng Cho PC">
@@ -223,7 +440,7 @@
           </a>
 
           <!-- Article 2: Cổng PCI Trên Main -->
-          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="hardware">
+          <a href="./bai-viet-chi-tiet.html" class="blog-card" data-category="hardware">
             <div class="blog-card-thumb-wrapper">
               <span class="blog-card-tag-floating blog-cat-badge automation">KIẾN THỨC PHẦN CỨNG</span>
               <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-cong-pci-tren-main-1x1.jpg?v=1786005998587" alt="Cổng PCI Trên Main Là Gì">
@@ -251,7 +468,7 @@
           </a>
 
           <!-- Article 3: Xóa game trên PC -->
-          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="security">
+          <a href="./bai-viet-chi-tiet.html" class="blog-card" data-category="security">
             <div class="blog-card-thumb-wrapper">
               <span class="blog-card-tag-floating blog-cat-badge security">THỦ THUẬT & HỆ THỐNG</span>
               <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-huong-dan-xoa-game-tren-pc.jpg?v=1786010590760" alt="Hướng dẫn xóa game trên PC">
@@ -279,7 +496,7 @@
           </a>
 
           <!-- Article 4: Top Game 2 Người -->
-          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="automation">
+          <a href="./bai-viet-chi-tiet.html" class="blog-card" data-category="automation">
             <div class="blog-card-thumb-wrapper">
               <span class="blog-card-tag-floating blog-cat-badge automation">CẤU HÌNH & TRẢI NGHIỆM</span>
               <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-game-2-nguoi-1-may-pc-1x1.jpg?v=1786009656133" alt="Top Game 2 Người 1 Máy PC">
@@ -307,7 +524,7 @@
           </a>
 
           <!-- Article 5: Cẩm Nang AI -->
-          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="ai">
+          <a href="./bai-viet-chi-tiet.html" class="blog-card" data-category="ai">
             <div class="blog-card-thumb-wrapper">
               <span class="blog-card-tag-floating blog-cat-badge ai">HẠ TẦNG AI & LLM</span>
               <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-nghen-co-chai-pc.jpg?v=1786010990053" alt="Cẩm Nang Triển Khai Trạm AI Cục Bộ">
@@ -335,7 +552,7 @@
           </a>
 
           <!-- Article 6: Tự động hóa -->
-          <a href="/bai-viet-chi-tiet.html" class="blog-card" data-category="automation">
+          <a href="./bai-viet-chi-tiet.html" class="blog-card" data-category="automation">
             <div class="blog-card-thumb-wrapper">
               <span class="blog-card-tag-floating blog-cat-badge automation">TỰ ĐỘNG HÓA</span>
               <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-huong-dan-xoa-game-tren-pc.jpg?v=1786010590760" alt="5 Luồng tự động hóa Lark Sapo">
@@ -433,32 +650,32 @@
               <strong>Công ty TNHH NavaTek</strong><br>
               Địa chỉ: Thành phố Hồ Chí Minh<br>
               Hotline: 1900 - NAVATEK | MST: 031789456<br>
-              Liên kết: <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="/tin-tuc.html" style="color: #94A3B8; text-decoration: underline;">Kho tri thức B2B</a>
+              Liên kết: <a href="./dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="./tin-tuc.html" style="color: #94A3B8; text-decoration: underline;">Kho tri thức B2B</a>
             </p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
-              <a href="/nganh-phuc-vu.html" class="footer-link" style="margin-right: 0.75rem;">Giải pháp</a>
-              <a href="/may-don-le.html" class="footer-link" style="margin-right: 0.75rem;">Sản phẩm</a>
-              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Dịch vụ</a>
-              <a href="/tin-tuc.html" class="footer-link" style="margin-right: 0.75rem;">Tin tức</a>
-              <a href="/du-an.html" class="footer-link">Liên hệ</a>
+            <!-- Footer Nav Menu Links (Bug 7, 22) -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.5rem; font-size: 0.9rem; font-weight: 600;">
+              <a href="./nganh-phuc-vu.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Giải pháp</a>
+              <a href="./may-don-le.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Sản phẩm</a>
+              <a href="./dich-vu-bao-tri.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Dịch vụ</a>
+              <a href="./ve-navatek.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Về NavaTek</a>
+              <a href="./tin-tuc.html" style="color: #38BDF8; text-decoration: none;">Tin tức</a>
+              <a href="./du-an.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Liên hệ</a>
             </div>
           </div>
 
+          <!-- Hệ sinh thái Nava Footer Card (Bug 2, 24) -->
           <div>
-            <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 0.75rem;">Hệ sinh thái Nava</h4>
-            <div class="sdi-form-grid-2" style="gap: 1.25rem !important;">
-              <a href="/" class="sdi-ecosystem-card">
-                <div class="sdi-eco-logo-wrap">
-                  <img src="/images/LOGO.png" alt="NAVATEK - Giải pháp doanh nghiệp">
-                </div>
-                <div class="sdi-eco-desc">Giải pháp doanh nghiệp</div>
+            <div style="font-size: 0.8rem; color: #64748B; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em;">HỆ SINH THÁI NAVA</div>
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-around; gap: 1rem;">
+              <a href="./index.html" style="text-decoration: none; text-align: center;">
+                <div style="font-family: var(--font-heading); font-weight: 800; color: #FFFFFF; font-size: 1.05rem;">NAVATEK</div>
+                <div style="font-size: 0.75rem; color: #94A3B8;">Giải pháp doanh nghiệp</div>
               </a>
-              <a href="https://navastore.vn" target="_blank" rel="noopener" class="sdi-ecosystem-card is-retail">
-                <div class="sdi-eco-logo-wrap">
-                  <img src="https://bizweb.dktcdn.net/100/543/817/themes/1000289/assets/logo.png?1786961088767" alt="NAVASTORE - Bán lẻ Top 2 Google">
-                </div>
-                <div class="sdi-eco-desc">Bán lẻ · Top 2 Google</div>
+              <div style="color: rgba(255,255,255,0.2); font-size: 1.2rem;">|</div>
+              <a href="https://navastore.vn" target="_blank" rel="noopener" style="text-decoration: none; text-align: center;">
+                <div style="font-family: var(--font-heading); font-weight: 800; color: #38BDF8; font-size: 1.05rem;">NAVASTORE</div>
+                <div style="font-size: 0.75rem; color: #94A3B8;">Bán lẻ • Top 2 Google</div>
               </a>
             </div>
           </div>
@@ -478,7 +695,7 @@
       <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
         <i data-lucide="x" style="width: 20px; height: 20px;"></i>
       </button>
-      <span class="eyebrow-badge">NAVATEK v3.1</span>
+      <span class="eyebrow-badge">NAVATEK B2B</span>
       <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
       <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
       <form id="quote-request-form">
@@ -503,7 +720,7 @@
     </div>
   </div>
 
-  <script type="module" src="/main.js"></script>
-  <script>lucide.createIcons();</script>
+  <script src="./main.js"></script>
+  <script>if (typeof lucide !== "undefined" && lucide.createIcons) { lucide.createIcons(); }</script>
 </body>
 </html>

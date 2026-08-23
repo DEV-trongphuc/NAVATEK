@@ -4,46 +4,199 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Combo Trạm AI: Mini PC + eGPU RTX 4070 — NavaTek B2B</title>
-  <meta name="description" content="Trạm AI cục bộ local inference chạy LLM ngay tại văn phòng. Bảo mật thông tin tối đa cho doanh nghiệp.">
+  <meta name="description" content="Combo Trạm AI: Mini PC + eGPU RTX 4070 12GB phục vụ chạy Private LLM tại chỗ, tiết kiệm điện 60%, bảo hành 24 tháng on-site tại TP.HCM.">
   
-  <!-- Direct Google Fonts for Stable Vietnamese Rendering -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/style.css">
-  
-  <!-- Lucide Icons -->
+  <link rel="stylesheet" href="./style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-  <!-- Unified Dark Cyber Header -->
+  <!-- Unified Master Header -->
   <header class="sdi-header">
     <div class="sdi-navbar-main">
-      <a href="/" class="sdi-logo">
-        <img src="/images/LOGO.png" alt="NavaTek B2B Logo" style="height: 38px; width: auto; object-fit: contain;">
-        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: #EEF2F6; color: var(--sdi-navy-primary); padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      <a href="./index.html" class="sdi-logo">
+        <img src="./images/LOGO.png" alt="NavaTek B2B" style="height: 38px; width: auto; object-fit: contain;">
       </a>
 
-      <!-- Center Nav Menu -->
+      <!-- Center Nav Menu (with Submenu Dropdowns) -->
       <nav class="sdi-nav-menu">
-        <a href="/nganh-phuc-vu.html" class="sdi-nav-link">Giải pháp</a>
-        <a href="/may-don-le.html" class="sdi-nav-link active">Sản phẩm</a>
-        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Dịch vụ</a>
-        <a href="/tin-tuc.html" class="sdi-nav-link">Tin tức</a>
-        <a href="/du-an.html" class="sdi-nav-link">Liên hệ</a>
+        <!-- 1. Giải pháp -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./nganh-phuc-vu.html" class="sdi-nav-link">
+            <span>Giải pháp</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./nganh-phuc-vu.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="cpu"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">AI Server & Local LLM</div>
+                  <div class="sdi-dropdown-desc">Trạm tính toán AI cục bộ bảo mật cao</div>
+                </div>
+              </a>
+              <a href="./combo-tron-bo.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="boxes"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Combo Hạ Tầng Trọn Bộ</div>
+                  <div class="sdi-dropdown-desc">Mini PC + eGPU cài sẵn Plug & Play</div>
+                </div>
+              </a>
+              <a href="./nganh-phuc-vu.html#tu-dong-hoa" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="workflow"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Tự Động Hóa Doanh Nghiệp</div>
+                  <div class="sdi-dropdown-desc">Tích hợp Lark, Sapo, Apify 24/7</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sản phẩm -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./may-don-le.html" class="sdi-nav-link active">
+            <span>Sản phẩm</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./may-don-le.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="layout-grid"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Tất Cả Thiết Bị B2B</div>
+                  <div class="sdi-dropdown-desc">Catalog Mini PC, Workstation & Linh kiện</div>
+                </div>
+              </a>
+              <a href="./chi-tiet-may-don.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="monitor"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Mini PC & Workstation</div>
+                  <div class="sdi-dropdown-desc">Máy tính nhỏ gọn Core i9 / RTX 4090</div>
+                </div>
+              </a>
+              <a href="./chi-tiet-linh-kien.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="hard-drive"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Linh Kiện & Gói Nâng Cấp</div>
+                  <div class="sdi-dropdown-desc">RAM DDR5, SSD NVMe Gen4, eGPU Box</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dịch vụ -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./dich-vu-bao-tri.html" class="sdi-nav-link">
+            <span>Dịch vụ</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./dich-vu-bao-tri.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="wrench"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Dịch Vụ Bảo Trì & IT Managed</div>
+                  <div class="sdi-dropdown-desc">Quản trị toàn diện, cam kết SLA 15-30 phút</div>
+                </div>
+              </a>
+              <a href="./dich-vu-bao-tri.html#on-site" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="map-pin"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Hỗ Trợ Kỹ Thuật On-Site</div>
+                  <div class="sdi-dropdown-desc">Kỹ sư hỗ trợ tận nơi tại TP.HCM & lân cận</div>
+                </div>
+              </a>
+              <a href="./dich-vu-bao-tri.html#bang-gia" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="badge-percent"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Bảng Giá Gói Dịch Vụ</div>
+                  <div class="sdi-dropdown-desc">Gói Cơ Bản, Tiêu Chuẩn & Doanh Nghiệp</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Về NavaTek -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./ve-navatek.html" class="sdi-nav-link">
+            <span>Về NavaTek</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./ve-navatek.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="building-2"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Giới Thiệu NavaTek</div>
+                  <div class="sdi-dropdown-desc">Tầm nhìn, sứ mệnh & năng lực hạ tầng</div>
+                </div>
+              </a>
+              <a href="./ve-navatek.html#chung-nhan" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="award"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Chứng Nhận ASUS Gold Partner</div>
+                  <div class="sdi-dropdown-desc">Đối tác phân phối chính hãng ủy quyền</div>
+                </div>
+              </a>
+              <a href="./ve-navatek.html#he-sinh-thai" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="network"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Hệ Sinh Thái Nava</div>
+                  <div class="sdi-dropdown-desc">NavaTek B2B & NavaStore Bán Lẻ</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tin tức -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./tin-tuc.html" class="sdi-nav-link">
+            <span>Tin tức</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./tin-tuc.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="newspaper"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Kho Tri Thức CNTT</div>
+                  <div class="sdi-dropdown-desc">Cẩm nang, kinh nghiệm & xu hướng công nghệ</div>
+                </div>
+              </a>
+              <a href="./bai-viet-chi-tiet.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="book-open"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Bài Viết Tiêu Biểu</div>
+                  <div class="sdi-dropdown-desc">Xử lý nghẽn cổ chai PC & tối ưu phần cứng</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Liên hệ -->
+        <div class="sdi-nav-item">
+          <a href="./du-an.html" class="sdi-nav-link">Liên hệ</a>
+        </div>
       </nav>
 
-      <!-- Search Box with Search Suggestion -->
+      <!-- Search Box with Suggestion -->
       <div class="sdi-search-wrapper">
         <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
         <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field">
         <div class="sdi-suggestion-box" id="search-suggestion-dropdown"></div>
       </div>
 
-      <!-- Action Button Orange (#E8862E) with Charcoal Text (#16202C) -->
+      <!-- Action Button Orange -->
       <button class="sdi-btn-orange trigger-quote-modal">
         <i data-lucide="phone-call" style="width: 17px; height: 17px;"></i>
         <span>Nhận báo giá</span>
@@ -60,14 +213,74 @@
   <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
     <div class="sdi-mobile-drawer-content">
       <nav class="sdi-mobile-nav-links">
-        <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/may-don-le.html" class="sdi-mobile-nav-link active">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/tin-tuc.html" class="sdi-mobile-nav-link">Tin tức <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <!-- 1. Giải pháp Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Giải pháp</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./nganh-phuc-vu.html" class="sdi-mobile-sublink"><i data-lucide="cpu"></i> AI Server & Local LLM</a>
+            <a href="./combo-tron-bo.html" class="sdi-mobile-sublink active"><i data-lucide="boxes"></i> Combo Hạ Tầng Trọn Bộ</a>
+            <a href="./nganh-phuc-vu.html#tu-dong-hoa" class="sdi-mobile-sublink"><i data-lucide="workflow"></i> Tự Động Hóa Doanh Nghiệp</a>
+          </div>
+        </div>
+
+        <!-- 2. Sản phẩm Accordion -->
+        <div class="sdi-mobile-accordion open">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Sản phẩm</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./may-don-le.html" class="sdi-mobile-sublink"><i data-lucide="layout-grid"></i> Tất Cả Thiết Bị B2B</a>
+            <a href="./chi-tiet-may-don.html" class="sdi-mobile-sublink"><i data-lucide="monitor"></i> Mini PC & Workstation</a>
+            <a href="./chi-tiet-linh-kien.html" class="sdi-mobile-sublink"><i data-lucide="hard-drive"></i> Linh Kiện & Nâng Cấp</a>
+          </div>
+        </div>
+
+        <!-- 3. Dịch vụ Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Dịch vụ</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./dich-vu-bao-tri.html" class="sdi-mobile-sublink"><i data-lucide="wrench"></i> Dịch Vụ Bảo Trì & IT Managed</a>
+            <a href="./dich-vu-bao-tri.html#on-site" class="sdi-mobile-sublink"><i data-lucide="map-pin"></i> Hỗ Trợ On-Site Tận Nơi</a>
+            <a href="./dich-vu-bao-tri.html#bang-gia" class="sdi-mobile-sublink"><i data-lucide="badge-percent"></i> Bảng Giá Dịch Vụ</a>
+          </div>
+        </div>
+
+        <!-- 4. Về NavaTek Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Về NavaTek</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./ve-navatek.html" class="sdi-mobile-sublink"><i data-lucide="building-2"></i> Giới Thiệu NavaTek</a>
+            <a href="./ve-navatek.html#chung-nhan" class="sdi-mobile-sublink"><i data-lucide="award"></i> Chứng Nhận ASUS Partner</a>
+            <a href="./ve-navatek.html#he-sinh-thai" class="sdi-mobile-sublink"><i data-lucide="network"></i> Hệ Sinh Thái Nava</a>
+          </div>
+        </div>
+
+        <!-- 5. Tin tức Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Tin tức</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./tin-tuc.html" class="sdi-mobile-sublink"><i data-lucide="newspaper"></i> Kho Tri Thức CNTT</a>
+            <a href="./bai-viet-chi-tiet.html" class="sdi-mobile-sublink"><i data-lucide="book-open"></i> Bài Viết Tiêu Biểu</a>
+          </div>
+        </div>
+
+        <!-- 6. Liên hệ link -->
+        <a href="./du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
       </nav>
       
-      <!-- Mobile Search inside Drawer -->
       <div class="sdi-search-wrapper" style="display: block !important; width: 100%;">
         <i data-lucide="search" class="sdi-search-icon" style="width: 16px; height: 16px;"></i>
         <input type="text" placeholder="Tìm sản phẩm, mã máy..." class="sdi-search-input" id="search-input-field-mobile">
@@ -82,17 +295,17 @@
   </div>
 
   <!-- Spacer matching header height -->
-  <div class="sdi-header-spacer" style="height: 76px;"></div>
+  <div class="sdi-header-spacer"></div>
 
   <!-- Breadcrumb -->
   <div style="background: #FFFFFF; border-bottom: 1px solid var(--sdi-border); padding: 1rem 0;">
     <div class="container-sdi">
       <div style="font-size: 0.85rem; color: var(--sdi-text-muted); display: flex; gap: 0.5rem; align-items: center;">
-        <a href="/" style="color: var(--sdi-text-muted); text-decoration: none;">Trang chủ</a>
+        <a href="./index.html" style="color: var(--sdi-text-muted); text-decoration: none;">Trang chủ</a>
         <span>/</span>
-        <a href="/may-don-le.html" style="color: var(--sdi-text-muted); text-decoration: none;">Sản phẩm</a>
+        <a href="./may-don-le.html" style="color: var(--sdi-text-muted); text-decoration: none;">Sản phẩm</a>
         <span>/</span>
-        <a href="/may-don-le.html" style="color: var(--sdi-text-muted); text-decoration: none;">Mini PC</a>
+        <a href="./may-don-le.html" style="color: var(--sdi-text-muted); text-decoration: none;">Combo trọn bộ</a>
         <span>/</span>
         <span style="color: var(--sdi-navy-primary); font-weight: 700;">Combo Trạm AI: Mini PC + eGPU</span>
       </div>
@@ -101,34 +314,30 @@
 
   <main style="background: #F8FAFC;">
     
-    <!-- FOLD 1: PRODUCT HERO INFRASTRUCTURE (White Background Fold) -->
+    <!-- FOLD 1: PRODUCT HERO INFRASTRUCTURE -->
     <section style="padding: 4rem 0; background: #FFFFFF; border-bottom: 1px solid var(--sdi-border);">
       <div class="container-sdi">
         <div class="sdi-split-grid">
           
-          <!-- Left: Image Gallery & Connection Info -->
+          <!-- Left: Image Gallery -->
           <div>
             <div class="wireframe-box-dashed-dark" style="padding: 1.5rem; min-height: 400px; justify-content: center; position: relative; margin-bottom: 1rem; overflow: hidden; background: #FAFAFA;">
-              <img src="/images/combo.png" alt="Combo Trạm AI: Mini PC + eGPU RTX 4070" id="main-product-preview-img" class="graphic-blend" style="max-height: 320px; transition: transform 0.3s ease;">
+              <img src="./images/combo.png" alt="Combo Trạm AI: Mini PC + eGPU RTX 4070" id="main-product-preview-img" class="graphic-blend" style="max-height: 320px; transition: transform 0.3s ease;">
             </div>
 
             <!-- Thumbnails Row -->
             <div class="sdi-logos-grid">
-              <div class="wireframe-box-dashed-dark thumbnail-btn active" data-target-src="/images/combo.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
-                <span style="font-size: 0.55rem; color: var(--sdi-text-muted); position: absolute; top: 3px; left: 3px;">ẢNH 1</span>
-                <img src="/images/combo.png" alt="Thumbnail 1" style="max-height: 60px; mix-blend-mode: multiply;">
+              <div class="wireframe-box-dashed-dark thumbnail-btn active" data-target-src="./images/combo.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
+                <img src="./images/combo.png" alt="Thumbnail 1" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
-              <div class="wireframe-box-dashed-dark thumbnail-btn" data-target-src="/images/laser.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
-                <span style="font-size: 0.55rem; color: var(--sdi-text-muted); position: absolute; top: 3px; left: 3px;">ẢNH 2</span>
-                <img src="/images/laser.png" alt="Thumbnail 2" style="max-height: 60px; mix-blend-mode: multiply;">
+              <div class="wireframe-box-dashed-dark thumbnail-btn" data-target-src="./images/laser.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
+                <img src="./images/laser.png" alt="Thumbnail 2" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
-              <div class="wireframe-box-dashed-dark thumbnail-btn" data-target-src="/images/bending.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
-                <span style="font-size: 0.55rem; color: var(--sdi-text-muted); position: absolute; top: 3px; left: 3px;">ẢNH 3</span>
-                <img src="/images/bending.png" alt="Thumbnail 3" style="max-height: 60px; mix-blend-mode: multiply;">
+              <div class="wireframe-box-dashed-dark thumbnail-btn" data-target-src="./images/bending.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
+                <img src="./images/bending.png" alt="Thumbnail 3" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
-              <div class="wireframe-box-dashed-dark thumbnail-btn" data-target-src="/images/ai.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
-                <span style="font-size: 0.55rem; color: var(--sdi-text-muted); position: absolute; top: 3px; left: 3px;">CỔNG KẾT NỐI</span>
-                <img src="/images/ai.png" alt="Thumbnail 4" style="max-height: 60px; mix-blend-mode: multiply;">
+              <div class="wireframe-box-dashed-dark thumbnail-btn" data-target-src="./images/ai.png" style="padding: 0.5rem; min-height: 80px; cursor: pointer; background: #FAFAFA;">
+                <img src="./images/ai.png" alt="Thumbnail 4" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
             </div>
           </div>
@@ -136,9 +345,9 @@
           <!-- Right: Specs Summary & B2B Actions -->
           <div style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <span class="eyebrow-badge eyebrow-badge-orange" style="margin-bottom: 0.25rem;">COMBO BÁN CHẠY V3.1</span>
+              <span class="eyebrow-badge eyebrow-badge-orange" style="margin-bottom: 0.25rem;">COMBO BÁN CHẠY</span>
               
-              <h1 style="font-size: 1.85rem; color: var(--sdi-navy-primary); margin-top: 0.35rem; margin-bottom: 0.5rem; line-height: 1.35;">
+              <h1 style="font-size: 1.85rem; color: var(--sdi-navy-primary); margin-top: 0.35rem; margin-bottom: 0.5rem; line-height: 1.35; font-weight: 900;">
                 Combo Trạm AI: Mini PC + eGPU RTX 4070
               </h1>
 
@@ -148,42 +357,62 @@
 
               <!-- Stats line -->
               <div style="font-size: 0.85rem; color: var(--sdi-text-secondary); font-weight: 700; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-                <span style="color: #c96714;">○ Đặt trước (7 ngày)</span>
+                <span><i data-lucide="check-circle" style="width: 15px; height: 15px; color: #10B981; display: inline; vertical-align: -2px;"></i> Tình trạng: <strong>Sẵn hàng tại TP.HCM</strong></span>
                 <span>•</span>
-                <span>Bảo hành: <strong>24 tháng</strong></span>
-                <span>•</span>
-                <span>Giao lắp: <strong>2 - 3 ngày</strong></span>
+                <span>Bảo hành: <strong>24 tháng 1 đổi 1</strong></span>
               </div>
 
-              <!-- Short description -->
-              <p style="color: var(--sdi-text-secondary); font-size: 0.925rem; line-height: 1.55; margin-bottom: 1.5rem;">
-                Combo cấu hình trọn gói Mini PC Core i9 hiệu năng cao ghép nối với hộp eGPU rời (NVIDIA RTX 4070 12GB), mang lại sức mạnh tính toán AI mạnh mẽ trong thiết kế siêu nhỏ gọn, phù hợp chạy local LLM cho văn phòng doanh nghiệp.
-              </p>
+              <!-- Key Value Propositions List -->
+              <div class="product-spec-highlights-box" style="background: #F8FAFD; border: 1px solid #E2E8F0; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+                <div class="spec-highlight-title" style="font-size: 0.8rem; font-weight: 800; color: #0B192C; text-transform: uppercase; margin-bottom: 0.85rem; letter-spacing: 0.04em;">Cấu hình tóm tắt nổi bật:</div>
+                <div class="spec-highlight-list" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  
+                  <div class="spec-highlight-item" style="display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: baseline; font-size: 0.9rem; line-height: 1.55; border-bottom: 1px dashed #E2E8F0; padding-bottom: 0.65rem;">
+                    <div class="spec-highlight-label" style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 700; color: #0B192C;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>CPU Vi xử lý:</span>
+                    </div>
+                    <div class="spec-highlight-desc" style="color: #475569;">Intel Core i9 · 16 nhân 24 luồng (Tối đa 5.4GHz)</div>
+                  </div>
 
-              <!-- B2B Enterprise CTA Box -->
-              <div style="background: #F8FAFD; border: 1px solid var(--sdi-border); border-radius: 16px; padding: 1.25rem 1.5rem; margin-bottom: 1rem;">
-                <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.35rem;">Mua số lượng cho doanh nghiệp?</h4>
-                <p style="font-size: 0.825rem; color: var(--sdi-text-secondary); margin-bottom: 1rem;">Nhận chiết khấu theo số lượng, hỗ trợ xuất hóa đơn VAT điện tử và lắp đặt tận nơi.</p>
-                
-                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-                  <button class="sdi-btn-orange trigger-quote-modal" style="padding: 0.55rem 1.15rem; font-size: 0.85rem;">Nhận báo giá số lượng</button>
-                  <a href="tel:19006282" class="sdi-pill-btn-outline" style="text-decoration: none; text-align: center; color: var(--sdi-navy-primary); border-color: var(--sdi-navy-primary); padding: 0.55rem 1.15rem; font-size: 0.85rem; height: auto;">
-                    <span>Chat / Gọi ngay</span>
-                  </a>
+                  <div class="spec-highlight-item" style="display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: baseline; font-size: 0.9rem; line-height: 1.55; border-bottom: 1px dashed #E2E8F0; padding-bottom: 0.65rem;">
+                    <div class="spec-highlight-label" style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 700; color: #0B192C;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>GPU AI Box:</span>
+                    </div>
+                    <div class="spec-highlight-desc" style="color: #475569;">NVIDIA RTX 4070 12GB VRAM GDDR6X (Local Inference)</div>
+                  </div>
+
+                  <div class="spec-highlight-item" style="display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: baseline; font-size: 0.9rem; line-height: 1.55; border-bottom: 1px dashed #E2E8F0; padding-bottom: 0.65rem;">
+                    <div class="spec-highlight-label" style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 700; color: #0B192C;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>RAM & SSD:</span>
+                    </div>
+                    <div class="spec-highlight-desc" style="color: #475569;">64GB DDR5 5600MHz · 1TB NVMe Gen4x4 (7000MB/s)</div>
+                  </div>
+
+                  <div class="spec-highlight-item" style="display: grid; grid-template-columns: 150px 1fr; gap: 1rem; align-items: baseline; font-size: 0.9rem; line-height: 1.55;">
+                    <div class="spec-highlight-label" style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 700; color: #0B192C;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>Kết nối cắm ngoài:</span>
+                    </div>
+                    <div class="spec-highlight-desc" style="color: #475569;">Cáp OCuLink 64Gbps / Thunderbolt 4 tốc độ cao</div>
+                  </div>
+
                 </div>
               </div>
 
-              <!-- PDF Download Spec button -->
-              <div style="margin-top: 0.75rem;">
-                <a href="/images/LOGO.png" download class="sdi-pill-btn-outline" style="text-decoration: none; font-size: 0.825rem; border-color: var(--sdi-border); color: var(--sdi-text-secondary); display: inline-flex; align-items: center; gap: 0.5rem; background: #FFFFFF; padding: 0.55rem 1.15rem; height: auto;">
-                  <i data-lucide="download" style="width: 14px; height: 14px; color: var(--sdi-orange-cta);"></i>
-                  <span>↓ Tải thông số kỹ thuật (PDF Spec Sheet)</span>
+              <!-- CTA Action Buttons -->
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="sdi-btn-orange trigger-quote-modal" style="font-size: 0.95rem; padding: 0.85rem 1.75rem;">
+                  <i data-lucide="file-text" style="width: 18px; height: 18px;"></i>
+                  <span>Nhận dự toán & Báo giá</span>
+                </button>
+                <a href="tel:1900628283" class="sdi-pill-btn-outline" style="border: 2px solid var(--sdi-navy-primary); color: var(--sdi-navy-primary); padding: 0.85rem 1.5rem; border-radius: 9999px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                  <i data-lucide="phone" style="width: 16px; height: 16px;"></i>
+                  <span>Hotline: 1900 - NAVATEK</span>
                 </a>
-                <div style="font-size: 0.7rem; color: var(--sdi-text-muted); margin-top: 0.25rem; font-style: italic; max-width: 480px;">
-                  Tải file spec sheet chính thức để làm hồ sơ trình sếp duyệt nội bộ thuận tiện.
-                </div>
               </div>
-
             </div>
           </div>
 
@@ -191,68 +420,53 @@
       </div>
     </section>
 
-    <!-- FOLD 2: COMBO COMPONENTS BLOCK (Light Background Fold) -->
-    <section style="padding: 5rem 0; background: #F8FAFC; border-bottom: 1px solid var(--sdi-border);">
+    <!-- FOLD 2: COMPONENT BREAKDOWN -->
+    <section class="tech-dot-grid-light" style="padding: 4.5rem 0; background: #F8FAFD; border-bottom: 1px solid var(--sdi-border);">
       <div class="container-sdi">
-        <div style="max-width: 800px; margin-bottom: 2.5rem;">
-          <span class="eyebrow-badge">CƠ CẤU COMBO TRỌN GÓI</span>
-          <h2>Trong bộ gồm những gì?</h2>
-          <p style="color: var(--sdi-text-secondary); font-size: 0.95rem;">
-            Tất cả thiết bị được ghép nối và cấu hình đồng bộ sẵn, giúp <strong>tiết kiệm 12%</strong> so với mua lẻ.
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 3rem auto;">
+          <span class="eyebrow-badge">CHI TIẾT THÀNH PHẦN</span>
+          <h2 style="font-size: 2.2rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; font-weight: 800;">Combo bao gồm những gì?</h2>
+          <p style="color: var(--sdi-text-secondary); font-size: 1rem; margin-top: 0.5rem;">
+            Bộ đôi phần cứng hoàn hảo được kỹ sư NavaTek cân chỉnh và thử nghiệm độ tương thích 100%.
           </p>
         </div>
 
-        <div class="sdi-stats-grid" style="margin-bottom: 2rem !important; gap: 1.5rem !important;">
-          <!-- Component 1 -->
-          <div class="sdi-card-solid" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; background: #FFFFFF;">
-            <div>
-              <span style="font-size: 0.75rem; font-weight: 800; color: var(--sdi-blue-accent); display: block; margin-bottom: 0.5rem;">MÓN 1 — PHẦN CỨNG CHÍNH</span>
-              <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Mini PC Core i9 · 64GB</h4>
-              <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem;">Trọng tâm xử lý trung tâm, RAM 64GB DDR5 xử lý mượt các tác vụ dữ liệu lớn.</p>
-            </div>
-            <a href="/may-don-le.html" style="font-size: 0.875rem; font-weight: 700; color: var(--sdi-blue-accent); text-decoration: none;">Xem chi tiết →</a>
+        <div class="sdi-split-grid" style="gap: 2rem;">
+          <div style="background: #FFFFFF; border: 1px solid var(--sdi-border); border-radius: 18px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="eyebrow-badge" style="background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent);">THÀNH PHẦN 1: TÍNH TOÁN</span>
+            <h3 style="font-size: 1.45rem; color: var(--sdi-navy-primary); margin: 0.5rem 0 1rem 0;">Mini PC Core i9 High-End</h3>
+            <p style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Trang bị vi xử lý Intel Core i9 cực mạnh mẽ trong thân hình nhỏ gọn chỉ bằng cuốn sách, 64GB DDR5 xử lý đa nhiệm mượt mà, tản nhiệt buồng hơi đồng êm ái.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--sdi-navy-primary); font-weight: 600;">
+              <li><i data-lucide="check" style="width: 16px; height: 16px; color: #16A34A; display: inline; vertical-align: -2px;"></i> Kích thước siêu nhỏ 130 x 130 x 50 mm</li>
+              <li><i data-lucide="check" style="width: 16px; height: 16px; color: #16A34A; display: inline; vertical-align: -2px;"></i> Xuất 4 màn hình 4K 144Hz độc lập</li>
+              <li><i data-lucide="check" style="width: 16px; height: 16px; color: #16A34A; display: inline; vertical-align: -2px;"></i> Tiết kiệm điện chỉ 65W - 90W khi vận hành</li>
+            </ul>
           </div>
 
-          <!-- Component 2 -->
-          <div class="sdi-card-solid" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; background: #FFFFFF;">
-            <div>
-              <span style="font-size: 0.75rem; font-weight: 800; color: var(--sdi-orange-cta); display: block; margin-bottom: 0.5rem;">MÓN 2 — CARD XỬ LÝ ĐỒ HỌA</span>
-              <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">eGPU box RTX 4070 12GB</h4>
-              <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem;">Card đồ họa gắn ngoài eGPU box kết nối qua cáp Thunderbolt tốc độ cao chuyên dụng chạy AI local.</p>
-            </div>
-            <a href="/may-don-le.html" style="font-size: 0.875rem; font-weight: 700; color: var(--sdi-blue-accent); text-decoration: none;">Xem chi tiết →</a>
-          </div>
-
-          <!-- Component 3 -->
-          <div class="sdi-card-solid" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; background: #FFFFFF;">
-            <div>
-              <span style="font-size: 0.75rem; font-weight: 800; color: #10B981; display: block; margin-bottom: 0.5rem;">MÓN 3 — TỐI ƯU CÀI ĐẶT</span>
-              <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Dịch vụ setup trao tay</h4>
-              <p style="font-size: 0.85rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem;">Cài đặt môi trường AI cục bộ (local LLM, Stable Diffusion), tối ưu hóa phần cứng và chuyển giao.</p>
-            </div>
-            <span style="font-size: 0.85rem; font-weight: 700; color: var(--sdi-text-muted);">Đã bao gồm trong gói</span>
-          </div>
-        </div>
-
-        <!-- Savings summary -->
-        <div style="background: rgba(232, 134, 46, 0.06); border: 1px dashed var(--sdi-orange-cta); border-radius: 16px; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-          <div style="font-size: 0.95rem; color: var(--sdi-navy-primary);">
-            Mua lẻ từng linh kiện cộng lại: <del style="color: var(--sdi-text-muted);">77.000.000₫</del>
-          </div>
-          <div style="font-size: 1.1rem; font-weight: 800; color: var(--sdi-navy-primary);">
-            Giá Combo trọn bộ: <span style="color: var(--sdi-orange-cta);">68.000.000₫</span> 
-            <span style="background: var(--sdi-orange-cta); color: #FFFFFF; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;">TIẾT KIỆM 9.000.000₫</span>
+          <div style="background: #FFFFFF; border: 1px solid var(--sdi-border); border-radius: 18px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+            <span class="eyebrow-badge" style="background: rgba(234,88,12,0.1); color: #EA580C;">THÀNH PHẦN 2: ĐỒ HỌA & AI</span>
+            <h3 style="font-size: 1.45rem; color: var(--sdi-navy-primary); margin: 0.5rem 0 1rem 0;">Hộp eGPU Box RTX 4070 12GB</h3>
+            <p style="color: var(--sdi-text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Hộp đồ họa cắm ngoài với nguồn công suất thực 650W Gold riêng biệt, trang bị card đồ họa NVIDIA RTX 4070 12GB VRAM phục vụ chạy mô hình LLM tại chỗ.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--sdi-navy-primary); font-weight: 600;">
+              <li><i data-lucide="check" style="width: 16px; height: 16px; color: #16A34A; display: inline; vertical-align: -2px;"></i> Kết nối OCuLink 64Gbps không nghẽn băng thông</li>
+              <li><i data-lucide="check" style="width: 16px; height: 16px; color: #16A34A; display: inline; vertical-align: -2px;"></i> Chạy mượt mà Llama-3 8B, DeepSeek 14B, Stable Diffusion</li>
+              <li><i data-lucide="check" style="width: 16px; height: 16px; color: #16A34A; display: inline; vertical-align: -2px;"></i> Có thể tháo rời linh hoạt khi chỉ cần dùng Mini PC</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOLD 3: SPECIFICATIONS TABLE (White Background Fold) -->
-    <section style="padding: 5rem 0; background: #FFFFFF; border-bottom: 1px solid var(--sdi-border);">
+    <!-- FOLD 3: SPECIFICATIONS TABLE -->
+    <section style="padding: 4.5rem 0; background: #FFFFFF; border-bottom: 1px solid var(--sdi-border);">
       <div class="container-sdi">
-        <div style="max-width: 800px; margin-bottom: 2.5rem;">
+        <div style="max-width: 800px; margin-bottom: 2rem;">
           <span class="eyebrow-badge">THÔNG SỐ CHI TIẾT</span>
-          <h3>Thông số kỹ thuật</h3>
+          <h2>Thông số kỹ thuật phần cứng</h2>
         </div>
         
         <div style="overflow-x: auto; border: 1px solid var(--sdi-border); border-radius: 16px;">
@@ -276,7 +490,7 @@
               </tr>
               <tr style="border-bottom: 1px solid #EFF3FA; background: #F8FAFD;">
                 <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Cổng kết nối</td>
-                <td style="padding: 1.25rem 1.5rem;">2x HDMI · 4x USB · LAN 1Gbps · Wi-Fi 6 · Thunderbolt 4</td>
+                <td style="padding: 1.25rem 1.5rem;">2x HDMI · 4x USB · LAN 1Gbps · Wi-Fi 6 · Thunderbolt 4 · OCuLink</td>
               </tr>
               <tr style="border-bottom: 1px solid #EFF3FA;">
                 <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Điện năng tiêu thụ</td>
@@ -284,7 +498,7 @@
               </tr>
               <tr style="border-bottom: 1px solid #EFF3FA; background: #F8FAFD;">
                 <td style="padding: 1.25rem 1.5rem; font-weight: 700;">Bảo hành B2B</td>
-                <td style="padding: 1.25rem 1.5rem;">24 tháng · 1 đổi 1 nhanh chóng · Hỗ trợ kỹ thuật on-site tại HCM</td>
+                <td style="padding: 1.25rem 1.5rem;">24 tháng · 1 đổi 1 nhanh chóng · Hỗ trợ kỹ thuật on-site tại TP.HCM</td>
               </tr>
             </tbody>
           </table>
@@ -292,57 +506,15 @@
       </div>
     </section>
 
-    <!-- FOLD 4: FULL-WIDTH TÌNH HUỐNG SỬ DỤNG, SO SÁNH CẤU HÌNH & 2-CARD FAQ (Feedback 7) -->
-    <section style="padding: 5.5rem 0; background: #FFFFFF; border-bottom: 1px solid var(--sdi-border);">
+    <!-- FOLD 4: SO SÁNH PHƯƠNG ÁN ĐẦU TƯ & TỔNG HỢP FAQ ĐẦY ĐỦ (Bug 18: Gộp Use Case vào FAQ) -->
+    <section style="padding: 5rem 0; background: #FFFFFF; border-bottom: 1px solid var(--sdi-border);">
       <div class="container-sdi">
         
-        <!-- Part 1: Full-Width Use Cases & Deep-Dive Content (300-500 words) -->
-        <div style="max-width: 960px; margin: 0 auto 3.5rem auto; text-align: center;">
-          <span class="eyebrow-badge" style="background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent);">TÌNH HUỐNG SỬ DỤNG &amp; ĐỐI TƯỢNG PHÙ HỢP</span>
-          <h2 style="font-size: 2.3rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; margin-bottom: 1.25rem;">Máy này phù hợp với ai?</h2>
-          <p style="font-size: 1.05rem; color: var(--sdi-text-secondary); line-height: 1.75; text-align: justify; margin-bottom: 1.25rem;">
-            Combo trạm AI (Mini PC Core i9 kết hợp eGPU RTX 4070 12GB VRAM) được NavaTek nghiên cứu và đóng gói nhằm giải quyết triệt để bài toán tính toán AI cục bộ (Private Local AI) cho các doanh nghiệp vừa và nhỏ (SME), viện nghiên cứu, và phòng chuyển đổi số. Thay vì phải chi trả hàng chục triệu đồng mỗi tháng cho hạ tầng máy chủ đám mây với nguy cơ thất thoát dữ liệu bí mật kinh doanh, toàn bộ mô hình ngôn ngữ lớn (LLM) và các tác vụ thị giác máy tính sẽ được xử lý hoàn toàn nội bộ ngay tại văn phòng của bạn.
-          </p>
-        </div>
-
-        <!-- 3 Use Case Cards -->
-        <div class="sdi-use-case-grid" style="margin-bottom: 4.5rem;">
-          <div class="sdi-usecase-card">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(37,99,235,0.1); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
-              <i data-lucide="shield-check" style="width: 22px; height: 22px;"></i>
-            </div>
-            <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">1. Doanh Nghiệp Cần Private AI</h4>
-            <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); line-height: 1.65;">
-              Các doanh nghiệp thuộc khối tài chính, y tế, luật, thương mại điện tử cần bảo mật hồ sơ khách hàng. Vận hành chatbot trợ lý ảo hỏi đáp hợp đồng, trích xuất dữ liệu hóa đơn nội bộ mà không cần đưa dữ liệu lên Cloud.
-            </p>
-          </div>
-
-          <div class="sdi-usecase-card">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(16,185,129,0.1); color: #10B981; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
-              <i data-lucide="flask-conical" style="width: 22px; height: 22px;"></i>
-            </div>
-            <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">2. Nhóm R&amp;D &amp; Nghiên Cứu</h4>
-            <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); line-height: 1.65;">
-              Phòng công nghệ thông tin và viện nghiên cứu thử nghiệm các mô hình LLM mã nguồn mở mới nhất (DeepSeek-R1, Llama-3, Qwen-2.5) hoặc Stable Diffusion tạo ảnh/video với độ trễ thấp và phần cứng chuyên biệt.
-            </p>
-          </div>
-
-          <div class="sdi-usecase-card">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(232,134,46,0.1); color: var(--sdi-orange-cta); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
-              <i data-lucide="workflow" style="width: 22px; height: 22px;"></i>
-            </div>
-            <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">3. Tự Động Hóa Dữ Liệu 24/7</h4>
-            <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); line-height: 1.65;">
-              Thiết lập trạm cào dữ liệu thị trường tự động, quản lý kho hàng đa kênh và tổng hợp báo cáo tự động trên Lark, Sapo (V2/V3), Coze liên tục 24/7 với chi phí tiền điện tiết kiệm hơn 60% so với PC lớn.
-            </p>
-          </div>
-        </div>
-
-        <!-- Part 2: Cấu hình so sánh (So Sánh Phương Án Đầu Tư) -->
+        <!-- So Sánh Phương Án Đầu Tư -->
         <div style="margin-bottom: 4.5rem;">
           <div style="text-align: center; margin-bottom: 2rem;">
-            <span class="eyebrow-badge">PHÂN TÍCH CHI PHÍ &amp; LỢI ÍCH</span>
-            <h3 style="font-size: 1.85rem; color: var(--sdi-navy-primary); margin-top: 0.5rem;">So Sánh Phương Án Đầu Tư Hạ Tầng</h3>
+            <span class="eyebrow-badge">PHÂN TÍCH CHI PHÍ & LỢI ÍCH</span>
+            <h3 style="font-size: 2.1rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; font-weight: 800;">So Sánh Phương Án Đầu Tư Hạ Tầng</h3>
           </div>
 
           <div class="sdi-comparison-table-wrapper">
@@ -357,13 +529,13 @@
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid #EFF3FA;">
-                  <td style="padding: 1.1rem 1.5rem; font-weight: 700;">Bảo Mật &amp; Dữ Liệu</td>
+                  <td style="padding: 1.1rem 1.5rem; font-weight: 700;">Bảo Mật & Dữ Liệu</td>
                   <td style="padding: 1.1rem 1.5rem; background: #F8FAFD; color: #10B981; font-weight: 700;">● Cục bộ 100%, không ra ngoài</td>
                   <td style="padding: 1.1rem 1.5rem;">● Cục bộ 100%</td>
                   <td style="padding: 1.1rem 1.5rem; color: #EF4444;">○ Dữ liệu gửi lên server nước ngoài</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #EFF3FA;">
-                  <td style="padding: 1.1rem 1.5rem; font-weight: 700;">Kích Thước &amp; Thẩm Mỹ</td>
+                  <td style="padding: 1.1rem 1.5rem; font-weight: 700;">Kích Thước & Thẩm Mỹ</td>
                   <td style="padding: 1.1rem 1.5rem; background: #F8FAFD; color: var(--sdi-blue-accent); font-weight: 700;">★ Siêu tinh gọn, đặt vừa góc bàn</td>
                   <td style="padding: 1.1rem 1.5rem;">Cồng kềnh, chiếm nhiều không gian</td>
                   <td style="padding: 1.1rem 1.5rem;">Không tốn chỗ văn phòng</td>
@@ -381,7 +553,7 @@
                   <td style="padding: 1.1rem 1.5rem; color: #EF4444;">120.000.000₫+ (Mất trắng sau thuê)</td>
                 </tr>
                 <tr>
-                  <td style="padding: 1.1rem 1.5rem; font-weight: 700;">Bảo Hành &amp; Lắp Đặt</td>
+                  <td style="padding: 1.1rem 1.5rem; font-weight: 700;">Bảo Hành & Lắp Đặt</td>
                   <td style="padding: 1.1rem 1.5rem; background: #F8FAFD; font-weight: 700;">24 tháng 1 đổi 1 · On-site TP.HCM</td>
                   <td style="padding: 1.1rem 1.5rem;">Bảo hành linh kiện rời rạc</td>
                   <td style="padding: 1.1rem 1.5rem;">Tự cấu hình qua ticket online</td>
@@ -391,51 +563,51 @@
           </div>
         </div>
 
-        <!-- Part 3: Parallel 2-Card FAQ (Feedback 7 Requirement) -->
+        <!-- FAQ Tổng Hợp (Gộp Máy này phù hợp với ai + Giải đáp kỹ thuật) -->
         <div>
           <div style="text-align: center; margin-bottom: 2.5rem;">
-            <span class="eyebrow-badge" style="background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent);">GIẢI ĐÁP THẮC MẮC</span>
-            <h3 style="font-size: 1.85rem; color: var(--sdi-navy-primary); margin-top: 0.5rem;">Câu Hỏi Thường Gặp (FAQ)</h3>
+            <span class="eyebrow-badge" style="background: rgba(37,99,235,0.08); color: var(--sdi-blue-accent);">GIẢI ĐÁP TOÀN DIỆN</span>
+            <h3 style="font-size: 2.1rem; color: var(--sdi-navy-primary); margin-top: 0.5rem; font-weight: 800;">Câu Hỏi Thường Gặp Về Combo</h3>
           </div>
 
           <div class="sdi-faq-parallel-grid">
             
-            <!-- Card 1: Phần cứng & Tản nhiệt -->
+            <!-- Card 1: Đối tượng phù hợp & Tình huống sử dụng (Merged from Bug 18) -->
             <div class="sdi-faq-card">
               <div style="display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid rgba(37,99,235,0.1); padding-bottom: 1rem;">
                 <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(37,99,235,0.1); color: var(--sdi-blue-accent); display: flex; align-items: center; justify-content: center;">
-                  <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
+                  <i data-lucide="users" style="width: 20px; height: 20px;"></i>
                 </div>
-                <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin: 0;">Phần Cứng, Hiển Thị &amp; Độ Ồn</h4>
+                <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin: 0;">Máy này phù hợp với ai? (Tình huống sử dụng)</h4>
               </div>
 
               <div class="sdi-faq-item">
                 <div class="sdi-faq-question">
                   <i data-lucide="help-circle" style="width: 18px; height: 18px; color: var(--sdi-blue-accent); flex-shrink: 0;"></i>
-                  <span>Combo này xuất được bao nhiêu màn hình cùng lúc?</span>
+                  <span>1. Doanh nghiệp cần Private AI bảo mật</span>
                 </div>
                 <div class="sdi-faq-answer">
-                  Hỗ trợ xuất hình ảnh đồng thời lên đến 4 màn hình độ phân giải 4K 144Hz qua các cổng HDMI 2.1, DisplayPort 1.4 và Thunderbolt 4, rất phù hợp cho góc làm việc đa tác vụ hoặc hiển thị bảng điều khiển trung tâm.
-                </div>
-              </div>
-
-              <div class="sdi-faq-item">
-                <div class="sdi-faq-question">
-                  <i data-lucide="help-circle" style="width: 18px; height: 18px; color: var(--sdi-blue-accent); flex-shrink: 0;"></i>
-                  <span>Máy chạy tải AI 24/7 có bị nóng hay phát ra tiếng ồn không?</span>
-                </div>
-                <div class="sdi-faq-answer">
-                  Mini PC và hộp eGPU đều được trang bị hệ thống tản nhiệt buồng hơi đồng cao cấp. Khi full-load liên tục, nhiệt độ GPU duy trì ổn định dưới 72°C và độ ồn dưới 28dB — cực kỳ êm ái, hoàn toàn không gây phiền trong môi trường văn phòng.
+                  Các doanh nghiệp tài chính, y tế, luật, thương mại điện tử cần bảo mật hồ sơ khách hàng. Vận hành chatbot trợ lý ảo hỏi đáp hợp đồng, trích xuất dữ liệu hóa đơn nội bộ mà không đưa dữ liệu lên Cloud.
                 </div>
               </div>
 
               <div class="sdi-faq-item">
                 <div class="sdi-faq-question">
                   <i data-lucide="help-circle" style="width: 18px; height: 18px; color: var(--sdi-blue-accent); flex-shrink: 0;"></i>
-                  <span>Sau này có thể nâng cấp thêm RAM và SSD được không?</span>
+                  <span>2. Nhóm R&D và viện nghiên cứu công nghệ</span>
                 </div>
                 <div class="sdi-faq-answer">
-                  Có. Máy có 2 khe cắm RAM chuẩn DDR5 hỗ trợ nâng cấp tối đa 96GB và 2 khe SSD M.2 NVMe PCIe Gen4/Gen5 cho phép mở rộng không gian lưu trữ lên đến 8TB.
+                  Thử nghiệm các mô hình LLM mã nguồn mở mới nhất (DeepSeek-R1, Llama-3, Qwen-2.5) hoặc Stable Diffusion tạo ảnh/video với độ trễ thấp và phần cứng chuyên biệt.
+                </div>
+              </div>
+
+              <div class="sdi-faq-item">
+                <div class="sdi-faq-question">
+                  <i data-lucide="help-circle" style="width: 18px; height: 18px; color: var(--sdi-blue-accent); flex-shrink: 0;"></i>
+                  <span>3. Tự động hóa quy trình văn phòng 24/7</span>
+                </div>
+                <div class="sdi-faq-answer">
+                  Thiết lập trạm cào dữ liệu thị trường tự động, quản lý kho hàng đa kênh và tổng hợp báo cáo tự động trên Lark, Sapo, Coze liên tục 24/7 với chi phí tiền điện tiết kiệm hơn 60%.
                 </div>
               </div>
             </div>
@@ -446,7 +618,7 @@
                 <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(16,185,129,0.1); color: #10B981; display: flex; align-items: center; justify-content: center;">
                   <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
                 </div>
-                <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin: 0;">Phần Mềm, Cài Đặt &amp; Hậu Mãi</h4>
+                <h4 style="font-size: 1.15rem; color: var(--sdi-navy-primary); margin: 0;">Phần Mềm, Cài Đặt & Hậu Mãi</h4>
               </div>
 
               <div class="sdi-faq-item">
@@ -455,7 +627,7 @@
                   <span>NavaTek đã cài đặt sẵn những phần mềm nào?</span>
                 </div>
                 <div class="sdi-faq-answer">
-                  Máy được bàn giao chuẩn Plug &amp; Play: cài sẵn hệ điều hành, driver CUDA, PyTorch, Docker, Ollama, Open-WebUI và ComfyUI. Kỹ sư NavaTek sẽ hướng dẫn tải mô hình ngôn ngữ lớn (Llama, DeepSeek) và nghiệm thu trực tiếp.
+                  Máy được bàn giao chuẩn Plug & Play: cài sẵn hệ điều hành, driver CUDA, PyTorch, Docker, Ollama, Open-WebUI và ComfyUI. Kỹ sư NavaTek sẽ hướng dẫn tải mô hình và nghiệm thu trực tiếp.
                 </div>
               </div>
 
@@ -475,7 +647,7 @@
                   <span>Chính sách bảo hành và hỗ trợ on-site tại TP.HCM như thế nào?</span>
                 </div>
                 <div class="sdi-faq-answer">
-                  Bảo hành chính hãng 24 tháng với cơ chế 1 đổi 1 nhanh chóng. Đội ngũ kỹ sư hỗ trợ kỹ thuật tận nơi (on-site) tại TP.HCM trong vòng 2-4 giờ làm việc khi có bất kỳ yêu cầu sự cố phần cứng nào.
+                  Bảo hành chính hãng 24 tháng với cơ chế 1 đổi 1 nhanh chóng. Đội ngũ kỹ sư hỗ trợ kỹ thuật tận nơi (on-site) tại TP.HCM trong vòng 2-4 giờ làm việc khi có sự cố.
                 </div>
               </div>
             </div>
@@ -486,8 +658,8 @@
       </div>
     </section>
 
-    <!-- FOLD 5: CROSS-SELL (White Background Fold) -->
-    <section style="padding: 5rem 0; background: #FFFFFF;">
+    <!-- FOLD 5: CROSS-SELL -->
+    <section style="padding: 4.5rem 0; background: #FFFFFF;">
       <div class="container-sdi">
         <div style="max-width: 800px; margin-bottom: 2.5rem;">
           <span class="eyebrow-badge">GỢI Ý MUA KÈM / NÂNG CẤP</span>
@@ -498,12 +670,10 @@
         </div>
 
         <div class="sdi-grid-4">
-          
-          <!-- Card 1 -->
           <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #F8FAFD;">
             <div>
               <div style="text-align: center; margin-bottom: 1rem;">
-                <img src="/images/ai.png" alt="RAM Upgrade" style="max-height: 60px; mix-blend-mode: multiply;">
+                <img src="./images/ai.png" alt="RAM Upgrade" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
               <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 38px;">Nâng RAM lên 64GB</h4>
               <div style="font-size: 1.1rem; font-weight: 850; color: var(--sdi-orange-cta); margin-bottom: 0.5rem;">+ 4.200.000₫</div>
@@ -511,11 +681,10 @@
             <button class="sdi-btn-orange trigger-quote-modal" style="width: 100%; justify-content: center; padding: 0.55rem; font-size: 0.825rem;">Thêm vào đơn</button>
           </div>
 
-          <!-- Card 2 -->
           <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #F8FAFD;">
             <div>
               <div style="text-align: center; margin-bottom: 1rem;">
-                <img src="/images/ai.png" alt="SSD Upgrade" style="max-height: 60px; mix-blend-mode: multiply;">
+                <img src="./images/ai.png" alt="SSD Upgrade" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
               <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 38px;">SSD NVMe 2TB tốc độ cao</h4>
               <div style="font-size: 1.1rem; font-weight: 850; color: var(--sdi-orange-cta); margin-bottom: 0.5rem;">+ 5.700.000₫</div>
@@ -523,11 +692,10 @@
             <button class="sdi-btn-orange trigger-quote-modal" style="width: 100%; justify-content: center; padding: 0.55rem; font-size: 0.825rem;">Thêm vào đơn</button>
           </div>
 
-          <!-- Card 3 -->
           <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #F8FAFD;">
             <div>
               <div style="text-align: center; margin-bottom: 1rem;">
-                <img src="/images/laser.png" alt="eGPU Upgrade" style="max-height: 60px; mix-blend-mode: multiply;">
+                <img src="./images/laser.png" alt="eGPU Upgrade" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
               <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 38px;">eGPU RTX — dựng Trạm AI</h4>
               <div style="font-size: 1.1rem; font-weight: 850; color: var(--sdi-orange-cta); margin-bottom: 0.5rem;">+ 42.000.000₫</div>
@@ -535,272 +703,141 @@
             <button class="sdi-btn-orange trigger-quote-modal" style="width: 100%; justify-content: center; padding: 0.55rem; font-size: 0.825rem;">Thêm vào đơn</button>
           </div>
 
-          <!-- Card 4 -->
           <div class="sdi-card-solid" style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; text-align: center; background: #F8FAFD;">
             <div>
               <div style="text-align: center; margin-bottom: 1rem;">
-                <img src="/images/bending.png" alt="Setup service" style="max-height: 60px; mix-blend-mode: multiply;">
+                <img src="./images/bending.png" alt="Setup service" style="max-height: 60px; mix-blend-mode: multiply;">
               </div>
               <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 38px;">Dịch vụ setup trao tay</h4>
               <div style="font-size: 1.05rem; font-weight: 850; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Liên hệ báo giá</div>
             </div>
             <button class="sdi-btn-orange trigger-quote-modal" style="width: 100%; justify-content: center; padding: 0.55rem; font-size: 0.825rem;">Thêm vào đơn</button>
           </div>
-
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ==========================================================================
-       UNIFIED DARK FOOTER & REQUEST QUOTE FORM
-       ========================================================================== -->
-  <footer class="footer-sdi tech-dot-grid-dark" id="footer-section" style="position: relative; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px), linear-gradient(135deg, #0A1128 0%, #050B1A 100%) !important; background-size: 28px 28px, auto !important; background-color: #050B1A !important; overflow: hidden;">
-    <div style="position: absolute; top: -10%; left: -10%; width: 450px; height: 450px; border-radius: 50%; background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
-    <div style="position: absolute; bottom: -10%; right: -5%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
-
-    <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.05;" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="grad-line-footer-combo" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
-          <stop offset="50%" stop-color="var(--sdi-blue-glow)" stop-opacity="0.6" />
-          <stop offset="100%" stop-color="var(--sdi-blue-accent)" stop-opacity="0.1" />
-        </linearGradient>
-      </defs>
-      <path d="M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550" fill="none" stroke="url(#grad-line-footer-combo)" stroke-width="1.2" />
-      <path d="M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580" fill="none" stroke="url(#grad-line-footer-combo)" stroke-width="1.2" />
-      <circle r="3" fill="#38BDF8" style="offset-path: path('M-100,60 L500,60 L650,220 L500,400 L900,400 L1100,550'); animation: flow-data 8s linear infinite;" />
-      <circle r="3" fill="#38BDF8" style="offset-path: path('M2000,100 L1400,100 L1250,250 L1400,420 L1000,420 L800,580'); animation: flow-data 10s linear infinite 4s;" />
-    </svg>
-
+  <!-- Unified Master Footer (Bug 7, Bug 22, Bug 24) -->
+  <footer class="tech-dot-grid-dark sdi-footer-section" style="background: #050B1A; color: #FFFFFF; padding: 4.5rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.08);">
     <div class="container-sdi">
-      <div class="sdi-split-grid is-footer">
+      <div class="sdi-split-grid is-footer" style="gap: 3rem; margin-bottom: 3.5rem;">
         
-        <!-- Left: Form -->
-        <div>
-          <span class="eyebrow-badge" style="background: rgba(56, 189, 248, 0.08); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.15); padding: 0.4rem 1rem;">BÁO GIÁ NHANH</span>
-          <h2 style="color: #FFFFFF; font-size: 2.1rem; margin-bottom: 0.5rem; margin-top: 0.5rem;">Nhận báo giá trong 24 giờ</h2>
-          <p style="color: #94A3B8; font-size: 0.9rem; margin-bottom: 2rem;">Kỹ sư hạ tầng của NavaTek sẽ liên hệ tư vấn cấu hình chi tiết và gửi báo giá qua email/Zalo.</p>
-
-          <form id="footer-lead-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <!-- Form Báo Giá Footer -->
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2.5rem 2rem;">
+          <span class="eyebrow-badge eyebrow-badge-orange">BÁO GIÁ NHANH</span>
+          <h3 style="color: #FFFFFF; font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">Nhận báo giá trong 24 giờ</h3>
+          <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem;">Dữ liệu chuyển thẳng đến kỹ sư giải pháp để phản hồi phương án kỹ thuật.</p>
+          
+          <form class="sdi-lead-form" style="display: flex; flex-direction: column; gap: 1rem;">
             <div class="sdi-form-grid-2">
-              <div>
-                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Họ và tên *</label>
-                <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
-              </div>
-              <div>
-                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Số điện thoại *</label>
-                <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
-              </div>
+              <input type="text" placeholder="Họ và tên *" required style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.75rem 1rem; border-radius: 10px;">
+              <input type="tel" placeholder="Số điện thoại *" required style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.75rem 1rem; border-radius: 10px;">
             </div>
-
             <div class="sdi-form-grid-2">
-              <div>
-                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Email</label>
-                <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); outline: none; background: rgba(255,255,255,0.06); color: #FFFFFF; font-size: 0.9rem;">
-              </div>
-              <div>
-                <label style="display: block; font-size: 0.8rem; font-weight: 700; color: #CBD5E1; margin-bottom: 0.35rem;">Nhu cầu của bạn *</label>
-                <div class="sdi-custom-select" data-name="demand">
-                  <input type="hidden" name="demand" value="Trạm AI Cục bộ & Tự động hóa" required>
-                  <button type="button" class="sdi-custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
-                    <span class="sdi-custom-select-label">Trạm AI Cục bộ & Tự động hóa</span>
-                    <i data-lucide="chevron-down" class="sdi-select-arrow"></i>
-                  </button>
-                  <div class="sdi-custom-select-dropdown" role="listbox">
-                    <div class="sdi-custom-select-option selected" data-value="Trạm AI Cục bộ & Tự động hóa" role="option" aria-selected="true">
-                      <span>Trạm AI Cục bộ & Tự động hóa</span>
-                      <i data-lucide="check" class="sdi-option-check"></i>
-                    </div>
-                    <div class="sdi-custom-select-option" data-value="Nâng cấp RAM / SSD / Lưu trữ" role="option">
-                      <span>Nâng cấp RAM / SSD / Lưu trữ</span>
-                      <i data-lucide="check" class="sdi-option-check"></i>
-                    </div>
-                    <div class="sdi-custom-select-option" data-value="Mini PC, Mạng, NAS & Camera" role="option">
-                      <span>Mini PC, Mạng, NAS & Camera</span>
-                      <i data-lucide="check" class="sdi-option-check"></i>
-                    </div>
-                    <div class="sdi-custom-select-option" data-value="Cần tư vấn tổng thể / Chưa rõ nhu cầu" role="option">
-                      <span>Cần tư vấn tổng thể / Chưa rõ nhu cầu</span>
-                      <i data-lucide="check" class="sdi-option-check"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <input type="email" placeholder="Email công ty" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.75rem 1rem; border-radius: 10px;">
+              <select style="background: #0A1128; border: 1px solid rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.75rem 1rem; border-radius: 10px;">
+                <option value="">Nhu cầu: chọn 1 trong 4 tùy chọn</option>
+                <option value="ai-server" selected>Trạm AI Cục bộ & Tự động hóa</option>
+                <option value="upgrade">Nâng cấp RAM / SSD / Lưu trữ</option>
+                <option value="minipc-network">Mini PC, Mạng, NAS & Camera</option>
+                <option value="consult">Cần tư vấn tổng thể / Chưa rõ nhu cầu</option>
+              </select>
             </div>
-
-            <div style="margin-top: 0.5rem;">
-              <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.9rem;">
-                <span>Gửi yêu cầu báo giá</span>
-              </button>
-            </div>
+            <button type="submit" class="sdi-btn-orange" style="margin-top: 0.5rem; justify-content: center;">
+              <span>Gửi yêu cầu báo giá</span>
+            </button>
           </form>
         </div>
 
-        <!-- Right: Corporate details & Ecosystem -->
-        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+        <!-- Thông tin công ty & Hệ sinh thái (Bug 7, 15, 24) -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 2rem;">
           <div>
-            <h4 style="color: #FFFFFF; font-size: 1.25rem; margin-bottom: 1rem;">Thông tin công ty</h4>
-            <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
-              <strong>Công ty TNHH NavaTek</strong><br>
+            <h4 style="color: #FFFFFF; font-size: 1.35rem; margin-bottom: 0.75rem;">Thông tin công ty</h4>
+            <div style="color: #94A3B8; font-size: 0.95rem; line-height: 1.7;">
+              <strong style="color: #FFFFFF;">Công ty TNHH NavaTek</strong><br>
               Địa chỉ: Thành phố Hồ Chí Minh<br>
-              Hotline: 1900 - NAVATEK | MST: 031789456<br>
-              Liên kết: <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách đổi trả</a>
-            </p>
+              Hotline: <strong style="color: #FFFFFF;">1900 - NAVATEK</strong> | MST: <strong style="color: #FFFFFF;">031789456</strong><br>
+              Liên kết: <a href="./dich-vu-bao-tri.html" style="color: var(--sdi-blue-accent); text-decoration: none;">Chính sách bảo hành</a> · <a href="./ve-navatek.html" style="color: var(--sdi-blue-accent); text-decoration: none;">Chính sách đổi trả</a>
+            </div>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
-              <a href="/nganh-phuc-vu.html" class="footer-link" style="margin-right: 0.75rem;">Giải pháp</a>
-              <a href="/may-don-le.html" class="footer-link" style="margin-right: 0.75rem; color: #38BDF8;">Sản phẩm</a>
-              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Dịch vụ</a>
-              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Về NavaTek</a>
-              <a href="/du-an.html" class="footer-link">Liên hệ</a>
+            <!-- Footer Nav Menu Links (Bug 7, 22) -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.5rem; font-size: 0.9rem; font-weight: 600;">
+              <a href="./nganh-phuc-vu.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Giải pháp</a>
+              <a href="./may-don-le.html" style="color: #38BDF8; text-decoration: none;">Sản phẩm</a>
+              <a href="./dich-vu-bao-tri.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Dịch vụ</a>
+              <a href="./ve-navatek.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Về NavaTek</a>
+              <a href="./tin-tuc.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Tin tức</a>
+              <a href="./du-an.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Liên hệ</a>
             </div>
           </div>
 
-          <!-- Ecosystem Block -->
+          <!-- Hệ sinh thái Nava Footer Card (Bug 2, 24) -->
           <div>
-            <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 0.75rem;">Hệ sinh thái Nava</h4>
-            <div class="sdi-form-grid-2" style="gap: 1.25rem !important;">
-              <a href="/" class="sdi-ecosystem-card">
-                <div class="sdi-eco-logo-wrap">
-                  <img src="/images/LOGO.png" alt="NAVATEK - Giải pháp doanh nghiệp">
-                </div>
-                <div class="sdi-eco-desc">Giải pháp doanh nghiệp</div>
+            <div style="font-size: 0.8rem; color: #64748B; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em;">HỆ SINH THÁI NAVA</div>
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-around; gap: 1rem;">
+              <a href="./index.html" style="text-decoration: none; text-align: center;">
+                <div style="font-family: var(--font-heading); font-weight: 800; color: #FFFFFF; font-size: 1.05rem;">NAVATEK</div>
+                <div style="font-size: 0.75rem; color: #94A3B8;">Giải pháp doanh nghiệp</div>
               </a>
-              <a href="https://navastore.vn" target="_blank" rel="noopener" class="sdi-ecosystem-card is-retail">
-                <div class="sdi-eco-logo-wrap">
-                  <img src="https://bizweb.dktcdn.net/100/543/817/themes/1000289/assets/logo.png?1786961088767" alt="NAVASTORE - Bán lẻ Top 2 Google">
-                </div>
-                <div class="sdi-eco-desc">Bán lẻ · Top 2 Google</div>
+              <div style="color: rgba(255,255,255,0.2); font-size: 1.2rem;">|</div>
+              <a href="https://navastore.vn" target="_blank" rel="noopener" style="text-decoration: none; text-align: center;">
+                <div style="font-family: var(--font-heading); font-weight: 800; color: #38BDF8; font-size: 1.05rem;">NAVASTORE</div>
+                <div style="font-size: 0.75rem; color: #94A3B8;">Bán lẻ • Top 2 Google</div>
               </a>
             </div>
-
           </div>
-        </div>
 
+        </div>
       </div>
 
-      <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; color: #475569; font-size: 0.8rem; margin-top: 3.5rem;">
+      <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; color: #64748B; font-size: 0.85rem;">
         © 2026 Công Ty TNHH NavaTek. Bảo lưu mọi quyền.
       </div>
     </div>
   </footer>
 
-  <!-- Modal Popup Form -->
+  <!-- Modal Popup Báo Giá -->
   <div class="modal-overlay" id="quote-modal">
-    <div class="modal-box">
+    <div class="modal-box" style="position: relative;">
       <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
         <i data-lucide="x" style="width: 20px; height: 20px;"></i>
       </button>
-      <span class="eyebrow-badge">NAVATEK v3.1</span>
-      <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
-      <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
-      <form id="quote-request-form">
-        <div style="margin-bottom: 1.25rem;">
-          <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Họ và tên *</label>
-          <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+      <span class="eyebrow-badge">NAVATEK B2B</span>
+      <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin: 0.5rem 0 0.25rem 0; font-weight: 800;">Yêu Cầu Báo Giá Combo Trọn Bộ</h3>
+      <p style="font-size: 0.925rem; color: #64748B; margin-bottom: 1.5rem; line-height: 1.5;">Kỹ sư giải pháp của NavaTek sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15-30 phút.</p>
+      <form id="quote-request-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.35rem;">Họ và tên *</label>
+          <input type="text" required placeholder="Nguyễn Văn A" style="width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
         </div>
-        <div class="sdi-form-grid-2" style="margin-bottom: 1.25rem !important;">
+        <div class="sdi-form-grid-2">
           <div>
-            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Số điện thoại / Zalo *</label>
-            <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.35rem;">Số điện thoại / Zalo *</label>
+            <input type="tel" required placeholder="0901234567" style="width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
           </div>
           <div>
-            <label style="display: block; font-size: 0.875rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.4rem;">Email</label>
-            <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: 14px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
+            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.35rem;">Email</label>
+            <input type="email" placeholder="contact@company.com" style="width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem;">
           </div>
         </div>
-        <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem;">
+        <div>
+          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: var(--sdi-navy-primary); margin-bottom: 0.35rem;">Gói combo quan tâm</label>
+          <select style="width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid #CBD5E1; outline: none; font-size: 0.95rem; background: #FFFFFF; font-family: inherit;">
+            <option value="combo-4070">Combo Cơ Bản: Mini PC + eGPU RTX 4070 (Từ 68.000.000₫)</option>
+            <option value="combo-4090" selected>Combo Nâng Cao: Mini PC + eGPU RTX 4090 (Từ 112.000.000₫)</option>
+            <option value="combo-custom">Tùy biến cấu hình riêng theo tải R&D</option>
+          </select>
+        </div>
+        <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem; font-size: 1rem; border-radius: 12px;">
           <span>Gửi Yêu Cầu Báo Giá</span>
         </button>
       </form>
     </div>
   </div>
 
-  <!-- Schema structured markup for Product & FAQPage (Feedback 7 Requirement) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://navatek.vn/combo-tron-bo.html#product",
-        "name": "Combo Trạm AI: Mini PC + eGPU RTX 4070",
-        "image": "https://navatek.vn/images/combo.png",
-        "description": "Combo cấu hình trọn gói Mini PC Core i9 hiệu năng cao ghép nối với hộp eGPU rời RTX 4070 12GB phục vụ chạy Private LLM tại chỗ.",
-        "brand": {
-          "@type": "Brand",
-          "name": "NavaTek"
-        },
-        "sku": "NVT-AI-COMBO-01",
-        "offers": {
-          "@type": "Offer",
-          "url": "https://navatek.vn/combo-tron-bo.html",
-          "priceCurrency": "VND",
-          "price": "68000000",
-          "availability": "https://schema.org/PreOrder"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://navatek.vn/combo-tron-bo.html#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Combo này xuất được bao nhiêu màn hình cùng lúc?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Hỗ trợ xuất hình ảnh đồng thời lên đến 4 màn hình độ phân giải 4K 144Hz qua các cổng HDMI 2.1, DisplayPort 1.4 và Thunderbolt 4."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Máy chạy tải AI 24/7 có bị nóng hay phát ra tiếng ồn không?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Mini PC và hộp eGPU đều được trang bị hệ thống tản nhiệt buồng hơi đồng cao cấp, nhiệt độ dưới 72 độ C và độ ồn dưới 28dB."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Sau này có thể nâng cấp thêm RAM và SSD được không?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Có. Máy có 2 khe cắm RAM DDR5 hỗ trợ tối đa 96GB và 2 khe SSD NVMe PCIe Gen4/Gen5 lên đến 8TB."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "NavaTek đã cài đặt sẵn những phần mềm nào?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Máy được bàn giao Plug & Play cài sẵn hệ điều hành, driver CUDA, PyTorch, Docker, Ollama, Open-WebUI và ComfyUI."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Có chạy được phần mềm kế toán, ERP doanh nghiệp không?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Hoàn toàn tương thích tốt và chạy mượt mà 100% các phần mềm kế toán MISA, Bravo, FAST, hệ thống ERP nội bộ và CSDL SQL Server, PostgreSQL."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Chính sách bảo hành và hỗ trợ on-site tại TP.HCM như thế nào?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Bảo hành chính hãng 24 tháng 1 đổi 1 nhanh chóng. Đội ngũ kỹ sư hỗ trợ kỹ thuật on-site tại TP.HCM trong vòng 2-4 giờ làm việc."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <script type="module" src="/main.js"></script>
-  <script>lucide.createIcons();</script>
+  <script src="./main.js"></script>
+  <script>if (typeof lucide !== "undefined" && lucide.createIcons) { lucide.createIcons(); }</script>
 </body>
 </html>

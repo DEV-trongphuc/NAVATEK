@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/style.css?v=3.2">
+  <link rel="stylesheet" href="./style.css?v=3.2">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -27,18 +27,174 @@
     
 
     <div class="sdi-navbar-main">
-      <a href="/" class="sdi-logo">
-        <img src="/images/LOGO.png" alt="NavaTek Logo" style="height: 38px; width: auto; object-fit: contain;">
-        <span style="font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; background: rgba(255,255,255,0.12); color: #FFFFFF; padding: 0.15rem 0.45rem; border-radius: 6px; margin-left: 0.25rem;">v3.1</span>
+      <a href="./index.html" class="sdi-logo">
+        <img src="./images/LOGO.png" alt="NavaTek Logo" style="height: 38px; width: auto; object-fit: contain;">
       </a>
 
-      <!-- Center Nav Menu (5 links matching Wireframe) -->
+      <!-- Center Nav Menu (with Submenu Dropdowns) -->
       <nav class="sdi-nav-menu">
-        <a href="/nganh-phuc-vu.html" class="sdi-nav-link active">Giải pháp</a>
-        <a href="/may-don-le.html" class="sdi-nav-link">Sản phẩm</a>
-        <a href="/dich-vu-bao-tri.html" class="sdi-nav-link">Dịch vụ</a>
-        <a href="/tin-tuc.html" class="sdi-nav-link">Tin tức</a>
-        <a href="/du-an.html" class="sdi-nav-link">Liên hệ</a>
+        <!-- 1. Giải pháp -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./nganh-phuc-vu.html" class="sdi-nav-link">
+            <span>Giải pháp</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./nganh-phuc-vu.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="cpu"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">AI Server & Local LLM</div>
+                  <div class="sdi-dropdown-desc">Trạm tính toán AI cục bộ bảo mật cao</div>
+                </div>
+              </a>
+              <a href="./combo-tron-bo.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="boxes"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Combo Hạ Tầng Trọn Bộ</div>
+                  <div class="sdi-dropdown-desc">Mini PC + eGPU cài sẵn Plug & Play</div>
+                </div>
+              </a>
+              <a href="./nganh-phuc-vu.html#tu-dong-hoa" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="workflow"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Tự Động Hóa Doanh Nghiệp</div>
+                  <div class="sdi-dropdown-desc">Tích hợp Lark, Sapo, Apify 24/7</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Sản phẩm -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./may-don-le.html" class="sdi-nav-link">
+            <span>Sản phẩm</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./may-don-le.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="layout-grid"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Tất Cả Thiết Bị B2B</div>
+                  <div class="sdi-dropdown-desc">Catalog Mini PC, Workstation & Linh kiện</div>
+                </div>
+              </a>
+              <a href="./chi-tiet-may-don.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="monitor"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Mini PC & Workstation</div>
+                  <div class="sdi-dropdown-desc">Máy tính nhỏ gọn Core i9 / RTX 4090</div>
+                </div>
+              </a>
+              <a href="./chi-tiet-linh-kien.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="hard-drive"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Linh Kiện & Gói Nâng Cấp</div>
+                  <div class="sdi-dropdown-desc">RAM DDR5, SSD NVMe Gen4, eGPU Box</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dịch vụ -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./dich-vu-bao-tri.html" class="sdi-nav-link">
+            <span>Dịch vụ</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./dich-vu-bao-tri.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="wrench"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Dịch Vụ Bảo Trì & IT Managed</div>
+                  <div class="sdi-dropdown-desc">Quản trị toàn diện, cam kết SLA 15-30 phút</div>
+                </div>
+              </a>
+              <a href="./dich-vu-bao-tri.html#on-site" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="map-pin"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Hỗ Trợ Kỹ Thuật On-Site</div>
+                  <div class="sdi-dropdown-desc">Kỹ sư hỗ trợ tận nơi tại TP.HCM & lân cận</div>
+                </div>
+              </a>
+              <a href="./dich-vu-bao-tri.html#bang-gia" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="badge-percent"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Bảng Giá Gói Dịch Vụ</div>
+                  <div class="sdi-dropdown-desc">Gói Cơ Bản, Tiêu Chuẩn & Doanh Nghiệp</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Về NavaTek -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./ve-navatek.html" class="sdi-nav-link">
+            <span>Về NavaTek</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./ve-navatek.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="building-2"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Giới Thiệu NavaTek</div>
+                  <div class="sdi-dropdown-desc">Tầm nhìn, sứ mệnh & năng lực hạ tầng</div>
+                </div>
+              </a>
+              <a href="./ve-navatek.html#chung-nhan" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="award"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Chứng Nhận ASUS Gold Partner</div>
+                  <div class="sdi-dropdown-desc">Đối tác phân phối chính hãng ủy quyền</div>
+                </div>
+              </a>
+              <a href="./ve-navatek.html#he-sinh-thai" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="network"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Hệ Sinh Thái Nava</div>
+                  <div class="sdi-dropdown-desc">NavaTek B2B & NavaStore Bán Lẻ</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Tin tức -->
+        <div class="sdi-nav-item has-dropdown">
+          <a href="./tin-tuc.html" class="sdi-nav-link">
+            <span>Tin tức</span>
+            <i data-lucide="chevron-down" class="sdi-nav-arrow"></i>
+          </a>
+          <div class="sdi-dropdown-menu">
+            <div class="sdi-dropdown-grid">
+              <a href="./tin-tuc.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="newspaper"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Kho Tri Thức CNTT</div>
+                  <div class="sdi-dropdown-desc">Cẩm nang, kinh nghiệm & xu hướng công nghệ</div>
+                </div>
+              </a>
+              <a href="./bai-viet-chi-tiet.html" class="sdi-dropdown-item">
+                <div class="sdi-dropdown-icon"><i data-lucide="book-open"></i></div>
+                <div class="sdi-dropdown-text">
+                  <div class="sdi-dropdown-title">Bài Viết Tiêu Biểu</div>
+                  <div class="sdi-dropdown-desc">Xử lý nghẽn cổ chai PC & tối ưu phần cứng</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Liên hệ -->
+        <div class="sdi-nav-item">
+          <a href="./du-an.html" class="sdi-nav-link">Liên hệ</a>
+        </div>
       </nav>
 
       <!-- Search Box with Search Suggestion -->
@@ -65,11 +221,72 @@
   <div class="sdi-mobile-drawer" id="sdi-mobile-drawer">
     <div class="sdi-mobile-drawer-content">
       <nav class="sdi-mobile-nav-links">
-        <a href="/nganh-phuc-vu.html" class="sdi-mobile-nav-link active">Giải pháp <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/may-don-le.html" class="sdi-mobile-nav-link">Sản phẩm <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/dich-vu-bao-tri.html" class="sdi-mobile-nav-link">Dịch vụ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/tin-tuc.html" class="sdi-mobile-nav-link">Tin tức <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
-        <a href="/du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+        <!-- 1. Giải pháp Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Giải pháp</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./nganh-phuc-vu.html" class="sdi-mobile-sublink"><i data-lucide="cpu"></i> AI Server & Local LLM</a>
+            <a href="./combo-tron-bo.html" class="sdi-mobile-sublink"><i data-lucide="boxes"></i> Combo Hạ Tầng Trọn Bộ</a>
+            <a href="./nganh-phuc-vu.html#tu-dong-hoa" class="sdi-mobile-sublink"><i data-lucide="workflow"></i> Tự Động Hóa Doanh Nghiệp</a>
+          </div>
+        </div>
+
+        <!-- 2. Sản phẩm Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Sản phẩm</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./may-don-le.html" class="sdi-mobile-sublink"><i data-lucide="layout-grid"></i> Tất Cả Thiết Bị B2B</a>
+            <a href="./chi-tiet-may-don.html" class="sdi-mobile-sublink"><i data-lucide="monitor"></i> Mini PC & Workstation</a>
+            <a href="./chi-tiet-linh-kien.html" class="sdi-mobile-sublink"><i data-lucide="hard-drive"></i> Linh Kiện & Nâng Cấp</a>
+          </div>
+        </div>
+
+        <!-- 3. Dịch vụ Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Dịch vụ</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./dich-vu-bao-tri.html" class="sdi-mobile-sublink"><i data-lucide="wrench"></i> Dịch Vụ Bảo Trì & IT Managed</a>
+            <a href="./dich-vu-bao-tri.html#on-site" class="sdi-mobile-sublink"><i data-lucide="map-pin"></i> Hỗ Trợ On-Site Tận Nơi</a>
+            <a href="./dich-vu-bao-tri.html#bang-gia" class="sdi-mobile-sublink"><i data-lucide="badge-percent"></i> Bảng Giá Dịch Vụ</a>
+          </div>
+        </div>
+
+        <!-- 4. Về NavaTek Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Về NavaTek</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./ve-navatek.html" class="sdi-mobile-sublink"><i data-lucide="building-2"></i> Giới Thiệu NavaTek</a>
+            <a href="./ve-navatek.html#chung-nhan" class="sdi-mobile-sublink"><i data-lucide="award"></i> Chứng Nhận ASUS Partner</a>
+            <a href="./ve-navatek.html#he-sinh-thai" class="sdi-mobile-sublink"><i data-lucide="network"></i> Hệ Sinh Thái Nava</a>
+          </div>
+        </div>
+
+        <!-- 5. Tin tức Accordion -->
+        <div class="sdi-mobile-accordion">
+          <div class="sdi-mobile-accordion-toggle">
+            <span>Tin tức</span>
+            <i data-lucide="chevron-down" class="sdi-mobile-arrow"></i>
+          </div>
+          <div class="sdi-mobile-accordion-body">
+            <a href="./tin-tuc.html" class="sdi-mobile-sublink"><i data-lucide="newspaper"></i> Kho Tri Thức CNTT</a>
+            <a href="./bai-viet-chi-tiet.html" class="sdi-mobile-sublink"><i data-lucide="book-open"></i> Bài Viết Tiêu Biểu</a>
+          </div>
+        </div>
+
+        <!-- 6. Liên hệ link -->
+        <a href="./du-an.html" class="sdi-mobile-nav-link">Liên hệ <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
       </nav>
       
       <!-- Mobile Search inside Drawer -->
@@ -169,7 +386,7 @@
 
           <div style="display: flex; gap: 1rem; align-items: center;" class="sdi-animate-fade-up sdi-delay-3">
             <button class="sdi-btn-orange trigger-quote-modal hero-pulse" style="font-size: 1rem;">Nhận báo giá</button>
-            <a href="/nganh-phuc-vu.html" class="sdi-pill-btn-outline" style="border: 2px solid var(--sdi-navy-primary); color: var(--sdi-navy-primary); padding: 0.75rem 1.85rem; border-radius: 9999px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s;">
+            <a href="./nganh-phuc-vu.html" class="sdi-pill-btn-outline" style="border: 2px solid var(--sdi-navy-primary); color: var(--sdi-navy-primary); padding: 0.75rem 1.85rem; border-radius: 9999px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; transition: all 0.3s;">
               <span>Xem giải pháp</span>
             </a>
           </div>
@@ -183,7 +400,7 @@
             <video autoplay muted loop playsinline poster="/images/b2b_it_hero.png" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.06; pointer-events: none;"></video>
             
             <div style="position: relative; z-index: 2; text-align: center; padding: 2.5rem 2rem;">
-              <img src="/images/b2b_it_hero.png" alt="NavaTek 3D IT Infrastructure" class="graphic-blend" style="max-height: 240px; margin-bottom: 1.25rem; filter: drop-shadow(0 20px 40px rgba(0, 51, 102, 0.15));">
+              <img src="./images/b2b_it_hero.png" alt="NavaTek 3D IT Infrastructure" class="graphic-blend" style="max-height: 240px; margin-bottom: 1.25rem; filter: drop-shadow(0 20px 40px rgba(0, 51, 102, 0.15));">
               <i data-lucide="play-circle" style="width: 36px; height: 36px; color: rgba(0, 51, 102, 0.3); margin-bottom: 0.5rem; display: inline-block;"></i>
               <div style="font-size: 0.8rem; color: var(--sdi-text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">HỆ SINH THÁI TÍNH TOÁN CỤC BỘ</div>
             </div>
@@ -223,7 +440,7 @@
         <div class="sdi-stats-grid" style="width: 100%;">
           <div class="sdi-stat-card">
             <div class="sdi-stat-icon-wrapper">
-              <i data-lucide="folder-check"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><polyline points="9 13 12 16 22 6"/></svg>
             </div>
             <div class="sdi-stat-number count-up" data-target="50">50+</div>
             <div class="sdi-stat-label">Dự án triển khai</div>
@@ -231,7 +448,7 @@
           
           <div class="sdi-stat-card">
             <div class="sdi-stat-icon-wrapper">
-              <i data-lucide="cpu"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
             </div>
             <div class="sdi-stat-number count-up" data-target="1000">1.000+</div>
             <div class="sdi-stat-label">Mini PC cung cấp</div>
@@ -239,7 +456,7 @@
           
           <div class="sdi-stat-card">
             <div class="sdi-stat-icon-wrapper">
-              <i data-lucide="headset"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>
             </div>
             <div class="sdi-stat-number">24/7</div>
             <div class="sdi-stat-label">Hỗ trợ tận nơi</div>
@@ -254,57 +471,38 @@
               <!-- Group 1 -->
               <div class="sdi-marquee-group">
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="zap" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">EVN HCM</span>
                 </div>
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="building-2" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">HÒA PHÁT</span>
                 </div>
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="anchor" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">NAM TRIỆU</span>
                 </div>
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="graduation-cap" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">ĐH BÁCH KHOA</span>
                 </div>
               </div>
               <!-- Group 2 (duplicated for infinite loop) -->
               <div class="sdi-marquee-group" aria-hidden="true">
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="zap" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">EVN HCM</span>
                 </div>
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="building-2" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">HÒA PHÁT</span>
                 </div>
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="anchor" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">NAM TRIỆU</span>
                 </div>
                 <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="graduation-cap" style="width: 18px; height: 18px;"></i></div>
-                  <span class="sdi-client-card-name" style="margin: 0;">ĐH BÁCH KHOA</span>
-                </div>
-              </div>
-              <!-- Group 3 (duplicated for infinite loop) -->
-              <div class="sdi-marquee-group" aria-hidden="true">
-                <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="zap" style="width: 18px; height: 18px;"></i></div>
-                  <span class="sdi-client-card-name" style="margin: 0;">EVN HCM</span>
-                </div>
-                <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="building-2" style="width: 18px; height: 18px;"></i></div>
-                  <span class="sdi-client-card-name" style="margin: 0;">HÒA PHÁT</span>
-                </div>
-                <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="anchor" style="width: 18px; height: 18px;"></i></div>
-                  <span class="sdi-client-card-name" style="margin: 0;">NAM TRIỆU</span>
-                </div>
-                <div class="sdi-client-card" style="width: 220px; flex-shrink: 0; min-height: 60px; flex-direction: row; gap: 0.75rem; padding: 0.75rem 1.25rem;">
-                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><i data-lucide="graduation-cap" style="width: 18px; height: 18px;"></i></div>
+                  <div class="sdi-client-card-icon" style="margin: 0; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
                   <span class="sdi-client-card-name" style="margin: 0;">ĐH BÁCH KHOA</span>
                 </div>
               </div>
@@ -324,10 +522,10 @@
       <div class="home-solutions-wr">
         <div class="head-section" style="display: flex; flex-direction: column; gap: 0.5rem;">
           <div class="section-head-title-cont">
-            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.15); padding: 0.4rem 1rem;">OUR SOLUTIONS</span>
+            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent); border: 1px solid rgba(37, 99, 235, 0.15); padding: 0.4rem 1rem;">GIẢI PHÁP CHIẾN LƯỢC</span>
           </div>
           <div class="section-head-right">
-            <h2 class="home-solutions-item-title" style="font-size: 2.8rem; line-height: 1.15; color: var(--sdi-navy-primary);">Your Priorities, Our Solutions</h2>
+            <h2 class="home-solutions-item-title" style="font-size: 2.8rem; line-height: 1.15; color: var(--sdi-navy-primary);">Hạ Tầng Tối Ưu Cho Doanh Nghiệp Của Bạn</h2>
           </div>
         </div>
 
@@ -341,7 +539,7 @@
               <div class="home-solutions-item-wr">
                 <div>
                   <div class="sdi-solutions-icon-container">
-                    <i data-lucide="cpu" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
+                    <i data-lucide="cpu" style="width: 28px; height: 28px; color: var(--sdi-blue-accent); stroke-width: 2.2;"></i>
                   </div>
                   
                   <h3 class="home-solutions-item-title" style="text-wrap: balance; max-width: 100%;">Trạm AI Cục bộ &amp; Máy chủ Tự động hóa</h3>
@@ -352,11 +550,11 @@
                 </div>
 
                 <div class="solutions-btn-group" style="margin-top: 0.75rem; display: flex; flex-direction: row; align-items: center; gap: 0.75rem; flex-wrap: nowrap; z-index: 3; position: relative;">
-                  <a href="/combo-tron-bo.html" class="sdi-pill-btn">
+                  <a href="./combo-tron-bo.html" class="sdi-pill-btn">
                     <span>Combo Trọn Bộ</span>
                     <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
                   </a>
-                  <a href="/may-don-le.html" class="sdi-pill-btn secondary">
+                  <a href="./may-don-le.html" class="sdi-pill-btn secondary">
                     <span>Máy Đơn Lẻ</span>
                     <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
                   </a>
@@ -372,7 +570,7 @@
               <div class="home-solutions-item-wr">
                 <div>
                   <div class="sdi-solutions-icon-container">
-                    <i data-lucide="database" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
+                    <i data-lucide="database" style="width: 28px; height: 28px; color: var(--sdi-blue-accent); stroke-width: 2.2;"></i>
                   </div>
                   
                   <h3 class="home-solutions-item-title">Gói Nâng cấp Hạ tầng Lưu trữ & Bộ nhớ</h3>
@@ -383,7 +581,7 @@
                 </p>
 
                 <div style="z-index: 3; position: relative; margin-top: auto;">
-                  <a href="/may-don-le.html" class="sdi-pill-btn">
+                  <a href="./may-don-le.html" class="sdi-pill-btn">
                     <span>Xem Gói Nâng Cấp</span>
                     <i data-lucide="arrow-right" style="width: 14px; height: 14px;"></i>
                   </a>
@@ -399,7 +597,7 @@
               <div class="home-solutions-item-wr">
                 <div>
                   <div class="sdi-solutions-icon-container">
-                    <i data-lucide="package-check" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
+                    <i data-lucide="package-check" style="width: 28px; height: 28px; color: var(--sdi-blue-accent); stroke-width: 2.2;"></i>
                   </div>
                   <h4 class="home-solutions-item-title">Dịch vụ "Trao tay" (Plug & Play)</h4>
                 </div>
@@ -417,7 +615,7 @@
               <div class="home-solutions-item-wr">
                 <div>
                   <div class="sdi-solutions-icon-container">
-                    <i data-lucide="workflow" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
+                    <i data-lucide="workflow" style="width: 28px; height: 28px; color: var(--sdi-blue-accent); stroke-width: 2.2;"></i>
                   </div>
                   <h4 class="home-solutions-item-title">Tư vấn & Thiết lập Tự động hóa</h4>
                 </div>
@@ -435,7 +633,7 @@
               <div class="home-solutions-item-wr">
                 <div>
                   <div class="sdi-solutions-icon-container">
-                    <i data-lucide="shield-check" style="width: 24px; height: 24px; color: var(--sdi-blue-accent);"></i>
+                    <i data-lucide="shield-check" style="width: 28px; height: 28px; color: var(--sdi-blue-accent); stroke-width: 2.2;"></i>
                   </div>
                   <h4 class="home-solutions-item-title">Hậu mãi chuẩn B2B</h4>
                 </div>
@@ -752,7 +950,7 @@
             </div>
           </div>
 
-          <a href="/dich-vu-bao-tri.html" class="sdi-pill-btn-outline">
+          <a href="./dich-vu-bao-tri.html" class="sdi-pill-btn-outline">
             <span>Xem dịch vụ triển khai</span>
             <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin-left: 0.5rem;"></i>
           </a>
@@ -784,14 +982,14 @@
           <div>
             <span class="product-type-badge combo">Combo trọn bộ</span>
             <div style="text-align: center; margin: 1.5rem 0;">
-              <img src="/images/combo.png" alt="Combo Trạm AI" style="max-height: 90px; mix-blend-mode: multiply;">
+              <img src="./images/combo.png" alt="Combo Trạm AI" style="max-height: 90px; mix-blend-mode: multiply;">
             </div>
             <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Combo Trạm AI: Mini PC + eGPU RTX 4070</h4>
           </div>
           <div>
             <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">Từ 68.000.000₫</div>
             <div style="font-size: 0.75rem; color: var(--sdi-text-muted); margin-bottom: 1rem;">○ Đặt trước • 7 ngày</div>
-            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+            <a href="./combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
           </div>
         </div>
 
@@ -800,14 +998,14 @@
           <div>
             <span class="product-type-badge single">Máy đơn</span>
             <div style="text-align: center; margin: 1.5rem 0;">
-              <img src="/images/laser.png" alt="Workstation AI" style="max-height: 90px; mix-blend-mode: multiply;">
+              <img src="./images/laser.png" alt="Workstation AI" style="max-height: 90px; mix-blend-mode: multiply;">
             </div>
             <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Workstation AI · RTX 4090 · 128GB</h4>
           </div>
           <div>
             <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">Từ 96.000.000₫</div>
             <div style="font-size: 0.75rem; color: var(--sdi-text-muted); margin-bottom: 1rem;">○ Đặt trước • 7 ngày</div>
-            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+            <a href="./chi-tiet-may-don.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
           </div>
         </div>
 
@@ -816,14 +1014,14 @@
           <div>
             <span class="product-type-badge single">Máy đơn</span>
             <div style="text-align: center; margin: 1.5rem 0;">
-              <img src="/images/bending.png" alt="Mini PC Core i9" style="max-height: 90px; mix-blend-mode: multiply;">
+              <img src="./images/bending.png" alt="Mini PC Core i9" style="max-height: 90px; mix-blend-mode: multiply;">
             </div>
             <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Mini PC Core i9 · 64GB · chạy LLM nhẹ</h4>
           </div>
           <div>
             <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">28.900.000₫</div>
             <div style="font-size: 0.75rem; color: #10B981; font-weight: 600; margin-bottom: 1rem;">● Còn hàng</div>
-            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+            <a href="./chi-tiet-may-don.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
           </div>
         </div>
 
@@ -832,14 +1030,14 @@
           <div>
             <span class="product-type-badge part">Linh kiện</span>
             <div style="text-align: center; margin: 1.5rem 0;">
-              <img src="/images/ai.png" alt="Gói nâng cấp RAM SSD" style="max-height: 90px; mix-blend-mode: multiply;">
+              <img src="./images/ai.png" alt="Gói nâng cấp RAM SSD" style="max-height: 90px; mix-blend-mode: multiply;">
             </div>
             <h4 style="font-size: 0.95rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem; min-height: 44px;">Gói nâng cấp RAM 64GB + SSD 2TB</h4>
           </div>
           <div>
             <div style="font-size: 1.15rem; font-weight: 900; color: var(--sdi-blue-accent); margin-bottom: 0.25rem;">9.900.000₫</div>
             <div style="font-size: 0.75rem; color: #10B981; font-weight: 600; margin-bottom: 1rem;">● Còn hàng</div>
-            <a href="/combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
+            <a href="./chi-tiet-linh-kien.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.6rem; font-size: 0.85rem; text-decoration: none;">Xem chi tiết</a>
       </div>
     </div>
   </div>
@@ -847,23 +1045,32 @@
 </section>
 
   <!-- ==========================================================================
-       SECTION 3: ĐỐI TÁC & NHÀ PHÂN PHỐI (PARTNER LOGOS)
+       SECTION 3: ĐỐI TÁC & NHÀ PHÂN PHỐI (PARTNER LOGOS - Bug 6)
        ========================================================================== -->
-  <section style="padding: 5rem 0; background: #FFFFFF; border-top: 1px solid var(--sdi-border); position: relative;">
+  <section style="padding: 4.5rem 0; background: #FFFFFF; border-top: 1px solid var(--sdi-border); position: relative;">
     <div class="container-sdi">
       
-
-      <div style="text-align: center; margin-bottom: 3rem;" class="reveal-on-scroll">
+      <div style="text-align: center; margin-bottom: 2.25rem;" class="reveal-on-scroll">
         <span class="eyebrow-badge">ĐỐI TÁC CHIẾN LƯỢC</span>
-        <h3 style="font-size: 1.5rem; color: var(--sdi-navy-primary); margin-top: 0.25rem;">Đối tác & nhà phân phối</h3>
+        <h3 style="font-size: 1.85rem; color: var(--sdi-navy-primary); margin-top: 0.35rem; font-weight: 800;">Đối tác công nghệ & Nhà phân phối chính hãng</h3>
       </div>
 
-      <div style="display: flex; justify-content: center; gap: 3.5rem; align-items: center; flex-wrap: wrap;" class="reveal-on-scroll delay-1">
-        <span class="partner-logo-tag intel">Intel</span>
-        <span class="partner-logo-tag amd">AMD</span>
-        <span class="partner-logo-tag nvidia">NVIDIA</span>
-        <span class="partner-logo-tag asus">Asus</span>
-        <span class="partner-logo-tag ntc">Nhất Tiến Chung</span>
+      <div class="partner-logos-grid-new reveal-on-scroll delay-1">
+        <div class="partner-brand-card">
+          <svg viewBox="0 0 100 34" fill="currentColor" style="color: #0071C5;"><path d="M12.4 28.5H7.8V12.1h4.6v16.4zm-2.3-18.7c-1.5 0-2.7-1.2-2.7-2.7s1.2-2.7 2.7-2.7 2.7 1.2 2.7 2.7-1.2 2.7-2.7 2.7zm23.2 18.7h-4.4v-8.8c0-2.4-.9-3.8-2.9-3.8-2.2 0-3.3 1.5-3.3 3.8v8.8h-4.4V12.1h4.4v2.3c1.2-1.7 3.1-2.6 5.3-2.6 3.6 0 5.3 2.4 5.3 6.1v10.6zm13.8 0h-4.3v-2.3c-1.1 1.7-2.9 2.6-5.1 2.6-3.4 0-5.3-2.3-5.3-6.1V12.1h4.4v9c0 2.3 1 3.6 3 3.6 2.1 0 3-1.4 3-3.6v-9h4.3v16.4zm8.6-12.7h-3v-3.7h3V8.3l4.4-1.3v5.1h4.3v3.7h-4.3v8.3c0 1.5.6 2.1 2 2.1h2.3v3.7h-3.8c-3.5 0-4.9-1.5-4.9-5.1v-9zm23.4 6.9h-12c.2 2.2 1.6 3.5 3.9 3.5 1.7 0 2.8-.7 3.5-1.9l3.8 1.9c-1.5 2.5-4.1 3.7-7.3 3.7-5.2 0-8.5-3.6-8.5-8.4s3.3-8.5 8.4-8.5c5.3 0 8.2 3.8 8.2 8.5 0 .5 0 .9 0 1.2zm-4.4-3.2c0-2-1.3-3.3-3.8-3.3-2.2 0-3.6 1.3-3.8 3.3h7.6zm14.1 9h-4.4V4.4l4.4-1.3v25.4z"/></svg>
+        </div>
+        <div class="partner-brand-card">
+          <svg viewBox="0 0 100 24" fill="currentColor" style="color: #ED1C24;"><path d="M0 23.5h5.5l2.4-5.6h10.4l2.4 5.6h5.8L14.7.5H11.8L0 23.5zm10.1-10.4l3.1-7.2 3.1 7.2h-6.2zm21.4 10.4h5.6V6.2l7.1 11.8h2.3l7.1-11.8v17.3h5.6V.5h-5.9l-7.9 13.3L37.5.5h-6v23zM70.8.5H59.5v23h11.3c7.2 0 12.3-4.8 12.3-11.5S78 .5 70.8.5zm0 17.6H65V5.9h5.8c3.8 0 6.5 2.5 6.5 6.1s-2.7 6.1-6.5 6.1z"/></svg>
+        </div>
+        <div class="partner-brand-card">
+          <svg viewBox="0 0 100 24" fill="currentColor" style="color: #76B900;"><path d="M18.8 3.7C8.4 3.7 0 12.1 0 22.5h3.9c0-8.2 6.7-14.9 14.9-14.9 8.2 0 14.9 6.7 14.9 14.9h3.9C37.6 12.1 29.2 3.7 18.8 3.7zm1.1 6.1c-5.7 0-10.3 4.6-10.3 10.3h2.8c0-4.1 3.4-7.5 7.5-7.5 4.1 0 7.5 3.4 7.5 7.5h2.8c0-5.7-4.6-10.3-10.3-10.3zm42.7.2h-5.2l-8.6 12.5h5.2l1.7-2.7h8.7l1.7 2.7h5.2L62.6 10zm-5.1 7.3l2.6-4.1 2.6 4.1h-5.2zm20.8-7.3v12.5h4.6V10h-4.6zm11.2 0v12.5h4.6V10h-4.6z"/></svg>
+        </div>
+        <div class="partner-brand-card">
+          <svg viewBox="0 0 100 24" fill="currentColor" style="color: #00539B;"><path d="M18.2 19.5H8.6l-1.8 4h-5L11.7.5h4.4l9.8 23h-5.9l-1.8-4zm-1.8-4.2l-3-7.2-3 7.2h6zm21.4-1.2c0 6.2-3.8 9.4-9.8 9.4-6.2 0-9.8-3.2-9.8-9.4V.5h5.4v13.5c0 3.1 1.7 4.7 4.4 4.7 2.8 0 4.4-1.6 4.4-4.7V.5h5.4v13.6zm18.3 5.4c-1.8 2.6-4.7 4-8.7 4-6.3 0-10.3-3.9-10.3-9.8s4-9.8 10.3-9.8c4 0 6.9 1.4 8.7 4l-3.8 3c-1.1-1.6-2.7-2.4-4.9-2.4-3.3 0-5.1 2.2-5.1 5.2s1.8 5.2 5.1 5.2c2.2 0 3.8-.8 4.9-2.4l3.8 3zm21.7-5.4c0 6.2-3.8 9.4-9.8 9.4-6.2 0-9.8-3.2-9.8-9.4V.5h5.4v13.5c0 3.1 1.7 4.7 4.4 4.7 2.8 0 4.4-1.6 4.4-4.7V.5h5.4v13.6z"/></svg>
+        </div>
+        <div class="partner-brand-card">
+          <span style="font-family: var(--font-heading); font-weight: 900; font-size: 1.05rem; color: var(--sdi-orange-cta); letter-spacing: 0.05em;">NHẤT TIẾN CHUNG</span>
+        </div>
       </div>
     </div>
   </section>
@@ -882,7 +1089,7 @@
             Kinh nghiệm thực chiến từ các kỹ sư giải pháp NavaTek giúp tối ưu hiệu năng phần cứng, triển khai AI On-Premise và bảo mật dữ liệu doanh nghiệp.
           </p>
         </div>
-        <a href="/tin-tuc.html" class="sdi-pill-btn" style="padding: 0.55rem 1.35rem; font-size: 0.85rem; margin-bottom: 0.5rem;">
+        <a href="./tin-tuc.html" class="sdi-pill-btn" style="padding: 0.55rem 1.35rem; font-size: 0.85rem; margin-bottom: 0.5rem;">
           <span>Xem tất cả bài viết</span>
           <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
         </a>
@@ -891,7 +1098,7 @@
       <div class="home-blog-grid reveal-on-scroll delay-1">
         
         <!-- Card 1: Nghẽn cổ chai PC -->
-        <a href="/bai-viet-chi-tiet.html" class="blog-card">
+        <a href="./bai-viet-chi-tiet.html" class="blog-card">
           <div class="blog-card-thumb-wrapper">
             <span class="blog-card-tag-floating blog-cat-badge ai">TỐI ƯU PHẦN CỨNG</span>
             <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-nghen-co-chai-pc.jpg?v=1786010990053" alt="Nghẽn cổ chai PC là gì?">
@@ -919,7 +1126,7 @@
         </a>
 
         <!-- Card 2: Lắp thêm ổ cứng -->
-        <a href="/bai-viet-chi-tiet.html" class="blog-card">
+        <a href="./bai-viet-chi-tiet.html" class="blog-card">
           <div class="blog-card-thumb-wrapper">
             <span class="blog-card-tag-floating blog-cat-badge hardware">NÂNG CẤP & LƯU TRỮ</span>
             <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-cach-lap-them-o-cung-cho-pc-1x1.jpg?v=1786006751627" alt="Cách Lắp Thêm Ổ Cứng Cho PC">
@@ -947,7 +1154,7 @@
         </a>
 
         <!-- Card 3: Cổng PCI Trên Main -->
-        <a href="/bai-viet-chi-tiet.html" class="blog-card">
+        <a href="./bai-viet-chi-tiet.html" class="blog-card">
           <div class="blog-card-thumb-wrapper">
             <span class="blog-card-tag-floating blog-cat-badge automation">KIẾN THỨC PHẦN CỨNG</span>
             <img src="https://bizweb.dktcdn.net/100/543/817/articles/anh-bia-cong-pci-tren-main-1x1.jpg?v=1786005998587" alt="Cổng PCI Trên Main Là Gì">
@@ -1117,36 +1324,34 @@
               <strong>Công ty TNHH NavaTek</strong><br>
               Địa chỉ: Thành phố Hồ Chí Minh<br>
               Hotline: 1900 - NAVATEK | MST: 031789456<br>
-              Liên kết: <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="/dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách đổi trả</a>
+              Liên kết: <a href="./dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách bảo hành</a> · <a href="./dich-vu-bao-tri.html" style="color: #94A3B8; text-decoration: underline;">Chính sách đổi trả</a>
             </p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
-              <a href="/nganh-phuc-vu.html" class="footer-link" style="margin-right: 0.75rem;">Giải pháp</a>
-              <a href="/may-don-le.html" class="footer-link" style="margin-right: 0.75rem;">Sản phẩm</a>
-              <a href="/dich-vu-bao-tri.html" class="footer-link" style="margin-right: 0.75rem;">Dịch vụ</a>
-              <a href="/tin-tuc.html" class="footer-link" style="margin-right: 0.75rem;">Tin tức</a>
-              <a href="/du-an.html" class="footer-link">Liên hệ</a>
+            <!-- Footer Nav Menu Links (Bug 7, 22) -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.5rem; font-size: 0.9rem; font-weight: 600;">
+              <a href="./nganh-phuc-vu.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Giải pháp</a>
+              <a href="./may-don-le.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Sản phẩm</a>
+              <a href="./dich-vu-bao-tri.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Dịch vụ</a>
+              <a href="./ve-navatek.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Về NavaTek</a>
+              <a href="./tin-tuc.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Tin tức</a>
+              <a href="./du-an.html" style="color: #CBD5E1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Liên hệ</a>
             </div>
           </div>
 
-          <!-- Ecosystem Block (Matching Wireframe) -->
+          <!-- Hệ sinh thái Nava Footer Card (Bug 2, 24) -->
           <div>
-            <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 0.75rem;">Hệ sinh thái Nava</h4>
-            <div class="sdi-form-grid-2" style="gap: 1.25rem !important;">
-              <a href="/" class="sdi-ecosystem-card">
-                <div class="sdi-eco-logo-wrap">
-                  <img src="/images/LOGO.png" alt="NAVATEK - Giải pháp doanh nghiệp">
-                </div>
-                <div class="sdi-eco-desc">Giải pháp doanh nghiệp</div>
+            <div style="font-size: 0.8rem; color: #64748B; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.05em;">HỆ SINH THÁI NAVA</div>
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-around; gap: 1rem;">
+              <a href="./index.html" style="text-decoration: none; text-align: center;">
+                <div style="font-family: var(--font-heading); font-weight: 800; color: #FFFFFF; font-size: 1.05rem;">NAVATEK</div>
+                <div style="font-size: 0.75rem; color: #94A3B8;">Giải pháp doanh nghiệp</div>
               </a>
-              <a href="https://navastore.vn" target="_blank" rel="noopener" class="sdi-ecosystem-card is-retail">
-                <div class="sdi-eco-logo-wrap">
-                  <img src="https://bizweb.dktcdn.net/100/543/817/themes/1000289/assets/logo.png?1786961088767" alt="NAVASTORE - Bán lẻ Top 2 Google">
-                </div>
-                <div class="sdi-eco-desc">Bán lẻ · Top 2 Google</div>
+              <div style="color: rgba(255,255,255,0.2); font-size: 1.2rem;">|</div>
+              <a href="https://navastore.vn" target="_blank" rel="noopener" style="text-decoration: none; text-align: center;">
+                <div style="font-family: var(--font-heading); font-weight: 800; color: #38BDF8; font-size: 1.05rem;">NAVASTORE</div>
+                <div style="font-size: 0.75rem; color: #94A3B8;">Bán lẻ • Top 2 Google</div>
               </a>
             </div>
-
           </div>
         </div>
 
@@ -1164,7 +1369,7 @@
       <button id="close-quote-modal" style="position: absolute; top: 1.25rem; right: 1.25rem; background: #F1F5F9; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; color: #475569; display: flex; align-items: center; justify-content: center;">
         <i data-lucide="x" style="width: 20px; height: 20px;"></i>
       </button>
-      <span class="eyebrow-badge">NAVATEK v3.1</span>
+      <span class="eyebrow-badge">NAVATEK B2B</span>
       <h3 style="font-size: 1.75rem; color: var(--sdi-navy-primary); margin-bottom: 0.5rem;">Yêu Cầu Báo Giá & Tải Catalog</h3>
       <p style="font-size: 0.95rem; color: #64748B; margin-bottom: 1.75rem;">Kỹ sư NAVATEK sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.</p>
       <form id="quote-request-form">
@@ -1246,7 +1451,7 @@
   }
   </script>
 
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
   <script>lucide.createIcons();</script>
 </body>
 </html>
