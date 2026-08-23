@@ -1081,51 +1081,103 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 15. MOBILE SOLUTIONS CAROUSEL & SLIDE DOTS SYNC
+  // 15. UNIVERSAL MOBILE SLIDER & SLIDE DOTS ENGINE (All multi-card sections)
   // ==========================================================================
-  const solutionsSlider = document.getElementById('solutions-slider');
-  const solutionsDotsContainer = document.getElementById('solutions-dots');
+  function initUniversalMobileSliders() {
+    // Select all containers configured as mobile sliders
+    const sliderContainers = document.querySelectorAll(
+      '[data-mobile-slider="true"], #solutions-slider, .solutions-grid-slider, .sdi-mobile-slider'
+    );
 
-  if (solutionsSlider && solutionsDotsContainer) {
-    const dots = solutionsDotsContainer.querySelectorAll('.solutions-dot');
-    const items = solutionsSlider.querySelectorAll('.home-solutions-item');
+    sliderContainers.forEach((slider) => {
+      // Find direct item children, excluding dot containers
+      const items = Array.from(slider.children).filter(
+        el => !el.classList.contains('sdi-slide-dots') && 
+              !el.classList.contains('solutions-slider-dots') &&
+              !el.classList.contains('sdi-slider-dots')
+      );
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (items[index]) {
-          const targetCard = items[index];
-          const scrollLeft = targetCard.offsetLeft - solutionsSlider.offsetLeft;
-          solutionsSlider.scrollTo({
-            left: scrollLeft,
-            behavior: 'smooth'
-          });
-          dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      if (items.length <= 1) return;
+
+      // Check if there is an existing dots container next to the slider
+      let dotsContainer = slider.nextElementSibling;
+      const isExistingDots = dotsContainer && (
+        dotsContainer.classList.contains('sdi-slide-dots') || 
+        dotsContainer.classList.contains('solutions-slider-dots') ||
+        dotsContainer.classList.contains('sdi-slider-dots')
+      );
+
+      if (!isExistingDots) {
+        dotsContainer = document.createElement('div');
+        dotsContainer.className = 'sdi-slide-dots';
+        if (slider.closest('.tech-dot-grid-dark') || slider.closest('.dark-section') || slider.closest('#stats-section')) {
+          dotsContainer.classList.add('dark');
         }
-      });
-    });
+        slider.parentNode.insertBefore(dotsContainer, slider.nextSibling);
+      }
 
-    let scrollTimeout;
-    solutionsSlider.addEventListener('scroll', () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        const scrollLeft = solutionsSlider.scrollLeft;
-        let closestIndex = 0;
-        let minDistance = Infinity;
-
-        items.forEach((item, index) => {
-          const itemOffset = item.offsetLeft - solutionsSlider.offsetLeft;
-          const distance = Math.abs(scrollLeft - itemOffset);
-          if (distance < minDistance) {
-            minDistance = distance;
-            closestIndex = index;
-          }
+      // Populate dots if empty or mismatched
+      let dots = Array.from(dotsContainer.querySelectorAll('.sdi-slide-dot, .solutions-dot'));
+      if (dots.length !== items.length) {
+        dotsContainer.innerHTML = '';
+        items.forEach((_, idx) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'sdi-slide-dot' + (idx === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', `Xem slide ${idx + 1}`);
+          dotsContainer.appendChild(dot);
         });
+        dots = Array.from(dotsContainer.querySelectorAll('.sdi-slide-dot, .solutions-dot'));
+      }
 
-        dots.forEach((d, i) => d.classList.toggle('active', i === closestIndex));
-      }, 40);
-    }, { passive: true });
+      // Dot click listener to scroll smoothly to corresponding slide
+      dots.forEach((dot, index) => {
+        dot.onclick = (e) => {
+          e.preventDefault();
+          if (items[index]) {
+            const targetCard = items[index];
+            const scrollLeft = targetCard.offsetLeft - slider.offsetLeft;
+            slider.scrollTo({
+              left: scrollLeft,
+              behavior: 'smooth'
+            });
+            dots.forEach((d, i) => d.classList.toggle('active', i === index));
+          }
+        };
+      });
+
+      // Passive scroll listener to update active dot
+      let scrollTimeout;
+      slider.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const scrollLeft = slider.scrollLeft;
+          let closestIndex = 0;
+          let minDistance = Infinity;
+
+          items.forEach((item, index) => {
+            const itemOffset = item.offsetLeft - slider.offsetLeft;
+            const distance = Math.abs(scrollLeft - itemOffset);
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestIndex = index;
+            }
+          });
+
+          dots.forEach((d, i) => d.classList.toggle('active', i === closestIndex));
+        }, 35);
+      }, { passive: true });
+    });
   }
+
+  // Initialize immediately and also on dynamic events
+  initUniversalMobileSliders();
+  window.addEventListener('resize', () => {
+    // Debounced re-init
+    clearTimeout(window._sliderResizeTimeout);
+    window._sliderResizeTimeout = setTimeout(initUniversalMobileSliders, 250);
+  });
+
 
   // ==========================================================================
   // 16. DYNAMIC SCROLL MATRIX & CTA STRAND ANIMATION
