@@ -6956,20 +6956,21 @@ html, body {
 }
 
 .sla-core-statement {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #E2E8F0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 2rem;
-  padding-left: 1.25rem;
-  border-left: 4px solid var(--sdi-blue-glow);
+  padding: 1rem 1.35rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3.5px solid #38BDF8;
+  border-radius: 0 12px 12px 0;
 }
 
-.sla-core-statement strong {
+.sla-core-statement strong,
+.sla-core-statement em {
   color: #FFFFFF;
-  font-weight: 800;
-  text-decoration: underline;
-  text-decoration-color: rgba(56, 189, 248, 0.5);
-  text-underline-offset: 4px;
+  font-weight: 600;
+  text-decoration: none !important;
 }
 
 .sla-grid-4 {
