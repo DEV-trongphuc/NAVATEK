@@ -390,6 +390,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <option value="consult">Tư vấn tổng thể / Chưa rõ nhu cầu</option>
               </select>
             </div>
+            <!-- Checkbox Yêu Cầu NDA -->
+            <label class="form-checkbox-group">
+              <input type="checkbox" name="nda_required" value="yes">
+              <span class="form-checkbox-text">
+                <strong>Yêu cầu NDA</strong> (Thỏa thuận bảo mật thông tin doanh nghiệp)
+                <small>Ký cam kết bảo mật trước khi khảo sát & tư vấn hạ tầng AI.</small>
+              </span>
+            </label>
             <button type="submit" class="sdi-btn-orange" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem; font-size: 1rem; border-radius: 12px;">
               <span>Gửi Yêu Cầu Báo Giá</span>
             </button>
@@ -715,7 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const href = link.getAttribute('href');
       if (href) {
         let isMatch = false;
-        if (href.includes('nganh-phuc-vu.html') && currentPath.includes('nganh-phuc-vu.html')) {
+        if ((href.includes('giai-phap-ai-server-local-llm.html') || href.includes('nganh-phuc-vu.html')) && (currentPath.includes('giai-phap-ai-server-local-llm.html') || currentPath.includes('nganh-phuc-vu.html'))) {
           isMatch = true;
         } else if (href.includes('may-don-le.html') && (currentPath.includes('may-don-le.html') || currentPath.includes('combo-tron-bo.html') || currentPath.includes('chi-tiet-may-don.html') || currentPath.includes('chi-tiet-linh-kien.html'))) {
           isMatch = true;
@@ -1180,8 +1188,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================================================
-  // 16. DYNAMIC SCROLL MATRIX & CTA STRAND ANIMATION
+  // 16. DYNAMIC CURTAIN REVEAL FOOTER & BINARY SCROLL ANIMATION
   // ==========================================================================
+  const adjustCurtainReveal = () => {
+    const footer = document.querySelector('.footer-sdi');
+    const wrapper = document.querySelector('.sdi-page-wrapper');
+    if (footer && wrapper) {
+      if (window.innerWidth >= 1024) {
+        footer.style.position = 'fixed';
+        footer.style.height = 'auto';
+        const naturalHeight = footer.offsetHeight;
+        footer.style.height = `${naturalHeight}px`;
+        wrapper.style.marginBottom = `${naturalHeight}px`;
+      } else {
+        footer.style.position = 'static';
+        footer.style.height = 'auto';
+        wrapper.style.marginBottom = '0px';
+      }
+    }
+  };
+
+  window.addEventListener('load', adjustCurtainReveal);
+  window.addEventListener('resize', adjustCurtainReveal);
+  setTimeout(adjustCurtainReveal, 100);
+  setTimeout(adjustCurtainReveal, 500);
+
   const binaryContainer = document.querySelector('.binary-matrix-container');
   const ctaGrad = document.querySelector('.home-cta-anims-grad');
   const ctaCode = document.querySelector('.home-cta-anims-code-img');
@@ -1192,24 +1223,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateCtaScrollAnim = () => {
       const rect = binaryContainer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
+      const relativeScroll = windowHeight - rect.top;
       
-      // Progress from 0 to 1 as the section scrolls into viewport
-      const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height * 0.4), 0), 1);
-      
-      if (ctaGrad) {
-        ctaGrad.style.opacity = (0.35 + progress * 0.45).toFixed(2);
-        ctaGrad.style.transform = `translateX(-50%) scale(${0.88 + progress * 0.22})`;
-      }
-      if (ctaCode) {
-        ctaCode.style.opacity = (0.15 + progress * 0.25).toFixed(2);
-      }
-      if (binaryStreams) {
-        binaryStreams.style.opacity = (0.4 + progress * 0.45).toFixed(2);
-      }
-      if (strandSvgs.length > 0) {
-        strandSvgs.forEach(svg => {
-          svg.style.opacity = (0.55 + progress * 0.4).toFixed(2);
-        });
+      if (relativeScroll > 0 && rect.bottom > 0) {
+        if (ctaCode) {
+          const translateY = (relativeScroll * 0.32) - 130;
+          ctaCode.style.transform = `translateX(-50%) translateY(${translateY}px) translateZ(0)`;
+          const progress = Math.min(Math.max(relativeScroll / (windowHeight * 0.65), 0), 1);
+          ctaCode.style.opacity = (progress * 0.35).toFixed(2);
+        }
+        if (ctaGrad) {
+          const progress = Math.min(Math.max(relativeScroll / (windowHeight * 0.65), 0), 1);
+          ctaGrad.style.opacity = progress.toFixed(2);
+        }
+        if (binaryStreams) {
+          const progress = Math.min(Math.max(relativeScroll / (windowHeight * 0.65), 0), 1);
+          binaryStreams.style.opacity = progress.toFixed(2);
+        }
+        if (strandSvgs.length > 0) {
+          const progress = Math.min(Math.max(relativeScroll / (windowHeight * 0.65), 0), 1);
+          strandSvgs.forEach(svg => {
+            svg.style.opacity = (0.25 + progress * 0.6).toFixed(2);
+          });
+        }
+      } else if (relativeScroll <= 0) {
+        if (ctaGrad) ctaGrad.style.opacity = 0;
+        if (binaryStreams) binaryStreams.style.opacity = 0;
+        if (ctaCode) ctaCode.style.opacity = 0;
       }
     };
 

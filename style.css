@@ -1500,9 +1500,8 @@ body {
 /* BINARY WATERFALL MATRIX FOR CTA TRANSITION SECTION */
 .binary-matrix-container {
   position: relative;
-  background-color: #010101 !important;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px) !important;
-  background-size: 32px 32px !important;
+  background-color: #FFFFFF !important;
+  background-image: none !important;
   min-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -1510,28 +1509,50 @@ body {
   align-items: center;
   text-align: center; /* Center-align all text and child elements */
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--sdi-border);
   box-sizing: border-box;
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 7rem;
-  color: #FFFFFF;
 }
 
 .binary-matrix-container h2 {
-  color: #FFFFFF !important;
+  color: var(--sdi-navy-primary) !important;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 .binary-matrix-container p {
-  color: rgba(255, 255, 255, 0.78) !important;
+  color: var(--sdi-text-secondary) !important;
   font-size: 1.05rem;
+}
+
+@media (min-width: 1024px) {
+  .sdi-page-wrapper ~ .footer-sdi {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-top: none;
+  }
+  .sdi-page-wrapper {
+    position: relative;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+  .binary-matrix-container {
+    border-bottom-left-radius: 40px !important;
+    border-bottom-right-radius: 40px !important;
+  }
 }
 
 .home-cta-anims-grad {
   z-index: 1;
-  filter: blur(80px);
+  filter: blur(100px);
   background-image: linear-gradient(90deg, #65acff, #3866f1 56%, #0063ff) !important;
   border-radius: 100rem;
   width: 50rem;
@@ -1541,9 +1562,9 @@ body {
   bottom: -4rem;
   transform: translateX(-50%);
   pointer-events: none;
-  opacity: 0.55;
-  will-change: opacity, transform;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.2s ease-out;
 }
 
 .home-cta-anims-code-img {
@@ -1555,7 +1576,7 @@ body {
   max-width: 64.25rem;
   height: 38rem;
   z-index: 2;
-  opacity: 0.28;
+  opacity: 0;
   mix-blend-mode: color-dodge;
   background-image: url('https://cdn.prod.website-files.com/685c045f09a3dab41aa0d71d/68cc800237876bc16ee202f1_code.svg');
   background-position: 50% 50%;
@@ -1563,32 +1584,32 @@ body {
   background-size: 135% auto;
   pointer-events: none;
   will-change: transform, opacity;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.15s ease-out;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
 }
 
 .binary-streams-wrapper {
   position: absolute;
-  top: 15%;
+  top: 35%;
   left: 0;
   width: 100%;
-  height: 85%;
+  height: 65%;
   pointer-events: none;
   z-index: 2;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 0;
   will-change: opacity;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.15s ease-out;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);
 }
 
 .binary-stream {
   position: absolute;
-  color: rgba(96, 165, 250, 0.45); /* Crisp and glowing cyan matrix lines */
+  color: rgba(96, 165, 250, 0.12); /* Extremely subtle and faint blue matrix lines */
   font-family: monospace;
-  font-size: 0.75rem;
+  font-size: 0.65rem; /* Small and neat */
   line-height: 1.3;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -1596,7 +1617,6 @@ body {
   writing-mode: vertical-rl;
   text-orientation: upright;
   user-select: none;
-  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
 }
 
 .binary-stream.falling {
@@ -1622,12 +1642,12 @@ body {
 .binary-stream.blur-heavy {
   filter: blur(2px);
   font-size: 0.8rem;
-  color: rgba(96, 165, 250, 0.25);
+  color: rgba(96, 165, 250, 0.05);
 }
 
 .binary-stream.blur-light {
   filter: blur(0.75px);
-  color: rgba(96, 165, 250, 0.4);
+  color: rgba(96, 165, 250, 0.08);
 }
 
 @keyframes binary-fall {
@@ -1636,10 +1656,10 @@ body {
     opacity: 0;
   }
   15% {
-    opacity: 0.75;
+    opacity: 0.28;
   }
   85% {
-    opacity: 0.75;
+    opacity: 0.28;
   }
   100% {
     transform: translateY(140%) translateZ(0);
@@ -1653,10 +1673,10 @@ body {
     opacity: 0;
   }
   15% {
-    opacity: 0.75;
+    opacity: 0.28;
   }
   85% {
-    opacity: 0.75;
+    opacity: 0.28;
   }
   100% {
     transform: translateY(-140%) translateZ(0);
@@ -1706,8 +1726,7 @@ body {
   height: 28rem;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.85;
-  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.45));
+  opacity: 0.65;
 }
 
 .sdi-strand-svg.is-left {
@@ -6846,5 +6865,398 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   B2B TRUST SIGNALS & CLIENT FEEDBACK ENHANCEMENTS (Anh Nam Feedback)
+   ========================================================================== */
 
+/* 1. Hero Partner Trust Strip */
+.hero-partner-trust-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  width: fit-content;
+  max-width: 100%;
+}
 
+.hero-partner-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-partner-badges {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.partner-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.partner-badge-asus {
+  background: rgba(234, 179, 8, 0.15);
+  color: #FDE047;
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.partner-badge-minisforum {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.partner-badge-security {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+/* 2. Core SLA & Warranty Guarantee Banner */
+.sla-highlight-banner {
+  background: linear-gradient(135deg, #0A1128 0%, #0F1E4A 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(10, 17, 40, 0.15);
+}
+
+.sla-highlight-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sla-core-statement {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #E2E8F0;
+  margin-bottom: 2rem;
+  padding-left: 1.25rem;
+  border-left: 4px solid var(--sdi-blue-glow);
+}
+
+.sla-core-statement strong {
+  color: #FFFFFF;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(56, 189, 248, 0.5);
+  text-underline-offset: 4px;
+}
+
+.sla-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.sla-item-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.sla-item-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-3px);
+}
+
+.sla-item-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.2);
+  color: #38BDF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+}
+
+.sla-item-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+}
+
+.sla-item-desc {
+  font-size: 0.825rem;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+
+/* 3. Workflow Integration Visual Architecture */
+.workflow-pipeline-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1.2fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.workflow-step-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 51, 102, 0.04);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.workflow-step-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--sdi-blue-accent);
+  box-shadow: 0 16px 32px rgba(0, 51, 102, 0.08);
+}
+
+.workflow-step-card.center-engine {
+  background: linear-gradient(135deg, #0A1128 0%, #101F48 100%);
+  color: #FFFFFF;
+  border: 2px solid var(--sdi-blue-accent);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+.workflow-step-card.center-engine h4 {
+  color: #FFFFFF;
+}
+
+.workflow-step-card.center-engine p {
+  color: #94A3B8;
+}
+
+.workflow-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  margin-bottom: 0.85rem;
+}
+
+.workflow-connector-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--sdi-blue-accent);
+}
+
+.workflow-connector-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #EFF6FF;
+  color: #2563EB;
+  border: 1px solid #BFDBFE;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin: 0.25rem 0;
+  white-space: nowrap;
+}
+
+/* 4. TCO Comparison Table & Highlights */
+.tco-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--sdi-border);
+  border-radius: 18px;
+  background: #FFFFFF;
+  box-shadow: var(--sdi-shadow-soft);
+  margin-top: 2rem;
+}
+
+.tco-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+.tco-table th, .tco-table td {
+  padding: 1.15rem 1.4rem;
+  vertical-align: middle;
+}
+
+.tco-table thead th {
+  background: #F8FAFD;
+  font-weight: 800;
+  color: var(--sdi-navy-primary);
+  border-bottom: 2px solid var(--sdi-border);
+}
+
+.tco-table thead th.highlight-col {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border-bottom: 2px solid #3B82F6;
+}
+
+.tco-table tbody tr {
+  border-bottom: 1px solid #EFF3FA;
+  transition: background 0.2s ease;
+}
+
+.tco-table tbody tr:hover {
+  background: #FAFCFF;
+}
+
+.tco-table tbody td.highlight-col {
+  background: rgba(239, 246, 255, 0.4);
+  font-weight: 600;
+}
+
+.tco-badge-savings {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ECFDF5;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+}
+
+.tco-badge-loss {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FECACA;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+}
+
+/* 5. NDA Checkbox in Forms */
+.form-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.75rem 0.85rem;
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px dashed rgba(37, 99, 235, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.form-checkbox-group:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: var(--sdi-blue-accent);
+}
+
+.form-checkbox-group input[type="checkbox"] {
+  margin-top: 0.2rem;
+  width: 17px;
+  height: 17px;
+  accent-color: var(--sdi-blue-accent);
+  cursor: pointer;
+}
+
+.form-checkbox-text {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--sdi-navy-primary);
+}
+
+.form-checkbox-text strong {
+  color: var(--sdi-blue-accent);
+}
+
+.form-checkbox-text small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--sdi-text-muted);
+  margin-top: 0.15rem;
+}
+
+/* Dark mode version for Footer Form */
+.sdi-lead-form .form-checkbox-group {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.sdi-lead-form .form-checkbox-group:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.sdi-lead-form .form-checkbox-text {
+  color: #E2E8F0;
+}
+
+.sdi-lead-form .form-checkbox-text strong {
+  color: #38BDF8;
+}
+
+.sdi-lead-form .form-checkbox-text small {
+  color: #94A3B8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .sla-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workflow-pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .workflow-connector-col {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .sla-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-partner-trust-strip {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
