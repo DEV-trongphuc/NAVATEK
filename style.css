@@ -6909,27 +6909,26 @@ html, body {
   gap: 0.4rem;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.06);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   transition: all 0.25s ease;
 }
 
-.partner-badge-asus {
-  background: rgba(234, 179, 8, 0.15);
-  color: #FDE047;
-  border: 1px solid rgba(234, 179, 8, 0.35);
-}
-
-.partner-badge-minisforum {
-  background: rgba(56, 189, 248, 0.15);
-  color: #38BDF8;
-  border: 1px solid rgba(56, 189, 248, 0.35);
-}
-
+.partner-badge-asus,
+.partner-badge-minisforum,
 .partner-badge-security {
-  background: rgba(16, 185, 129, 0.15);
-  color: #34D399;
-  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.partner-badge-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #FFFFFF;
 }
 
 /* 2. Core SLA & Warranty Guarantee Banner */

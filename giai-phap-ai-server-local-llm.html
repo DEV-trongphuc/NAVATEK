@@ -345,9 +345,6 @@
               <i data-lucide="trending-down" style="width: 16px; height: 16px;"></i>
               <span>Xem so sánh chi phí Cloud vs. Local</span>
             </a>
-            <a href="#cau-hinh" class="sdi-pill-btn-outline" style="border: 1px solid rgba(255,255,255,0.4); color: #CBD5E1; padding: 0.75rem 1.5rem; border-radius: 999px; font-weight: 600; text-decoration: none;">
-              Xem cấu hình
-            </a>
           </div>
 
           <!-- Trust Signals: ASUS & MINISFORUM Gold Partner Badges -->
@@ -641,20 +638,32 @@
           </p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.78rem;">
             <div style="background: rgba(255,255,255,0.06); padding: 0.5rem 0.65rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-              <div style="font-weight: 700; color: #38BDF8;">🧠 Private LLM 8B–70B</div>
-              <div style="color: #94A3B8; font-size: 0.72rem;">Llama-3 / Qwen / DeepSeek</div>
+              <div style="font-weight: 700; color: #38BDF8; display: flex; align-items: center; gap: 0.35rem;">
+                <i data-lucide="cpu" style="width: 13px; height: 13px; color: #38BDF8;"></i>
+                <span>Private LLM 8B–70B</span>
+              </div>
+              <div style="color: #94A3B8; font-size: 0.72rem; margin-top: 0.15rem;">Llama-3 / Qwen / DeepSeek</div>
             </div>
             <div style="background: rgba(255,255,255,0.06); padding: 0.5rem 0.65rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-              <div style="font-weight: 700; color: #38BDF8;">📑 OCR Kế Toán &amp; HĐ</div>
-              <div style="color: #94A3B8; font-size: 0.72rem;">Bóc tách chứng từ tự động</div>
+              <div style="font-weight: 700; color: #38BDF8; display: flex; align-items: center; gap: 0.35rem;">
+                <i data-lucide="file-text" style="width: 13px; height: 13px; color: #38BDF8;"></i>
+                <span>OCR Kế Toán &amp; HĐ</span>
+              </div>
+              <div style="color: #94A3B8; font-size: 0.72rem; margin-top: 0.15rem;">Bóc tách chứng từ tự động</div>
             </div>
             <div style="background: rgba(255,255,255,0.06); padding: 0.5rem 0.65rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-              <div style="font-weight: 700; color: #38BDF8;">🔍 Local RAG Vector DB</div>
-              <div style="color: #94A3B8; font-size: 0.72rem;">Tra cứu tri thức &lt; 50ms</div>
+              <div style="font-weight: 700; color: #38BDF8; display: flex; align-items: center; gap: 0.35rem;">
+                <i data-lucide="search" style="width: 13px; height: 13px; color: #38BDF8;"></i>
+                <span>Local RAG Vector DB</span>
+              </div>
+              <div style="color: #94A3B8; font-size: 0.72rem; margin-top: 0.15rem;">Tra cứu tri thức &lt; 50ms</div>
             </div>
             <div style="background: rgba(255,255,255,0.06); padding: 0.5rem 0.65rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-              <div style="font-weight: 700; color: #38BDF8;">🔒 Zero Cloud Leak</div>
-              <div style="color: #94A3B8; font-size: 0.72rem;">Bảo mật tuyệt đối không ra ngoài</div>
+              <div style="font-weight: 700; color: #38BDF8; display: flex; align-items: center; gap: 0.35rem;">
+                <i data-lucide="shield-check" style="width: 13px; height: 13px; color: #38BDF8;"></i>
+                <span>Zero Cloud Leak</span>
+              </div>
+              <div style="color: #94A3B8; font-size: 0.72rem; margin-top: 0.15rem;">Bảo mật LAN tuyệt đối</div>
             </div>
           </div>
         </div>
@@ -780,41 +789,42 @@
         <!-- Config 1: Workstation 1 GPU -->
         <div class="bento-card bento-card-white" style="padding: 2.25rem 2rem; justify-content: space-between; border: 1px solid var(--sdi-border); border-radius: 20px; display: flex; flex-direction: column;">
           <div>
-            <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.08); color: var(--sdi-blue-accent);">Mức Khởi Đầu · 1 GPU</span>
+            <span class="eyebrow-badge" style="background: rgba(0, 51, 102, 0.06); color: var(--sdi-navy-primary);">Mức Khởi Đầu · 1 GPU</span>
             <h3 style="font-size: 1.4rem; color: var(--sdi-navy-primary); margin: 0.5rem 0 0.5rem 0;">Workstation 1 GPU (24GB VRAM)</h3>
-            <div style="display: inline-block; background: #EFF6FF; color: #1D4ED8; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 6px; margin-bottom: 1rem;">
-              🎯 Tối ưu cho Llama-3 8B (Q8) / Qwen 14B
+            <div style="display: inline-flex; align-items: center; gap: 0.35rem; background: #F1F5F9; color: #334155; font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.7rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #E2E8F0;">
+              <i data-lucide="cpu" style="width: 13px; height: 13px; color: #2563EB;"></i>
+              <span>Tối ưu cho Llama-3 8B (Q8) / Qwen 14B</span>
             </div>
             <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
               Phù hợp cho nhóm nghiên cứu từ 1-5 người chạy thử nghiệm Private LLM nội bộ, bóc tách hóa đơn OCR, tìm kiếm tài liệu RAG và trợ lý văn phòng.
             </p>
           </div>
           <div>
-            <div style="font-size: 1.65rem; font-weight: 800; color: var(--sdi-orange-cta); margin-bottom: 1rem;">Từ 79.000.000₫</div>
+            <div style="font-size: 1.65rem; font-weight: 800; color: var(--sdi-navy-primary); margin-bottom: 1rem;">Từ 79.000.000₫</div>
             <a href="./chi-tiet-may-don.html" class="sdi-pill-btn-outline" style="width: 100%; justify-content: center; font-size: 0.85rem;">Xem chi tiết cấu hình</a>
           </div>
         </div>
 
         <!-- Config 2: Server AI 2 GPU -->
-        <div class="bento-card" style="padding: 2.25rem 2rem; justify-content: space-between; border: 2px solid var(--sdi-blue-accent); background: linear-gradient(135deg, #FFFFFF 0%, #EEF4FF 100%); border-radius: 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);">
+        <div class="bento-card" style="padding: 2.25rem 2rem; justify-content: space-between; border: 2px solid var(--sdi-blue-accent); background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFD 100%); border-radius: 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 30px rgba(0, 51, 102, 0.06);">
           <div>
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
-              <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.16); color: var(--sdi-blue-accent); margin-bottom: 0;">Phổ Biến Nhất · 2 GPU</span>
-              <span style="background: #2563EB; color: #FFFFFF; font-size: 0.72rem; font-weight: 800; padding: 0.3rem 0.75rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 0.3rem; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);">
-                <i data-lucide="sparkles" style="width: 12px; height: 12px;"></i>
+              <span class="eyebrow-badge" style="background: rgba(37, 99, 235, 0.1); color: var(--sdi-blue-accent); margin-bottom: 0;">Phổ Biến Nhất · 2 GPU</span>
+              <span style="background: var(--sdi-navy-primary); color: #FFFFFF; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 0.3rem;">
                 Khuyên Dùng Cho Doanh Nghiệp
               </span>
             </div>
             <h3 style="font-size: 1.4rem; color: var(--sdi-navy-primary); margin: 0.5rem 0 0.5rem 0;">Server AI 2 GPU (48GB VRAM)</h3>
-            <div style="display: inline-block; background: #DBEAFE; color: #1E40AF; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 6px; margin-bottom: 1rem;">
-              🎯 Fine-tuning LLM 70B (Q4) / Stable Diffusion
+            <div style="display: inline-flex; align-items: center; gap: 0.35rem; background: #EFF6FF; color: #1D4ED8; font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.7rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #BFDBFE;">
+              <i data-lucide="cpu" style="width: 13px; height: 13px; color: #2563EB;"></i>
+              <span>Fine-tuning LLM 70B (Q4) / Stable Diffusion</span>
             </div>
             <p style="font-size: 0.9rem; color: var(--sdi-text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
               Dành cho phòng R&amp;D chuyên nghiệp, fine-tuning mô hình dữ liệu lớn, xử lý hình ảnh thị giác máy tính tải cao hoặc phục vụ 50-200 nhân viên đồng thời.
             </p>
           </div>
           <div>
-            <div style="font-size: 1.65rem; font-weight: 800; color: var(--sdi-orange-cta); margin-bottom: 1rem;">Từ 189.000.000₫</div>
+            <div style="font-size: 1.65rem; font-weight: 800; color: var(--sdi-navy-primary); margin-bottom: 1rem;">Từ 189.000.000₫</div>
             <a href="./combo-tron-bo.html" class="sdi-btn-orange" style="width: 100%; justify-content: center; font-size: 0.85rem;">Xem chi tiết cấu hình</a>
           </div>
         </div>
@@ -822,10 +832,11 @@
         <!-- Config 3: Cluster 4+ GPU -->
         <div class="bento-card bento-card-white" style="padding: 2.25rem 2rem; justify-content: space-between; border: 1px solid var(--sdi-border); border-radius: 20px; display: flex; flex-direction: column;">
           <div>
-            <span class="eyebrow-badge" style="background: rgba(16, 185, 129, 0.08); color: #10B981;">Tải Lớn &amp; Phân Tán · 4+ GPU</span>
+            <span class="eyebrow-badge" style="background: rgba(0, 51, 102, 0.06); color: var(--sdi-navy-primary);">Tải Lớn &amp; Phân Tán · 4+ GPU</span>
             <h3 style="font-size: 1.4rem; color: var(--sdi-navy-primary); margin: 0.5rem 0 0.5rem 0;">Cluster 4+ GPU (96GB–320GB+)</h3>
-            <div style="display: inline-block; background: #D1FAE5; color: #065F46; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 6px; margin-bottom: 1rem;">
-              🎯 DeepSeek R1 / LLM 70B Full / Multi-Agent
+            <div style="display: inline-flex; align-items: center; gap: 0.35rem; background: #F1F5F9; color: #334155; font-size: 0.8rem; font-weight: 700; padding: 0.35rem 0.7rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #E2E8F0;">
+              <i data-lucide="cpu" style="width: 13px; height: 13px; color: #2563EB;"></i>
+              <span>DeepSeek R1 / LLM 70B Full / Multi-Agent</span>
             </div>
             <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1.5rem; line-height: 1.6;">
               Giải pháp cụm máy chủ phân tán hiệu năng cực cao dành cho doanh nghiệp lớn, sàn thương mại điện tử hoặc ứng dụng sản xuất hàng triệu giao dịch.
