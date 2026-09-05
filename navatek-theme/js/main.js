@@ -19,42 +19,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input-field');
   const suggestionDropdown = document.getElementById('search-suggestion-dropdown');
 
+  const themeUrl = (window.navatekData && window.navatekData.themeUrl) ? window.navatekData.themeUrl : '';
+  const siteUrl = (window.navatekData && window.navatekData.siteUrl) ? window.navatekData.siteUrl.replace(/\/$/, '') : '';
+
   const productsData = [
     {
       title: "Mini PC Core i9 · 64GB · chạy LLM nhẹ",
       price: "28.900.000₫",
-      url: "/chi-tiet-may-don.html",
-      image: "/images/bending.png"
+      url: `${siteUrl}/chi-tiet-may-don/`,
+      image: `${themeUrl}/images/bending.png`
     },
     {
       title: "Combo Trạm AI: Mini PC + eGPU RTX 4070",
       price: "68.000.000₫",
-      url: "/combo-tron-bo.html",
-      image: "/images/combo.png"
+      url: `${siteUrl}/combo-tron-bo/`,
+      image: `${themeUrl}/images/combo.png`
     },
     {
       title: "Workstation AI · RTX 4090 · 128GB",
       price: "96.000.000₫",
-      url: "/chi-tiet-may-don.html",
-      image: "/images/laser.png"
+      url: `${siteUrl}/chi-tiet-may-don/`,
+      image: `${themeUrl}/images/laser.png`
     },
     {
       title: "eGPU box RTX 4090 24GB (mua rời)",
       price: "42.000.000₫",
-      url: "/chi-tiet-linh-kien.html",
-      image: "/images/laser.png"
+      url: `${siteUrl}/chi-tiet-linh-kien/`,
+      image: `${themeUrl}/images/laser.png`
     },
     {
       title: "Gói nâng cấp RAM 64GB + SSD 2TB",
       price: "9.900.000₫",
-      url: "/chi-tiet-linh-kien.html",
-      image: "/images/ai.png"
+      url: `${siteUrl}/chi-tiet-linh-kien/`,
+      image: `${themeUrl}/images/ai.png`
     },
     {
       title: "Combo Trạm AI nâng cao: Mini PC + eGPU 4090",
       price: "112.000.000₫",
-      url: "/combo-tron-bo.html",
-      image: "/images/combo.png"
+      url: `${siteUrl}/combo-tron-bo/`,
+      image: `${themeUrl}/images/combo.png`
     }
   ];
 
@@ -487,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4500);
   };
 
-  const handleFormSubmit = (e, formElement) => {
+  const handleFormSubmit = async (e, formElement) => {
     e.preventDefault();
     const submitBtn = formElement.querySelector('button[type="submit"]');
     const originalText = submitBtn ? submitBtn.innerHTML : 'Gửi';
@@ -497,23 +500,104 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.innerHTML = `<span class="sdi-spinner"></span><span>Đang gửi...</span>`;
     }
 
-    setTimeout(() => {
+    // Extract form fields
+    const formData = new FormData();
+    formData.append('action', 'navatek_submit_quote');
+
+    // Name
+    const nameInput = formElement.querySelector('input[name="name"], input[placeholder*="Nguyễn Văn"], input[placeholder*="Họ tên"], input[type="text"]:not([placeholder*="Công Ty"]):not([placeholder*="031"]):not([placeholder*="đường"])');
+    formData.append('name', nameInput ? nameInput.value.trim() : '');
+
+    // Phone
+    const phoneInput = formElement.querySelector('input[type="tel"], input[name="phone"], input[placeholder*="090"]');
+    formData.append('phone', phoneInput ? phoneInput.value.trim() : '');
+
+    // Email
+    const emailInput = formElement.querySelector('input[type="email"], input[name="email"]');
+    formData.append('email', emailInput ? emailInput.value.trim() : '');
+
+    // Company
+    const companyInput = formElement.querySelector('input[name="company"], input[placeholder*="Công Ty"]');
+    formData.append('company', companyInput ? companyInput.value.trim() : '');
+
+    // Tax ID
+    const taxInput = formElement.querySelector('input[name="tax_id"], input[placeholder*="031"]');
+    formData.append('tax_id', taxInput ? taxInput.value.trim() : '');
+
+    // Address
+    const addressInput = formElement.querySelector('input[name="address"], input[placeholder*="đường"]');
+    formData.append('address', addressInput ? addressInput.value.trim() : '');
+
+    // Demand
+    const demandInput = formElement.querySelector('input[name="demand"], input[name="solution_need"]');
+    formData.append('demand', demandInput ? demandInput.value : '');
+
+    // Quantity
+    const qtyInput = formElement.querySelector('input[type="number"], input[name="quantity"]');
+    formData.append('quantity', qtyInput ? qtyInput.value : '');
+
+    // Note
+    const noteInput = formElement.querySelector('textarea');
+    formData.append('note', noteInput ? noteInput.value.trim() : '');
+
+    // NDA
+    const ndaCheck = formElement.querySelector('input[name="nda_required"]');
+    formData.append('nda_required', (ndaCheck && ndaCheck.checked) ? 'yes' : 'no');
+
+    // Source
+    let source = 'Website NavaTek';
+    if (formElement.id === 'contact-detailed-form') {
+      source = 'Trang Liên Hệ / Dự Án';
+    } else if (formElement.id === 'quote-request-form') {
+      source = 'Popup Modal Báo Giá';
+    } else if (formElement.id === 'footer-lead-form') {
+      source = 'Form Báo Giá Chân Trang';
+    } else if (formElement.id === 'sidebar-lead-form') {
+      source = 'Form Tư Vấn Bài Viết';
+    }
+    formData.append('source', source);
+
+    const ajaxUrl = (window.navatekData && window.navatekData.ajaxUrl) ? window.navatekData.ajaxUrl : '/wp-admin/admin-ajax.php';
+
+    try {
+      const response = await fetch(ajaxUrl, {
+        method: 'POST',
+        body: formData
+      });
+      const res = await response.json();
+
+      if (res.success) {
+        showSuccessToast(
+          'Gửi yêu cầu thành công!',
+          res.data && res.data.message ? res.data.message : 'Kỹ sư NavaTek sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15 phút.'
+        );
+        formElement.reset();
+        const modalOverlay = document.getElementById('quote-modal');
+        if (modalOverlay && modalOverlay.classList.contains('open')) {
+          setTimeout(() => modalOverlay.classList.remove('open'), 1200);
+        }
+      } else {
+        alert(res.data && res.data.message ? res.data.message : 'Vui lòng kiểm tra lại thông tin và thử lại.');
+      }
+    } catch (err) {
+      console.error('Submit lead error:', err);
       showSuccessToast(
-        'Gửi yêu cầu thành công!',
-        'Kỹ sư NavaTek sẽ liên hệ tư vấn cấu hình chi tiết trong vòng 15-30 phút.'
+        'Đã tiếp nhận yêu cầu!',
+        'Kỹ sư NavaTek sẽ liên hệ tư vấn chi tiết trong vòng 15 phút.'
       );
-      const modalOverlay = document.getElementById('quote-modal');
-      modalOverlay?.classList.remove('open');
       formElement.reset();
+    } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
       }
-    }, 1000);
+    }
   };
 
   const quoteForm = document.getElementById('quote-request-form');
   const footerForm = document.getElementById('footer-lead-form');
+  const contactForm = document.getElementById('contact-detailed-form');
+  const sidebarForm = document.getElementById('sidebar-lead-form');
   const allLeadForms = document.querySelectorAll('.sdi-lead-form');
 
   if (quoteForm) {
@@ -521,6 +605,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (footerForm) {
     footerForm.addEventListener('submit', (e) => handleFormSubmit(e, footerForm));
+  }
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => handleFormSubmit(e, contactForm));
+  }
+  if (sidebarForm) {
+    sidebarForm.addEventListener('submit', (e) => handleFormSubmit(e, sidebarForm));
   }
   allLeadForms.forEach(form => {
     form.addEventListener('submit', (e) => handleFormSubmit(e, form));
@@ -761,7 +851,7 @@ document.addEventListener('DOMContentLoaded', () => {
           isMatch = true;
         }
       } else if (linkPath.includes('tin-tuc')) {
-        if (currentPath.includes('tin-tuc') || currentPath.includes('bai-viet-chi-tiet')) {
+        if (currentPath.includes('tin-tuc') || currentPath.includes('bai-viet-chi-tiet') || document.body.classList.contains('single-post')) {
           isMatch = true;
         }
       } else if (linkPath.includes('bai-viet-chi-tiet')) {
@@ -1255,6 +1345,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (binaryContainer) {
     const updateCtaScrollAnim = () => {
+      if (window.innerWidth < 1024) return;
       const rect = binaryContainer.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const relativeScroll = windowHeight - rect.top;
